@@ -1,6 +1,9 @@
 class Api::SessionsController < ApplicationController
 
+    # before_action :require_logged_in!, only: [:destroy]
+
     def new
+        @user = User.new
         render :new
     end
 
@@ -17,6 +20,7 @@ class Api::SessionsController < ApplicationController
     def destroy
         logout!
         render json: { message: 'Logout was successful.'}
+        redirect_to new_session_url
     end 
 
 end
