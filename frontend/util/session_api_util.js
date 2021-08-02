@@ -3,7 +3,7 @@
 //logout --> makes an AJAX request that deletes the currest session
 
 
-export const signUp = (user) => {
+export const signup = (user) => {
     return $.ajax({
         url: 'api/user',
         method: 'POST',
@@ -11,7 +11,7 @@ export const signUp = (user) => {
     })
 }
 
-export const logIn = (session) => {
+export const login = (session) => {
     return $.ajax({
         url: '/api/session',
         method: 'POST',
@@ -19,7 +19,7 @@ export const logIn = (session) => {
     })
 }
 
-export const logOut = (sessionId) => {
+export const logout = (sessionId) => {
     return $.ajax({
         url: `api/session/${sessionId}`,
         method: 'DELETE'
