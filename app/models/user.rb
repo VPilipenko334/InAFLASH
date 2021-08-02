@@ -9,7 +9,7 @@ validates :password, length: {minimum: 6}, allow_nil: true
     # has_many :photos
     # foreign_key :user_id
 
-def self.finy_by_credentials(username, password)
+def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user
     user.is_password(password) ? user : nil 
