@@ -1,7 +1,5 @@
 class Api::UsersController < ApplicationController
 
-    # before_action :require_logged_in!, only: [:show, :index, :edit]
-
     def new 
         @user = User.new
         render :new 
@@ -34,9 +32,6 @@ class Api::UsersController < ApplicationController
             render ['User not found']
         end
     end 
-
-    # def update
-    # end
 
     private 
     def user_params
