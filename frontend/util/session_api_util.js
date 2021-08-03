@@ -25,3 +25,4 @@ export const logout = (sessionId) => {
         method: 'DELETE'
     })
 }
+
