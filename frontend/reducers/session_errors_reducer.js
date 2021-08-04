@@ -3,19 +3,19 @@
 //RECEIVE_CURRENT_USER --> clears the errors 
 
 //listens to two types of actions here: 
-import { RECEIEVE_SESSION_ERRORS, RECEIVE_CURRENT_USER } from "../actions/session_actions";
-import sessionReducer from "./session_reducer";
+import {
+    RECEIVE_SESSION_ERRORS,
+    RECEIVE_CURRENT_USER,
+} from '../actions/session_actions';
 
- const sessionErrorReducer = (state = [], action) => {
+export default (state = [], action) => {
     Object.freeze(state);
     switch (action.type) {
-        case RECEIEVE_SESSION_ERRORS:
-            return action.errors; 
+        case RECEIVE_SESSION_ERRORS:
+            return action.errors;
         case RECEIVE_CURRENT_USER:
             return [];
         default:
             return state;
-    }; 
-}
-
-export default sessionErrorReducer; 
+    }
+};

@@ -1,8 +1,8 @@
-//renders a controlled component with the state governed by user's interface
+import React from 'react';
 
 class SessionForm extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             username: "",
             password: ""
@@ -34,11 +34,10 @@ class SessionForm extends React.Component {
         );
     }
 
-
     render() {
         return (
             <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form">
+                <form onSubmit={this.handleSubmit} className="login-form-box">
                     Welcome to InAFlash!
                     <br />
                     Please {this.props.formType} or {this.props.navLink}
@@ -70,12 +69,3 @@ class SessionForm extends React.Component {
 }
 
 export default SessionForm;
-
-
-
-
-
-
-
-
-}
