@@ -20,16 +20,17 @@ class ApplicationController < ActionController::Base
 
     helper_method :current_user, :logged_in?
 
+    #CRLLL
+
     def current_user
         return nil if session[:session_token].nil?
 
-        @create_user ||= User.find_by(session_token: session[:session_token])
+        @current_user ||= User.find_by(session_token: session[:session_token])
     end
-
 
     def require_logged_in!
         redirect_to new_session_url unless logged_in?
-    end
+    end 
 
     def logged_in?
         !!current_user
@@ -37,7 +38,7 @@ class ApplicationController < ActionController::Base
 
     def login!(user)
         session[:session_token] = user.reset_session_token!
-        @current_user = user 
+        @current_user = user
     end
 
     def logout!
@@ -45,5 +46,5 @@ class ApplicationController < ActionController::Base
         session[:session_token] = nil
         @current_user = nil 
     end
+end 
 
-end
