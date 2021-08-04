@@ -5,8 +5,7 @@ import { NavLink } from "react-router-dom";
 const WelcomePage = () => {
     return (
         <div className="body">
-
-        
+            Hello 
         </div>
     )
 }
