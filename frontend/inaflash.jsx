@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from './store/store';
-import Root from './components/Root';
+import Root from './components/Root'
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root');
@@ -21,5 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.store = store
 
     ReactDOM.render(<h1>Welcome to InAFlash!</h1>, root);
-    //<Root store={store} />
+
+    // ReactDOM.render(<Root store={store} />, root);
 });
