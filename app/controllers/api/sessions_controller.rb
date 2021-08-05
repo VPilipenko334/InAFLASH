@@ -16,12 +16,16 @@ class Api::SessionsController < ApplicationController
     end 
 
     def destroy
-        if @user.logged_in?
-            logout!
-            render json: { message: 'Logout was successful.'}
-            redirect_to new_session_url
-        else 
-            render json: ['There is no current user to log out'], status: 404
-        end 
+        @user = current_user
+        if @user
+            logout
+            render "api/users/show"
+        else
+            render json: ["There is no current user to log out"], status: 404
+        end
     end
 end
+
+
+
+

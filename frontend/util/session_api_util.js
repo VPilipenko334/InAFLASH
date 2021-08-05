@@ -2,27 +2,25 @@
 //login --> should make an AJAX request that creates a new session 
 //logout --> makes an AJAX request that deletes the currest session
 
-
-export const signup = (user) => {
-    return $.ajax({
-        url: 'api/user',
+export const login = user => (
+    $.ajax({
         method: 'POST',
-        data: {user}
-    })
-}
-
-export const login = (session) => {
-    return $.ajax({
         url: '/api/session',
+        data: { user }
+    })
+);
+
+export const signup = user => (
+    $.ajax({
         method: 'POST',
-        data: {session}
+        url: '/api/user',
+        data: { user }
     })
-}
+);
 
-export const logout = (sessionId) => {
-    return $.ajax({
-        url: `api/session/${sessionId}`,
-        method: 'DELETE'
+export const logout = () => (
+    $.ajax({
+        method: 'DELETE',
+        url: '/api/session'
     })
-}
-
+);
