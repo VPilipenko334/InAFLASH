@@ -11,7 +11,7 @@ class Api::UsersController < ApplicationController
             login!(@user)
             render :show
         else 
-            render json.errors.full_messages, status: 401
+            render json: @user.errors.full_messages, status: 401
         end
     end 
 
@@ -29,7 +29,7 @@ class Api::UsersController < ApplicationController
             @user.destroy
             render :show 
         else 
-            render ['User not found']
+            render json: ['User not found']
         end
     end 
 

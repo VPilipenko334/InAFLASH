@@ -17,7 +17,8 @@
 
  h1 {
     color: blueviolet;
-    display: center
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
  }
 
  .login-form-container {
