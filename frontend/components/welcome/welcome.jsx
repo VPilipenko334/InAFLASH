@@ -1,11 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import React from 'react';
 
-const WelcomePage = () => {
-    return (
-        <div className="body">
-            Hello friends 
+export default () => (
+    <div className="home">
+        <div className="nav-bar">
         </div>
-    )
-}
+    </div>
+)
