@@ -13,6 +13,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute } from '../util/route_util';
 import welcome from './welcome/welcome';
+import search_Bar from './search_bar/search_ bar';
 
 const App = () => (
     <div className="top-container">

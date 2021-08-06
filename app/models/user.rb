@@ -7,6 +7,14 @@ class User < ApplicationRecord
 
     attr_reader :password
 
+    has_many :pictures, 
+        foreign_key: :user_id,
+        class_name: Picture
+    
+    has_many :likes, 
+        foreign_key: :user_id,
+        class_name: :Like 
+
     #SPIRE 
 
     def self.find_by_credentials(username, password)

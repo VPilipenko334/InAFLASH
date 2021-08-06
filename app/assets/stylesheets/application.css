@@ -85,9 +85,10 @@ input[type=password]:focus, textarea:focus {
    font-family: 'Montserrat', sans-serif;
  }
 
- .nav-bar {
+ /* .nav-bar {
    background-color: pink;
-}
+   padding: 20px
+} */
 
 body{ 
   background-color: #f7f8fa;
