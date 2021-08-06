@@ -36,7 +36,7 @@ const App = () => (
                 </Switch>
             </div>
 
-            <PictureIndexContainer />
+            {/* <PictureIndexContainer /> */}
         </div>
     </div>
 );

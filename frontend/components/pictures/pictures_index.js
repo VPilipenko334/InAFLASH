@@ -22,7 +22,7 @@ class PictureIndex extends React.Component {
                 <div className="discover-container">
                     <ul className="picture-container">
                         {pictures.map((picture,index) => (
-                            <PictureItem key={index} 
+                            <PictureIndex key={index} 
                             picture={picture} 
                             loggedIn={loggedIn}
                             session={session} />
