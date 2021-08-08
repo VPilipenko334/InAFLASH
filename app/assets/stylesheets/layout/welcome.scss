@@ -1,115 +1,222 @@
-.nav-bar {
-    background-color: palevioletred;
-    position: relative;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    border: grey;
+.home {
+  position: relative;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-.home {
-  background-color: grey;
+//div that has the main photo in it 
+.top-bar {
+  background-image: image-url("pictures/castle.jpg");
+  background-color: white;
+  background-size: cover;
   display: inline-block;
   position: relative;
-  padding-top: 10vh;
-  width: 99vw;
-  margin-top: 3%;
-  font-family: 'Montserrat', sans-serif;
-  border: black
+  padding-top: 100vh;
+  width: 100vw;
+  margin-top: 2%;
 }
 
-.inner-main-container {
-    background-color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    border: grey;
-    display: inline-block; 
+.top-bar .inner-main-container {
+  display: inline-block;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  max-width: 30%;
+  text-align: left;
+  padding: 30px 30px;
+  border-radius: 10px;
 }
 
-
-// .about-container-head {
-//     margin: auto
-    
-// }
-
-// html {
-//   box-sizing: border-box;
-//   font-size: 62.5%; // 10px/16px = 62% -> 1rem =>  10px
-// }
-// .sign-up-link {
-
-// }
-
-.body-container {
-  display: flex;
-  align-items: center;
-  background-color: #45457c;
-  padding-top: 40px;
-  justify-content: center;
-  padding-bottom: 50px;
-  margin-top: 20px;
+inner-main-container > h2 {
+  font-size: 40px;
+  font-weight: bolder;
+  color: black;
+  margin-bottom: 15px;
+  line-height: 110%;
 }
-// font-size: 16px;
+
+inner-main-container > p {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 120%;
+}
+
+inner-main-container > button {
+  font-size: 24px;
+  border-radius: 40px;
+  padding: 5px 15px 5px 15px;
+  width: 180px;
+  height: 60px;
+  border: none;
+}
+
+inner-main-container > button:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}
+
+about-container-head {
+  margin: auto;
+}
+
+about-container-head > h3 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 50px;
+  line-height: 200%;
+  margin-bottom: 40px;
+}
+
+about-container-head .body-container {
+  display: inline-block;
+  width: 28%;
+  font-size: 20px;
+  vertical-align: top;
+  padding: 10px;
+  margin-left: 3%;
+}
+
+.body-container > p {
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.body-container > h4 {
+  font-weight: bolder;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.pencil {
+  display: block;
+//   background-image: image-url("Home/Ruler.png");
+background-color: pink;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.leaves {
+  display: block;
+  // background-image: image-url("welcome.scss");
+  background-color: plum;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+.stats {
+  display: block;
+  // background-image: image-url("");
+  background-color: yellowgreen;
+  // background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+// .content_box_container {
+//   display: flex;
+//   align-items: center;
+//   background-color: #45457c;
+//   padding-top: 40px;
+//   justify-content: center;
+//   padding-bottom: 50px;
+//   margin-top: 20px;
+// }
+// .content_box {
+//   justify-content: center;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+// }
+
+// .content_box > h3 {
+//   font-weight: bolder;
+//   color: white;
+//   font-size: 40px;
+//   margin-bottom: 20px;
+//   text-align: center;
+// }
+// .content_box > p {
+//   color: white;
+//   font-weight: lighter;
+//   margin-bottom: 20px;
+//   text-align: center;
+//   width: 60%;
+//   font-size: 20px;
+// }
+
+// .content_box > button {
+//   padding: 5px 15px 5px 15px;
+//   font-size: 24px;
+//   border-radius: 40px;
+//   width: 220px;
+//   height: 60px;
+//   color: black;
+//   text-decoration: none;
+//   border: none;
+// }
+
+// .content_box > button:hover {
+//   color: #1890ff;
+//   cursor: pointer;
+// }
+
+// div footer {
+//   font-size: 16px;
 //   display: flex;
 //   flex-direction: column;
 //   justify-content: center;
 //   text-align: center;
 //   align-items: center;
+//   text-transform: uppercase;
 //   border-top: 1px solid lightgray;
 //   margin: 10px 30px;
 //   padding: 10px;
-
-
-
-
-// .fairy1 {
-//   background-image: image-url("https://www.clipartmax.com/png/small/270-2709821_fairy-clipart-girl-clipart-flower-clipart-fantasy-iridessa-clipart.png");
 // }
 
-// .fairy2 {
-
+// .link_with_no_underLine {
+//   text-decoration: none;
+//   color: inherit;
 // }
 
-// .fairy3 {
-
+// .content_box_container2 {
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-evenly;
+//   text-align: center;
 // }
 
-// .fairy-generater-container {
+// .content_box2 {
+//   width: 50%;
+//   margin-top: 20px;
+//   margin-bottom: 50px;
+//   h1 {
+//     font-size: 20px;
+//     font-weight: bold;
+//     color: rgb(97, 96, 96);
+//     padding-bottom: 20px;
+//   }
+//   li {
+//     color: rgb(97, 96, 96);
+//     padding-top: 20px;
+//     a {
+//       text-decoration: none;
+//       color: inherit;
+//       margin-left: 10px;
+//     }
+//   }
 
+//   li:hover {
+//     color: #1890ff;
+//     cursor: pointer;
+//   }
 // }
-
-// .content-box {
-
-// }
-
-// .random-fairies {
-
-// }
-
-// .content-box-two {
-
-// }
-
-// .smoller-content-box {
-
-// }
-
-// .about-me {
-
-// }
-
-// .social-links-div {
-
-// }
-
-// .social-link-div {
-
-// }
-
-
-// .veronikafairy {
-
-// }
-
-// .final {
-
-// }
-

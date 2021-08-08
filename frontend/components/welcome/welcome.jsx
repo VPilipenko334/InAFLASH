@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 export default () => (
     <div className="home">
-        <div className="nav-bar">
+        <div className="top-bar">
             <div className="inner-main-container">
                 <h2>Discover and share the world's most gorgeous faries</h2>
                 <p>Get inspired to fly away with the most interesting, mythical and eccentric fairies.
@@ -16,7 +16,7 @@ export default () => (
         <div className="about-container-head">
             <h3>What makes us different?</h3> 
                 <div className="body-container">
-                    <span className="fairy1"></span>
+                    <span className="leaves"></span>
                     <h4>Grow as an artist</h4>
                         <p>Get immediate exposure with your first upload. Our Pulse algorithm surfaces new photographs and 
                             photographers, ensuring your photos are seen by the community so you receive valuable feedback on day one.
@@ -25,7 +25,7 @@ export default () => (
         </div>
 
         <div className="body-container">
-                    <span className="fairy2"></span>
+                    <span className="pencil"></span>
                     <h4>Build Your Career</h4>
                         <p>Present yourself as a professional. Display your Services, create a Directory listing and get hired, 
                         showcase your articles, presets, videos, and more with Resources, and curate Galleries to highlight your work.
@@ -33,7 +33,7 @@ export default () => (
         </div>
 
         <div className="body-container">
-                    <span className="fairy3"></span>
+                    <span className="stats"></span>
                         <h4>See how you're performing</h4>
                             <p>With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank 
                             in comparison to other photographers in the community.
