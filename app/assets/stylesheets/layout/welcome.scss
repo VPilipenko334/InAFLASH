@@ -1,9 +1,115 @@
-.body {
-    position: relative;
-    box-sizing: border-box;
-    color: palevioletred;
-}
-
 .nav-bar {
     background-color: palevioletred;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    border: grey;
 }
+
+.home {
+  background-color: grey;
+  display: inline-block;
+  position: relative;
+  padding-top: 10vh;
+  width: 99vw;
+  margin-top: 3%;
+  font-family: 'Montserrat', sans-serif;
+  border: black
+}
+
+.inner-main-container {
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    border: grey;
+    display: inline-block; 
+}
+
+
+// .about-container-head {
+//     margin: auto
+    
+// }
+
+// html {
+//   box-sizing: border-box;
+//   font-size: 62.5%; // 10px/16px = 62% -> 1rem =>  10px
+// }
+// .sign-up-link {
+
+// }
+
+.body-container {
+  display: flex;
+  align-items: center;
+  background-color: #45457c;
+  padding-top: 40px;
+  justify-content: center;
+  padding-bottom: 50px;
+  margin-top: 20px;
+}
+// font-size: 16px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: center;
+//   align-items: center;
+//   border-top: 1px solid lightgray;
+//   margin: 10px 30px;
+//   padding: 10px;
+
+
+
+
+// .fairy1 {
+//   background-image: image-url("https://www.clipartmax.com/png/small/270-2709821_fairy-clipart-girl-clipart-flower-clipart-fantasy-iridessa-clipart.png");
+// }
+
+// .fairy2 {
+
+// }
+
+// .fairy3 {
+
+// }
+
+// .fairy-generater-container {
+
+// }
+
+// .content-box {
+
+// }
+
+// .random-fairies {
+
+// }
+
+// .content-box-two {
+
+// }
+
+// .smoller-content-box {
+
+// }
+
+// .about-me {
+
+// }
+
+// .social-links-div {
+
+// }
+
+// .social-link-div {
+
+// }
+
+
+// .veronikafairy {
+
+// }
+
+// .final {
+
+// }
+

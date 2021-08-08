@@ -13,9 +13,9 @@ export default () => (
             </div>
         </div>
 
-        <div className="top-container">
+        <div className="about-container-head">
             <h3>What makes us different?</h3> 
-                <div className="container-front-page">
+                <div className="body-container">
                     <span className="fairy1"></span>
                     <h4>Grow as an artist</h4>
                         <p>Get immediate exposure with your first upload. Our Pulse algorithm surfaces new photographs and 
@@ -24,49 +24,45 @@ export default () => (
                 </div>
         </div>
 
-        <div className="container-front-page">
-                <div className="second-container">
+        <div className="body-container">
                     <span className="fairy2"></span>
                     <h4>Build Your Career</h4>
                         <p>Present yourself as a professional. Display your Services, create a Directory listing and get hired, 
                         showcase your articles, presets, videos, and more with Resources, and curate Galleries to highlight your work.
                         </p>
-                </div>
         </div>
 
-        <div className="container-front-page">
-                <div className="third-container">
+        <div className="body-container">
                     <span className="fairy3"></span>
                         <h4>See how you're performing</h4>
                             <p>With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank 
                             in comparison to other photographers in the community.
                             </p>
-                </div>
         </div>
 
-        <div className="best-of-the-best">
-                <div className="fourth-container">
+        <div className="fairy-generater-container">
+                <div className="content-box">
                     <span className="random-fairies"></span>
                         <h4>Coolest Fairy of the Week: </h4>
                            <button>Generate Fairy Here</button>
                 </div>
         </div>
 
-        <div className="nav-bar">
-            <div className="inner-main-container">
+        <div className="content-box-two">
+            <div className="smoller-content-box">
                 <h3>Join our community today</h3>
                     <p>Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography
                     </p>
                 <button><Link to="/signup" className="sign-up-link">Sign up</Link></button>
             </div>
     
-        <div className="top-container">
+        <div className="about-me">
                 <h3>Veronika, the fairy that made this, can be found here:</h3>
-                <div className="container-front-page">
+                <div className="social-links">
                     <span className="veronikafairy"></span>
                     <ul>
                         <li>
-                            <i className="social-link"></i>
+                            <i className="social-link-div"></i>
                             <a href="https://github.com/VPilipenko334" target="_blank">Github</a>
                         </li>
                         <li>
@@ -75,7 +71,7 @@ export default () => (
                         </li>
                     </ul>
                 </div>
-                <div className="final-box">
+                <div className="final">
                     <h1>Community</h1>
                     <ul>
                         <li>
