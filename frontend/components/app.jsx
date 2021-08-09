@@ -14,8 +14,10 @@ import SessionForm from './session_form/session_form'
 import LogInFormContainer from './session_form/login_form_container';
 import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import welcome from './welcome/welcome';
-import search_Bar from './search_bar/search_ bar';
-import PictureIndexContainer from './pictures/pictures_index_container'
+//search bar
+// import PictureIndex from './pictures/pictures_index_container';
+import UploadPictureContainer from './pictures/upload_picture_container.js';
+import ShowPictureContainer from './pictures/pictures_show_container.js';
 
 const App = () => (
     <div>
@@ -26,17 +28,20 @@ const App = () => (
 
                 <input type="text" placeholder="Search.."/>
                 <GreetingContainer />
-       
+                {/* <PictureIndexContainer /> */}
 
             <div className="login-links">
                 <Switch>
                         <AuthRoute exact path="/" component={welcome} />
                         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
                         <AuthRoute exact path="/login" component={LogInFormContainer} />
+
+                        <ProtectedRoute exact path="/upload" component={UploadPictureContainer} />
+                        <Route exact path="/pictures/:pictureId" component={ShowPictureContainer} />
+                        {/* <ProtectedRoute path="/profile/:userId" component={ProfileContainer} />
+                        <ProtectedRoute path="/users/:userId" component={UserContainer} /> */}
                 </Switch>
             </div>
-
-            {/* <PictureIndexContainer /> */}
         </div>
     </div>
 );

@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
     has_many :pictures, 
         foreign_key: :user_id,
-        class_name: Picture
+        class_name: :Picture
     
     has_many :likes, 
         foreign_key: :user_id,

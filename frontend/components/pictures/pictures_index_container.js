@@ -7,6 +7,7 @@ import PictureIndex from "./pictures_index";
 const mapStateToProps = (state= {}) => {
     return {
         pictures: Object.values(state.entities.pictures),
+        loggedIn: Boolean(state.session.currentUser),
         session: state.session.currentUser
     }
 }

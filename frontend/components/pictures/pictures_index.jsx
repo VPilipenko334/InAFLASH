@@ -7,15 +7,14 @@ class PictureIndex extends React.Component {
         super(props)
     }
 
-    // componentDidMount() {
-    //     this.props.fetchPictures();
-    // }
-
-    render(){
-        const {pictures, loggedIn, session} = this.props; 
+    componentDidMount() {
+        this.props.fetchPictures()
+    }
+    
+    render() {
+        const {pictures, loggedIn, session} = this.props
         if (!pictures) return null; 
-        // console.log('hello');
-
+    
         return (
             <div className="upload-container">
                 <button><h2>Upload</h2></button>
