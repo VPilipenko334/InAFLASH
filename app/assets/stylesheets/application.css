@@ -1,4 +1,4 @@
-/*
+/* 
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -85,14 +85,7 @@ input[type=password]:focus, textarea:focus {
    font-family: 'Montserrat', sans-serif;
  }
 
- /* .nav-bar {
-   background-color: pink;
-   padding: 20px
-} */
-
-body{ 
-  background-color: #f7f8fa;
-}
+ 
 
 .header-container {
   background-color: rgb(255, 255, 255);
