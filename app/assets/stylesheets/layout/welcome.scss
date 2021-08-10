@@ -234,7 +234,7 @@ inner-main-container {
   position: absolute;
   top: 20%;
   right: 20%;
-  max-width: 35%;
+  max-width: 37%;
   text-align: left;
   padding: 30px -20px;
   border-radius: 10px;
@@ -249,7 +249,15 @@ inner-main-container {
   display: inline-block;
   font-family: Helvetica Neue, Arial, sans-serif;
   position: relative;
-  font-size: 16px;  
+  font-size: 18px;  
+  display: flex;
+  position: absolute;
+  bottom: 45%;
+  right: 20%;
+  max-width: 37%;
+  text-align: left;
+  padding: 30px -20px;
+  border-radius: 10px;
   color:white;
 }
 

@@ -8,7 +8,7 @@ class PictureIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPictures()
+        this.props.fetchPictures() 
     }
     
     render() {

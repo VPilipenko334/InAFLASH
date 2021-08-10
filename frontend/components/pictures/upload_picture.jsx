@@ -115,7 +115,7 @@ class UploadPicture extends React.Component {
                             </label> <br/>
                             <div>
                                 <button className="cancel-button" onClick={this.handleCancel}>Cancel</button>
-                            {/* <input className="upload-button" onClick={this.handleSubmit} type="submit" value="Upload Photo" /> */}
+                                <input className="upload-button" onSubmit={this.handleSubmit} type="submit" value="Upload Photo" />
                             </div>
                         </form>
                 </div>

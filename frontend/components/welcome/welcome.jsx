@@ -6,7 +6,7 @@ export default () => (
         <div className="top-bar">
             <div className="inner-main-container"> 
                 <h1 className="first-h1">Discover and share the world's most gorgeous faries</h1><br />
-                <p>Get inspired to fly away with the most interesting, mythical and eccentric fairies.
+                    <p>Get inspired to fly away with the most interesting, mythical and eccentric fairies.
                     Follow the sparkles at the end of their fingertips to embark on a mystical adventure.
                 </p><br />
                 <button><Link to="/signup" className="sign-up-button">Sign up</Link></button>
@@ -17,6 +17,7 @@ export default () => (
             <h3 className="difference">What makes us different?</h3><br />
                 <div className="body-container">
                     <span className="leaves"></span>
+
                     <h4 className="words">Grow as an artist</h4>
                         <p id="smollwords">Get immediate exposure with your first upload. Our Pulse algorithm surfaces new photographs and 
                             photographers, ensuring your photos are seen by the community so you receive valuable feedback on day one.
@@ -43,7 +44,7 @@ export default () => (
                 <div className="content-box">
                     <span className="random-photos"></span><br/>
                         <center><h3 id="cool-photo">Coolest Photo of the week:</h3></center><br/>
-                        <center><button id="generator-button">Generate Photo Here</button></center>
+            <center><button id="generator-button">Generate Photo Here</button></center><br /><br /><br />
                 </div>
 
         <div className="content-box-two">
@@ -56,16 +57,16 @@ export default () => (
             </div>
     
         
-                <div className="final">
+            <div className="final">
                     <NavLink to="/">Back to Home</NavLink>
                 </div>
             </div>
-            <div>
+                <div>
                 <footer>
                     <div>
                         InAFlash - 2021
                     </div>
                 </footer>
             </div>
-        </div>
+            </div>
 )
