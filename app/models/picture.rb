@@ -2,7 +2,7 @@ class Picture < ApplicationRecord
 
     validates :title, :description, :user_id, presence: true
     validates :title, uniqueness: {scope: :user_id}
-    has_one_attached :post
+    has_one_attached :photo
     belongs_to :user
 
 
@@ -13,7 +13,5 @@ class Picture < ApplicationRecord
     # has_many :likes, 
     #     foreign_key: :picture_id,
     #     class_name: :Like
-
-    has_one :picture 
 
 end

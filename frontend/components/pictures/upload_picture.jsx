@@ -18,7 +18,7 @@ class UploadPicture extends React.Component {
         }
 
         this.handleFile = this.handleFile.bind(this);
-        this.handleSubmit = this.handleSubmit(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
     }
 
@@ -26,20 +26,19 @@ class UploadPicture extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value })
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        this.props.submitPicture(this.state);
-    }
+    // handleSubmit(e) {
+    //     e.preventDefault();
+    //     this.props.submitPicture(this.state);
+    // }
 
     handleFile(e) {
         const file = e.target.files[0];
-        const fileReader = new fileReader // will look for new files uploaded to the page 
-        //loads events after element has finished loading 
+        const fileReader = new FileReader();
         fileReader.onloadend = () => {
-            this.setState({ pictureFile: file, pictureUrl: fileReader.result, selectForm:1 });
-        }
+            this.setState({ photoFile: file, photoUrl: fileReader.result, selectForm: 1 });
+        };
         if (file) {
-            fileReader.readAsDataUrl(file);
+            fileReader.readAsDataURL(file);
         }
     }
 
@@ -72,7 +71,6 @@ class UploadPicture extends React.Component {
                         <div className="upload-form">
                             <h3>Upload your photo here</h3>
                             <input type="file" onChange={this.handleFile} id="file"  />
-                                <button>Click here to upload</button>
                                 <div className="requirements">
                                     <h2>Photo Requirements</h2>
                                         <p>
@@ -99,25 +97,25 @@ class UploadPicture extends React.Component {
                     <div className="upload-button-box">
                         <label id="uploading-here">
                             <h2>Upload</h2>
-                            <input type="file" OnChange={this.handleFile} style={{display: "none"}} />
+                            <input type="file" onChange={this.handleFile} style={{display: "none"}} />
                         </label>
                         <div className="upload-form-preview-photo">
                             {PreviewPhoto}
                         </div>
                     </div>
 
-                        <form className="upload-form">
+                    <form className="upload-form" onSubmit={this.handleSubmit}>
                             <h3> Art Selected: </h3> 
                             <label>Title:
-                                <input className="title" type="text" value={this.state.title} onChange={this.Update("title")} />
+                                <input className="title" type="text" value={this.state.title} onChange={this.update("title")} />
                                 {this.state.tError ? <p className="errors">Title can not be empty</p> : null}
                             </label> <br/>
                             <label>Description: 
-                                <textarea cols="40" rows="6" className="description" type="text" value={this.state.description} onChange={this.Update("description")} />
+                                <textarea cols="40" rows="6" className="description" type="text" value={this.state.description} onChange={this.update("description")} />
                             </label> <br/>
                             <div>
                                 <button className="cancel-button" onClick={this.handleCancel}>Cancel</button>
-                                <input className="upload-button" onClick={this.handleSubmit} type="submit" value="Upload" />
+                            {/* <input className="upload-button" onClick={this.handleSubmit} type="submit" value="Upload Photo" /> */}
                             </div>
                         </form>
                 </div>

@@ -242,7 +242,7 @@ var App = function App() {
     component: _home_home__WEBPACK_IMPORTED_MODULE_10__.default
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
     exact: true,
-    path: "#/upload",
+    path: "/upload",
     component: _pictures_upload_picture_container__WEBPACK_IMPORTED_MODULE_13__.default
   }))));
 };
@@ -707,7 +707,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
       selectForm: 0
     };
     _this.handleFile = _this.handleFile.bind(_assertThisInitialized(_this));
-    _this.handleSubmit = _this.handleSubmit(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleCancel = _this.handleCancel.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -720,11 +720,35 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
       return function (e) {
         return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
       };
+    } // handleSubmit(e) {
+    //     e.preventDefault();
+    //     this.props.submitPicture(this.state);
+    // }
+
+  }, {
+    key: "handleFile",
+    value: function handleFile(e) {
+      var _this3 = this;
+
+      var file = e.target.files[0];
+      var fileReader = new FileReader();
+
+      fileReader.onloadend = function () {
+        _this3.setState({
+          photoFile: file,
+          photoUrl: fileReader.result,
+          selectForm: 1
+        });
+      };
+
+      if (file) {
+        fileReader.readAsDataURL(file);
+      }
     }
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      var _this3 = this;
+      var _this4 = this;
 
       e.preventDefault();
 
@@ -735,29 +759,8 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
         form.append('picture[userId]', this.state.userId);
         formData.append('picture[picture]', this.state.pictureFile);
         this.props.createPicture(formData).then(function (rest) {
-          return _this3.props.history.push("/pictures/".concat(rest.picture.id));
+          return _this4.props.history.push("/pictures/".concat(rest.picture.id));
         });
-      }
-    }
-  }, {
-    key: "handleFile",
-    value: function handleFile(e) {
-      var _this4 = this;
-
-      var file = e.target.files[0];
-      var fileReader = new fileReader(); // will look for new files uploaded to the page 
-      //loads events after element has finished loading 
-
-      fileReader.onloadend = function () {
-        _this4.setState({
-          pictureFile: file,
-          pictureUrl: fileReader.result,
-          selectForm: 1
-        });
-      };
-
-      if (file) {
-        fileReader.readAsDataUrl(file);
       }
     }
   }, {
@@ -785,7 +788,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
           type: "file",
           onChange: this.handleFile,
           id: "file"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, "Click here to upload"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           className: "requirements"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Photo Requirements"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, ".jpg only Max. photo dimensions are 200MP/megapixels"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Licensing requirements"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Min. photo dimensions are 3MP/megapixels No watermarks, logos, or borders No NSFW content"))));
       }
@@ -799,19 +802,20 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
           id: "uploading-here"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Upload"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           type: "file",
-          OnChange: this.handleFile,
+          onChange: this.handleFile,
           style: {
             display: "none"
           }
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           className: "upload-form-preview-photo"
         }, PreviewPhoto)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
-          className: "upload-form"
+          className: "upload-form",
+          onSubmit: this.handleSubmit
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, " Art Selected: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Title:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
           className: "title",
           type: "text",
           value: this.state.title,
-          onChange: this.Update("title")
+          onChange: this.update("title")
         }), this.state.tError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
           className: "errors"
         }, "Title can not be empty") : null), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Description:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
@@ -820,16 +824,11 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
           className: "description",
           type: "text",
           value: this.state.description,
-          onChange: this.Update("description")
+          onChange: this.update("description")
         })), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
           className: "cancel-button",
           onClick: this.handleCancel
-        }, "Cancel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-          className: "upload-button",
-          onClick: this.handleSubmit,
-          type: "submit",
-          value: "Upload"
-        }))));
+        }, "Cancel"))));
       }
     }
   }]);
