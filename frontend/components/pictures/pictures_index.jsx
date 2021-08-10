@@ -17,15 +17,15 @@ class PictureIndex extends React.Component {
     
         return (
             <div className="upload-container">
-                <button><h2>Upload</h2></button>
                 <div className="discover-container">
                     <ul className="picture-container">
-                        {pictures.map((picture,index) => (
+                        <h2>testing</h2> 
+                        {/* {pictures.map((picture,index) => (
                             <PictureIndex key={index} 
                             picture={picture} 
                             loggedIn={loggedIn}
                             session={session} />
-                        ))}
+                        ))} */}
                     </ul>
                 </div>
             </div>

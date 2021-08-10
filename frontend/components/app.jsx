@@ -20,10 +20,12 @@ import UploadPicture from './pictures/upload_picture';
 import ShowPicture from './pictures/pictures_show';
 import HomePage from './home/home';
 import home_container from './home/home_container';
+import PicturesShowContainer from './pictures/pictures_show_container';
+import UploadPictureContainer from './pictures/upload_picture_container';
 
 const App = () => (
     <div>
-        <div className="header-container">
+        <header className="header-container">
             <div className="links"> 
                 <div id="nav-bar-things">
                 <Link to="/" id="logo"><h1>InAFlash</h1></Link>
@@ -35,22 +37,24 @@ const App = () => (
                 <GreetingContainer />
                 {/* <PictureIndexContainer /> */}
             </div>
+            </header>
+
 
             <div className="login-links">
                 <Switch>
                         <Route exact path="/" component={welcome} />
                         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
                         <AuthRoute exact path="/login" component={LogInFormContainer} />
-                        {/* <p> testing </p>  */}
-                        <Route exact path="/homepage" component={HomePage} />
-                        <Route exact path="/upload" component={UploadPicture} />
-                        <Route exact path="/pictures/:pictureId" component={ShowPicture} />
-                        {/* <ProtectedRoute path="/profile/:userId" component={ProfileContainer} />
-                        <ProtectedRoute path="/users/:userId" component={UserContainer} /> */}
+
+
+                        <ProtectedRoute exact path="/userId" component={HomePage} />
+                        <ProtectedRoute exact path="#/upload" component={UploadPictureContainer} />
+                        {/* <ProtectedRoute exact path="#/pictures/:pictureId" component={PicturesShowContainer} /> */}
+
                 </Switch>
             </div>
         </div>
-    </div>
+    
 );
 
 export default App;

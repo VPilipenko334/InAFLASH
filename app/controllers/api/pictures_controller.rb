@@ -1,4 +1,16 @@
 class Api::PicturesController < ApplicationController
+    
+    before_action :require_logged_in, only: [:create, :destroy]
+
+       #creating/ adding a new picture 
+    def create
+        @picture = Picture.new(picture_params)
+        if @picture.save! && picture.user_id == current_user.id
+            render 'api/pictures/show' #front-end component 
+        else 
+            render json: @picture.errors.full_messages, status: 401
+        end
+    end 
 
 
     def index
@@ -10,16 +22,6 @@ class Api::PicturesController < ApplicationController
         @picture = Picture.find(params[:id])
         render :show
     end
-
-    #creating/ adding a new picture 
-    def create
-        @picture = Picture.new(picture_params)
-        if @picture.save! && picture.user_id == current_user.id
-            render 'api/pictures/show' #front-end component 
-        else 
-            render json: @picture.errors.full_messages, status: 401
-        end
-    end 
 
     def destroy 
         @picture = Picture.find(params[:id])

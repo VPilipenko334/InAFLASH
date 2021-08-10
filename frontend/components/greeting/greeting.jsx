@@ -17,7 +17,7 @@ const Greeting = ({ currentUser, logout }) => {
       <button className="header-button" onClick={logout}>Log Out</button>
       
       <button><Link to="/upload" className="upload-photo">Upload</Link></button>
-      <Link to="/userId" className="user-id">User HomePage</Link>
+      <button><Link to="/userId" className="user-id">User HomePage</Link></button>
       
     </div>
   );

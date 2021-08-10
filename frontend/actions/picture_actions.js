@@ -12,7 +12,7 @@ const receivePicture = (picture) => {
     }
 }
 
-const receievePictures = (pictures) => {
+const receivePictures = (pictures) => {
     return {
         type: RECEIVE_PICTURES,
         pictures
