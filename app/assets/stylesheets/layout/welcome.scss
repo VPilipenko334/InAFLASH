@@ -1,30 +1,55 @@
 .home {
   position: relative;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: Helvetica Neue, Arial, sans-serif;
 }
 
 //div that has the main photo in it 
 .top-bar {
-  background-image: image-url("pictures/castle.jpg");
-  background-color: white;
+  background-image: image-url("../pictures/ocean.jpg");
+  // background-color: rgb(23, 14, 14);
   background-size: cover;
   display: inline-block;
   position: relative;
-  padding-top: 100vh;
+  // padding-top: 100%;
+  // width: 100%;
+  padding-top: 70vh;
   width: 100vw;
   margin-top: 2%;
+  font-size: 16px;
+  color: white;
+}
+
+.first-h1 {
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -0.4px;
 }
 
 .top-bar .inner-main-container {
   display: inline-block;
   position: absolute;
-  top: 30%;
-  left: 15%;
-  max-width: 30%;
+  top: 20%;
+  left: 5%;
+  max-width: 35%;
   text-align: left;
-  padding: 30px 30px;
+  padding: 30px -20px;
   border-radius: 10px;
+}
+
+.sign-up-button {
+  margin-top: 16px;
+  height: 64px;
+  width: auto;
+  font-size: 24px;
+  justify-content: center;
+  font-weight: bold;
+  margin: 10px;
+  border: none;
+  // min-width: 216px;
+  background-color: white;
+  color: black;
+  // border-radius: 10px;
 }
 
 inner-main-container > h2 {
@@ -43,7 +68,7 @@ inner-main-container > p {
   line-height: 120%;
 }
 
-inner-main-container > button {
+inner-main-container {
   font-size: 24px;
   border-radius: 40px;
   padding: 5px 15px 5px 15px;
@@ -52,35 +77,49 @@ inner-main-container > button {
   border: none;
 }
 
-inner-main-container > button:hover {
-  filter: brightness(85%);
-  cursor: pointer;
-}
+// inner-main-container > button:hover {
+//   filter: brightness(85%);
+//   cursor: pointer;
+// }
 
-about-container-head {
-  margin: auto;
-}
+// about-container-head {
+//   // margin: auto;
+//   margin-top: 32px;
+//   padding-left: 64px;
+//   padding-right: 64px;
+//   box-sizing: border-box;
+//   background-color: rgb(158, 84, 84);
+// }
 
-about-container-head > h3 {
+// .about-container-head > h3 {
+//   text-align: center;
+//   font-weight: bolder;
+//   font-size: 50px;
+//   line-height: 200%;
+//   margin-bottom: 40px;
+// }
+
+// .about-container-head .body-container {
+//   display: inline-block;
+//   width: 28%;
+//   font-size: 20px;
+//   vertical-align: top;
+//   padding: 10px;
+//   margin-left: 3%;
+// }
+
+.difference {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
   text-align: center;
-  font-weight: bolder;
-  font-size: 50px;
-  line-height: 200%;
-  margin-bottom: 40px;
+  box-sizing: border-box;
 }
 
-about-container-head .body-container {
-  display: inline-block;
-  width: 28%;
-  font-size: 20px;
-  vertical-align: top;
-  padding: 10px;
-  margin-left: 3%;
-}
-
-.body-container > p {
+.body-container {
   font-size: 20px;
   line-height: 120%;
+  text-align: center;
 }
 
 .body-container > h4 {
@@ -91,35 +130,43 @@ about-container-head .body-container {
 
 .pencil {
   display: block;
-//   background-image: image-url("Home/Ruler.png");
-background-color: pink;
+  background-image: image-url("../pictures/2.png");
+  background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
+  height: 64px;
+  width: 64px;
   margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .leaves {
   display: block;
-  // background-image: image-url("welcome.scss");
-  background-color: plum;
+  background-image: image-url("../pictures/1.png");
+  background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
+  height: 64px;
+  width: 64px;
   margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .stats {
   display: block;
-  // background-image: image-url("");
-  background-color: yellowgreen;
-  // background-color: white;
+  background-image: image-url("../pictures/4.png");
+ background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
+  height: 64px;
+  width: 64px;
   margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // .content_box_container {

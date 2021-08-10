@@ -1,5 +1,3 @@
-@pictures.each do |picture|
-    json.set! picture.id do 
-        json.extract! picture, :id, :title, :description, :user_id
-    end
-end
+json.extract! @picture, :id, :title, :description, :user_id, :private
+# json.pictureUrl url_for(@picture.photo)
+# json.likes @picture.likes

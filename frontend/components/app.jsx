@@ -16,28 +16,31 @@ import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import welcome from './welcome/welcome';
 //search bar
 // import PictureIndex from './pictures/pictures_index_container';
-import UploadPictureContainer from './pictures/upload_picture_container.js';
-import ShowPictureContainer from './pictures/pictures_show_container.js';
+import UploadPicture from './pictures/upload_picture';
+import ShowPicture from './pictures/pictures_show';
+import HomePage from './home/home';
+import home_container from './home/home_container';
 
 const App = () => (
     <div>
         <div className="header-container">
             <div className="links">
                 <Link to="/"><h1>InAFlash</h1></Link>
-            </div>
 
-                <input type="text" placeholder="Search.."/>
+                <input type="text" placeholder="Search" />
                 <GreetingContainer />
                 {/* <PictureIndexContainer /> */}
+            </div>
 
             <div className="login-links">
                 <Switch>
-                        <AuthRoute exact path="/" component={welcome} />
+                        <Route exact path="/" component={welcome} />
                         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
                         <AuthRoute exact path="/login" component={LogInFormContainer} />
-
-                        <ProtectedRoute exact path="/upload" component={UploadPictureContainer} />
-                        <Route exact path="/pictures/:pictureId" component={ShowPictureContainer} />
+                        {/* <p> testing </p>  */}
+                        <Route exact path="/homepage" component={HomePage} />
+                        <Route exact path="/upload" component={UploadPicture} />
+                        <Route exact path="/pictures/:pictureId" component={ShowPicture} />
                         {/* <ProtectedRoute path="/profile/:userId" component={ProfileContainer} />
                         <ProtectedRoute path="/users/:userId" component={UserContainer} /> */}
                 </Switch>

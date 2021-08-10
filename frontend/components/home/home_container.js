@@ -21,4 +21,4 @@ const mDTP = (dispatch) => {
     }
 }
 
-export default connect(mSTP, mDTP)(HomePage)
+export default connect(mSTP, mDTP)(HomePage);

@@ -13,9 +13,9 @@ class HomePage extends React.Component {
 
     render() {
         const { pictures, session } = this.props
-        if (!pictures) {
-            return null 
-        } else {
+        // if (!pictures) {
+        //     return null 
+        // } else {
             return (
                 <div className="homepage">
                     <h2>Welcome to the Homepage!</h2>
@@ -35,6 +35,6 @@ class HomePage extends React.Component {
             )
         }
     }
-}
+// }
 
 export default HomePage; 

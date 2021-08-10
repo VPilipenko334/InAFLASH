@@ -19,7 +19,7 @@
  h1 {
 
     display: flex;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Helvetica Neue, Arial, sans-serif;
     font-size: 25px;
     font-weight: bolder
  }
@@ -28,19 +28,19 @@
    display: flex;
    justify-content: center;
    margin-top: 100px;
-   font-family: 'Montserrat', sans-serif;
+   font-family: Helvetica Neue, Arial, sans-serif;
  }
 
  .login-form {
    display: flex;
    justify-content: center;
    flex-direction: column;
-   font-family: 'Montserrat', sans-serif;
+   font-family: Helvetica Neue, Arial, sans-serif;
  }
 
  .login-input {
    margin-left: 20px;
-   font-family: 'Montserrat', sans-serif;
+   font-family: Helvetica Neue, Arial, sans-serif;
  }
    
 input[type=text], textarea {
@@ -82,7 +82,7 @@ input[type=password]:focus, textarea:focus {
  .login-form-box {
    outline: 1px solid black;
    padding: 50px;
-   font-family: 'Montserrat', sans-serif;
+   font-family: Helvetica Neue, Arial, sans-serif;
  }
 
  

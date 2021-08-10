@@ -4,17 +4,17 @@ import { Link, NavLink } from 'react-router-dom'
 export default () => (
     <div className="home">
         <div className="top-bar">
-            <div className="inner-main-container">
-                <h2>Discover and share the world's most gorgeous faries</h2>
+            <div className="inner-main-container"> 
+                <h1 className="first-h1">Discover and share the world's most gorgeous faries</h1><br />
                 <p>Get inspired to fly away with the most interesting, mythical and eccentric fairies.
                     Follow the sparkles at the end of their fingertips to embark on a mystical adventure.
-                </p>
-                <button><Link to="/signup" className="sign-up-link">Sign up</Link></button>
+                </p><br />
+                <button><Link to="/signup" className="sign-up-button">Sign up</Link></button>
             </div>
         </div>
 
-        <div className="about-container-head">
-            <h3>What makes us different?</h3> 
+        <div className="about-container-head"> <br /><br />
+            <h3 className="difference">What makes us different?</h3> 
                 <div className="body-container">
                     <span className="leaves"></span>
                     <h4>Grow as an artist</h4>
