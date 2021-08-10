@@ -6,14 +6,14 @@
 
 //div that has the main photo in it 
 .top-bar {
-  background-image: image-url("../pictures/ocean.jpg");
+  background-image: image-url("../pictures/waveedit.png");
   // background-color: rgb(23, 14, 14);
   background-size: cover;
   display: inline-block;
   position: relative;
   // padding-top: 100%;
   // width: 100%;
-  padding-top: 70vh;
+  padding-top: 90vh;
   width: 100vw;
   margin-top: 2%;
   font-size: 16px;
@@ -212,7 +212,49 @@ inner-main-container {
 // }
 
 .community {
-  background-image: image-url("../pictures/sunflower.jpg");
+  background-image: image-url("../pictures/skyyyy.jpg");
+  background-size: cover;
+  display: inline-block;
+  position: relative;
+  // padding-top: 100%;
+  // width: 100%;
+  padding-top: 70vh;
+  width: 100vw;
+  // margin-top: 2%;
+  font-size: 16px;
+}
+
+#join-community {
+  font-size: 10px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  max-width: 35%;
+  text-align: left;
+  padding: 30px -20px;
+  border-radius: 10px;
+  color:white;
+  font-size: 46px;
+  line-height: 52px;
+  letter-spacing: -0.4px;
+  font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+#love-pics {
+  display: inline-block;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  position: relative;
+  font-size: 16px;  
+  color:white;
+}
+
+.content-box {
+  background-image: image-url("../pictures/yellow.png");
   background-size: cover;
   display: inline-block;
   position: relative;
@@ -222,15 +264,9 @@ inner-main-container {
   width: 100vw;
   margin-top: 2%;
   font-size: 16px;
+  // background-color: green;
 }
 
-#community-join {
-  font-size: 0px;
-  line-height: 40px;
-  font-weight: bold;
-  text-align: center;
-  box-sizing: border-box;
-}
 
 #nav-bar-things {
   text-decoration: none; 

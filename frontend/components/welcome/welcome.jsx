@@ -38,48 +38,26 @@ export default () => (
                             <p id="smollwords">With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank 
                             in comparison to other photographers in the community.
                             </p><br />  
-        </div>
-                <br /><br /><br />
-        <div className="fairy-generater-container">
+        </div><br />
+                
                 <div className="content-box">
-                    <span className="random-fairies"></span>
-                        <h3 id="cool-fairy">Coolest Fairy of the Week: </h3>
-                        <center><button id="generator-button">Generate Fairy Here</button></center>
+                    <span className="random-photos"></span><br/>
+                        <center><h3 id="cool-photo">Coolest Photo of the week:</h3></center><br/>
+                        <center><button id="generator-button">Generate Photo Here</button></center>
                 </div>
-        </div>
 
         <div className="content-box-two">
             <div className="smoller-content-box">
                 <div className="community">
                 <h3 id="join-community">Join our community today</h3>
-                    <p>Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography
+                    <p id="love-pics">Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography
                     </p>
-                <button><Link to="/signup" className="sign-up-link">Sign up</Link></button>
                 </div>
             </div>
     
-        <div className="about-me">
-                <h3>Veronika, the fairy that made this, can be found here:</h3>
-                <div className="social-links">
-                    <span className="veronikafairy"></span>
-                    <ul>
-                        <li>
-                            <i className="social-link-div"></i>
-                            <a href="https://github.com/VPilipenko334" target="_blank">Github</a>
-                        </li>
-                        <li>
-                            <i className="social-link"></i>
-                            <a href="https://linkedin.com/in/veronikapilipenko" target="_blank">LinkedIn</a>
-                        </li>
-                    </ul>
-                </div>
+        
                 <div className="final">
-                    <h1>Community</h1>
-                    <ul>
-                        <li>
-                            <NavLink to="/">Back to Home</NavLink>
-                        </li>
-                    </ul>
+                    <NavLink to="/">Back to Home</NavLink>
                 </div>
             </div>
             <div>
@@ -90,5 +68,4 @@ export default () => (
                 </footer>
             </div>
         </div>
-    </div>
 )
