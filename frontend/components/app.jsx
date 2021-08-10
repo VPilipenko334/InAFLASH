@@ -24,9 +24,13 @@ import home_container from './home/home_container';
 const App = () => (
     <div>
         <div className="header-container">
-            <div className="links">
-                <Link to="/"><h1>InAFlash</h1></Link>
-
+            <div className="links"> 
+                <div id="nav-bar-things">
+                <Link to="/" id="logo"><h1>InAFlash</h1></Link>
+                    <a href="https://github.com/VPilipenko334" id="git">Github      </a>
+                    <a href="https://linkedin.com/in/veronikapilipenko" id="linkedin">LinkedIn</a>
+                    <br/>
+                    </div>
                 <input type="text" placeholder="Search" />
                 <GreetingContainer />
                 {/* <PictureIndexContainer /> */}

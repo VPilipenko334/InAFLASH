@@ -14,46 +14,48 @@ export default () => (
         </div>
 
         <div className="about-container-head"> <br /><br />
-            <h3 className="difference">What makes us different?</h3> 
+            <h3 className="difference">What makes us different?</h3><br />
                 <div className="body-container">
                     <span className="leaves"></span>
-                    <h4>Grow as an artist</h4>
-                        <p>Get immediate exposure with your first upload. Our Pulse algorithm surfaces new photographs and 
+                    <h4 className="words">Grow as an artist</h4>
+                        <p id="smollwords">Get immediate exposure with your first upload. Our Pulse algorithm surfaces new photographs and 
                             photographers, ensuring your photos are seen by the community so you receive valuable feedback on day one.
-                        </p>
+                        </p><br />
                 </div>
         </div>
 
         <div className="body-container">
                     <span className="pencil"></span>
-                    <h4>Build Your Career</h4>
-                        <p>Present yourself as a professional. Display your Services, create a Directory listing and get hired, 
+                    <h4 className="words">Build Your Career</h4>
+                        <p id="smollwords">Present yourself as a professional. Display your Services, create a Directory listing and get hired, 
                         showcase your articles, presets, videos, and more with Resources, and curate Galleries to highlight your work.
-                        </p>
+                        </p><br />
         </div>
 
         <div className="body-container">
                     <span className="stats"></span>
-                        <h4>See how you're performing</h4>
-                            <p>With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank 
+                     <h4 className="words">See how you're performing</h4>
+                            <p id="smollwords">With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank 
                             in comparison to other photographers in the community.
-                            </p>
+                            </p><br />  
         </div>
-
+                <br /><br /><br />
         <div className="fairy-generater-container">
                 <div className="content-box">
                     <span className="random-fairies"></span>
-                        <h4>Coolest Fairy of the Week: </h4>
-                           <button>Generate Fairy Here</button>
+                        <h3 id="cool-fairy">Coolest Fairy of the Week: </h3>
+                        <center><button id="generator-button">Generate Fairy Here</button></center>
                 </div>
         </div>
 
         <div className="content-box-two">
             <div className="smoller-content-box">
-                <h3>Join our community today</h3>
+                <div className="community">
+                <h3 id="join-community">Join our community today</h3>
                     <p>Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography
                     </p>
                 <button><Link to="/signup" className="sign-up-link">Sign up</Link></button>
+                </div>
             </div>
     
         <div className="about-me">

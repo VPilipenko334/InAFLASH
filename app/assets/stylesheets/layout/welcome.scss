@@ -21,7 +21,7 @@
 }
 
 .first-h1 {
-  font-size: 48px;
+  font-size: 46px;
   line-height: 52px;
   letter-spacing: -0.4px;
 }
@@ -128,43 +128,53 @@ inner-main-container {
   margin-bottom: 20px;
 }
 
+.words {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+// #smollwords {
+//   font-size: 16px;
+//   line-height: 20px;
+//   letter-spacing: 0px;
+//   text-transform: none;
+// }
+
 .pencil {
-  display: block;
+  display: inline-block;
   background-image: image-url("../pictures/2.png");
   background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
   height: 64px;
   width: 64px;
-  margin-bottom: 10px;
-  display: block;
+  margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .leaves {
-  display: block;
+  display: inline-block;
   background-image: image-url("../pictures/1.png");
   background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
   height: 64px;
   width: 64px;
-  margin-bottom: 10px;
-  display: block;
+  margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
 }
 .stats {
-  display: block;
+  display: inline-block;
   background-image: image-url("../pictures/4.png");
- background-size: cover;
+  background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
   height: 64px;
   width: 64px;
-  margin-bottom: 10px;
-  display: block;
+  margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -178,92 +188,73 @@ inner-main-container {
 //   padding-bottom: 50px;
 //   margin-top: 20px;
 // }
-// .content_box {
-//   justify-content: center;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-// }
 
-// .content_box > h3 {
-//   font-weight: bolder;
-//   color: white;
-//   font-size: 40px;
-//   margin-bottom: 20px;
-//   text-align: center;
-// }
-// .content_box > p {
-//   color: white;
-//   font-weight: lighter;
-//   margin-bottom: 20px;
-//   text-align: center;
-//   width: 60%;
-//   font-size: 20px;
-// }
+#cool-fairy {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+}
 
-// .content_box > button {
-//   padding: 5px 15px 5px 15px;
+// #generator-button {
+//   margin-top: 16px;
+//   height: 64px;
+//   width: auto;
 //   font-size: 24px;
-//   border-radius: 40px;
-//   width: 220px;
-//   height: 60px;
-//   color: black;
-//   text-decoration: none;
-//   border: none;
-// }
-
-// .content_box > button:hover {
-//   color: #1890ff;
-//   cursor: pointer;
-// }
-
-// div footer {
-//   font-size: 16px;
-//   display: flex;
-//   flex-direction: column;
 //   justify-content: center;
-//   text-align: center;
-//   align-items: center;
-//   text-transform: uppercase;
-//   border-top: 1px solid lightgray;
-//   margin: 10px 30px;
-//   padding: 10px;
+//   font-weight: bold;
+//   margin: 10px;
+//   border: none;
+//   // min-width: 216px;
+//   background-color: burlywood;
+//   color: black;
 // }
 
-// .link_with_no_underLine {
-//   text-decoration: none;
-//   color: inherit;
+.community {
+  background-image: image-url("../pictures/sunflower.jpg");
+  background-size: cover;
+  display: inline-block;
+  position: relative;
+  // padding-top: 100%;
+  // width: 100%;
+  padding-top: 70vh;
+  width: 100vw;
+  margin-top: 2%;
+  font-size: 16px;
+}
+
+#community-join {
+  font-size: 0px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#nav-bar-things {
+  text-decoration: none; 
+  color: black;
+}
+
+// #git {
+
 // }
 
-// .content_box_container2 {
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-evenly;
-//   text-align: center;
+// #linkedin {
+//   display: inline-block;
+//   background-image: image-url("../pictures/2.png");
+//   background-size: cover;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   height: 64px;
+//   width: 64px;
+//   margin-bottom: 5px;
+//   margin-left: auto;
+//   margin-right: auto;
 // }
 
-// .content_box2 {
-//   width: 50%;
-//   margin-top: 20px;
-//   margin-bottom: 50px;
-//   h1 {
-//     font-size: 20px;
-//     font-weight: bold;
-//     color: rgb(97, 96, 96);
-//     padding-bottom: 20px;
-//   }
-//   li {
-//     color: rgb(97, 96, 96);
-//     padding-top: 20px;
-//     a {
-//       text-decoration: none;
-//       color: inherit;
-//       margin-left: 10px;
-//     }
-//   }
-
-//   li:hover {
-//     color: #1890ff;
-//     cursor: pointer;
-//   }
+// #logo {
+//   background-image: image-url("../pictures/flash.png");
+//   background-size: cover;
 // }

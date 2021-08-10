@@ -7,7 +7,7 @@ import PictureIndexContainer from '../pictures/pictures_index_container';
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
-      <Link to="/login">Login</Link>
+      <Link to="/login">Login    </Link>
       <Link to="/signup">Sign up!</Link>
     </nav>
   );
