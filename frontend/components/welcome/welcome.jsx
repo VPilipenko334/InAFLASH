@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom';
+import { getRandomImage } from '../generator/random_generator.js'
 
 export default () => (
     <div className="home">
@@ -43,8 +44,11 @@ export default () => (
                 
                 <div className="content-box">
                     <span className="random-photos"></span><br/>
+                        <div id="random-photo"> 
+                        
+                        </div>
                         <center><h3 id="cool-photo">Coolest Photo of the week:</h3></center><br/>
-            <center><button id="generator-button">Generate Photo Here</button></center><br /><br /><br />
+            <center><button id="generator-button" onClick={getRandomImage}>Generate Photo Here</button></center><br /><br /><br />
                 </div>
 
         <div className="content-box-two">
