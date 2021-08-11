@@ -1497,12 +1497,9 @@ var createPicture = function createPicture(picture) {
   return $.ajax({
     method: "POST",
     url: "/api/pictures/".concat(picture),
-    data: {
-      picture: picture
-    } //contentType: false,
-    //processData: false,
-    //data: formData
-
+    contentType: false,
+    processData: false,
+    data: formData
   });
 };
 var deletePicture = function deletePicture(pictureId) {
