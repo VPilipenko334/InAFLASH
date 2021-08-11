@@ -26,19 +26,17 @@ class UploadPicture extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value })
     }
 
-    // handleSubmit(e) {
-    //     e.preventDefault();
-    //     this.props.submitPicture(this.state);
-    // }
-
     handleFile(e) {
         const file = e.target.files[0];
         const fileReader = new FileReader();
         fileReader.onloadend = () => {
-            this.setState({ photoFile: file, photoUrl: fileReader.result, selectForm: 1 });
-        };
+            this.setState({ pictureFile: file, photoUrl: fileReader.result, selectForm: 1 });
+        }
+
         if (file) {
             fileReader.readAsDataURL(file);
+        } else {
+            this.setState({ imageUrl: "", imageFile: null });
         }
     }
 
@@ -54,13 +52,14 @@ class UploadPicture extends React.Component {
         }
     }
 
+
     handleCancel(e) {
         this.setState({ selectForm:0})
     }
 
 
     render() {
-      //can render a special upload photo button here
+   
         const PreviewPhoto = this.state.pictureUrl ? <img className="upload-form-preview" src={this.state.pictureUrl} /> : null;
 
 
@@ -93,7 +92,7 @@ class UploadPicture extends React.Component {
         if (this.state.selectForm === 1) {
             return (
 
-                <div className="uploaded-container"> 
+                <div className="uploaded-container-photo"> 
                     <div className="upload-button-box">
                         <label id="uploading-here">
                             <h2>Upload</h2>
@@ -115,7 +114,7 @@ class UploadPicture extends React.Component {
                             </label> <br/>
                             <div>
                                 <button className="cancel-button" onClick={this.handleCancel}>Cancel</button>
-                                <input className="upload-button" onSubmit={this.handleSubmit} type="submit" value="Upload Photo" />
+                                <button className="upload-button" onSubmit={this.handleSubmit}>Upload</button>
                             </div>
                         </form>
                 </div>

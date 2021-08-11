@@ -1,4 +1,3 @@
-
 @pictures.each do |picture|
     json.set! picture.id do
         json.extract! picture, :id, :title, :description, :userId
