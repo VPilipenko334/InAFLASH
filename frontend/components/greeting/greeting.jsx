@@ -28,11 +28,12 @@ const Greeting = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <div className="header-group">
       <h2 className="header-name">Welcome, {currentUser.username}!</h2>
+        <div className="buttons-on-homepage">
       <button className="header-button" onClick={logout}>Log Out</button>
       
       <button><Link to="/upload" className="upload-photo">Upload</Link></button>
       <button><Link to="/userId" className="user-id">User HomePage</Link></button>
-      
+      </div>
     </div>
   );
 

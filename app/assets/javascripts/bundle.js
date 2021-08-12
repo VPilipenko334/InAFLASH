@@ -255,8 +255,6 @@ var scrollFunc = function scrollFunc() {
   }
 };
 
-window.addEventListener("scroll", scrollFunc);
-
 var scrollToTop = function scrollToTop() {
   var c = document.documentElement.scrollTop || document.body.scrollTop;
 
@@ -283,7 +281,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var randomPic = new Array();
 randomPic[0] = "https://inaflash-seeds.s3.amazonaws.com/bride.jpg";
-randomPic[1] = "https://inaflash-seeds.s3.amazonaws.com/beach.jpg";
+randomPic[1] = "https://inaflash-seeds.s3.amazonaws.com/background.jpg";
 randomPic[2] = "https://inaflash-seeds.s3.amazonaws.com/bride.jpg";
 randomPic[3] = "https://inaflash-seeds.s3.amazonaws.com/castle.jpg";
 randomPic[4] = "https://inaflash-seeds.s3.amazonaws.com/child.jpg";
@@ -371,7 +369,9 @@ var Greeting = function Greeting(_ref) {
       className: "header-group"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
       className: "header-name"
-    }, "Welcome, ", currentUser.username, "!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    }, "Welcome, ", currentUser.username, "!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "buttons-on-homepage"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
       className: "header-button",
       onClick: logout
     }, "Log Out"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
@@ -380,7 +380,7 @@ var Greeting = function Greeting(_ref) {
     }, "Upload")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       to: "/userId",
       className: "user-id"
-    }, "User HomePage")));
+    }, "User HomePage"))));
   };
 
   return currentUser ? personalGreeting() : sessionLinks();
@@ -780,7 +780,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
       title: "",
       description: "",
       privacy: "",
-      userId: _this.props.userId,
+      userId: _this.props.currentUserId,
       redirect: false,
       pictureFile: null,
       pictureUrl: null,
@@ -838,10 +838,10 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
         var formData = new FormData();
         formData.append('picture[title]', this.state.title);
         formData.append('picture[description]', this.state.description);
-        formData.append('picture[userId]', this.state.userId);
+        formData.append('picture[user_id]', this.state.userId);
         formData.append('picture[picture]', this.state.pictureFile);
-        this.props.createPicture(formData).then(function (rest) {
-          return _this4.props.history.push("/pictures/".concat(rest.picture.id));
+        this.props.createPicture(formData).then(function (res) {
+          return _this4.props.history.push("/pictures/".concat(res.id));
         });
       }
     }
@@ -911,7 +911,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
           onClick: this.handleCancel
         }, "Cancel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
           className: "upload-button",
-          onClick: this.handleSubmit
+          type: "submit"
         }, "Upload"))));
       }
     }
@@ -949,8 +949,7 @@ var mapStateToProps = function mapStateToProps() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   return {
     picture: state.entities.pictures,
-    currentUser: state.session.id // or state.session.currentUser.id?
-
+    currentUserId: state.session.id
   };
 };
 
@@ -1128,21 +1127,10 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
     value: function demoLogin(e) {
       e.preventDefault();
       this.props.login({
-        username: 'guest',
-        password: 'password'
+        username: 'mikem',
+        password: 'teslaspacerocket'
       });
-    } // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
-
+    }
   }, {
     key: "render",
     value: function render() {
@@ -1603,9 +1591,7 @@ var createPicture = function createPicture(picture) {
     url: '/api/pictures',
     contentType: false,
     processData: false,
-    data: {
-      picture: picture
-    }
+    data: picture
   });
 };
 var deletePicture = function deletePicture(pictureId) {

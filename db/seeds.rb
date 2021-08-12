@@ -14,40 +14,52 @@ require 'net/http'
 Picture.destroy_all
 User.destroy_all
 
-
+#creating users 
 user1 = User.create!(username: 'veropili', password: 'hello123456')
-
 user2 = User.create!(username: 'marafinkel', password: 'passwordpassword')
-
 user3 = User.create!(username: 'chrisd', password: 'hellofriends')
-
 user4 = User.create!(username: 'jenny', password: 'thisismypassword')
-
 user5 = User.create!(username: 'elonmusk', password: '123456')
-
 user6 = User.create!(username: 'willsand', password: 'idontknowmyname')
-
 user7 = User.create!(username: 'mikem', password: 'teslaspacerocket')
-
 user8 = User.create!(username: 'walker', password: 'jellybeansareyum')
-
 user9 = User.create!(username: 'charis', password: 'ilovetodance')  
-
 user10 = User.create!(username: 'nicha', password: 'imclinicallyinsanetbh')
 
-user11 = User.create!(username: 'mishka', password: 'passwordsarelong')
+#adding pictures to the database 
+picture1 = Picture.create!(title: 'beach', private: false, description: 'first', user_id: user1.id)
+picture2 = Picture.create!(title: 'bride', private: false, description: 'a photo of a beautiful bride', user_id: user2.id)
+picture3 = Picture.create!(title: 'castle', private: false, description: 'a wonderful castle stands', user_id: user3.id)
+picture4 = Picture.create!(title: 'child', private: false, description: 'a child is found on the photo', user_id: user4.id)
+picture5 = Picture.create!(title: 'cloud', private: true, description: 'the beautiful clouds', user_id: user5.id)
+picture6 = Picture.create!(title: 'grey', private: true, description: 'grey clouds', user_id: user6.id)
+picture7 = Picture.create!(title: 'fairy', private: true, description: 'a beautiful fairy has appeared!', user_id: user7.id)
+picture8 = Picture.create!(title: 'house', private: true, description: 'a house stands', user_id: user8.id)
+picture9 = Picture.create!(title: 'mushrooms', private: true, description: 'beautiful neon mushrooms that light up the night sky', user_id: user9.id)
+picture10 = Picture.create!(title: 'ocean', private: false, description: 'the ocean is the purest place on earth', user_id: user10.id)
 
-user12 = User.create!(username: 'jellybean', password: 'imadog')
+#AWS attaching pictures // seeding the database
 
-user13 = User.create!(username: 'ronniepizzle', password: 'swimming')
+file1 = open("https://inaflash-seeds.s3.amazonaws.com/background.jpg")
+file2 = open("https://inaflash-seeds.s3.amazonaws.com/bride.jpg")
+file3 = open("https://inaflash-seeds.s3.amazonaws.com/castle.jpg")
+file4 = open("https://inaflash-seeds.s3.amazonaws.com/child.jpg")
+file5 = open("https://inaflash-seeds.s3.amazonaws.com/cloud.jpg")
+file6 = open("https://inaflash-seeds.s3.amazonaws.com/grey.jpg")
+file7 = open("https://inaflash-seeds.s3.amazonaws.com/fairy.jpg")
+file8 = open("https://inaflash-seeds.s3.amazonaws.com/house.jpg")
+file9 = open("https://inaflash-seeds.s3.amazonaws.com/mushrooms.jpg")
+file10 = open("https://inaflash-seeds.s3.amazonaws.com/ocean.jpg")
 
-user14 = User.create!(username: 'girlygirl101', password: 'tirednosleep')
 
-user15 = User.create!(username: 'hifriends', password: 'passpasspass')
-
-picture1 = Picture.create!(title: 'title', private: false, description: 'first', user_id: user1.id)
-
-
-file = open('https://inaflash-seeds.s3.amazonaws.com/bride.jpg')
-
-picture1.picture.attach(io: file, filename: 'bride.jpg')
+#attaching the pictures to the users 
+picture1.picture.attach(io: file1, filename: 'bride.jpg')
+picture2.picture.attach(io: file2, filename: 'bridge.jpg')
+picture3.picture.attach(io: file3, filename: 'castle.jpg')
+picture4.picture.attach(io: file4, filename: 'child.jpg')
+picture5.picture.attach(io: file5, filename: 'cloud.jpg')
+picture6.picture.attach(io: file6, filename: 'grey.jpg')
+picture7.picture.attach(io: file7, filename: 'fairy.jpg')
+picture8.picture.attach(io: file8, filename: 'house.jpg')
+picture9.picture.attach(io: file9, filename: 'mushrooms.jpg')
+picture10.picture.attach(io: file10, filename: 'ocean.jpg')

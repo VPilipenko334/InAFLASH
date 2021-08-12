@@ -9,7 +9,7 @@ class UploadPicture extends React.Component {
             title: "",
             description: "",
             privacy: "",
-            userId: this.props.userId,
+            userId: this.props.currentUserId,
             redirect: false, 
             pictureFile: null, 
             pictureUrl: null,
@@ -47,9 +47,9 @@ class UploadPicture extends React.Component {
             const formData = new FormData();
             formData.append('picture[title]', this.state.title)
             formData.append('picture[description]', this.state.description)
-            formData.append('picture[userId]', this.state.userId)
+            formData.append('picture[user_id]', this.state.userId)
             formData.append('picture[picture]', this.state.pictureFile)
-            this.props.createPicture(formData).then(rest => this.props.history.push(`/pictures/${rest.picture.id}`));
+            this.props.createPicture(formData).then(res => this.props.history.push(`/pictures/${res.id}`));
         }
     }
 
@@ -115,7 +115,7 @@ class UploadPicture extends React.Component {
                             </label> <br/>
                             <div>
                                 <button className="cancel-button" onClick={this.handleCancel}>Cancel</button>
-                                <button className="upload-button" onClick={this.handleSubmit}>Upload</button>
+                                <button className="upload-button" type="submit">Upload</button>
                             </div>
                         </form>
                 </div>

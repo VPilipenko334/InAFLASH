@@ -24,7 +24,7 @@ export const createPicture = (picture) => {
         url: '/api/pictures',
         contentType: false,
         processData: false,
-        data: {picture}
+        data: picture
     })
 }
 

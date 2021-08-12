@@ -1,7 +1,7 @@
   const randomPic = new Array();
 
   randomPic[0] = "https://inaflash-seeds.s3.amazonaws.com/bride.jpg";
-  randomPic[1] = "https://inaflash-seeds.s3.amazonaws.com/beach.jpg";
+  randomPic[1] = "https://inaflash-seeds.s3.amazonaws.com/background.jpg";
   randomPic[2] = "https://inaflash-seeds.s3.amazonaws.com/bride.jpg";
   randomPic[3] = "https://inaflash-seeds.s3.amazonaws.com/castle.jpg";
   randomPic[4] = "https://inaflash-seeds.s3.amazonaws.com/child.jpg";

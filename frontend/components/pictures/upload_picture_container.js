@@ -7,7 +7,7 @@ import { createPicture } from "../../actions/picture_actions";
 const mapStateToProps = (state={}) => {
     return {
         picture: state.entities.pictures, 
-        currentUser: state.session.id    // or state.session.currentUser.id?
+        currentUserId: state.session.id 
     }
 }
 

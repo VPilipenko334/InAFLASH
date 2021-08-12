@@ -5,7 +5,8 @@ class Api::PicturesController < ApplicationController
        #creating/ adding a new picture 
     def create
         @picture = Picture.new(picture_params)
-        if @picture.save! && picture.user_id == current_user.id
+        # debugger
+        if @picture.save! && @picture.user_id == current_user.id
             render 'api/pictures/show' #front-end component 
         else 
             render json: @picture.errors.full_messages, status: 401
@@ -37,7 +38,7 @@ class Api::PicturesController < ApplicationController
     private 
 
     def picture_params
-        params.require(:picture).permit(:title, :description, :user_id, :photo)
+        params.require(:picture).permit(:title, :description, :user_id, :picture)
     end
 
 

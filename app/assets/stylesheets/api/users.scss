@@ -1,3 +1,36 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header-group {
+  background-color: rgb(255, 255, 255);
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header-group {
+  display: inline-block;
+  margin: 0 5px;
+  flex-direction: row;
+  margin:0 -15px;
+  padding:0 20px;
+}
+
+// .buttons-on-homepage {
+//  text-d
+// }
+
+
+.header-name {
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  margin: 0px -15px;
+  padding:0 40px;
+}
+

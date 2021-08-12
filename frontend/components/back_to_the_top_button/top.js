@@ -9,7 +9,6 @@ const scrollFunc = () => {
     }
 };
 
-window.addEventListener("scroll", scrollFunc);
 
 const scrollToTop = () => {
     const c = document.documentElement.scrollTop || document.body.scrollTop;

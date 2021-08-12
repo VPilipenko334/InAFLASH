@@ -25,20 +25,9 @@ class SessionForm extends React.Component {
 
     demoLogin(e) {
         e.preventDefault();
-        this.props.login({username: 'guest', password: 'password'})
+        this.props.login({ username: 'mikem', password: 'teslaspacerocket'})
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
 
     render() {
         return (
@@ -47,7 +36,6 @@ class SessionForm extends React.Component {
                     <form onSubmit={this.handleSubmit} className="login-form-box">
                         Welcome to InAFlash!
                         <br />
-                        {/* {this.renderErrors()} */}
                         <div className="login-form">
                             <br />
                             <label>Username:
