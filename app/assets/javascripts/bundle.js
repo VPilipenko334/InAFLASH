@@ -832,13 +832,13 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
     value: function handleSubmit(e) {
       var _this4 = this;
 
-      e.preventDefault();
+      e.preventDefault(); // debugger
 
-      if (this.tError === false) {
-        var formData = new formData();
+      if (this.state.tError === false) {
+        var formData = new FormData();
         formData.append('picture[title]', this.state.title);
         formData.append('picture[description]', this.state.description);
-        form.append('picture[userId]', this.state.userId);
+        formData.append('picture[userId]', this.state.userId);
         formData.append('picture[picture]', this.state.pictureFile);
         this.props.createPicture(formData).then(function (rest) {
           return _this4.props.history.push("/pictures/".concat(rest.picture.id));
@@ -911,7 +911,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
           onClick: this.handleCancel
         }, "Cancel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
           className: "upload-button",
-          onSubmit: this.handleSubmit
+          onClick: this.handleSubmit
         }, "Upload"))));
       }
     }
@@ -938,6 +938,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _upload_picture__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./upload_picture */ "./frontend/components/pictures/upload_picture.jsx");
+/* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
+
 
 
 
@@ -954,19 +956,9 @@ var mapStateToProps = function mapStateToProps() {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    createPicture: function (_createPicture) {
-      function createPicture(_x) {
-        return _createPicture.apply(this, arguments);
-      }
-
-      createPicture.toString = function () {
-        return _createPicture.toString();
-      };
-
-      return createPicture;
-    }(function (picture) {
-      return dispatch(createPicture(picture));
-    })
+    createPicture: function createPicture(picture) {
+      return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_3__.createPicture)(picture));
+    }
   };
 };
 
@@ -1046,6 +1038,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     processForm: function processForm(user) {
       return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.login)(user));
+    },
+    login: function login(user) {
+      return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.login)(user));
     }
   };
 };
@@ -1108,6 +1103,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       password: ""
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.demoLogin = _this.demoLogin.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1126,6 +1122,15 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       e.preventDefault();
       var user = Object.assign({}, this.state);
       this.props.processForm(user);
+    }
+  }, {
+    key: "demoLogin",
+    value: function demoLogin(e) {
+      e.preventDefault();
+      this.props.login({
+        username: 'guest',
+        password: 'password'
+      });
     } // renderErrors() {
     //     return (
     //         <ul>
@@ -1164,7 +1169,9 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         className: "session-submit",
         type: "submit",
         value: this.props.formType
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Please ", this.props.formType, " or ", this.props.navLink)));
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        onClick: this.demoLogin
+      }, "Demo User")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Please ", this.props.formType, " or ", this.props.navLink)));
     }
   }]);
 
@@ -1197,6 +1204,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
   return {
@@ -1212,6 +1220,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     processForm: function processForm(user) {
       return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.signup)(user));
+    },
+    login: function login(user) {
+      return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.login)(user));
     }
   };
 };
@@ -1589,10 +1600,12 @@ var fetchPictures = function fetchPictures() {
 var createPicture = function createPicture(picture) {
   return $.ajax({
     method: "POST",
-    url: "/api/pictures/".concat(picture),
+    url: '/api/pictures',
     contentType: false,
     processData: false,
-    data: formData
+    data: {
+      picture: picture
+    }
   });
 };
 var deletePicture = function deletePicture(pictureId) {

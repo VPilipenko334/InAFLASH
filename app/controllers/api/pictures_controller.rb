@@ -1,6 +1,6 @@
 class Api::PicturesController < ApplicationController
     
-    before_action :require_logged_in, only: [:create, :destroy]
+    before_action :require_logged_in!, only: [:create, :destroy]
 
        #creating/ adding a new picture 
     def create
@@ -18,11 +18,13 @@ class Api::PicturesController < ApplicationController
         render :index 
     end
 
+
     def show
         @picture = Picture.find(params[:id])
         render :show
     end
 
+    
     def destroy 
         @picture = Picture.find(params[:id])
         if @picture.user_id == current_user.id
@@ -37,7 +39,6 @@ class Api::PicturesController < ApplicationController
     def picture_params
         params.require(:picture).permit(:title, :description, :user_id, :photo)
     end
-
 
 
 end

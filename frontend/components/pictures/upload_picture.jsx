@@ -42,11 +42,12 @@ class UploadPicture extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        if (this.tError === false) {
-            const formData = new formData();
+        // debugger
+        if (this.state.tError === false) {
+            const formData = new FormData();
             formData.append('picture[title]', this.state.title)
             formData.append('picture[description]', this.state.description)
-            form.append('picture[userId]', this.state.userId)
+            formData.append('picture[userId]', this.state.userId)
             formData.append('picture[picture]', this.state.pictureFile)
             this.props.createPicture(formData).then(rest => this.props.history.push(`/pictures/${rest.picture.id}`));
         }
@@ -114,7 +115,7 @@ class UploadPicture extends React.Component {
                             </label> <br/>
                             <div>
                                 <button className="cancel-button" onClick={this.handleCancel}>Cancel</button>
-                                <button className="upload-button" onSubmit={this.handleSubmit}>Upload</button>
+                                <button className="upload-button" onClick={this.handleSubmit}>Upload</button>
                             </div>
                         </form>
                 </div>

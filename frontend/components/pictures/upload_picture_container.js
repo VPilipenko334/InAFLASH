@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import UploadPicture from "./upload_picture";
 import { withRouter } from "react-router";
+import { createPicture } from "../../actions/picture_actions";
 
 const mapStateToProps = (state={}) => {
     return {
