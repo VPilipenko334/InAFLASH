@@ -10,7 +10,7 @@
   padding: 10px;
 }
 
-.header-group {
+.buttons-on-homepage {
   display: inline-block;
   margin: 0 5px;
   flex-direction: row;
@@ -18,19 +18,34 @@
   padding:0 20px;
 }
 
-// .buttons-on-homepage {
-//  text-d
-// }
-
+.homepage-header-button {
+  width: auto;
+  min-width: 124px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  margin: 0px;
+  border-width: 2px;
+  border-radius: 28px;
+  border-style: solid;
+  cursor: pointer;
+  text-align: center;
+  max-height: 48px;
+  padding: 10px 22px 10px 14px;
+  text-decoration: none;
+}
 
 .header-name {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: normal;
   cursor: pointer;
   color: rgb(49, 49, 49);
   text-decoration: none;
   font-family: Helvetica Neue, Arial, sans-serif;
   margin: 0px -15px;
-  padding:0 40px;
+  padding:0 20px;
 }
-

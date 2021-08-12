@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
         };
 
         let { username, password, } = demoUser;
-        let interval = 3000;
+        let interval = 100;
         let login = () => {
             this.props.processForm(this.state);
             this.props.history.push("/")
@@ -75,7 +75,8 @@ class SessionForm extends React.Component {
                         <br />
                         <div className="login-form">
                             <br />
-                            <label>Username:
+                            <label className="username-password">Username:
+                                <br />
                                 <input type="text"
                                     value={this.state.username}
                                     onChange={this.update('username')}
@@ -83,7 +84,8 @@ class SessionForm extends React.Component {
                                 />
                             </label>
                             <br />
-                            <label>Password:
+                            <label className="username-password">Password: 
+                                <br />
                                 <input type="password"
                                     value={this.state.password}
                                     onChange={this.update('password')}
@@ -92,7 +94,7 @@ class SessionForm extends React.Component {
                             </label>
                             <br />
                             <input className="session-submit" type="submit" value={this.props.formType} /><br/>
-                            <button onClick={this.demoLogin}>Demo User</button>
+                            <button className="demo-user-button" onClick={this.demoLogin}>Demo User</button>
                         </div>
                         <br />
                     Please {this.props.formType} or {this.props.navLink}

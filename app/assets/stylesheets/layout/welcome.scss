@@ -186,6 +186,13 @@ inner-main-container {
   font-family: Helvetica Neue, Arial, sans-serif;
 }
 
+#join-community {
+  font-size: 46px;
+  line-height: 52px;
+  letter-spacing: -0.4px;
+  text-align: left;
+}
+
 .community {
   background-image: image-url("../pictures/skyyyy.jpg");
   background-size: cover;
@@ -206,6 +213,7 @@ inner-main-container {
   margin-right: 10%;
   margin-left: 40%;
   margin-top: -10%;
+  
 }
 
 .content-box {
