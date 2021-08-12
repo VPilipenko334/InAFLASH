@@ -1134,7 +1134,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       };
       var username = demoUser.username,
           password = demoUser.password;
-      var interval = 100;
+      var interval = 300;
 
       var login = function login() {
         _this3.props.processForm(_this3.state);

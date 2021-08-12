@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
         };
 
         let { username, password, } = demoUser;
-        let interval = 100;
+        let interval = 300;
         let login = () => {
             this.props.processForm(this.state);
             this.props.history.push("/")
