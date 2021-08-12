@@ -232,6 +232,44 @@ var App = function App() {
 
 /***/ }),
 
+/***/ "./frontend/components/back_to_the_top_button/top.js":
+/*!***********************************************************!*\
+  !*** ./frontend/components/back_to_the_top_button/top.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var scrollToTopButton = document.getElementById('js-top');
+
+var scrollFunc = function scrollFunc() {
+  var y = window.scrollY;
+
+  if (y > 0) {
+    scrollToTopButton.className = "top-link show";
+  } else {
+    scrollToTopButton.className = "top-link hide";
+  }
+};
+
+window.addEventListener("scroll", scrollFunc);
+
+var scrollToTop = function scrollToTop() {
+  var c = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 10);
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollToTop);
+
+/***/ }),
+
 /***/ "./frontend/components/generator/random_generator.js":
 /*!***********************************************************!*\
   !*** ./frontend/components/generator/random_generator.js ***!
@@ -244,21 +282,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getRandomImage": () => (/* binding */ getRandomImage)
 /* harmony export */ });
 var randomPic = new Array();
-randomPic[0] = "https://inaflash-seeds.s3.amazonaws.com/bride.jpg"; // randomPic[1] = "./random_pics/beach.jpg";
-// randomPic[2] = "./random_pics/bride.jpg";
-// randomPic[3] = "./random_pics/castle.jpg";
-// randomPic[4] = "./random_pics/child.jpg";
-// randomPic[5] = "./random_pics/cloud.jpg";
-// randomPic[6] = "./random_pics/grey.jpg";
-// randomPic[7] = "./random_pics/fairy.jpg";
-// randomPic[8] = "./random_pics/house.jpg";
-// randomPic[9] = "./random_pics/mushrooms.jpg";
-// randomPic[10] = "./random_pics/ocean.jpg";
-// randomPic[11] = "./random_pics/painting.jpg";
-// randomPic[12] = "./random_pics/purple_trees.jpg";
-// randomPic[13] = "./random_pics/sea.jpg";
-// randomPic[14] = "./random_pics/ski.jpg";
-// randomPic[15] = "./random_pics/water.jpg";
+randomPic[0] = "https://inaflash-seeds.s3.amazonaws.com/bride.jpg";
+randomPic[1] = "https://inaflash-seeds.s3.amazonaws.com/beach.jpg";
+randomPic[2] = "https://inaflash-seeds.s3.amazonaws.com/bride.jpg";
+randomPic[3] = "https://inaflash-seeds.s3.amazonaws.com/castle.jpg";
+randomPic[4] = "https://inaflash-seeds.s3.amazonaws.com/child.jpg";
+randomPic[5] = "https://inaflash-seeds.s3.amazonaws.com/cloud.jpg";
+randomPic[6] = "https://inaflash-seeds.s3.amazonaws.com/grey.jpg";
+randomPic[7] = "https://inaflash-seeds.s3.amazonaws.com/fairy.jpg";
+randomPic[8] = "https://inaflash-seeds.s3.amazonaws.com/house.jpg";
+randomPic[9] = "https://inaflash-seeds.s3.amazonaws.com/mushrooms.jpg";
+randomPic[10] = "https://inaflash-seeds.s3.amazonaws.com/ocean.jpg";
+randomPic[11] = "https://inaflash-seeds.s3.amazonaws.com/painting.jpg";
+randomPic[12] = "https://inaflash-seeds.s3.amazonaws.com/purple_trees.jpg";
+randomPic[13] = "https://inaflash-seeds.s3.amazonaws.com/sea.jpg";
+randomPic[14] = "https://inaflash-seeds.s3.amazonaws.com/ski.jpg";
+randomPic[15] = "https://inaflash-seeds.s3.amazonaws.com/water.jpg";
 
 var getRandomNumber = function getRandomNumber(max) {
   return Math.floor(Math.random() * max);
@@ -1193,8 +1232,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _generator_random_generator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../generator/random_generator.js */ "./frontend/components/generator/random_generator.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _generator_random_generator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../generator/random_generator */ "./frontend/components/generator/random_generator.js");
+/* harmony import */ var _back_to_the_top_button_top__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../back_to_the_top_button/top */ "./frontend/components/back_to_the_top_button/top.js");
+
 
 
 
@@ -1207,7 +1248,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "inner-main-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     className: "first-h1"
-  }, "Discover and share the world\u2019s best photos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Get inspired with incredible photos from diverse styles and genres around the world. We're not guided by fads\u2014just great photography."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+  }, "Discover and share the world\u2019s best photos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Get inspired with incredible photos from diverse styles and genres around the world. We're not guided by fads\u2014just great photography."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
     to: "/signup",
     className: "sign-up-button-home"
   }, "Sign up"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1252,7 +1293,7 @@ __webpack_require__.r(__webpack_exports__);
     id: "random-photo"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     id: "generator-button",
-    onClick: _generator_random_generator_js__WEBPACK_IMPORTED_MODULE_1__.getRandomImage
+    onClick: _generator_random_generator__WEBPACK_IMPORTED_MODULE_1__.getRandomImage
   }, "Click for photo of the week")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "content-box-two"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1265,10 +1306,10 @@ __webpack_require__.r(__webpack_exports__);
     id: "join-community"
   }, "Join our community today"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     id: "love-pics"
-  }, "Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: "/",
-    className: "back-home-button"
-  }, "Back Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "back-home-button",
+    onClick: _back_to_the_top_button_top__WEBPACK_IMPORTED_MODULE_2__.default
+  }, "Scroll back to the top")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "final-words"
   }, "InAFlash - 2021 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Created by: Veronika Pilipenko"))));
 });

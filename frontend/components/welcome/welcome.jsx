@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { getRandomImage } from '../generator/random_generator.js'
+import { getRandomImage } from '../generator/random_generator'
+import scrollToTop from '../back_to_the_top_button/top'
 
 export default () => (
     <div className="home">
@@ -69,11 +70,11 @@ export default () => (
             </div>
                 <div>
                 <footer>
-                      <center><Link to="/" className="back-home-button">Back Home</Link></center>
+                <center><button className="back-home-button" onClick={scrollToTop}>Scroll back to the top</button></center>
                         <div className="final-words">
-                            InAFlash - 2021 <br/>
-                            Created by: Veronika Pilipenko 
-                     </div>
+                                InAFlash - 2021 <br/>
+                                Created by: Veronika Pilipenko 
+                        </div>
                     </footer>
                 </div>
             </div>

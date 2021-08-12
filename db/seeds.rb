@@ -47,6 +47,7 @@ user15 = User.create!(username: 'hifriends', password: 'passpasspass')
 
 picture1 = Picture.create!(title: 'title', private: false, description: 'first', user_id: user1.id)
 
+
 file = open('https://inaflash-seeds.s3.amazonaws.com/bride.jpg')
 
 picture1.picture.attach(io: file, filename: 'bride.jpg')

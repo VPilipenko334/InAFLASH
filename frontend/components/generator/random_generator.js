@@ -1,21 +1,21 @@
   const randomPic = new Array();
 
   randomPic[0] = "https://inaflash-seeds.s3.amazonaws.com/bride.jpg";
-  // randomPic[1] = "./random_pics/beach.jpg";
-  // randomPic[2] = "./random_pics/bride.jpg";
-  // randomPic[3] = "./random_pics/castle.jpg";
-  // randomPic[4] = "./random_pics/child.jpg";
-  // randomPic[5] = "./random_pics/cloud.jpg";
-  // randomPic[6] = "./random_pics/grey.jpg";
-  // randomPic[7] = "./random_pics/fairy.jpg";
-  // randomPic[8] = "./random_pics/house.jpg";
-  // randomPic[9] = "./random_pics/mushrooms.jpg";
-  // randomPic[10] = "./random_pics/ocean.jpg";
-  // randomPic[11] = "./random_pics/painting.jpg";
-  // randomPic[12] = "./random_pics/purple_trees.jpg";
-  // randomPic[13] = "./random_pics/sea.jpg";
-  // randomPic[14] = "./random_pics/ski.jpg";
-  // randomPic[15] = "./random_pics/water.jpg";
+  randomPic[1] = "https://inaflash-seeds.s3.amazonaws.com/beach.jpg";
+  randomPic[2] = "https://inaflash-seeds.s3.amazonaws.com/bride.jpg";
+  randomPic[3] = "https://inaflash-seeds.s3.amazonaws.com/castle.jpg";
+  randomPic[4] = "https://inaflash-seeds.s3.amazonaws.com/child.jpg";
+  randomPic[5] = "https://inaflash-seeds.s3.amazonaws.com/cloud.jpg";
+  randomPic[6] = "https://inaflash-seeds.s3.amazonaws.com/grey.jpg";
+  randomPic[7] = "https://inaflash-seeds.s3.amazonaws.com/fairy.jpg";
+  randomPic[8] = "https://inaflash-seeds.s3.amazonaws.com/house.jpg";
+  randomPic[9] = "https://inaflash-seeds.s3.amazonaws.com/mushrooms.jpg";
+  randomPic[10] = "https://inaflash-seeds.s3.amazonaws.com/ocean.jpg";
+  randomPic[11] = "https://inaflash-seeds.s3.amazonaws.com/painting.jpg";
+  randomPic[12] = "https://inaflash-seeds.s3.amazonaws.com/purple_trees.jpg";
+  randomPic[13] = "https://inaflash-seeds.s3.amazonaws.com/sea.jpg";
+  randomPic[14] = "https://inaflash-seeds.s3.amazonaws.com/ski.jpg";
+  randomPic[15] = "https://inaflash-seeds.s3.amazonaws.com/water.jpg";
 
 
   const getRandomNumber = (max) => Math.floor(Math.random() * max);
