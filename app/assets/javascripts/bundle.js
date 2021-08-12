@@ -1125,12 +1125,57 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "demoLogin",
     value: function demoLogin(e) {
+      var _this3 = this;
+
       e.preventDefault();
-      this.props.login({
-        username: 'mikem',
-        password: 'teslaspacerocket'
-      });
-    }
+      var demoUser = {
+        username: "mikem",
+        password: "teslaspacerocket"
+      };
+      var username = demoUser.username,
+          password = demoUser.password;
+      var interval = 3000;
+
+      var login = function login() {
+        _this3.props.processForm(_this3.state);
+
+        _this3.props.history.push("/");
+      };
+
+      if (this.state.username !== username) {
+        var inputUsername = setInterval(function () {
+          if (_this3.state.username !== username) {
+            var tempUsername = username.slice(0, _this3.state.username.length + 1);
+
+            _this3.setState({
+              username: username
+            });
+          } else {
+            clearInterval(inputUsername);
+            fillPassword();
+          }
+        }, interval);
+      }
+
+      var fillPassword = function fillPassword() {
+        var inputPassword = setInterval(function () {
+          if (_this3.state.password !== password) {
+            var tempPassword = password.slice(0, _this3.state.password.length + 1);
+
+            _this3.setState({
+              password: password
+            });
+          } else {
+            clearInterval(inputPassword);
+            login();
+          }
+        }, interval);
+      };
+    } // demoLogin(e) {
+    //     e.preventDefault();
+    //     this.props.login({ username: 'mikem', password: 'teslaspacerocket'})
+    // }
+
   }, {
     key: "render",
     value: function render() {
