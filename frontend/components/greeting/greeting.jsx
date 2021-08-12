@@ -9,17 +9,18 @@ const Greeting = ({ currentUser, logout }) => {
     <div className="main-top-container">
       <nav className="login-signup-links">
         <header className="header-container">
-          <div id="nav-bar-things">
-            <Link to="/">InAFlash</Link>
-            <a href="https://github.com/VPilipenko334" id="git">      Github      </a>
-            <a href="https://linkedin.com/in/veronikapilipenko" id="linkedin">LinkedIn</a>
+          <div className="nav-bar-things">
+            <Link to="/" className="logo">InAFlash</Link>
+            <a href="https://github.com/VPilipenko334" className="git">      Github      </a>
+            <a href="https://linkedin.com/in/veronikapilipenko" className="linkedin">LinkedIn</a>
             <br />
-          </div>
+            </div>
+          <div className="more-nav-right">
+            <input type="text" placeholder="Search InAFlash..." className="search-bar" />
 
-          <input type="text" placeholder="Search" />
-
-            <Link className="log-in-link" to="/login">Login    </Link>
-            <button><Link className="sign-up-button-form" to="/signup">Sign up!</Link></button>
+              <Link className="log-in-link" to="/login">Login    </Link>
+              <Link className="sign-up-button-form" to="/signup">Sign up</Link>
+              </div>
         </header>
       </nav>
     </div>

@@ -32,14 +32,12 @@
   max-width: 40%;
   text-align: left;
   padding: 30px -20px;
-  // border-radius: 10px;
 }
 
 .sign-up-button-home {
   margin-top: 16px;
   height: 64px;
   width: auto;
-  padding: 0px 32px;
   line-height: 64px;
   font-size: 24px;
   display: inline-flex;
@@ -51,6 +49,8 @@
   min-width: 216px;
   background-color: rgb(255, 255, 255);
   color: rgb(34, 34, 34);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 inner-main-container > h2 {
@@ -227,26 +227,50 @@ inner-main-container {
   padding: 10px;
 }
 
-#nav-bar-things >* {
-  // background-color: khaki;
-  font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-
-
-.log-in-link >* {
+.nav-bar-things  {
   display: inline-block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  margin: 0 5px;
+  flex-direction: row;
+  margin:0 -15px;
+  padding:0 20px;
+}
+
+.more-nav-right {
+  display: inline-block;
+  margin: 0 5px;
+  flex-direction: row;
 }
 
 
-.sign-up-button-form >* {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-	cursor: pointer;
-	background-color: white;
-  font-size: 15px;
-  text-decoration: none; 
+.log-in-link {
+  display: inline-block;
+  font-family: Helvetica Neue, Arial, sans-serif;
   color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0px -15px;
+  padding:0 40px;
+}
+
+
+.sign-up-button-form {
+  font-family: Helvetica Neue, Arial, sans-serif;
+  font-size: 14px;
+  margin-left: 0px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  padding: 0px 16px;
+  border-width: 2px;
+  border-radius: 100px;
+  border-style: solid;
+  line-height: 16px;
+  font-weight: bold;
+  height: 32px;
+  margin: 0px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 #photo-generator-text {
@@ -259,6 +283,7 @@ inner-main-container {
   width: 50%;
   margin: auto;
   padding: 5px;
+  text-decoration: none;
 }
 
 #editors {
@@ -291,6 +316,7 @@ inner-main-container {
   min-width: 216px;
   background-color: rgb(12, 6, 6);
   color: rgb(249, 249, 249);
+  text-decoration: none;
 }
 
 .final-words {
@@ -311,4 +337,52 @@ inner-main-container {
   display: flex;
   align-items: center;
   margin: auto;
+}
+
+.search-bar {
+  background-color: rgb(247, 248, 250);
+  border: none;
+  border-radius: 25px;
+  width: 210px;
+  height: 40px;
+  text-indent: 48px;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0px -15px;
+  padding:0 40px;
+}
+
+.logo { 
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  margin: 0px -15px;
+  padding:0 40px;
+}
+
+.git {
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  min-height: 31px;
+  margin: 0px -15px;
+  padding:0 40px;
+}
+
+.linkedin {
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  margin: 0px -15px;
+  padding:0 40px;
 }
