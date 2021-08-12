@@ -6,15 +6,15 @@ export default () => (
     <div className="home">
         <div className="top-bar">
             <div className="inner-main-container"> 
-                <h1 className="first-h1">Discover and share the world's most gorgeous faries</h1><br />
-                    <p>Get inspired to fly away with the most interesting, mythical and eccentric fairies.
-                    Follow the sparkles at the end of their fingertips to embark on a mystical adventure.
-                </p><br />
-                <button><Link to="/signup" className="sign-up-button">Sign up</Link></button>
+                <h1 className="first-h1">Discover and share the world’s best photos</h1><br />
+                    <p>Get inspired with incredible photos from diverse styles and genres around the world. 
+                    We're not guided by fads—just great photography.
+                    </p><br />
+                <Link to="/signup" className="sign-up-button-home">Sign up</Link>
             </div>
         </div>
 
-        <div className="about-container-head"> <br /><br />
+        <center><div className="about-container-head">
             <h3 className="difference">What makes us different?</h3><br />
                 <div className="body-container">
                     <span className="leaves"></span>
@@ -35,42 +35,44 @@ export default () => (
         </div>
 
         <div className="body-container">
-                    <span className="stats"></span>
-                     <h4 className="words">See how you're performing</h4>
+                <span className="stats"></span>
+                    <h4 className="words">See how you're performing</h4>
                             <p id="smollwords">With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank 
                             in comparison to other photographers in the community.
                             </p><br />  
-        </div><br />
+                </div></center><br />
                 
                 <div className="content-box">
+                    <center><div className="photo-icon"></div></center>
                     <span className="random-photos"></span><br/>
-                        <div id="random-photo"> 
-                        
+                        <center><h3 id="photo-generator-text">Photo of the week:</h3></center><br/>
+                        <br/> <p id="editors"> Our editors are always on the lookout for jaw dropping content for you 
+                        to discover and stay inspired. Check back weekly to see what’s new. </p>
+                        <div id="random-photo">
+
                         </div>
-                        <center><h3 id="cool-photo">Coolest Photo of the week:</h3></center><br/>
-            <center><button id="generator-button" onClick={getRandomImage}>Generate Photo Here</button></center><br /><br /><br />
+                        <center><button id="generator-button" onClick={getRandomImage}>Click for photo of the week</button></center><br /><br /><br />
                 </div>
 
         <div className="content-box-two">
             <div className="smoller-content-box">
                 <div className="community">
-                <h3 id="join-community">Join our community today</h3>
+                <h1 id="join-community">Join our community today</h1><br/>
                     <p id="love-pics">Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography
                     </p>
                 </div>
             </div>
     
         
-            <div className="final">
-                    <NavLink to="/">Back to Home</NavLink>
-                </div>
             </div>
                 <div>
                 <footer>
-                    <div>
-                        InAFlash - 2021
-                    </div>
-                </footer>
-            </div>
+                      <center><Link to="/" className="back-home-button">Back Home</Link></center>
+                        <div className="final-words">
+                            InAFlash - 2021 <br/>
+                            Created by: Veronika Pilipenko 
+                     </div>
+                    </footer>
+                </div>
             </div>
 )

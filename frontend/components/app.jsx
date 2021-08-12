@@ -25,22 +25,8 @@ import UploadPictureContainer from './pictures/upload_picture_container';
 
 const App = () => (
     <div>
-        <header className="header-container">
-            <div className="links"> 
-                <div id="nav-bar-things">
-                <Link to="/" id="logo"><h1>InAFlash</h1></Link>
-                    <a href="https://github.com/VPilipenko334" id="git">Github      </a>
-                    <a href="https://linkedin.com/in/veronikapilipenko" id="linkedin">LinkedIn</a>
-                    <br/>
-                    </div>
-                <input type="text" placeholder="Search" />
-                <GreetingContainer />
-                {/* <PictureIndexContainer /> */}
-            </div>
-            </header>
-
-
             <div className="login-links">
+            <GreetingContainer />
                 <Switch>
                         <Route exact path="/" component={welcome} />
                         <AuthRoute exact path="/signup" component={SignUpFormContainer} />

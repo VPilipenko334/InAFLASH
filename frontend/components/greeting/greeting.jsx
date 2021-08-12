@@ -6,10 +6,23 @@ import PictureIndexContainer from '../pictures/pictures_index_container';
 
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
-    <nav className="login-signup">
-      <Link to="/login">Login    </Link>
-      <Link to="/signup">Sign up!</Link>
-    </nav>
+    <div className="main-top-container">
+      <nav className="login-signup-links">
+        <header className="header-container">
+          <div id="nav-bar-things">
+            <Link to="/" id="logo">InAFlash      </Link> 
+            <a href="https://github.com/VPilipenko334" id="git">      Github      </a>
+            <a href="https://linkedin.com/in/veronikapilipenko" id="linkedin">LinkedIn</a>
+            <br />
+          </div>
+
+          <input type="text" placeholder="Search" />
+
+            <Link className="log-in-link" to="/login">Login    </Link>
+            <button><Link className="sign-up-button-form" to="/signup">Sign up!</Link></button>
+        </header>
+      </nav>
+    </div>
   );
   const personalGreeting = () => (
     <div className="header-group">

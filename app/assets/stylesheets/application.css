@@ -14,10 +14,7 @@
  *= require_self
  */
 
-
-
  h1 {
-
     display: flex;
     font-family: Helvetica Neue, Arial, sans-serif;
     font-size: 25px;
@@ -85,14 +82,10 @@ input[type=password]:focus, textarea:focus {
    font-family: Helvetica Neue, Arial, sans-serif;
  }
 
- 
-
-.header-container {
-  background-color: rgb(255, 255, 255);
-}
 
 .login-signup {
   flex-direction: column;
+  font-family: Helvetica Neue, Arial, sans-serif;
   padding: 0;
 	background: none;
 	border: none;
