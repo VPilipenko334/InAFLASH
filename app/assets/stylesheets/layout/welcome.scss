@@ -196,29 +196,16 @@ inner-main-container {
   height: 50vh;
 }
 
-#join-community {
-  font-size: 10px;
-  line-height: 40px;
-  font-weight: bold;
-  text-align: center;
-  box-sizing: border-box;
-  text-align: left;
-  color:white;
-  font-size: 46px;
-  line-height: 52px;
-  letter-spacing: -0.4px;
-  font-family: Helvetica Neue, Arial, sans-serif;
-  max-width: 60%;
-}
-
-#love-pics {
-  font-family: Helvetica Neue, Arial, sans-serif;
-  font-size: 16px;  
+.community-text {
   display: flex;
-  text-align: left;
-  color:white;
-  max-width: 60%;
-
+  align-items: flex-end;
+  color: white;
+  text-align: right;
+  flex-direction: column;
+  width: 40%;
+  margin-right: 10%;
+  margin-left: 40%;
+  margin-top: -10%;
 }
 
 .content-box {

@@ -57,9 +57,11 @@ export default () => (
         <div className="content-box-two">
             <div className="smoller-content-box">
                 <div className="community">
+                    <div className="community-text">
                 <h1 id="join-community">Join our community today</h1><br/>
                     <p id="love-pics">Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography
                     </p>
+                    </div>
                 </div>
             </div>
     
