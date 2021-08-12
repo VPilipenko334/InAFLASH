@@ -105,7 +105,6 @@ inner-main-container {
   font-weight: bold;
 }
 
-
 .pencil {
   display: inline-block;
   background-image: image-url("../pictures/2.png");
@@ -234,28 +233,28 @@ inner-main-container {
 }
 
  .header-container {
-  background-color: rgb(242, 204, 204);
+  background-color: rgb(255, 255, 255);
   display: flex; 
   justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
 
-#logo {
-  background-image: image-url("../pictures/logo.png");
-  background-size: cover;
-  height: 50px;
-  width: 100px;
-  font-family: Helvetica Neue, Arial, sans-serif;
+#nav-bar-things >* {
+  // background-color: khaki;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
-.log-in-link {
+
+.log-in-link >* {
   display: inline-block;
-  font-family: Helvetica Neue, Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
-.sign-up-button-form {
-  font-family: Helvetica Neue, Arial, sans-serif;
+
+.sign-up-button-form >* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 	cursor: pointer;
 	background-color: white;
   font-size: 15px;
@@ -286,7 +285,7 @@ inner-main-container {
   margin: auto;
   width: 50%;
   padding: 5px;
-  margin-bottom: 60%;
+  margin-bottom: 5%;
 }
 
 .back-home-button {
@@ -317,4 +316,12 @@ inner-main-container {
   padding-top: 16px;
   padding-bottom: 24px;
   font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+#random-photo >* {
+  height: 900px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: auto;
 }

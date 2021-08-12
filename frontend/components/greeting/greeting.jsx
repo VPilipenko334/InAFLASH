@@ -10,7 +10,7 @@ const Greeting = ({ currentUser, logout }) => {
       <nav className="login-signup-links">
         <header className="header-container">
           <div id="nav-bar-things">
-            <Link to="/" id="logo">InAFlash      </Link> 
+            <Link to="/">InAFlash</Link>
             <a href="https://github.com/VPilipenko334" id="git">      Github      </a>
             <a href="https://linkedin.com/in/veronikapilipenko" id="linkedin">LinkedIn</a>
             <br />
