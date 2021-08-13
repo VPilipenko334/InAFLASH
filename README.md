@@ -1,24 +1,62 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About 
 
-Things you may want to cover:
+InAFlash is a clone of the photo-sharing website 500px. InAFlash allows users to log in, sign up or have a demo account sign in, while storing user information in a PostgreSQL database. On InAFlash homepage, users can search up any photo or user information that they'd like using the search bar. There is also a photo of the week feature, which users or visitors can click on in order to generate a photo that has had the most likes of that week. Once users log in or create an account, the user can then upload a photo, with a title, description and privacy setting -- which will set the photo to either be public and be viewed by other users, or private. A user can have an album of photos that they can share, and will have a home-feed that populates with pictures. Users can also follow other users, as well as comment and like other photos. 
 
-* Ruby version
+I used a wide variety of technologies in order to create this website. For the backend, I used Ruby on Rails with Active Record. I also used PosgreSQL for storing data in the database along with Amazon AWS s3 for storing all the images. For the frontend portion of the project, I used React Redux along with Node.js in order to create a dynamic application. 
 
-* System dependencies
+## Technologies 
+* Ruby
+* Rails
+* React.js
+* Redux.js
+* Node.js
+* SQL/PostgreSQL
+* Webpack
+* Amazon AWS S3
+* Active Storage 
 
-* Configuration
+## Features 
 
-* Database creation
+### User Authentication
+* Users can create an account, which will get stored in the database
+* An error will be rendered if a user tries to log in with invalid credentials 
+* An error will be rendered if a user tries to create an account with a password that is too short 
+* There is a demo user available
 
-* Database initialization
+### Upload a Photo Feature
+* Users can upload a photo 
+* Users will have to fill out a form that includes the photo's title, description and privacy setting before uploading to the site
+* Privacy setting can be turned on or off
+* Photo will be uploaded to the user's album and can be rendered on their homepage depending on privacy setting 
 
-* How to run the test suite
+### Photo of the week generator
+* Users or visitors can click a button that will generate a photo of the week
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Upcoming Features: 
 
-* ...
+### Search Bar
+* Users can search for other users using the search bar
+* Users can search for photos using the search bar 
+* Items will be searched using an AJAX request
+
+
+### User's Homepage 
+* A user will be able to have a homepage that will render all the different photos shared by other users
+* Users will be able to click on any photo on that homepage and click it
+* Users will be able to click on any other user and follow them 
+
+### Follows/ Followers
+* Users will be able to follow other users 
+
+### Likes
+* Users will be able to like other users
+* Users will be able to like pictures
+
+### Comments 
+* Users will be able to comment on pictures 
+
+
+
