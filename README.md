@@ -19,6 +19,9 @@ I used a wide variety of technologies in order to create this website. For the b
 
 ## Features 
 
+## Homepage: 
+<img width="1015" alt="Screen Shot 2021-08-13 at 12 42 35 PM" src="https://user-images.githubusercontent.com/63820576/129392094-d85c0ed9-1dc9-4250-a2b6-42a2a56d29f9.png">
+
 ### User Authentication
 * Users can create an account, which will get stored in the database
 * An error will be rendered if a user tries to log in with invalid credentials 
