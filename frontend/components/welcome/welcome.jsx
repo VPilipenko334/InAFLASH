@@ -67,15 +67,27 @@ export default () => (
             </div>
     
         
-            </div>
-                <div>
+        </div>
+            <div class="footer-dark">
                 <footer>
-                <center><button className="back-home-button" onClick={scrollToTop}>Scroll back to the top</button></center>
-                        <div className="final-words">
-                                InAFlash - 2021 <br/>
-                                Created by: Veronika Pilipenko 
+                    <div class="container">
+                        <div class="row">
+                            <center><button className="back-home-button" onClick={scrollToTop}>Scroll back to the top</button></center>
+                           
+                            <div class="col-md-6 item text">
+                        
+                            </div>
+                                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a>
+                                <a href="#"><i class="icon ion-social-twitter"></i>
+                                </a><a href="#"><i class="icon ion-social-snapchat"></i>
+                                </a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                            </div>
                         </div>
-                    </footer>
-                </div>
+                        <p class="copyright">Veronika Pilipenko - InAFlash 2021</p>
+                    </div>
+                </footer>
             </div>
+    </div>
 )
+
+                       
