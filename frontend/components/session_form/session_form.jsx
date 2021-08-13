@@ -71,8 +71,8 @@ class SessionForm extends React.Component {
             <div className="full">
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
-                        Welcome to InAFlash!
-                        <br />
+                        <h3>Welcome to InAFlash!</h3>
+                            <br />
                         <div className="login-form">
                             <br />
                             <label className="username-password">Username:
@@ -97,7 +97,9 @@ class SessionForm extends React.Component {
                             <button className="demo-user-button" onClick={this.demoLogin}>Demo User</button>
                         </div>
                         <br />
-                    Please {this.props.formType} or {this.props.navLink}
+                        <div className="login-or-signup-text">
+                            Please {this.props.formType} or {this.props.navLink}
+                        </div>
                     </form>
                 </div>
         </div>
