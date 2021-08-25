@@ -66,6 +66,7 @@ class UploadPicture extends React.Component {
 
         if (this.state.selectForm === 0) {
             return (
+                <div className="full">
                 <div className="upload-photo-container"> 
                     <h1>Upload Photo</h1>
                         <div className="upload-form">
@@ -85,6 +86,7 @@ class UploadPicture extends React.Component {
                                         </p>
                                 </div>
                         </div>
+                    </div>
                 </div>
             )
         }
@@ -92,8 +94,8 @@ class UploadPicture extends React.Component {
 
         if (this.state.selectForm === 1) {
             return (
-
-                <div className="uploaded-container-photo"> 
+                <div className="full">
+                    <div className="uploaded-container-photo"> 
                     <div className="upload-button-box">
                         <label id="uploading-here">
                             <h2>Upload</h2>
@@ -117,8 +119,10 @@ class UploadPicture extends React.Component {
                                 <button className="cancel-button" onClick={this.handleCancel}>Cancel</button>
                                 <button className="upload-button" type="submit">Upload</button>
                             </div>
+
                         </form>
                 </div>
+            </div>
             )
         }
 
