@@ -4,6 +4,7 @@ import UploadPicture from "./upload_picture";
 import { withRouter } from "react-router";
 import { createPicture } from "../../actions/picture_actions";
 
+//do I need to keep state an empty object??
 const mapStateToProps = (state={}) => {
     return {
         picture: state.entities.pictures, 

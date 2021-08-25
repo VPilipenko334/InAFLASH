@@ -349,7 +349,10 @@ var Greeting = function Greeting(_ref) {
     }, "      Github      "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
       href: "https://linkedin.com/in/veronikapilipenko",
       className: "linkedin"
-    }, "LinkedIn"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, "LinkedIn"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+      href: "https://angel.co/u/veronika-pilipenko",
+      className: "linkedin"
+    }, "AngelList"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "more-nav-right"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
       type: "text",
@@ -943,7 +946,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+ //do I need to keep state an empty object??
 
 var mapStateToProps = function mapStateToProps() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -1366,27 +1369,7 @@ __webpack_require__.r(__webpack_exports__);
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "back-home-button",
     onClick: _back_to_the_top_button_top__WEBPACK_IMPORTED_MODULE_2__.default
-  }, "Scroll back to the top")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    "class": "col-md-6 item text"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    "class": "col item social"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    "class": "icon ion-social-facebook"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    "class": "icon ion-social-twitter"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    "class": "icon ion-social-snapchat"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    "class": "icon ion-social-instagram"
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }, "Scroll back to the top"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     "class": "copyright"
   }, "Veronika Pilipenko - InAFlash 2021")))));
 });

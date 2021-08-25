@@ -13,11 +13,11 @@ const Greeting = ({ currentUser, logout }) => {
             <Link to="/" className="logo">InAFlash</Link>
             <a href="https://github.com/VPilipenko334" className="git">      Github      </a>
             <a href="https://linkedin.com/in/veronikapilipenko" className="linkedin">LinkedIn</a>
+            <a href="https://angel.co/u/veronika-pilipenko" className="linkedin">AngelList</a>
             <br />
             </div>
           <div className="more-nav-right">
             <input type="text" placeholder="Search InAFlash..." className="search-bar" />
-
               <Link className="log-in-link" to="/login">Login    </Link>
               <Link className="sign-up-button-form" to="/signup">Sign up</Link>
               </div>

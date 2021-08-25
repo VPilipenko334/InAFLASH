@@ -73,15 +73,6 @@ export default () => (
                     <div class="container">
                         <div class="row">
                             <center><button className="back-home-button" onClick={scrollToTop}>Scroll back to the top</button></center>
-                           
-                            <div class="col-md-6 item text">
-                        
-                            </div>
-                                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a>
-                                <a href="#"><i class="icon ion-social-twitter"></i>
-                                </a><a href="#"><i class="icon ion-social-snapchat"></i>
-                                </a><a href="#"><i class="icon ion-social-instagram"></i></a>
-                            </div>
                         </div>
                         <p class="copyright">Veronika Pilipenko - InAFlash 2021</p>
                     </div>
