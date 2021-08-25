@@ -96,12 +96,12 @@ input[type=password]:focus, textarea:focus {
 }
 
  .login-form-box {
-   outline: 1px solid rgb(89, 82, 82);
-   padding: 100px;
+   outline: 2px solid rgb(89, 82, 82);
+   padding: 115px;
    font-family: Helvetica Neue, Arial, sans-serif;
    height: 400;
    max-height: 400; 
-   width: 610;
+   width: 700;
    font-size: 16px; 
    align-items: center;
  }

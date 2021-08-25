@@ -18,7 +18,7 @@ const Greeting = ({ currentUser, logout }) => {
             </div>
           <div className="more-nav-right">
             <input type="text" placeholder="Search InAFlash..." className="search-bar" />
-              <Link className="log-in-link" to="/login">Login    </Link>
+              <Link className="log-in-link" to="/login">Log in</Link>
               <Link className="sign-up-button-form" to="/signup">Sign up</Link>
               </div>
         </header>
