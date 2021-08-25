@@ -14,6 +14,13 @@
  *= require_self
  */
 
+
+ .full {
+  background-color:#f7f8fa;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  }
+
  h1 {
     display: flex;
     font-family: Helvetica Neue, Arial, sans-serif;
@@ -33,9 +40,10 @@
  .login-form-container {
    display: flex;
    justify-content: center;
-   margin-top: 100px;
-   margin-bottom: 100px;
+   /* margin-top: 50px;
+   margin-bottom: 50px; */
    font-family: Helvetica Neue, Arial, sans-serif;
+   background-color: #f7f8fa;
  }
 
  .login-form {
@@ -96,14 +104,18 @@ input[type=password]:focus, textarea:focus {
 }
 
  .login-form-box {
-   outline: 2px solid rgb(89, 82, 82);
-   padding: 115px;
+   outline: 1px solid rgb(238, 239, 242);
+   padding-top: 50px;
+   padding-bottom: 50px;
+   padding-left: 100px;
+   padding-right: 100px;
    font-family: Helvetica Neue, Arial, sans-serif;
    height: 400;
    max-height: 400; 
    width: 700;
-   font-size: 16px; 
+   font-size: 20px; 
    align-items: center;
+   background-color: white;
  }
 
 
