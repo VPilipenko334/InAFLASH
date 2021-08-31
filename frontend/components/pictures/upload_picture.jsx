@@ -43,6 +43,7 @@ class UploadPicture extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         // debugger
+        // console.log(this.state)
         if (this.state.tError === false) {
             const formData = new FormData();
             formData.append('picture[title]', this.state.title)
@@ -50,6 +51,8 @@ class UploadPicture extends React.Component {
             formData.append('picture[user_id]', this.state.userId)
             formData.append('picture[picture]', this.state.pictureFile)
             this.props.createPicture(formData).then(res => this.props.history.push(`/pictures/${res.id}`));
+            // this.props.history.push('/pictures')
+            
         }
     }
 

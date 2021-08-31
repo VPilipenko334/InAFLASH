@@ -178,13 +178,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _welcome_welcome__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./welcome/welcome */ "./frontend/components/welcome/welcome.jsx");
 /* harmony import */ var _pictures_upload_picture__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pictures/upload_picture */ "./frontend/components/pictures/upload_picture.jsx");
 /* harmony import */ var _pictures_pictures_show__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pictures/pictures_show */ "./frontend/components/pictures/pictures_show.jsx");
-/* harmony import */ var _pictures_pictures_show__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_pictures_pictures_show__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _home_home__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./home/home */ "./frontend/components/home/home.jsx");
-/* harmony import */ var _home_home__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_home_home__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _home_home_container__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./home/home_container */ "./frontend/components/home/home_container.js");
-/* harmony import */ var _home_home_container__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_home_home_container__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _pictures_pictures_show_container__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pictures/pictures_show_container */ "./frontend/components/pictures/pictures_show_container.js");
-/* harmony import */ var _pictures_pictures_show_container__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_pictures_pictures_show_container__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _pictures_upload_picture_container__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pictures/upload_picture_container */ "./frontend/components/pictures/upload_picture_container.js");
 
 
@@ -222,11 +218,15 @@ var App = function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
     exact: true,
     path: "/userId",
-    component: (_home_home__WEBPACK_IMPORTED_MODULE_10___default())
+    component: _home_home__WEBPACK_IMPORTED_MODULE_10__.default
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
     exact: true,
     path: "/upload",
     component: _pictures_upload_picture_container__WEBPACK_IMPORTED_MODULE_13__.default
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
+    exact: true,
+    path: "/pictures",
+    component: _pictures_pictures_show_container__WEBPACK_IMPORTED_MODULE_12__.default
   }))));
 };
 
@@ -324,6 +324,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _pictures_upload_picture__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pictures/upload_picture */ "./frontend/components/pictures/upload_picture.jsx");
 /* harmony import */ var _pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pictures/pictures_index_container */ "./frontend/components/pictures/pictures_index_container.js");
+/* harmony import */ var _pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -437,86 +438,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /*!*******************************************!*\
   !*** ./frontend/components/home/home.jsx ***!
   \*******************************************/
-/***/ (() => {
-
-// import React from 'react';
-// import PictureFeed from './picturefeed';
-// class HomeFeed extends React.Component {
-//     constructor(props) {
-//         super(props)
-//     }
-//     // componentDidMount(){
-//     //     debugger
-//     //     this.props.fetchPictures()
-//     // }
-//     componentWillMount() {
-//         this.props.fetchPictures()
-//         this.props.fetchlikes()
-//     }
-//     render() {
-//         // console.log("I am in the HomeFeed page")
-//         // console.log(this.props)
-//         const { pictures, likes, session, createLike, deleteLike } = this.props
-//         if (!pictures) {
-//             return null
-//             // const img = pictures.filter(picture => picture.ownerId == currentUser)
-//         } else {
-//             return (
-//                 <div className="upload_container">
-//                     <h3>Home Feed</h3>
-//                     <p className="home_fee_p" >See all arts</p>
-//                     <div className="discover_container">
-//                         <ul className="picture_item_container">
-//                             {pictures.map((picture, idx) => (
-//                                 <PictureItem key={idx} picture={picture} likes={likes} session={session} createLike={createLike} deleteLike={deleteLike} />
-//                             ))}
-//                         </ul>
-//                     </div>
-//                 </div>
-//             )
-//         }
-//     }
-// }
-// export default HomeFeed
-
-/***/ }),
-
-/***/ "./frontend/components/home/home_container.js":
-/*!****************************************************!*\
-  !*** ./frontend/components/home/home_container.js ***!
-  \****************************************************/
-/***/ (() => {
-
-// import React from 'react';
-// import { connect } from 'react-redux';
-// import { fetchPictures } from '../../util/picture_api_util';
-// import { fetchCurrentUser } from '../../util/user_api_util';
-// // import likes when they are complete 
-// import HomePage from './home'
-// const mSTP = (state) => {
-//     return {
-//         pictures: Object.values(state.entities.pictures),
-//         //likes 
-//         session: state.session,
-//     };
-// };
-// const mDTP = (dispatch) => {
-//     return {
-//         fetchPictures: () => dispatch(fetchPictures()),
-//         fetchCurrentUser: (userId) => dispatch(fetchCurrentUser(userId))
-//         //fetchLikes
-//         //createLikes
-//         //deleteLikes
-//     }
-// }
-// export default connect(mSTP, mDTP)(HomePage);
-
-/***/ }),
-
-/***/ "./frontend/components/pictures/pictures_index.jsx":
-/*!*********************************************************!*\
-  !*** ./frontend/components/pictures/pictures_index.jsx ***!
-  \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -525,7 +446,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _pictures_index_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pictures_index_container */ "./frontend/components/pictures/pictures_index_container.js");
+/* harmony import */ var _picturefeed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./picturefeed */ "./frontend/components/home/picturefeed.jsx");
+/* harmony import */ var _picturefeed__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_picturefeed__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -551,45 +473,127 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+var HomeFeed = /*#__PURE__*/function (_React$Component) {
+  _inherits(HomeFeed, _React$Component);
 
-var PictureIndex = /*#__PURE__*/function (_React$Component) {
-  _inherits(PictureIndex, _React$Component);
+  var _super = _createSuper(HomeFeed);
 
-  var _super = _createSuper(PictureIndex);
-
-  function PictureIndex(props) {
-    _classCallCheck(this, PictureIndex);
+  function HomeFeed(props) {
+    _classCallCheck(this, HomeFeed);
 
     return _super.call(this, props);
-  }
+  } // componentDidMount(){
+  //     debugger
+  //     this.props.fetchPictures()
+  // }
 
-  _createClass(PictureIndex, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
+
+  _createClass(HomeFeed, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
       this.props.fetchPictures();
+      this.props.fetchlikes();
     }
   }, {
     key: "render",
     value: function render() {
+      // console.log("I am in the HomeFeed page")
+      // console.log(this.props)
       var _this$props = this.props,
           pictures = _this$props.pictures,
-          loggedIn = _this$props.loggedIn,
-          session = _this$props.session;
-      if (!pictures) return null;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "upload-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "discover-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-        className: "picture-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "testing"))));
+          likes = _this$props.likes,
+          session = _this$props.session,
+          createLike = _this$props.createLike,
+          deleteLike = _this$props.deleteLike;
+
+      if (!pictures) {
+        return null; // const img = pictures.filter(picture => picture.ownerId == currentUser)
+      } else {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "upload_container"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Home Feed"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+          className: "home_fee_p"
+        }, "See all arts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "discover_container"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+          className: "picture_item_container"
+        }, pictures.map(function (picture, idx) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(PictureItem, {
+            key: idx,
+            picture: picture,
+            likes: likes,
+            session: session,
+            createLike: createLike,
+            deleteLike: deleteLike
+          });
+        }))));
+      }
     }
   }]);
 
-  return PictureIndex;
+  return HomeFeed;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PictureIndex);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomeFeed);
+
+/***/ }),
+
+/***/ "./frontend/components/home/home_container.js":
+/*!****************************************************!*\
+  !*** ./frontend/components/home/home_container.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _util_picture_api_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util/picture_api_util */ "./frontend/util/picture_api_util.js");
+/* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/user_api_util */ "./frontend/util/user_api_util.js");
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home */ "./frontend/components/home/home.jsx");
+
+
+
+ // import likes when they are complete 
+
+
+
+var mSTP = function mSTP(state) {
+  return {
+    pictures: Object.values(state.entities.pictures),
+    //likes 
+    session: state.session
+  };
+};
+
+var mDTP = function mDTP(dispatch) {
+  return {
+    fetchPictures: function fetchPictures() {
+      return dispatch((0,_util_picture_api_util__WEBPACK_IMPORTED_MODULE_2__.fetchPictures)());
+    },
+    fetchCurrentUser: function fetchCurrentUser(userId) {
+      return dispatch((0,_util_user_api_util__WEBPACK_IMPORTED_MODULE_3__.fetchCurrentUser)(userId));
+    } //fetchLikes
+    //createLikes
+    //deleteLikes
+
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mSTP, mDTP)(_home__WEBPACK_IMPORTED_MODULE_4__.default));
+
+/***/ }),
+
+/***/ "./frontend/components/home/picturefeed.jsx":
+/*!**************************************************!*\
+  !*** ./frontend/components/home/picturefeed.jsx ***!
+  \**************************************************/
+/***/ (() => {
+
+
 
 /***/ }),
 
@@ -597,6 +601,145 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
 /*!******************************************************************!*\
   !*** ./frontend/components/pictures/pictures_index_container.js ***!
   \******************************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./frontend/components/pictures/pictures_show.jsx":
+/*!********************************************************!*\
+  !*** ./frontend/components/pictures/pictures_show.jsx ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+ // import { Redirect } from 'react-router-dom';
+// import CreateCommentContainer from '../comments/create_comment_container';
+// import CommentIndexContainer from '../comments/comment_index_container';
+// import { HiOutlineUserCircle } from "react-icons/hi";
+// import { RiHeartLine, RiFolderAddLine, RiShareLine } from "react-icons/ri";
+
+ // import { GrNext } from "react-icons/gr";
+
+var PictureShow = /*#__PURE__*/function (_React$Component) {
+  _inherits(PictureShow, _React$Component);
+
+  var _super = _createSuper(PictureShow);
+
+  function PictureShow(props) {
+    var _this;
+
+    _classCallCheck(this, PictureShow);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      userId: undefined
+    };
+    _this.handleback = _this.handleback.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(PictureShow, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchPicture(this.props.match.params.id);
+      this.props.fetchCurrentUser(); // this.props.fetchlikes();
+      // this.props.fetchlikes();
+      // this.setState({userId: this.props.fetchUser(this.props.picture.userId)});
+      // this.props.fetchUser(this.props.picture.userId);
+      // console.log(this.props.picture);
+    }
+  }, {
+    key: "handleback",
+    value: function handleback() {
+      this.props.history.goBack();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var picture = this.props.picture;
+      if (!picture) return null;
+      var user = this.props.users[picture.userId];
+      if (!user) return null;
+      console.log(user);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "picture-show-biggest-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "picture-show-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "picture-box"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        className: "picture-show-img",
+        src: picture.post
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "after-show-picture"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "picture-show-info"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "logos"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RiHeartLine, {
+        size: "30"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RiFolderAddLine, {
+        size: "30"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RiShareLine, {
+        size: "30"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "center-box"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "picture-info-box"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: user.profile
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "next-to-picture"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, picture.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, " by ", user.username, " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, picture.description))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "comment-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "upgrade"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(CreateCommentContainer, {
+        photoId: this.props.picture.id
+      }))));
+    }
+  }]);
+
+  return PictureShow;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PictureShow);
+
+/***/ }),
+
+/***/ "./frontend/components/pictures/pictures_show_container.js":
+/*!*****************************************************************!*\
+  !*** ./frontend/components/pictures/pictures_show_container.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -607,74 +750,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
-/* harmony import */ var _pictures_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pictures_index */ "./frontend/components/pictures/pictures_index.jsx");
+/* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/user_api_util */ "./frontend/util/user_api_util.js");
+/* harmony import */ var _pictures_show__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pictures_show */ "./frontend/components/pictures/pictures_show.jsx");
 
 
- // import { fetchPicture } from "../../util/picture_api_util";
 
 
+ // import photoUserSelector from '../../selectors/photo_user_selector';
+// import { fetchlikes, createLike, deletelike } from "../../actions/like_actions";
 
-var mapStateToProps = function mapStateToProps() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+var mSTP = function mSTP(state, ownProps) {
+  var picture = state.entities.pictures[ownProps.match.params.id];
   return {
-    pictures: Object.values(state.entities.pictures),
-    loggedIn: Boolean(state.session.currentUser),
-    session: state.session.currentUser
+    picture: picture,
+    session: state.session.currentUser,
+    // user: state.entities.users[picture.userId],
+    // likes: Object.values(state.entities.likes),
+    users: state.entities.users // users :state.entities.users,
+    // user: pictureUserSelector(state, ownProps.match.params.id),
+
   };
 };
 
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+var mDTP = function mDTP(dispatch) {
   return {
-    fetchpictures: function fetchpictures() {
-      return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__.fetchPictures)());
-    }
+    fetchPicture: function fetchPicture(pictureId) {
+      return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__.fetchPicture)(pictureId));
+    },
+    fetchUsers: function fetchUsers() {
+      return dispatch((0,_util_user_api_util__WEBPACK_IMPORTED_MODULE_3__.fetchCurrentUser)());
+    } // fetchlikes: () => dispatch(fetchlikes()),
+    // createLike: (likerId, photoId) => dispatch(createLike(likerId, photoId)),
+    // deleteLike: likeId => dispatch(deleteLike(likeId))
+
   };
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, mapDispatchToProps)(_pictures_index__WEBPACK_IMPORTED_MODULE_3__.default));
-
-/***/ }),
-
-/***/ "./frontend/components/pictures/pictures_show.jsx":
-/*!********************************************************!*\
-  !*** ./frontend/components/pictures/pictures_show.jsx ***!
-  \********************************************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "./frontend/components/pictures/pictures_show_container.js":
-/*!*****************************************************************!*\
-  !*** ./frontend/components/pictures/pictures_show_container.js ***!
-  \*****************************************************************/
-/***/ (() => {
-
-// import React from "react";
-// import { connect } from "react-redux";
-// import { fetchPicture } from "../../actions/picture_actions";
-// // import { fetchlikes, createLike, deleteLike } from "../../actions/like_action";
-// import ShowPicture from "./pictures_show";
-// import {fetchCurrentUser} from "../../util/user_api_util";
-// const mSTP = (state, ownProps) => {
-//   return {
-//     picture: state.entities.pictures[ownProps.match.params.pictureId],
-//     // likes: Object.values(state.entities.likes),
-//     session: state.session.currentUser,
-//     users: state.entities.users,
-//   };
-// };
-// const mDTP = (dispatch) => {
-//   return {
-//     fetchCurrentUser: (userId)=> dispatch(fetchCurrentUser(userId)),
-//     fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
-//     // createLike: (userId, pictureId) => dispatch(createLike(userId, pictureId)),
-//     // fetchlikes: () => dispatch(fetchlikes()),
-//     // deleteLike: likeId => dispatch(deleteLike(likeId)),
-//   };
-// };
-// export default connect(mSTP, mDTP)(ShowPicture);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mSTP, mDTP)(_pictures_show__WEBPACK_IMPORTED_MODULE_4__.default));
 
 /***/ }),
 
@@ -786,6 +898,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
       var _this4 = this;
 
       e.preventDefault(); // debugger
+      // console.log(this.state)
 
       if (this.state.tError === false) {
         var formData = new FormData();
@@ -795,7 +908,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
         formData.append('picture[picture]', this.state.pictureFile);
         this.props.createPicture(formData).then(function (res) {
           return _this4.props.history.push("/pictures/".concat(res.id));
-        });
+        }); // this.props.history.push('/pictures')
       }
     }
   }, {
@@ -902,8 +1015,7 @@ __webpack_require__.r(__webpack_exports__);
 
  //do I need to keep state an empty object??
 
-var mapStateToProps = function mapStateToProps() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+var mapStateToProps = function mapStateToProps(state) {
   return {
     picture: state.entities.pictures,
     currentUserId: state.session.id
@@ -1718,6 +1830,26 @@ var logout = function logout() {
   return $.ajax({
     method: 'DELETE',
     url: '/api/session'
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/user_api_util.js":
+/*!****************************************!*\
+  !*** ./frontend/util/user_api_util.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fetchCurrentUser": () => (/* binding */ fetchCurrentUser)
+/* harmony export */ });
+var fetchCurrentUser = function fetchCurrentUser(userId) {
+  return $.ajax({
+    method: "GET",
+    url: "api/users/".concat(userId)
   });
 };
 
@@ -32570,9 +32702,7 @@ __webpack_require__.r(__webpack_exports__);
  * The public API for a <Router> that uses HTML5 history.
  */
 
-var BrowserRouter =
-/*#__PURE__*/
-function (_React$Component) {
+var BrowserRouter = /*#__PURE__*/function (_React$Component) {
   (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__.default)(BrowserRouter, _React$Component);
 
   function BrowserRouter() {
@@ -32590,7 +32720,7 @@ function (_React$Component) {
   var _proto = BrowserRouter.prototype;
 
   _proto.render = function render() {
-    return react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router__WEBPACK_IMPORTED_MODULE_0__.Router, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router__WEBPACK_IMPORTED_MODULE_0__.Router, {
       history: this.history,
       children: this.props.children
     });
@@ -32617,9 +32747,7 @@ if (true) {
  * The public API for a <Router> that uses window.location.hash.
  */
 
-var HashRouter =
-/*#__PURE__*/
-function (_React$Component) {
+var HashRouter = /*#__PURE__*/function (_React$Component) {
   (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__.default)(HashRouter, _React$Component);
 
   function HashRouter() {
@@ -32637,7 +32765,7 @@ function (_React$Component) {
   var _proto = HashRouter.prototype;
 
   _proto.render = function render() {
-    return react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router__WEBPACK_IMPORTED_MODULE_0__.Router, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router__WEBPACK_IMPORTED_MODULE_0__.Router, {
       history: this.history,
       children: this.props.children
     });
@@ -32717,7 +32845,7 @@ var LinkAnchor = forwardRef(function (_ref, forwardedRef) {
   /* eslint-disable-next-line jsx-a11y/anchor-has-content */
 
 
-  return react__WEBPACK_IMPORTED_MODULE_2__.createElement("a", props);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("a", props);
 });
 
 if (true) {
@@ -32736,7 +32864,7 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
       innerRef = _ref2.innerRef,
       rest = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_5__.default)(_ref2, ["component", "replace", "to", "innerRef"]);
 
-  return react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router__WEBPACK_IMPORTED_MODULE_0__.__RouterContext.Consumer, null, function (context) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router__WEBPACK_IMPORTED_MODULE_0__.__RouterContext.Consumer, null, function (context) {
     !context ?  true ? (0,tiny_invariant__WEBPACK_IMPORTED_MODULE_8__.default)(false, "You should not use <Link> outside a <Router>") : 0 : void 0;
     var history = context.history;
     var location = normalizeToLocation(resolveToLocation(to, context.location), context.location);
@@ -32746,7 +32874,8 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
       href: href,
       navigate: function navigate() {
         var location = resolveToLocation(to, context.location);
-        var method = replace ? history.replace : history.push;
+        var isDuplicateNavigation = (0,history__WEBPACK_IMPORTED_MODULE_6__.createPath)(context.location) === (0,history__WEBPACK_IMPORTED_MODULE_6__.createPath)(normalizeToLocation(location));
+        var method = replace || isDuplicateNavigation ? history.replace : history.push;
         method(location);
       }
     }); // React 15 compat
@@ -32758,7 +32887,7 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
       props.innerRef = innerRef;
     }
 
-    return react__WEBPACK_IMPORTED_MODULE_2__.createElement(component, props);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(component, props);
   });
 });
 
@@ -32818,7 +32947,7 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
       innerRef = _ref.innerRef,
       rest = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_5__.default)(_ref, ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"]);
 
-  return react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router__WEBPACK_IMPORTED_MODULE_0__.__RouterContext.Consumer, null, function (context) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router__WEBPACK_IMPORTED_MODULE_0__.__RouterContext.Consumer, null, function (context) {
     !context ?  true ? (0,tiny_invariant__WEBPACK_IMPORTED_MODULE_8__.default)(false, "You should not use <NavLink> outside a <Router>") : 0 : void 0;
     var currentLocation = locationProp || context.location;
     var toLocation = normalizeToLocation(resolveToLocation(to, currentLocation), currentLocation);
@@ -32833,7 +32962,7 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
     }) : null;
     var isActive = !!(isActiveProp ? isActiveProp(match, currentLocation) : match);
     var className = isActive ? joinClassnames(classNameProp, activeClassName) : classNameProp;
-    var style = isActive ? (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__.default)({}, styleProp, {}, activeStyle) : styleProp;
+    var style = isActive ? (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__.default)({}, styleProp, activeStyle) : styleProp;
 
     var props = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__.default)({
       "aria-current": isActive && ariaCurrent || null,
@@ -32849,13 +32978,13 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
       props.innerRef = innerRef;
     }
 
-    return react__WEBPACK_IMPORTED_MODULE_2__.createElement(Link, props);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Link, props);
   });
 });
 
 if (true) {
   NavLink.displayName = "NavLink";
-  var ariaCurrentType = prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(["page", "step", "location", "date", "time", "true"]);
+  var ariaCurrentType = prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(["page", "step", "location", "date", "time", "true", "false"]);
   NavLink.propTypes = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__.default)({}, Link.propTypes, {
     "aria-current": ariaCurrentType,
     activeClassName: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
@@ -32938,29 +33067,15 @@ var createNamedContext = function createNamedContext(name) {
   return context;
 };
 
-var historyContext =
-/*#__PURE__*/
-createNamedContext("Router-History");
+var historyContext = /*#__PURE__*/createNamedContext("Router-History");
 
-// TODO: Replace with React.createContext once we can assume React 16+
-
-var createNamedContext$1 = function createNamedContext(name) {
-  var context = (0,mini_create_react_context__WEBPACK_IMPORTED_MODULE_3__.default)();
-  context.displayName = name;
-  return context;
-};
-
-var context =
-/*#__PURE__*/
-createNamedContext$1("Router");
+var context = /*#__PURE__*/createNamedContext("Router");
 
 /**
  * The public API for putting history on context.
  */
 
-var Router =
-/*#__PURE__*/
-function (_React$Component) {
+var Router = /*#__PURE__*/function (_React$Component) {
   (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__.default)(Router, _React$Component);
 
   Router.computeRootMatch = function computeRootMatch(pathname) {
@@ -33015,18 +33130,22 @@ function (_React$Component) {
   };
 
   _proto.componentWillUnmount = function componentWillUnmount() {
-    if (this.unlisten) this.unlisten();
+    if (this.unlisten) {
+      this.unlisten();
+      this._isMounted = false;
+      this._pendingLocation = null;
+    }
   };
 
   _proto.render = function render() {
-    return react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Provider, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Provider, {
       value: {
         history: this.props.history,
         location: this.state.location,
         match: Router.computeRootMatch(this.state.location.pathname),
         staticContext: this.props.staticContext
       }
-    }, react__WEBPACK_IMPORTED_MODULE_1__.createElement(historyContext.Provider, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(historyContext.Provider, {
       children: this.props.children || null,
       value: this.props.history
     }));
@@ -33051,9 +33170,7 @@ if (true) {
  * The public API for a <Router> that stores location in memory.
  */
 
-var MemoryRouter =
-/*#__PURE__*/
-function (_React$Component) {
+var MemoryRouter = /*#__PURE__*/function (_React$Component) {
   (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__.default)(MemoryRouter, _React$Component);
 
   function MemoryRouter() {
@@ -33071,7 +33188,7 @@ function (_React$Component) {
   var _proto = MemoryRouter.prototype;
 
   _proto.render = function render() {
-    return react__WEBPACK_IMPORTED_MODULE_1__.createElement(Router, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Router, {
       history: this.history,
       children: this.props.children
     });
@@ -33094,9 +33211,7 @@ if (true) {
   };
 }
 
-var Lifecycle =
-/*#__PURE__*/
-function (_React$Component) {
+var Lifecycle = /*#__PURE__*/function (_React$Component) {
   (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__.default)(Lifecycle, _React$Component);
 
   function Lifecycle() {
@@ -33132,11 +33247,11 @@ function Prompt(_ref) {
   var message = _ref.message,
       _ref$when = _ref.when,
       when = _ref$when === void 0 ? true : _ref$when;
-  return react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context) {
     !context ?  true ? (0,tiny_invariant__WEBPACK_IMPORTED_MODULE_11__.default)(false, "You should not use <Prompt> outside a <Router>") : 0 : void 0;
     if (!when || context.staticContext) return null;
     var method = context.history.block;
-    return react__WEBPACK_IMPORTED_MODULE_1__.createElement(Lifecycle, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Lifecycle, {
       onMount: function onMount(self) {
         self.release = method(message);
       },
@@ -33205,7 +33320,7 @@ function Redirect(_ref) {
       to = _ref.to,
       _ref$push = _ref.push,
       push = _ref$push === void 0 ? false : _ref$push;
-  return react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context) {
     !context ?  true ? (0,tiny_invariant__WEBPACK_IMPORTED_MODULE_11__.default)(false, "You should not use <Redirect> outside a <Router>") : 0 : void 0;
     var history = context.history,
         staticContext = context.staticContext;
@@ -33220,7 +33335,7 @@ function Redirect(_ref) {
       return null;
     }
 
-    return react__WEBPACK_IMPORTED_MODULE_1__.createElement(Lifecycle, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Lifecycle, {
       onMount: function onMount() {
         method(location);
       },
@@ -33340,9 +33455,7 @@ function evalChildrenDev(children, props, path) {
  */
 
 
-var Route =
-/*#__PURE__*/
-function (_React$Component) {
+var Route = /*#__PURE__*/function (_React$Component) {
   (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__.default)(Route, _React$Component);
 
   function Route() {
@@ -33354,7 +33467,7 @@ function (_React$Component) {
   _proto.render = function render() {
     var _this = this;
 
-    return react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context$1) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context$1) {
       !context$1 ?  true ? (0,tiny_invariant__WEBPACK_IMPORTED_MODULE_11__.default)(false, "You should not use <Route> outside a <Router>") : 0 : void 0;
       var location = _this.props.location || context$1.location;
       var match = _this.props.computedMatch ? _this.props.computedMatch // <Switch> already computed the match for us
@@ -33371,13 +33484,13 @@ function (_React$Component) {
           render = _this$props.render; // Preact uses an empty array as children by
       // default, so use null if that's the case.
 
-      if (Array.isArray(children) && children.length === 0) {
+      if (Array.isArray(children) && isEmptyChildren(children)) {
         children = null;
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Provider, {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Provider, {
         value: props
-      }, props.match ? children ? typeof children === "function" ?  true ? evalChildrenDev(children, props, _this.props.path) : 0 : children : component ? react__WEBPACK_IMPORTED_MODULE_1__.createElement(component, props) : render ? render(props) : null : typeof children === "function" ?  true ? evalChildrenDev(children, props, _this.props.path) : 0 : null);
+      }, props.match ? children ? typeof children === "function" ?  true ? evalChildrenDev(children, props, _this.props.path) : 0 : children : component ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(component, props) : render ? render(props) : null : typeof children === "function" ?  true ? evalChildrenDev(children, props, _this.props.path) : 0 : null);
     });
   };
 
@@ -33451,9 +33564,7 @@ function noop() {}
  */
 
 
-var StaticRouter =
-/*#__PURE__*/
-function (_React$Component) {
+var StaticRouter = /*#__PURE__*/function (_React$Component) {
   (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__.default)(StaticRouter, _React$Component);
 
   function StaticRouter() {
@@ -33521,7 +33632,7 @@ function (_React$Component) {
       listen: this.handleListen,
       block: this.handleBlock
     };
-    return react__WEBPACK_IMPORTED_MODULE_1__.createElement(Router, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__.default)({}, rest, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Router, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__.default)({}, rest, {
       history: history,
       staticContext: context
     }));
@@ -33546,9 +33657,7 @@ if (true) {
  * The public API for rendering the first <Route> that matches.
  */
 
-var Switch =
-/*#__PURE__*/
-function (_React$Component) {
+var Switch = /*#__PURE__*/function (_React$Component) {
   (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__.default)(Switch, _React$Component);
 
   function Switch() {
@@ -33560,7 +33669,7 @@ function (_React$Component) {
   _proto.render = function render() {
     var _this = this;
 
-    return react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context) {
       !context ?  true ? (0,tiny_invariant__WEBPACK_IMPORTED_MODULE_11__.default)(false, "You should not use <Switch> outside a <Router>") : 0 : void 0;
       var location = _this.props.location || context.location;
       var element, match; // We use React.Children.forEach instead of React.Children.toArray().find()
@@ -33569,7 +33678,7 @@ function (_React$Component) {
       // component at different URLs.
 
       react__WEBPACK_IMPORTED_MODULE_1__.Children.forEach(_this.props.children, function (child) {
-        if (match == null && react__WEBPACK_IMPORTED_MODULE_1__.isValidElement(child)) {
+        if (match == null && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.isValidElement(child)) {
           element = child;
           var path = child.props.path || child.props.from;
           match = path ? matchPath(location.pathname, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__.default)({}, child.props, {
@@ -33577,7 +33686,7 @@ function (_React$Component) {
           })) : context.match;
         }
       });
-      return match ? react__WEBPACK_IMPORTED_MODULE_1__.cloneElement(element, {
+      return match ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.cloneElement(element, {
         location: location,
         computedMatch: match
       }) : null;
@@ -33610,9 +33719,9 @@ function withRouter(Component) {
     var wrappedComponentRef = props.wrappedComponentRef,
         remainingProps = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_7__.default)(props, ["wrappedComponentRef"]);
 
-    return react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context) {
       !context ?  true ? (0,tiny_invariant__WEBPACK_IMPORTED_MODULE_11__.default)(false, "You should not use <" + displayName + " /> outside a <Router>") : 0 : void 0;
-      return react__WEBPACK_IMPORTED_MODULE_1__.createElement(Component, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__.default)({}, remainingProps, context, {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Component, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__.default)({}, remainingProps, context, {
         ref: wrappedComponentRef
       }));
     });
