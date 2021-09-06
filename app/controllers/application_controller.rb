@@ -24,28 +24,28 @@ class ApplicationController < ActionController::Base
 
     def current_user
         return nil if session[:session_token].nil?
-
         @current_user ||= User.find_by(session_token: session[:session_token])
     end
-
-    def require_logged_in!
-        render json: { base: ['invalid credentials'] }, status: 401 if !logged_in?
-    end 
 
     def logged_in?
         !!current_user
     end
 
-    def login!(user)
+    def require_logged_in
+        unless current_user
+            render json: { base: ['invalid credentials'] }, status: 401
+        end
+    end
+
+    def login(user)
         session[:session_token] = user.reset_session_token!
         @current_user = user
     end
 
-    def logout
-        current_user.reset_session_token!
+    def logout!
+        current_user.reset_session_token! if logged_in?
         session[:session_token] = nil
         @current_user = nil
     end
 
-end 
-
+end
