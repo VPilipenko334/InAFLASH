@@ -12,20 +12,28 @@ class User < ApplicationRecord
         class_name: :Picture
     
     has_many :likes, 
-        foreign_key: :user_id,
+        foreign_key: :liker_id,
         class_name: :Like 
+
+    has_many :comments, 
+        foreign_key: :commenter_id,
+        class_name: :Comment 
+
+    has_many :Follows, 
+        foreign_key: :follower_id,
+        class_name: :Follow
+
+    has_many :Followers, 
+        foreign_key: :followed_id,
+        class_name: :Follow
 
     #SPIRE 
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
 
-        if user && user.is_password?(password)
-            user
-        else
-            nil
-        end
-    end 
+        user && user.is_password?(password) ? user : nil
+    end
 
     def password=(password)
         @password = password
@@ -34,15 +42,15 @@ class User < ApplicationRecord
 
     def is_password?(password)
         BCrypt::Password.new(self.password_digest).is_password?(password)
-    end 
+    end
 
     def reset_session_token!
-        self.session_token = SecureRandom.urlsafe_base64
+        self.session_token = SecureRandom::urlsafe_base64
         self.save!
         self.session_token
-    end 
+    end
 
     def ensure_session_token
-        self.session_token ||= SecureRandom.urlsafe_base64
+        self.session_token ||= SecureRandom::urlsafe_base64
     end
 end
