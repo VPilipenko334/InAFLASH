@@ -4,10 +4,10 @@
 // add a picture --> createPicture (create)
 // delete a picture --> deletePicture (destroy)
 
-export const fetchPicture = (pictureId) => {
+export const fetchPicture = (id) => {
     return $.ajax({ 
         method: "GET",
-        url: `api/picture/${pictureId}`
+        url: `api/picture/${id}`
     })
 };
 
@@ -18,13 +18,14 @@ export const fetchPictures = () => {
     })
 }
 
-export const createPicture = (picture) => {
+
+export const createPicture = (formData) => {
     return $.ajax({
         method: "POST",
         url: '/api/pictures',
         contentType: false,
         processData: false,
-        data: picture
+        data: formData
     })
 }
 

@@ -26,18 +26,18 @@ import UploadPictureContainer from './pictures/upload_picture_container';
 const App = () => (
     <div>
             <div className="login-links">
-            <GreetingContainer />
-                <Switch>
-                        <Route exact path="/" component={welcome} />
-                        <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-                        <AuthRoute exact path="/login" component={LogInFormContainer} />
+                <GreetingContainer />
+                    <Switch>
+                            <Route exact path="/" component={welcome} />
+                            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+                            <AuthRoute exact path="/login" component={LogInFormContainer} />
 
 
-                        <ProtectedRoute exact path="/userId" component={HomePage} />
-                        <ProtectedRoute exact path="/upload" component={UploadPictureContainer} />
-                        <ProtectedRoute exact path="/pictures" component={PicturesShowContainer} />
+                            <ProtectedRoute exact path="/userId" component={HomePage} />
+                            <ProtectedRoute exact path="/upload" component={UploadPictureContainer} />
+                            <ProtectedRoute exact path="/pictures" component={PicturesShowContainer} />
 
-                </Switch>
+                    </Switch>
             </div>
         </div>
     

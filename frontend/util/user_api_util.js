@@ -1,6 +1,27 @@
-export const fetchCurrentUser = (userId) => {
-    return $.ajax({
-        method: "GET",
-        url: `api/users/${userId}`
+export const fetchUser = userId => (
+    $.ajax({
+        method: 'GET',
+        url: `/api/users/${userId}`
     })
-};
+);
+export const fetchUsers = () => (
+    $.ajax({
+        method: 'GET',
+        url: `/api/users`
+    })
+);
+export const updateUser = (user) => (
+    $.ajax({
+        method: 'PATCH',
+        url: `/api/users/${user.id}`,
+        data: {user}
+    })
+);
+
+
+export const fetchUserPictures = userId => (
+    $.ajax({
+        method: 'GET',
+        url: `/api/users/${userId}/pictures`
+    })
+);

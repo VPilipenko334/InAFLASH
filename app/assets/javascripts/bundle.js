@@ -49,29 +49,35 @@ var removePicture = function removePicture(pictureId) {
 // these should match our util
 
 
-var fetchPicture = function fetchPicture(pictureId) {
+var fetchPicture = function fetchPicture(id) {
   return function (dispatch) {
-    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPicture(pictureId).then(function (picture) {
+    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPicture(id).then(function (picture) {
       return dispatch(receivePicture(picture));
-    });
+    }) // think about where the fetchPicture is coming from 
+    ;
   };
-}; // think about where the fetchPicture is coming from 
-
+};
 var fetchPictures = function fetchPictures() {
   return function (dispatch) {
     return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPictures().then(function (pictures) {
       return dispatch(receivePictures(pictures));
     });
   };
-};
+}; // export const createPicture = (picture) => dispatch =>
+//     PictureAPIUtil.createPicture(picture).then(dispatch =>(receivePicture(picture)))
+// export const deletePicture = (pictureId) => dispatch => 
+//     PictureAPIUtil.deletePicture(pictureId).then(() => dispatch(removePicture(pictureId))) 
+
 var createPicture = function createPicture(picture) {
   return function (dispatch) {
-    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.createPicture(picture).then(dispatch(receivePicture(picture)));
+    return APIUtil.createPicture(picture).then(function (picture) {
+      return dispatch(receivePicture(picture));
+    });
   };
 };
 var deletePicture = function deletePicture(pictureId) {
   return function (dispatch) {
-    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.deletePicture(pictureId).then(function () {
+    return APIUtil.deletePicture(pictureId).then(function () {
       return dispatch(removePicture(pictureId));
     });
   };
@@ -150,6 +156,90 @@ var logout = function logout() {
   return function (dispatch) {
     return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__.logout().then(function (user) {
       return dispatch(logoutCurrentUser());
+    });
+  };
+};
+
+/***/ }),
+
+/***/ "./frontend/actions/user_actions.js":
+/*!******************************************!*\
+  !*** ./frontend/actions/user_actions.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RECEIVE_USER": () => (/* binding */ RECEIVE_USER),
+/* harmony export */   "RECEIVE_USER_ERRORS": () => (/* binding */ RECEIVE_USER_ERRORS),
+/* harmony export */   "RECEIVE_USERS": () => (/* binding */ RECEIVE_USERS),
+/* harmony export */   "receiveUser": () => (/* binding */ receiveUser),
+/* harmony export */   "receiveUsers": () => (/* binding */ receiveUsers),
+/* harmony export */   "receiveUserErrors": () => (/* binding */ receiveUserErrors),
+/* harmony export */   "fetchUserPictures": () => (/* binding */ fetchUserPictures),
+/* harmony export */   "fetchUser": () => (/* binding */ fetchUser),
+/* harmony export */   "updateUser": () => (/* binding */ updateUser),
+/* harmony export */   "fetchUsers": () => (/* binding */ fetchUsers)
+/* harmony export */ });
+/* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/user_api_util */ "./frontend/util/user_api_util.js");
+/* harmony import */ var _picture_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./picture_actions */ "./frontend/actions/picture_actions.js");
+
+
+var RECEIVE_USER = "RECEIVE_USER";
+var RECEIVE_USER_ERRORS = "RECEIVE_USER_ERRORS";
+var RECEIVE_USERS = "RECEIVE_USERS";
+var receiveUser = function receiveUser(user) {
+  return {
+    type: RECEIVE_USER,
+    user: user
+  };
+};
+var receiveUsers = function receiveUsers(users) {
+  return {
+    type: RECEIVE_USERS,
+    users: users
+  };
+};
+var receiveUserErrors = function receiveUserErrors(errors) {
+  return {
+    type: RECEIVE_USER_ERRORS,
+    errors: errors
+  };
+};
+var fetchUserPictures = function fetchUserPictures(userId) {
+  return function (dispatch) {
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchUserPictures(userId).then(function (pictures) {
+      return dispatch(receivePictures(pictures));
+    }).fail(function (err) {
+      return dispatch(receiveUserErrors(err.responseJSON));
+    });
+  };
+};
+var fetchUser = function fetchUser(userId) {
+  return function (dispatch) {
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchUser(userId).then(function (user) {
+      return dispatch(receiveUser(user));
+    }).fail(function (err) {
+      return dispatch(receiveUserErrors(err.responseJSON));
+    });
+  };
+};
+var updateUser = function updateUser(user) {
+  return function (dispatch) {
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.updateUser(user).then(function (user) {
+      return dispatch(receiveUser(user));
+    }).fail(function (err) {
+      return dispatch(receiveUserErrors(err.responseJSON));
+    });
+  };
+};
+var fetchUsers = function fetchUsers() {
+  return function (dispatch) {
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchUsers().then(function (users) {
+      return dispatch(receiveUsers(users));
+    }).fail(function (err) {
+      return dispatch(receiveUserErrors(err.responseJSON));
     });
   };
 };
@@ -574,7 +664,7 @@ var mDTP = function mDTP(dispatch) {
       return dispatch((0,_util_picture_api_util__WEBPACK_IMPORTED_MODULE_2__.fetchPictures)());
     },
     fetchCurrentUser: function fetchCurrentUser(userId) {
-      return dispatch((0,_util_user_api_util__WEBPACK_IMPORTED_MODULE_3__.fetchCurrentUser)(userId));
+      return dispatch((0,_util_user_api_util__WEBPACK_IMPORTED_MODULE_3__.fetchUser)(userId));
     } //fetchLikes
     //createLikes
     //deleteLikes
@@ -963,7 +1053,7 @@ var mDTP = function mDTP(dispatch) {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__.fetchPicture)(pictureId));
     },
     fetchUsers: function fetchUsers() {
-      return dispatch((0,_util_user_api_util__WEBPACK_IMPORTED_MODULE_3__.fetchCurrentUser)());
+      return dispatch((0,_util_user_api_util__WEBPACK_IMPORTED_MODULE_3__.fetchUser)());
     } // fetchlikes: () => dispatch(fetchlikes()),
     // createLike: (likerId, photoId) => dispatch(createLike(likerId, photoId)),
     // deleteLike: likeId => dispatch(deleteLike(likeId))
@@ -1680,7 +1770,7 @@ var PicturesReducer = function PicturesReducer() {
 
     case _actions_picture_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_PICTURES:
       return Object.assign(newState, action.pictures);
-      return newState;
+    // return newState; 
 
     case _actions_picture_actions__WEBPACK_IMPORTED_MODULE_0__.REMOVE_PICTURE:
       delete newState[action.pictureId];
@@ -1812,27 +1902,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/user_actions */ "./frontend/actions/user_actions.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // keeps track of all our users 
 
 
-var userReducer = function userReducer() {
+
+var usersReducer = function usersReducer() {
   var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
-  Object.freeze(oldState); // newState = Object.assign({}, state, { [action.user.id]: action.user })
+  Object.freeze(oldState);
 
   switch (action.type) {
-    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_CURRENT_USER:
-      return Object.assign({}, oldState, _defineProperty({}, action.currentUser.id, action.currentUser));
+    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_USER:
+      return Object.assign({}, oldState, _defineProperty({}, action.user.id, action.user));
+
+    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_USERS:
+      return Object.assign({}, oldState, action.users);
 
     default:
       return oldState;
   }
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (userReducer);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (usersReducer);
 
 /***/ }),
 
@@ -1885,10 +1979,10 @@ __webpack_require__.r(__webpack_exports__);
 //  see all pictures --> fetchPictures (index)
 // add a picture --> createPicture (create)
 // delete a picture --> deletePicture (destroy)
-var fetchPicture = function fetchPicture(pictureId) {
+var fetchPicture = function fetchPicture(id) {
   return $.ajax({
     method: "GET",
-    url: "api/picture/".concat(pictureId)
+    url: "api/picture/".concat(id)
   });
 };
 var fetchPictures = function fetchPictures() {
@@ -1897,13 +1991,13 @@ var fetchPictures = function fetchPictures() {
     url: '/api/pictures'
   });
 };
-var createPicture = function createPicture(picture) {
+var createPicture = function createPicture(formData) {
   return $.ajax({
     method: "POST",
     url: '/api/pictures',
     contentType: false,
     processData: false,
-    data: picture
+    data: formData
   });
 };
 var deletePicture = function deletePicture(pictureId) {
@@ -2029,12 +2123,36 @@ var logout = function logout() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "fetchCurrentUser": () => (/* binding */ fetchCurrentUser)
+/* harmony export */   "fetchUser": () => (/* binding */ fetchUser),
+/* harmony export */   "fetchUsers": () => (/* binding */ fetchUsers),
+/* harmony export */   "updateUser": () => (/* binding */ updateUser),
+/* harmony export */   "fetchUserPictures": () => (/* binding */ fetchUserPictures)
 /* harmony export */ });
-var fetchCurrentUser = function fetchCurrentUser(userId) {
+var fetchUser = function fetchUser(userId) {
   return $.ajax({
-    method: "GET",
-    url: "api/users/".concat(userId)
+    method: 'GET',
+    url: "/api/users/".concat(userId)
+  });
+};
+var fetchUsers = function fetchUsers() {
+  return $.ajax({
+    method: 'GET',
+    url: "/api/users"
+  });
+};
+var updateUser = function updateUser(user) {
+  return $.ajax({
+    method: 'PATCH',
+    url: "/api/users/".concat(user.id),
+    data: {
+      user: user
+    }
+  });
+};
+var fetchUserPictures = function fetchUserPictures(userId) {
+  return $.ajax({
+    method: 'GET',
+    url: "/api/users/".concat(userId, "/pictures")
   });
 };
 

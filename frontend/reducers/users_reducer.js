@@ -1,16 +1,20 @@
 // keeps track of all our users 
 
-import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
+import { RECEIVE_USER } from '../actions/user_actions';
+import { RECEIVE_USERS } from '../actions/user_actions';
 
-const userReducer = (oldState = {}, action) => {
+const usersReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
-    // newState = Object.assign({}, state, { [action.user.id]: action.user })
     switch (action.type) {
-        case RECEIVE_CURRENT_USER:
-            return Object.assign({}, oldState, { [action.currentUser.id]: action.currentUser });
+        case RECEIVE_USER:
+            return Object.assign({}, oldState, { [action.user.id]: action.user });
+
+        case RECEIVE_USERS:
+            return Object.assign({}, oldState, action.users);
+
         default:
             return oldState;
     }
-};
+}
 
-export default userReducer;
+export default usersReducer;

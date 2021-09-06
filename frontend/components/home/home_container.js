@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchPictures } from '../../util/picture_api_util';
-import { fetchCurrentUser } from '../../util/user_api_util';
+import { fetchUser } from '../../util/user_api_util';
 // import likes when they are complete 
 import HomePage from './home'
 
@@ -16,7 +16,7 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         fetchPictures: () => dispatch(fetchPictures()),
-        fetchCurrentUser: (userId) => dispatch(fetchCurrentUser(userId))
+        fetchCurrentUser: (userId) => dispatch(fetchUser(userId))
         //fetchLikes
         //createLikes
         //deleteLikes
