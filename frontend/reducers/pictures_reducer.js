@@ -13,7 +13,7 @@ const PicturesReducer = (oldState= {}, action) => {
             newState[action.picture.id] = action.picture;
         case RECEIVE_PICTURES:
             return Object.assign(newState, action.pictures);
-            // return newState; 
+            return newState; 
         case REMOVE_PICTURE:
             delete newState[action.pictureId]
             return newState; 

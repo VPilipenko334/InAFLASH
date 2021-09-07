@@ -39,15 +39,8 @@ export const fetchPicture = id => dispatch => (
 export const fetchPictures = () => dispatch => (
     PictureAPIUtil.fetchPictures().then(pictures => dispatch(receivePictures(pictures)))
 );
-// export const createPicture = (picture) => dispatch =>
-//     PictureAPIUtil.createPicture(picture).then(dispatch =>(receivePicture(picture)))
+export const createPicture = (picture) => dispatch =>
+    PictureAPIUtil.createPicture(picture).then(dispatch =>(receivePicture(picture)))
 
-// export const deletePicture = (pictureId) => dispatch => 
-//     PictureAPIUtil.deletePicture(pictureId).then(() => dispatch(removePicture(pictureId))) 
-export const createPicture = picture => dispatch => (
-    APIUtil.createPicture(picture).then(picture => (dispatch(receivePicture(picture))))
-);
-
-export const deletePicture = pictureId => dispatch => (
-    APIUtil.deletePicture(pictureId).then(() => (dispatch(removePicture(pictureId))))
-);
+export const deletePicture = (pictureId) => dispatch => 
+    PictureAPIUtil.deletePicture(pictureId).then(() => dispatch(removePicture(pictureId))) 

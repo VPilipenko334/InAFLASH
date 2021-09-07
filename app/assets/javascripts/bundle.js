@@ -63,21 +63,17 @@ var fetchPictures = function fetchPictures() {
       return dispatch(receivePictures(pictures));
     });
   };
-}; // export const createPicture = (picture) => dispatch =>
-//     PictureAPIUtil.createPicture(picture).then(dispatch =>(receivePicture(picture)))
-// export const deletePicture = (pictureId) => dispatch => 
-//     PictureAPIUtil.deletePicture(pictureId).then(() => dispatch(removePicture(pictureId))) 
-
+};
 var createPicture = function createPicture(picture) {
   return function (dispatch) {
-    return APIUtil.createPicture(picture).then(function (picture) {
-      return dispatch(receivePicture(picture));
+    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.createPicture(picture).then(function (dispatch) {
+      return receivePicture(picture);
     });
   };
 };
 var deletePicture = function deletePicture(pictureId) {
   return function (dispatch) {
-    return APIUtil.deletePicture(pictureId).then(function () {
+    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.deletePicture(pictureId).then(function () {
       return dispatch(removePicture(pictureId));
     });
   };
@@ -1770,7 +1766,7 @@ var PicturesReducer = function PicturesReducer() {
 
     case _actions_picture_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_PICTURES:
       return Object.assign(newState, action.pictures);
-    // return newState; 
+      return newState;
 
     case _actions_picture_actions__WEBPACK_IMPORTED_MODULE_0__.REMOVE_PICTURE:
       delete newState[action.pictureId];
@@ -1991,13 +1987,13 @@ var fetchPictures = function fetchPictures() {
     url: '/api/pictures'
   });
 };
-var createPicture = function createPicture(formData) {
+var createPicture = function createPicture(picture) {
   return $.ajax({
     method: "POST",
     url: '/api/pictures',
     contentType: false,
     processData: false,
-    data: formData
+    data: picture
   });
 };
 var deletePicture = function deletePicture(pictureId) {

@@ -1,6 +1,6 @@
 class Api::PicturesController < ApplicationController
     
-    before_action :require_logged_in!, only: [:create, :destroy]
+    before_action :require_logged_in, only: [:create, :destroy]
 
        #creating/ adding a new picture 
     def create
