@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import UploadPicture from '../pictures/upload_picture';
-import PictureIndexContainer from '../pictures/pictures_index_container';
+// import PictureIndexContainer from '../pictures/pictures_index_container';
 
 
 const Greeting = ({ currentUser, logout }) => {

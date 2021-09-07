@@ -22,7 +22,7 @@ import ShowPicture from './pictures/pictures_show';
 // import home_container from './pictures_home/pictures_home_container';
 import PicturesShowContainer from './pictures/pictures_show_container';
 import UploadPictureContainer from './pictures/upload_picture_container';
-
+import pictures_show_container from './pictures/pictures_show_container';
 const App = () => (
     <div>
             <div className="login-links">
@@ -36,7 +36,6 @@ const App = () => (
                             {/* <ProtectedRoute exact path="/userId" component={HomePage} /> */}
                             <ProtectedRoute exact path="/upload" component={UploadPictureContainer} />
                             {/* <ProtectedRoute exact path="/pictures" component={PicturesShowContainer} /> */}
-
                     </Switch>
             </div>
         </div>

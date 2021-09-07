@@ -66,8 +66,8 @@ var fetchPictures = function fetchPictures() {
 };
 var createPicture = function createPicture(picture) {
   return function (dispatch) {
-    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.createPicture(picture).then(function (dispatch) {
-      return receivePicture(picture);
+    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPictures(picture).then(function (picture) {
+      return dispatch(receivePicture(picture));
     });
   };
 };
@@ -284,6 +284,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var App = function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "login-links"
@@ -397,13 +398,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _pictures_upload_picture__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pictures/upload_picture */ "./frontend/components/pictures/upload_picture.jsx");
-/* harmony import */ var _pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pictures/pictures_index_container */ "./frontend/components/pictures/pictures_index_container.js");
 
 
-
-
+ // import PictureIndexContainer from '../pictures/pictures_index_container';
 
 var Greeting = function Greeting(_ref) {
   var currentUser = _ref.currentUser,
@@ -418,7 +417,7 @@ var Greeting = function Greeting(_ref) {
       className: "header-container"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "nav-bar-things"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: "/",
       className: "logo"
     }, "InAFlash"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
@@ -436,10 +435,10 @@ var Greeting = function Greeting(_ref) {
       type: "text",
       placeholder: "Search InAFlash...",
       className: "search-bar"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       className: "log-in-link",
       to: "/login"
-    }, "Log in"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, "Log in"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       className: "sign-up-button-form",
       to: "/signup"
     }, "Sign up")))));
@@ -452,10 +451,10 @@ var Greeting = function Greeting(_ref) {
       className: "header-name"
     }, "welcome, ", currentUser.username, "!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "buttons-on-homepage"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: "/upload",
       className: "homepage-header-button"
-    }, "Upload"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, "Upload"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: "/userId",
       className: "homepage-header-button"
     }, "User HomePage"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
@@ -509,202 +508,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
-/***/ "./frontend/components/pictures/pictures_index_container.js":
-/*!******************************************************************!*\
-  !*** ./frontend/components/pictures/pictures_index_container.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-var PhotoIndex = /*#__PURE__*/function (_React$Component) {
-  _inherits(PhotoIndex, _React$Component);
-
-  var _super = _createSuper(PhotoIndex);
-
-  function PhotoIndex(props) {
-    _classCallCheck(this, PhotoIndex);
-
-    return _super.call(this, props);
-  }
-
-  _createClass(PhotoIndex, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.fetchPhotos();
-      this.props.fetchUsers();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var photos = this.props.photos;
-      var users = this.props.users;
-      if (!photos) return null;
-      if (!users) return null; // console.log(photos)
-      // console.log(users)
-
-      var photoTank = {};
-
-      for (var i = 0; i < photos.length; i++) {
-        var photo = photos[i];
-
-        if (!photoTank[photo.userId]) {
-          photoTank[photo.userId] = [photo];
-        } else {
-          photoTank[photo.userId].push(photo);
-        }
-      } //   console.log(photoTank);
-
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "photo-index-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "first-item"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Welcome to BlowUp"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Follow photographers to get started")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "featured-photos"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Featured photographers"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Follow to explore new works"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "photos-slices-container"
-      }, users.slice(0, 6).map(function (user) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "photos-with-username"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-          className: "photo-item-container"
-        }, photoTank[user.id] && photoTank[user.id].length === 3 ? photoTank[user.id].map(function (photo) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-            className: "photo-item"
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-            to: "/photos/".concat(photo.id)
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-            className: "photo-img",
-            src: photo.post
-          })));
-        }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "username-profile-photo"
-        }, photoTank[user.id] && photoTank[user.id].length === 3 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, user.username) : null));
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "photos-all"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "one-section"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Editors' Choice"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Photos selected by our Editors"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "column"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "row"
-      }, photos.slice(22, 24).map(function (photo, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          key: idx
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-          to: "/photos/".concat(photo.id)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-          className: "photo-img",
-          src: photo.post
-        })));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "row"
-      }, photos.slice(12, 14).map(function (photo, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          key: idx
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-          to: "/photos/".concat(photo.id)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-          className: "photo-img",
-          src: photo.post
-        })));
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "one-section"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Featured Galleries"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Best Galeries o BlowUp"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "column"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "row"
-      }, photos.slice(14, 16).map(function (photo, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          key: idx
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-          to: "/photos/".concat(photo.id)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-          className: "photo-img",
-          src: photo.post
-        })));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "row"
-      }, photos.slice(16, 18).map(function (photo, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          key: idx
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-          to: "/photos/".concat(photo.id)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-          className: "photo-img",
-          src: photo.post
-        })));
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "one-section"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Quests"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Photo contests to challange you"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "column"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "row"
-      }, photos.slice(18, 20).map(function (photo, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          key: idx
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-          to: "/photos/".concat(photo.id)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-          className: "photo-img",
-          src: photo.post
-        })));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "row"
-      }, photos.slice(20, 22).map(function (photo, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          key: idx
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-          to: "/photos/".concat(photo.id)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-          className: "photo-img",
-          src: photo.post
-        })));
-      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "last-div"
-      }));
-    }
-  }]);
-
-  return PhotoIndex;
-}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
-
-;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PhotoIndex);
-
-/***/ }),
-
 /***/ "./frontend/components/pictures/pictures_show.jsx":
 /*!********************************************************!*\
   !*** ./frontend/components/pictures/pictures_show.jsx ***!
@@ -739,13 +542,10 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
- // import { Redirect } from 'react-router-dom';
-// import CreateCommentContainer from '../comments/create_comment_container';
-// import CommentIndexContainer from '../comments/comment_index_container';
-// import { HiOutlineUserCircle } from "react-icons/hi";
+ // import CreateCommentContainer from '../comments/create_comment_container';
 // import { RiHeartLine, RiFolderAddLine, RiShareLine } from "react-icons/ri";
 
- // import { GrNext } from "react-icons/gr";
+
 
 var PictureShow = /*#__PURE__*/function (_React$Component) {
   _inherits(PictureShow, _React$Component);
@@ -783,47 +583,8 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var picture = this.props.picture;
-      if (!picture) return null;
-      var user = this.props.users[picture.userId];
-      if (!user) return null;
-      console.log(user);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "picture-show-biggest-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "picture-show-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "picture-box"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        className: "picture-show-img",
-        src: picture.post
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "after-show-picture"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "picture-show-info"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "logos"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RiHeartLine, {
-        size: "30"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RiFolderAddLine, {
-        size: "30"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RiShareLine, {
-        size: "30"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "center-box"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "picture-info-box"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: user.profile
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "next-to-picture"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, picture.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, " by ", user.username, " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, picture.description))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "comment-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "upgrade"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(CreateCommentContainer, {
-        photoId: this.props.picture.id
-      }))));
+      /*#__PURE__*/
+      react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "hello");
     }
   }]);
 
