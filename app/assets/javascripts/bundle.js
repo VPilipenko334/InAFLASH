@@ -66,9 +66,7 @@ var fetchPictures = function fetchPictures() {
 };
 var createPicture = function createPicture(picture) {
   return function (dispatch) {
-    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.createPicture(picture).then(function (picture) {
-      return dispatch(receivePicture(picture));
-    });
+    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.createPicture(picture).then(dispatch(receivePicture(picture)));
   };
 };
 var deletePicture = function deletePicture(pictureId) {
@@ -579,55 +577,44 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
     key: "handleback",
     value: function handleback() {
       this.props.history.goBack();
-    }
-  }, {
-    key: "toggleLike",
-    value: function toggleLike() {
-      var _this2 = this;
+    } // toggleLike() {
+    //     let like = false
+    //     let likePicture = []
+    //     for (let i = 0; i < this.props.likes.length; i++) {
+    //         if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
+    //             likePicture.push(this.props.likes[i].id)
+    //             like = true
+    //         }
+    //     }
+    //     return (
+    //         <div className="like_button_box">
+    //             {
+    //                 like ?
+    //                     <button className="like_button" onClick={() => this.props.deleteLike(pictureLiked[0])}>
+    //                         <i className="liked-class"></i>
+    //                     </button> :
+    //                     <button className="like_button" onClick={() => this.props.createLike(this.props.session.id, this.props.picture.id)}>
+    //                         <i className="liked-class"></i>
+    //                     </button>
+    //             }
+    //         </div>
+    //     )
+    // }
+    // isUser() {
+    //     if (this.props.session === null) {
+    //         return null
+    //     } else if (this.props.session.id === this.props.picture.ownerId) {
+    //         return null
+    //     } else {
+    //         return this.toggleLike()
+    //     }
+    // }
 
-      var like = false;
-      var likePicture = [];
-
-      for (var i = 0; i < this.props.likes.length; i++) {
-        if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
-          likePicture.push(this.props.likes[i].id);
-          like = true;
-        }
-      }
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "like_button_box"
-      }, like ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-        className: "like_button",
-        onClick: function onClick() {
-          return _this2.props.deleteLike(pictureLiked[0]);
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-        className: "liked-class"
-      })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-        className: "like_button",
-        onClick: function onClick() {
-          return _this2.props.createLike(_this2.props.session.id, _this2.props.picture.id);
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-        className: "liked-class"
-      })));
-    }
-  }, {
-    key: "isUser",
-    value: function isUser() {
-      if (this.props.session === null) {
-        return null;
-      } else if (this.props.session.id === this.props.picture.ownerId) {
-        return null;
-      } else {
-        return this.toggleLike();
-      }
-    }
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
+      // console.log(this.props)
+      // console.log(pictureId)
       return 'hello darkness my old friend';
     }
   }]);
@@ -810,7 +797,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
         formData.append('picture[user_id]', this.state.userId);
         formData.append('picture[picture]', this.state.pictureFile);
         this.props.createPicture(formData).then(function (res) {
-          return _this4.props.history.push('/pictures/');
+          return _this4.props.history.push("/pictures/".concat(res.id));
         }); // this.props.history.push('/pictures')
       }
     }
@@ -912,6 +899,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _upload_picture__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./upload_picture */ "./frontend/components/pictures/upload_picture.jsx");
 /* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
+/* harmony import */ var _util_picture_api_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util/picture_api_util */ "./frontend/util/picture_api_util.js");
+
 
 
 
@@ -931,6 +920,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     createPicture: function createPicture(picture) {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_3__.createPicture)(picture));
+    },
+    fetchPicture: function fetchPicture(pictureId) {
+      return dispatch((0,_util_picture_api_util__WEBPACK_IMPORTED_MODULE_4__.fetchPicture)(pictureId));
     }
   };
 };
@@ -1629,7 +1621,7 @@ __webpack_require__.r(__webpack_exports__);
 var fetchPicture = function fetchPicture(pictureId) {
   return $.ajax({
     method: "GET",
-    url: "api/pictures/".concat(pictureId)
+    url: "api/picture/".concat(pictureId)
   });
 };
 var fetchPictures = function fetchPictures() {
@@ -1638,13 +1630,13 @@ var fetchPictures = function fetchPictures() {
     url: '/api/pictures'
   });
 };
-var createPicture = function createPicture(picture) {
+var createPicture = function createPicture(formData) {
   return $.ajax({
     method: "POST",
     url: '/api/pictures',
     contentType: false,
     processData: false,
-    data: picture
+    data: formData
   });
 };
 var deletePicture = function deletePicture(pictureId) {

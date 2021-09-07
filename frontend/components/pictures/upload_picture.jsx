@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router";
 
+
 class UploadPicture extends React.Component {
     constructor(props) {
         super(props);
@@ -50,7 +51,7 @@ class UploadPicture extends React.Component {
             formData.append('picture[description]', this.state.description)
             formData.append('picture[user_id]', this.state.userId)
             formData.append('picture[picture]', this.state.pictureFile)
-            this.props.createPicture(formData).then(res => this.props.history.push('/pictures/'));
+            this.props.createPicture(formData).then(res => this.props.history.push(`/pictures/${res.id}`));
             // this.props.history.push('/pictures')
             
         }

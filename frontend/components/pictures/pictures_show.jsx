@@ -24,44 +24,45 @@ class PictureShow extends React.Component {
         this.props.history.goBack();
     }
 
-    toggleLike() {
-        let like = false
-        let likePicture = []
-        for (let i = 0; i < this.props.likes.length; i++) {
-            if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
-                likePicture.push(this.props.likes[i].id)
-                like = true
-            }
-        }
+    // toggleLike() {
+    //     let like = false
+    //     let likePicture = []
+    //     for (let i = 0; i < this.props.likes.length; i++) {
+    //         if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
+    //             likePicture.push(this.props.likes[i].id)
+    //             like = true
+    //         }
+    //     }
 
-        return (
-            <div className="like_button_box">
-                {
-                    like ?
-                        <button className="like_button" onClick={() => this.props.deleteLike(pictureLiked[0])}>
-                            <i className="liked-class"></i>
-                        </button> :
-                        <button className="like_button" onClick={() => this.props.createLike(this.props.session.id, this.props.picture.id)}>
-                            <i className="liked-class"></i>
-                        </button>
-                }
-            </div>
-        )
-    }
+    //     return (
+    //         <div className="like_button_box">
+    //             {
+    //                 like ?
+    //                     <button className="like_button" onClick={() => this.props.deleteLike(pictureLiked[0])}>
+    //                         <i className="liked-class"></i>
+    //                     </button> :
+    //                     <button className="like_button" onClick={() => this.props.createLike(this.props.session.id, this.props.picture.id)}>
+    //                         <i className="liked-class"></i>
+    //                     </button>
+    //             }
+    //         </div>
+    //     )
+    // }
 
-    isUser() {
-        if (this.props.session === null) {
-            return null
-        } else if (this.props.session.id === this.props.picture.ownerId) {
-            return null
-        } else {
-            return this.toggleLike()
-        }
-    }
+    // isUser() {
+    //     if (this.props.session === null) {
+    //         return null
+    //     } else if (this.props.session.id === this.props.picture.ownerId) {
+    //         return null
+    //     } else {
+    //         return this.toggleLike()
+    //     }
+    // }
 
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
+        // console.log(pictureId)
         return (
             'hello darkness my old friend' 
         )
