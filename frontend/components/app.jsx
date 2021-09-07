@@ -35,7 +35,8 @@ const App = () => (
 
                             {/* <ProtectedRoute exact path="/userId" component={HomePage} /> */}
                             <ProtectedRoute exact path="/upload" component={UploadPictureContainer} />
-                            <ProtectedRoute exact path="/pictures/" component={PicturesShowContainer} />
+                            <ProtectedRoute exact path="/pictures/:pictureId" component={PicturesShowContainer} />
+                            <ProtectedRoute exact path="/pictures/:pictureId" component={PicturesShowContainer} />
                     </Switch>
             </div>
         </div>

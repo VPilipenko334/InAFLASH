@@ -304,7 +304,11 @@ var App = function App() {
     component: _pictures_upload_picture_container__WEBPACK_IMPORTED_MODULE_11__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
     exact: true,
-    path: "/pictures/",
+    path: "/pictures/:pictureId",
+    component: _pictures_pictures_show_container__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
+    exact: true,
+    path: "/pictures/:pictureId",
     component: _pictures_pictures_show_container__WEBPACK_IMPORTED_MODULE_10__["default"]
   }))));
 };
@@ -614,6 +618,7 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       // console.log(this.props)
+      // const { picture } = this.props;
       // console.log(pictureId)
       return 'hello darkness my old friend';
     }
@@ -1621,7 +1626,7 @@ __webpack_require__.r(__webpack_exports__);
 var fetchPicture = function fetchPicture(pictureId) {
   return $.ajax({
     method: "GET",
-    url: "api/picture/".concat(pictureId)
+    url: "api/pictures/".concat(pictureId)
   });
 };
 var fetchPictures = function fetchPictures() {

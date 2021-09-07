@@ -8,7 +8,7 @@
 export const fetchPicture = (pictureId) => {
     return $.ajax({
         method: "GET",
-        url: `api/picture/${pictureId}`
+        url: `api/pictures/${pictureId}`
     })
 };
 

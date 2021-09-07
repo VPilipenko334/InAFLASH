@@ -62,6 +62,7 @@ class PictureShow extends React.Component {
 
     render() {
         // console.log(this.props)
+        // const { picture } = this.props;
         // console.log(pictureId)
         return (
             'hello darkness my old friend' 
