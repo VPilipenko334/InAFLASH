@@ -50,7 +50,7 @@ class UploadPicture extends React.Component {
             formData.append('picture[description]', this.state.description)
             formData.append('picture[user_id]', this.state.userId)
             formData.append('picture[picture]', this.state.pictureFile)
-            this.props.createPicture(formData).then(res => this.props.history.push(`/pictures/${res.id}`));
+            this.props.createPicture(formData).then(res => this.props.history.push('/pictures/'));
             // this.props.history.push('/pictures')
             
         }
@@ -58,7 +58,7 @@ class UploadPicture extends React.Component {
 
 
     handleCancel(e) {
-        this.setState({ selectForm:0})
+        this.setState({ selectForm: 0 })
     }
 
 

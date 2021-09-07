@@ -49,14 +49,14 @@ var removePicture = function removePicture(pictureId) {
 // these should match our util
 
 
-var fetchPicture = function fetchPicture(id) {
+var fetchPicture = function fetchPicture(pictureId) {
   return function (dispatch) {
-    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPicture(id).then(function (picture) {
+    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPicture(pictureId).then(function (picture) {
       return dispatch(receivePicture(picture));
-    }) // think about where the fetchPicture is coming from 
-    ;
+    });
   };
-};
+}; // think about where the fetchPicture is coming from 
+
 var fetchPictures = function fetchPictures() {
   return function (dispatch) {
     return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPictures().then(function (pictures) {
@@ -66,7 +66,7 @@ var fetchPictures = function fetchPictures() {
 };
 var createPicture = function createPicture(picture) {
   return function (dispatch) {
-    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPictures(picture).then(function (picture) {
+    return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.createPicture(picture).then(function (picture) {
       return dispatch(receivePicture(picture));
     });
   };
@@ -304,6 +304,10 @@ var App = function App() {
     exact: true,
     path: "/upload",
     component: _pictures_upload_picture_container__WEBPACK_IMPORTED_MODULE_11__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
+    exact: true,
+    path: "/pictures/",
+    component: _pictures_pictures_show_container__WEBPACK_IMPORTED_MODULE_10__["default"]
   }))));
 };
 
@@ -568,8 +572,8 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchPicture(this.props.match.params.id);
-      this.props.fetchCurrentUser(); // this.props.fetchlikes();
+      this.props.fetchPicture(this.props.match.params.pictureId); // this.props.fetchUser();
+      // this.props.fetchlikes();
       // this.props.fetchlikes();
       // this.setState({userId: this.props.fetchUser(this.props.picture.userId)});
       // this.props.fetchUser(this.props.picture.userId);
@@ -583,8 +587,7 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      /*#__PURE__*/
-      react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "hello");
+      return 'hello darkness my old friend';
     }
   }]);
 
@@ -766,7 +769,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
         formData.append('picture[user_id]', this.state.userId);
         formData.append('picture[picture]', this.state.pictureFile);
         this.props.createPicture(formData).then(function (res) {
-          return _this4.props.history.push("/pictures/".concat(res.id));
+          return _this4.props.history.push('/pictures/');
         }); // this.props.history.push('/pictures')
       }
     }
@@ -872,7 +875,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- //do I need to keep state an empty object??
+ // import { fetchPicture } from '../../util/picture_api_util';
+// import { createPicture } from '../../util/picture_api_util';
+//do I need to keep state an empty object??
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
@@ -1580,10 +1585,10 @@ __webpack_require__.r(__webpack_exports__);
 //  see all pictures --> fetchPictures (index)
 // add a picture --> createPicture (create)
 // delete a picture --> deletePicture (destroy)
-var fetchPicture = function fetchPicture(id) {
+var fetchPicture = function fetchPicture(pictureId) {
   return $.ajax({
     method: "GET",
-    url: "api/picture/".concat(id)
+    url: "api/pictures/".concat(pictureId)
   });
 };
 var fetchPictures = function fetchPictures() {

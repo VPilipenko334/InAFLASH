@@ -15,8 +15,8 @@ class PictureShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPicture(this.props.match.params.id);
-        this.props.fetchCurrentUser();
+        this.props.fetchPicture(this.props.match.params.pictureId);
+        // this.props.fetchUser();
         // this.props.fetchlikes();
         // this.props.fetchlikes();
         // this.setState({userId: this.props.fetchUser(this.props.picture.userId)});
@@ -30,9 +30,9 @@ class PictureShow extends React.Component {
     }
 
     render() {
-        <div>
-            hello
-        </div>
+        return (
+            'hello darkness my old friend' 
+        )
     }
 }
 

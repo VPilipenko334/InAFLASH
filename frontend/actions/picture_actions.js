@@ -31,19 +31,19 @@ const removePicture = (pictureId) => {
 // action creators
 // these should match our util
 
-export const fetchPicture = id => dispatch => (
-    PictureAPIUtil.fetchPicture(id).then(picture=> dispatch(receivePicture(picture)))
+export const fetchPicture = pictureId => dispatch =>
+    PictureAPIUtil.fetchPicture(pictureId).then(picture => dispatch(receivePicture(picture))
+    );
 // think about where the fetchPicture is coming from 
-);
 
-export const fetchPictures = () => dispatch => (
-    PictureAPIUtil.fetchPictures().then(pictures => dispatch(receivePictures(pictures)))
-);
+export const fetchPictures = () => dispatch =>
+    PictureAPIUtil.fetchPictures().then(pictures =>dispatch(receivePictures(pictures))
+    );
 
-export const createPicture = (picture) => dispatch => (
-    PictureAPIUtil.fetchPictures(picture).then(picture => dispatch(receivePicture(picture)))
-);
+export const createPicture = picture => dispatch =>
+    PictureAPIUtil.createPicture(picture).then(picture => dispatch(receivePicture(picture))
+    );
 
-export const deletePicture = (pictureId) => dispatch => (
-    PictureAPIUtil.deletePicture(pictureId).then(() => dispatch(removePicture(pictureId))) 
-);
+export const deletePicture = pictureId => dispatch =>
+    PictureAPIUtil.deletePicture(pictureId).then(() => dispatch(removePicture(pictureId))
+    );
