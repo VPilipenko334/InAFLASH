@@ -8,6 +8,7 @@ gem 'pry-rails'
 gem 'annotate'
 gem 'bcrypt'
 gem "aws-sdk-s3"
+gem 'mini_magick'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -18,8 +18,8 @@ import welcome from './welcome/welcome';
 // import PictureIndex from './pictures/pictures_index_container';
 import UploadPicture from './pictures/upload_picture';
 import ShowPicture from './pictures/pictures_show';
-import HomePage from './home/home';
-import home_container from './home/home_container';
+// import HomePage from './pictures_home/home';
+// import home_container from './pictures_home/pictures_home_container';
 import PicturesShowContainer from './pictures/pictures_show_container';
 import UploadPictureContainer from './pictures/upload_picture_container';
 
@@ -33,7 +33,7 @@ const App = () => (
                             <AuthRoute exact path="/login" component={LogInFormContainer} />
 
 
-                            <ProtectedRoute exact path="/userId" component={HomePage} />
+                            {/* <ProtectedRoute exact path="/userId" component={HomePage} /> */}
                             <ProtectedRoute exact path="/upload" component={UploadPictureContainer} />
                             <ProtectedRoute exact path="/pictures" component={PicturesShowContainer} />
 
