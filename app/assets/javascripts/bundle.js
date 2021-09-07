@@ -303,10 +303,6 @@ var App = function App() {
     exact: true,
     path: "/upload",
     component: _pictures_upload_picture_container__WEBPACK_IMPORTED_MODULE_11__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
-    exact: true,
-    path: "/pictures",
-    component: _pictures_pictures_show_container__WEBPACK_IMPORTED_MODULE_10__["default"]
   }))));
 };
 
