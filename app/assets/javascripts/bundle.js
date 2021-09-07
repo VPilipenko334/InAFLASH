@@ -574,10 +574,6 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       this.props.fetchPicture(this.props.match.params.pictureId); // this.props.fetchUser();
       // this.props.fetchlikes();
-      // this.props.fetchlikes();
-      // this.setState({userId: this.props.fetchUser(this.props.picture.userId)});
-      // this.props.fetchUser(this.props.picture.userId);
-      // console.log(this.props.picture);
     }
   }, {
     key: "handleback",
@@ -585,8 +581,53 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
       this.props.history.goBack();
     }
   }, {
+    key: "toggleLike",
+    value: function toggleLike() {
+      var _this2 = this;
+
+      var like = false;
+      var likePicture = [];
+
+      for (var i = 0; i < this.props.likes.length; i++) {
+        if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
+          likePicture.push(this.props.likes[i].id);
+          like = true;
+        }
+      }
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "like_button_box"
+      }, like ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        className: "like_button",
+        onClick: function onClick() {
+          return _this2.props.deleteLike(pictureLiked[0]);
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+        className: "liked-class"
+      })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        className: "like_button",
+        onClick: function onClick() {
+          return _this2.props.createLike(_this2.props.session.id, _this2.props.picture.id);
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+        className: "liked-class"
+      })));
+    }
+  }, {
+    key: "isUser",
+    value: function isUser() {
+      if (this.props.session === null) {
+        return null;
+      } else if (this.props.session.id === this.props.picture.ownerId) {
+        return null;
+      } else {
+        return this.toggleLike();
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
+      console.log(this.props);
       return 'hello darkness my old friend';
     }
   }]);
