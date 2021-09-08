@@ -23,6 +23,7 @@ import ShowPicture from './pictures/pictures_show';
 import PicturesShowContainer from './pictures/pictures_show_container';
 import UploadPictureContainer from './pictures/upload_picture_container';
 import PicturesIndexContainer from './pictures/pictures_index_container'
+import userProfilePictureContainer from './user_profile/user_profile_picture_container';
 // import PictureHomeContainer from './pictures_home/pictures_home_container'
 import HomeFeed from './home_feed/home_feed'
 
@@ -39,7 +40,8 @@ const App = () => (
 
                             {/* <AuthRoute exact path='/' component={PictureHomeContainer} /> */}
 
-                            <ProtectedRoute exact path='/' component={PicturesIndexContainer} />
+                            <ProtectedRoute exact path='/pictures' component={PicturesIndexContainer} />
+                            <ProtectedRoute exact path='/profile' component={userProfilePictureContainer} />
                             <ProtectedRoute exact path="/upload" component={UploadPictureContainer} />
                             <ProtectedRoute exact path="/pictures/:pictureId" component={PicturesShowContainer} />
 

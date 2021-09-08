@@ -70,28 +70,30 @@ class UploadPicture extends React.Component {
 
         if (this.state.selectForm === 0) {
             return (
-                <div className="full">
-                <div className="upload-photo-container"> 
-                    <h1>Upload Photo</h1>
-                        <div className="upload-form">
-                            <h3>Upload your photo here</h3>
-                            <input type="file" onChange={this.handleFile} id="file"  />
-                                <div className="requirements">
-                                    <h2>Photo Requirements</h2>
-                                        <p>
-                                        .jpg only
-                                        Max. photo dimensions are 200MP/megapixels
-                                        </p>
+                <div className="upload-opener">
+                    <div className="full-container">
+                        <div className="upload-photo-container"> 
+                            <h1>Upload Photo</h1>
+                                <div className="upload-form">
+                                    <h3>Upload your photo here</h3>
+                                    <input type="file" onChange={this.handleFile} id="file"  />
+                                        <div className="requirements">
+                                            <h2>Photo Requirements</h2>
+                                                <p>
+                                                .jpg only
+                                                Max. photo dimensions are 200MP/megapixels
+                                                </p>
 
-                                    <h2>Licensing requirements</h2>
-                                        <p>Min. photo dimensions are 3MP/megapixels
-                                        No watermarks, logos, or borders
-                                        No NSFW content
-                                        </p>
+                                            <h2>Licensing requirements</h2>
+                                                <p>Min. photo dimensions are 3MP/megapixels
+                                                No watermarks, logos, or borders
+                                                No NSFW content
+                                                </p>
+                                        </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
-                </div>
             )
         }
 

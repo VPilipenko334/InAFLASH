@@ -25,15 +25,17 @@ const Greeting = ({ currentUser, logout }) => {
       </nav>
     </div>
   );
+
   const personalGreeting = () => (
     <div className="header-group">
       <h2 className="header-name">welcome, {currentUser.username}!</h2>
-        <div className="buttons-on-homepage">
-        <Link to="/upload" className="homepage-header-button">Upload</Link>
-        <Link to="/userId" className="homepage-header-button">User HomePage</Link>
-        <button className="homepage-header-button" onClick={logout}>Log Out</button>
+        {/* <div className="buttons-on-homepage"> */}
+        <img src="user.png" className="user-man"></img>
+        <Link to="/upload" className="greeting-buttons">Upload</Link>
+        <Link to="/home" className="greeting-buttons">Home</Link>
+        <button className="homepage-header-button" onClick={logout}>Logout</button>
       </div>
-    </div>
+    // </div>
   );
 
   return currentUser ? personalGreeting() : sessionLinks();

@@ -253,7 +253,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
 /* harmony import */ var _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./session_form/signup_form_container */ "./frontend/components/session_form/signup_form_container.jsx");
 /* harmony import */ var _session_form_session_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./session_form/session_form */ "./frontend/components/session_form/session_form.jsx");
@@ -265,7 +265,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pictures_pictures_show_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pictures/pictures_show_container */ "./frontend/components/pictures/pictures_show_container.js");
 /* harmony import */ var _pictures_upload_picture_container__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pictures/upload_picture_container */ "./frontend/components/pictures/upload_picture_container.js");
 /* harmony import */ var _pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pictures/pictures_index_container */ "./frontend/components/pictures/pictures_index_container.js");
-/* harmony import */ var _home_feed_home_feed__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./home_feed/home_feed */ "./frontend/components/home_feed/home_feed.jsx");
+/* harmony import */ var _user_profile_user_profile_picture_container__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./user_profile/user_profile_picture_container */ "./frontend/components/user_profile/user_profile_picture_container.js");
+/* harmony import */ var _user_profile_user_profile_picture_container__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_user_profile_user_profile_picture_container__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _home_feed_home_feed__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./home_feed/home_feed */ "./frontend/components/home_feed/home_feed.jsx");
 
 
 
@@ -283,6 +285,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
  // import PictureHomeContainer from './pictures_home/pictures_home_container'
 
 
@@ -290,7 +293,7 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "login-links"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     exact: true,
     path: "/",
     component: _welcome_welcome__WEBPACK_IMPORTED_MODULE_7__["default"]
@@ -305,11 +308,15 @@ var App = function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
     exact: true,
     path: "/home",
-    component: _home_feed_home_feed__WEBPACK_IMPORTED_MODULE_13__["default"]
+    component: _home_feed_home_feed__WEBPACK_IMPORTED_MODULE_14__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
     exact: true,
-    path: "/",
+    path: "/pictures",
     component: _pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_12__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
+    exact: true,
+    path: "/profile",
+    component: (_user_profile_user_profile_picture_container__WEBPACK_IMPORTED_MODULE_13___default())
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
     exact: true,
     path: "/upload",
@@ -463,18 +470,20 @@ var Greeting = function Greeting(_ref) {
       className: "header-group"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
       className: "header-name"
-    }, "welcome, ", currentUser.username, "!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "buttons-on-homepage"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    }, "welcome, ", currentUser.username, "!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      src: "user.png",
+      className: "user-man"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: "/upload",
-      className: "homepage-header-button"
+      className: "greeting-buttons"
     }, "Upload"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-      to: "/userId",
-      className: "homepage-header-button"
-    }, "User HomePage"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      to: "/home",
+      className: "greeting-buttons"
+    }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
       className: "homepage-header-button",
       onClick: logout
-    }, "Log Out")));
+    }, "Logout")) // </div>
+    ;
   };
 
   return currentUser ? personalGreeting() : sessionLinks();
@@ -577,7 +586,7 @@ var HomeFeed = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Hi I am going to be the Home Feed"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, " hi I am the inner home feed "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/",
         className: "back-home-link"
-      }, "Click to go back Home"));
+      }, "Click to go back to the main page"));
     }
   }]);
 
@@ -1009,7 +1018,9 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
 
       if (this.state.selectForm === 0) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "full"
+          className: "upload-opener"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "full-container"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           className: "upload-photo-container"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Upload Photo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1020,7 +1031,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
           id: "file"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           className: "requirements"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Photo Requirements"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, ".jpg only Max. photo dimensions are 200MP/megapixels"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Licensing requirements"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Min. photo dimensions are 3MP/megapixels No watermarks, logos, or borders No NSFW content")))));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Photo Requirements"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, ".jpg only Max. photo dimensions are 200MP/megapixels"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Licensing requirements"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Min. photo dimensions are 3MP/megapixels No watermarks, logos, or borders No NSFW content"))))));
       }
 
       if (this.state.selectForm === 1) {
@@ -1423,12 +1434,23 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     processForm: function processForm(user) {
       return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.login)(user));
-    } // login: (user) => dispatch(login(user))
+    } // signup: (user) => dispatch(signup(user))
+    // login: (user) => dispatch(login(user))
 
   };
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_0__.connect)(mapStateToProps, mapDispatchToProps)(_session_form__WEBPACK_IMPORTED_MODULE_3__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/user_profile/user_profile_picture_container.js":
+/*!****************************************************************************!*\
+  !*** ./frontend/components/user_profile/user_profile_picture_container.js ***!
+  \****************************************************************************/
+/***/ (() => {
+
+
 
 /***/ }),
 
@@ -1533,15 +1555,15 @@ __webpack_require__.r(__webpack_exports__);
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
     className: "icon ion-social-facebook"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#"
+    href: "https://github.com/VPilipenko334"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
     className: "icon ion-social-twitter"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#"
+    href: "https://www.linkedin.com/in/veronikapilipenko"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
     className: "icon ion-social-snapchat"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#"
+    href: "https://angel.co/u/veronika-pilipenko"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
     className: "icon ion-social-instagram"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {

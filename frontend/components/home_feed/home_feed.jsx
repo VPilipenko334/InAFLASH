@@ -8,7 +8,7 @@ class HomeFeed extends React.Component {
                 <h1>Hi I am going to be the Home Feed</h1>
                 <p> hi I am the inner home feed </p>
                     <br/>
-                <Link to="/" className="back-home-link">Click to go back Home</Link>
+                <Link to="/" className="back-home-link">Click to go back to the main page</Link>
             </div>
         )
     }

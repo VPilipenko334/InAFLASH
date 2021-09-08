@@ -30,13 +30,54 @@
   font-weight: bold;
   margin: 0px;
   border-width: 2px;
-  border-radius: 28px;
+  border-radius: 25px;
   border-style: solid;
   cursor: pointer;
   text-align: center;
   max-height: 48px;
-  padding: 10px 22px 10px 14px;
+  padding: 10px 10px 10px 10px;
+  outline: none;
+  background-color: #EFEFEF;
+  border-color: 767676;
+  color: rgb(34, 34, 34);
   text-decoration: none;
+  margin: 5px; 
+}
+
+.greeting-buttons {
+  width: auto;
+  min-width: 124px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  margin: 0px;
+  border-width: 2px;
+  border-radius: 25px;
+  border-style: solid;
+  cursor: pointer;
+  text-align: center;
+  max-height: 48px;
+  padding: 10px 10px 10px 10px;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(34, 34, 34);
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+  margin: 5px; 
+}
+
+.user-man {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
 }
 
 .header-name {
