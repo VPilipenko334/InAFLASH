@@ -773,7 +773,9 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
       console.log('hello this works');
       console.log(this.props);
       console.log(this.state);
-      return 'hello' //     <div>
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        onClick: this.handleback
+      }, "hello this is a button")) //     <div>
       //         <div className="picture_show_container">
       //             <div className="picture_show_box1">
       //                 <i className="fas fa-arrow-left" onClick={this.handleback}></i>

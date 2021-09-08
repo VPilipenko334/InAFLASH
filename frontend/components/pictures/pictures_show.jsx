@@ -73,7 +73,13 @@ class PictureShow extends React.Component {
         console.log(this.props)
         console.log(this.state)
         return (
-            'hello'
+            <div>
+
+
+                <button onClick={this.handleback}>hello this is a button</button>
+
+
+            </div>
       
         //     <div>
         //         <div className="picture_show_container">
