@@ -75,20 +75,20 @@ class UploadPicture extends React.Component {
                         <div className="upload-photo-container"> 
                             <h1>Upload Photo</h1>
                                 <div className="upload-form">
-                                    <h3>Upload your photo here</h3>
-                                    <input type="file" onChange={this.handleFile} id="file"  />
-                                        <div className="requirements">
-                                            <h2>Photo Requirements</h2>
-                                                <p>
-                                                .jpg only
-                                                Max. photo dimensions are 200MP/megapixels
-                                                </p>
+                                    <h3>Upload your photo here</h3> <br/>
+                                        <input type="file" onChange={this.handleFile} id="file" /><br />
+                                            <div className="requirements">
+                                                <h2>Photo Requirements</h2>
+                                                    <p>
+                                                    .jpg only
+                                                    Max. photo dimensions are 200MP/megapixels
+                                                 </p><br />
 
-                                            <h2>Licensing requirements</h2>
-                                                <p>Min. photo dimensions are 3MP/megapixels
-                                                No watermarks, logos, or borders
-                                                No NSFW content
-                                                </p>
+                                                <h2>Licensing requirements</h2>
+                                                    <p>Min. photo dimensions are 3MP/megapixels
+                                                    No watermarks, logos, or borders
+                                                    No NSFW content
+                                                    </p>
                                         </div>
                                 </div>
                             </div>
@@ -100,9 +100,9 @@ class UploadPicture extends React.Component {
 
         if (this.state.selectForm === 1) {
             return (
-                <div className="full">
-                    <div className="uploaded-container-photo"> 
-                    <div className="upload-button-box">
+                <div className="upload-opener">
+                    <div className="full-container"> 
+                    <div className="upload-container">
                         <label id="uploading-here">
                             <h2>Upload</h2>
                             <input type="file" onChange={this.handleFile} style={{display: "none"}} />
@@ -113,7 +113,7 @@ class UploadPicture extends React.Component {
                     </div>
 
                     <form className="upload-form" onSubmit={this.handleSubmit}>
-                            <h3> Art Selected: </h3> 
+                            <h3> Art Selected: </h3>
                             <label>Title:
                                 <input className="title" type="text" value={this.state.title} onChange={this.update("title")} />
                                 {this.state.tError ? <p className="errors">Title can not be empty</p> : null}
