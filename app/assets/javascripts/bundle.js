@@ -577,32 +577,9 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          pictures = _this$props.pictures,
-          loggedIn = _this$props.loggedIn,
-          like = _this$props.like,
-          session = _this$props.session,
-          createLike = _this$props.createLike,
-          deleteLike = _this$props.deleteLike;
-      if (!pictures) return null; // console.log("I am in the index page")
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "upload_container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Discover"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "discover_container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-        className: "picture_item_container"
-      }, pictures.map(function (picture, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(PictureItem, {
-          key: idx,
-          picture: picture,
-          loggedIn: loggedIn,
-          like: like,
-          session: session,
-          createLike: createLike,
-          deleteLike: deleteLike
-        });
-      }))));
+      var pictures = this.props.pictures;
+      if (!pictures) return null;
+      return 'hello i am picture index';
     }
   }]);
 
@@ -707,7 +684,8 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      id: ""
+      id: "",
+      picture: ""
     };
     _this.handleback = _this.handleback.bind(_assertThisInitialized(_this)); // this.handleprofile = this.handleprofile(this)
 
@@ -717,90 +695,84 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchPicture(this.props.match.params.pictureId); // this.props.fetchlikes()
+      this.props.fetchPicture(this.props.match.params.pictureId); // this.props.fetchPictures();
+
+      this.props.fetchUsers(); // this.props.fetchlikes()
     }
   }, {
     key: "handleback",
     value: function handleback() {
       this.props.history.goBack();
-    } // toggleLike() {
-    //     let liked = false
-    //     let pictureLiked = []
-    //     for (let i = 0; i < this.props.likes.length; i++) {
-    //         if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
-    //             pictureLiked.push(this.props.likes[i].id)
-    //             liked = true
-    //         }
-    //     }
-    //     return (
-    //         <div className="like_button_box">
-    //             {
-    //                 liked ?
-    //                     <button className="like_button" onClick={() => this.props.deleteLike(pictureLiked[0])}>
-    //                         <i className="fas fa-heart"></i>
-    //                     </button> :
-    //                     <button className="like_button" onClick={() => this.props.createLike(this.props.session.id, this.props.picture.id)}>
-    //                         <i className="far fa-heart"></i>
-    //                     </button>
-    //             }
-    //         </div>
-    //     )
-    // }
-    // isUser() {
-    //     // debugger
-    //     if (this.props.session === null) {
-    //         return null
-    //     } else if (this.props.session.id === this.props.picture.ownerId) {
-    //         return null
-    //     } else {
-    //         return this.toggleLike()
-    //     }
-    // }
-    // handleUser() {
-    //     if (this.props.picture === null) {
-    //         return null
-    //     }
-    //     return (
-    //         <div>
-    //             Username: { }
-    //         </div>
-    //     )
-    // }
+    }
+  }, {
+    key: "toggleLike",
+    value: function toggleLike() {
+      var _this2 = this;
 
+      var liked = false;
+      var pictureLiked = [];
+
+      for (var i = 0; i < this.props.likes.length; i++) {
+        if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
+          pictureLiked.push(this.props.likes[i].id);
+          liked = true;
+        }
+      }
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "like_button_box"
+      }, liked ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        className: "like_button",
+        onClick: function onClick() {
+          return _this2.props.deleteLike(pictureLiked[0]);
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+        className: "fas fa-heart"
+      })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        className: "like_button",
+        onClick: function onClick() {
+          return _this2.props.createLike(_this2.props.session.id, _this2.props.picture.id);
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+        className: "far fa-heart"
+      })));
+    }
+  }, {
+    key: "isUser",
+    value: function isUser() {
+      // debugger
+      if (this.props.session === null) {
+        return null;
+      } else if (this.props.session.id === this.props.picture.userId) {
+        return null;
+      } else {
+        return this.toggleLike();
+      }
+    }
+  }, {
+    key: "handleUser",
+    value: function handleUser() {
+      if (this.props.picture === null) {
+        return null;
+      }
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Username: ");
+    }
   }, {
     key: "render",
     value: function render() {
-      console.log('hello this works');
-      console.log(this.props);
-      console.log(this.state);
+      var picture = this.props.picture;
+      if (picture === undefined) return null;
+      console.log('hello this works'); // console.log(this.props)
+      // console.log(this.state)
+      // console.log(picture)
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         onClick: this.handleback
-      }, "hello this is a button")) //     <div>
-      //         <div className="picture_show_container">
-      //             <div className="picture_show_box1">
-      //                 <i className="fas fa-arrow-left" onClick={this.handleback}></i>
-      //             </div>
-      //             <div className="picture_show_box2">
-      //                 <div>
-      //                     <img className="picture_show_img" src={picture.pictureUrl} alt="" />
-      //                 </div>
-      //             </div>
-      //         </div>
-      //         <div className="picture_show_info">
-      //             <div className="picture_info">
-      //                 {this.isUser()}
-      //                 <div className="picture_info_box1">
-      //                     <div className="picture_info_box2">
-      //                         {/* {this.handleUser()} */}
-      //                         <i onClick={() => this.props.history.push(`/users/${picture.ownerId}`)} className="fas fa-user-circle profile_logo"></i>
-      //                         <h5>{picture.title}</h5>
-      //                     </div>
-      //                     <p>{picture.description}</p>
-      //                 </div>
-      //             </div>
-      //         </div>
-      //     </div>
-      ;
+      }, "hello this is a button"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        className: "image-preview",
+        src: picture.pictureUrl
+      }));
     }
   }]);
 

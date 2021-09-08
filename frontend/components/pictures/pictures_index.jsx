@@ -12,20 +12,11 @@ class PictureIndex extends React.Component {
     }
 
     render() {
-        const { pictures, loggedIn, like, session, createLike, deleteLike } = this.props
+        const { pictures } = this.props
         if (!pictures) return null;
-        // console.log("I am in the index page")
+
         return (
-            <div className="upload_container">
-                <h3>Discover</h3>
-                <div className="discover_container">
-                    <ul className="picture_item_container">
-                        {pictures.map((picture, idx) => (
-                            <PictureItem key={idx} picture={picture} loggedIn={loggedIn} like={like} session={session} createLike={createLike} deleteLike={deleteLike} />
-                        ))}
-                    </ul>
-                </div>
-            </div>
+          'hello i am picture index'
         )
     }
 
