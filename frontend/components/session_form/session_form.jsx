@@ -23,6 +23,18 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
     demoLogin(e) {
         e.preventDefault();
         const demoUser = {

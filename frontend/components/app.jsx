@@ -22,7 +22,11 @@ import ShowPicture from './pictures/pictures_show';
 // import home_container from './pictures_home/pictures_home_container';
 import PicturesShowContainer from './pictures/pictures_show_container';
 import UploadPictureContainer from './pictures/upload_picture_container';
-import pictures_show_container from './pictures/pictures_show_container';
+import PicturesIndexContainer from './pictures/pictures_index_container'
+// import PictureHomeContainer from './pictures_home/pictures_home_container'
+import HomeFeed from './home_feed/home_feed'
+
+
 const App = () => (
     <div>
             <div className="login-links">
@@ -31,12 +35,16 @@ const App = () => (
                             <Route exact path="/" component={welcome} />
                             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
                             <AuthRoute exact path="/login" component={LogInFormContainer} />
+                            <ProtectedRoute exact path='/home' component={HomeFeed} />
 
+                            {/* <AuthRoute exact path='/' component={PictureHomeContainer} /> */}
 
-                            {/* <ProtectedRoute exact path="/userId" component={HomePage} /> */}
+                            <ProtectedRoute exact path='/' component={PicturesIndexContainer} />
                             <ProtectedRoute exact path="/upload" component={UploadPictureContainer} />
                             <ProtectedRoute exact path="/pictures/:pictureId" component={PicturesShowContainer} />
-                            <ProtectedRoute exact path="/pictures/:pictureId" component={PicturesShowContainer} />
+
+
+
                     </Switch>
             </div>
         </div>
