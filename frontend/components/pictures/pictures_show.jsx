@@ -17,7 +17,9 @@ class PictureShow extends React.Component {
         // this.props.fetchPictures();
         this.props.fetchUsers();
         // this.props.fetchlikes()
+        // console.log(this.props)
     }
+
 
     handleback() {
         this.props.history.goBack()
@@ -38,10 +40,10 @@ class PictureShow extends React.Component {
                 {
                     liked ?
                         <button className="like_button" onClick={() => this.props.deleteLike(pictureLiked[0])}>
-                            <i className="fas fa-heart"></i>
+                            <i className="like"></i>
                         </button> :
                         <button className="like_button" onClick={() => this.props.createLike(this.props.session.id, this.props.picture.id)}>
-                            <i className="far fa-heart"></i>
+                            <i className="like"></i>
                         </button>
                 }
             </div>
@@ -72,21 +74,22 @@ class PictureShow extends React.Component {
     }
 
     render() {
-        const { picture } = this.props;
 
-        if (picture === undefined)
-            return null;
-        console.log('hello this works')
-        // console.log(this.props)
-        // console.log(this.state)
-        // console.log(picture)
+        const { picture } = this.props;
+        if (!picture) return null;
+
+        // const user = this.props.users[picture.userId];
+        // if (!user) return null;
+        // console.log(user);
         return (
             <div>
 
                 <button onClick={this.handleback}>hello this is a button</button><br/>
-                <img className="image-preview" src={picture.pictureUrl} />
+                {/* <img className="picture-show-component" src={picture.picture} /> */}
                 {/* {this.isUser()} */}
-                {/* <h5>{picture.title}</h5> */}
+                <h5>{picture.title}</h5>
+                <h5>{picture.description}</h5>
+
 
                 
 

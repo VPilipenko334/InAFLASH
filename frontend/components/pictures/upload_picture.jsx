@@ -31,7 +31,7 @@ class UploadPicture extends React.Component {
         const file = e.target.files[0];
         const fileReader = new FileReader();
         fileReader.onloadend = () => {
-            this.setState({ pictureFile: file, photoUrl: fileReader.result, selectForm: 1 });
+            this.setState({ pictureFile: file, pictureUrl: fileReader.result, selectForm: 1 });
         }
 
         if (file) {
@@ -65,7 +65,7 @@ class UploadPicture extends React.Component {
 
     render() {
 
-        const PreviewPhoto = this.state.pictureUrl ? <img className="upload-form-preview" src={this.state.pictureUrl} /> : null;
+        const PreviewPicture = this.state.pictureUrl ? <img className="upload-form-preview" src={this.state.pictureUrl} /> : null;
 
 
         if (this.state.selectForm === 0) {
@@ -107,8 +107,8 @@ class UploadPicture extends React.Component {
 
                                 <input type="file" onChange={this.handleFile} style={{ display: "none" }} />
                             </label>
-                            <div className="upload-form-preview-photo">
-                                {PreviewPhoto}
+                            <div className="upload-form-preview-photo" height="100" width="100">
+                                {PreviewPicture}
                             </div>
                         </div>
 

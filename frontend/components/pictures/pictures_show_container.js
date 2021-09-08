@@ -7,15 +7,13 @@ import PictureShow from "./pictures_show";
 
 
 const mSTP = (state, ownProps) => {
-    const picture = state.entities.pictures[ownProps.match.params.id];
+    const picture = state.entities.pictures[ownProps.match.params.pictureId];
     return {
         picture: picture,
         session: state.session.currentUser,
         // user: state.entities.users[picture.userId],
         // likes: Object.values(state.entities.likes),
         users: state.entities.users,
-        // users :state.entities.users,
-        // user: pictureUserSelector(state, ownProps.match.params.id),
     };
 };
 
@@ -24,7 +22,7 @@ const mDTP = dispatch => {
         fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
         fetchUsers: () => dispatch(fetchUsers()),
         // fetchlikes: () => dispatch(fetchlikes()),
-        // createLike: (likerId, photoId) => dispatch(createLike(likerId, photoId)),
+        // createLike: (likerId, pictureId) => dispatch(createLike(likerId, pictureId)),
         // deleteLike: likeId => dispatch(deleteLike(likeId))
     };
 };

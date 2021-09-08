@@ -698,6 +698,7 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
       this.props.fetchPicture(this.props.match.params.pictureId); // this.props.fetchPictures();
 
       this.props.fetchUsers(); // this.props.fetchlikes()
+      // console.log(this.props)
     }
   }, {
     key: "handleback",
@@ -727,14 +728,14 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
           return _this2.props.deleteLike(pictureLiked[0]);
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-        className: "fas fa-heart"
+        className: "like"
       })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         className: "like_button",
         onClick: function onClick() {
           return _this2.props.createLike(_this2.props.session.id, _this2.props.picture.id);
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-        className: "far fa-heart"
+        className: "like"
       })));
     }
   }, {
@@ -762,17 +763,13 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var picture = this.props.picture;
-      if (picture === undefined) return null;
-      console.log('hello this works'); // console.log(this.props)
-      // console.log(this.state)
-      // console.log(picture)
+      if (!picture) return null; // const user = this.props.users[picture.userId];
+      // if (!user) return null;
+      // console.log(user);
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         onClick: this.handleback
-      }, "hello this is a button"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        className: "image-preview",
-        src: picture.pictureUrl
-      }));
+      }, "hello this is a button"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, picture.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, picture.description));
     }
   }]);
 
@@ -806,15 +803,13 @@ __webpack_require__.r(__webpack_exports__);
  // import { fetchlikes, createLike, deletelike } from "../../actions/like_actions";
 
 var mSTP = function mSTP(state, ownProps) {
-  var picture = state.entities.pictures[ownProps.match.params.id];
+  var picture = state.entities.pictures[ownProps.match.params.pictureId];
   return {
     picture: picture,
     session: state.session.currentUser,
     // user: state.entities.users[picture.userId],
     // likes: Object.values(state.entities.likes),
-    users: state.entities.users // users :state.entities.users,
-    // user: pictureUserSelector(state, ownProps.match.params.id),
-
+    users: state.entities.users
   };
 };
 
@@ -826,7 +821,7 @@ var mDTP = function mDTP(dispatch) {
     fetchUsers: function fetchUsers() {
       return dispatch((0,_actions_user_actions__WEBPACK_IMPORTED_MODULE_3__.fetchUsers)());
     } // fetchlikes: () => dispatch(fetchlikes()),
-    // createLike: (likerId, photoId) => dispatch(createLike(likerId, photoId)),
+    // createLike: (likerId, pictureId) => dispatch(createLike(likerId, pictureId)),
     // deleteLike: likeId => dispatch(deleteLike(likeId))
 
   };
@@ -924,7 +919,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
       fileReader.onloadend = function () {
         _this3.setState({
           pictureFile: file,
-          photoUrl: fileReader.result,
+          pictureUrl: fileReader.result,
           selectForm: 1
         });
       };
@@ -967,7 +962,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var PreviewPhoto = this.state.pictureUrl ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      var PreviewPicture = this.state.pictureUrl ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         className: "upload-form-preview",
         src: this.state.pictureUrl
       }) : null;
@@ -1006,8 +1001,10 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
             display: "none"
           }
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "upload-form-preview-photo"
-        }, PreviewPhoto)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
+          className: "upload-form-preview-photo",
+          height: "100",
+          width: "100"
+        }, PreviewPicture)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
           className: "upload-form",
           onSubmit: this.handleSubmit
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Upload A Photo:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, " Art Selected: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Title:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
