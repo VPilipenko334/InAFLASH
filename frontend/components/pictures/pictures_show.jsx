@@ -77,19 +77,17 @@ class PictureShow extends React.Component {
 
         const { picture } = this.props;
         if (!picture) return null;
+        // console.log(picture);
 
-        // const user = this.props.users[picture.userId];
-        // if (!user) return null;
-        // console.log(user);
         return (
             <div>
                 <div className="upload-opener">
                     <button onClick={this.handleback}>hello this is a button</button><br/>
                     <img className="picture_show_img" height="500" width="500" src={picture.pictureUrl} alt="" />
-                    {/* {this.isUser()} */}
-                    <h5>{picture.title}</h5>
+                    <h5>{picture.title}</h5> by
                     <h4>{picture.description}</h4>
                     
+                    <button>back to the home page</button>
                 </div>
             </div>
         )
