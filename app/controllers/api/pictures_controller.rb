@@ -30,7 +30,7 @@ class Api::PicturesController < ApplicationController
     end
 
     def destroy
-        @picture = Photo.find(params[:id])
+        @picture = Picture.find(params[:id])
         if @picture.destroy
         render :index
         else
