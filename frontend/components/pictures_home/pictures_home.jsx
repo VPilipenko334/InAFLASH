@@ -7,7 +7,7 @@ class PictureHome extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPhotos();
+        this.props.fetchPictures();
         this.props.fetchUsers();
     }
 

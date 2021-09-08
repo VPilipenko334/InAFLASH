@@ -574,8 +574,8 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchPicture(this.props.match.params.pictureId); // this.props.fetchUser();
-      // this.props.fetchlikes();
+      this.props.fetchPicture(this.props.match.params.id);
+      this.props.fetchUsers(); // this.props.fetchlikes();
     }
   }, {
     key: "handleback",
@@ -620,7 +620,7 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
       // console.log(this.props)
       // const { picture } = this.props;
       // console.log(pictureId)
-      return 'hello darkness my old friend';
+      return 'hello darkness my old friend i am the pictures show container';
     }
   }]);
 
@@ -645,14 +645,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
-/* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/user_api_util */ "./frontend/util/user_api_util.js");
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
 /* harmony import */ var _pictures_show__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pictures_show */ "./frontend/components/pictures/pictures_show.jsx");
 
 
 
 
- // import photoUserSelector from '../../selectors/photo_user_selector';
-// import { fetchlikes, createLike, deletelike } from "../../actions/like_actions";
+ // import { fetchlikes, createLike, deletelike } from "../../actions/like_actions";
 
 var mSTP = function mSTP(state, ownProps) {
   var picture = state.entities.pictures[ownProps.match.params.id];
@@ -673,7 +672,7 @@ var mDTP = function mDTP(dispatch) {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__.fetchPicture)(pictureId));
     },
     fetchUsers: function fetchUsers() {
-      return dispatch((0,_util_user_api_util__WEBPACK_IMPORTED_MODULE_3__.fetchUser)());
+      return dispatch((0,_actions_user_actions__WEBPACK_IMPORTED_MODULE_3__.fetchUsers)());
     } // fetchlikes: () => dispatch(fetchlikes()),
     // createLike: (likerId, photoId) => dispatch(createLike(likerId, photoId)),
     // deleteLike: likeId => dispatch(deleteLike(likeId))
@@ -904,15 +903,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _upload_picture__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./upload_picture */ "./frontend/components/pictures/upload_picture.jsx");
 /* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
-/* harmony import */ var _util_picture_api_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util/picture_api_util */ "./frontend/util/picture_api_util.js");
 
 
 
 
 
- // import { fetchPicture } from '../../util/picture_api_util';
-// import { createPicture } from '../../util/picture_api_util';
-//do I need to keep state an empty object??
+ //do I need to keep state an empty object??
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
@@ -927,7 +923,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_3__.createPicture)(picture));
     },
     fetchPicture: function fetchPicture(pictureId) {
-      return dispatch((0,_util_picture_api_util__WEBPACK_IMPORTED_MODULE_4__.fetchPicture)(pictureId));
+      return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_3__.fetchPicture)(pictureId));
     }
   };
 };

@@ -1,9 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchPicture } from "../../actions/picture_actions";
-import { fetchUser } from "../../util/user_api_util";
+import { fetchUsers } from "../../actions/user_actions";
 import PictureShow from "./pictures_show";
-// import photoUserSelector from '../../selectors/photo_user_selector';
 // import { fetchlikes, createLike, deletelike } from "../../actions/like_actions";
 
 
@@ -17,14 +16,13 @@ const mSTP = (state, ownProps) => {
         users: state.entities.users,
         // users :state.entities.users,
         // user: pictureUserSelector(state, ownProps.match.params.id),
-
     };
 };
-
+      
 const mDTP = dispatch => {
     return {
         fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
-        fetchUsers: () => dispatch(fetchUser()),
+        fetchUsers: () => dispatch(fetchUsers()),
         // fetchlikes: () => dispatch(fetchlikes()),
         // createLike: (likerId, photoId) => dispatch(createLike(likerId, photoId)),
         // deleteLike: likeId => dispatch(deleteLike(likeId))
