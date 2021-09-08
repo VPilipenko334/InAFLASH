@@ -19,8 +19,6 @@ const receivePictures = (pictures) => {
     }
 }
 
-// you need pictureId for removal because you need to know which 
-// picture you will be removing 
 const removePicture = (pictureId) => {
     return {
         type: REMOVE_PICTURE,
@@ -28,8 +26,6 @@ const removePicture = (pictureId) => {
     }
 }
 
-// action creators
-// these should match our util
 
 export const fetchPicture = pictureId => dispatch =>
     PictureAPIUtil.fetchPicture(pictureId).then(picture => dispatch(receivePicture(picture)))

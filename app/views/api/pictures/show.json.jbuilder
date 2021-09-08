@@ -1,5 +1,3 @@
-# json.extract! @picture, :id, :title, :description, :user_id, :private
-# json.pictureUrl url_for(@picture.picture)
-# # json.likes @picture.likes
-
-json.partial! 'picture', picture: @picture
+json.extract! @picture, :id, :title, :private, :description, :user_id
+json.pictureUrl url_for(@picture.picture)
+# json.likes @picture.likes

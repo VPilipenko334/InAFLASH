@@ -5,8 +5,8 @@
 //receiveCurrentUser(currentUser) --> regular action creator 
 //logoutCurrentUser() --> regular action creator 
 //receiveErrors(errors) --> regular action creator 
-    //--> errors is an array 
-    // all other action creators will accept an object 
+//--> errors is an array 
+// all other action creators will accept an object 
 import * as APIUtil from '../util/session_api_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';

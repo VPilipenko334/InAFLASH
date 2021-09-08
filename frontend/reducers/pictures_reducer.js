@@ -1,10 +1,10 @@
-import { 
+import {
     RECEIVE_PICTURE,
     RECEIVE_PICTURES,
     REMOVE_PICTURE
 } from '../actions/picture_actions';
 
-const PicturesReducer = (oldState= {}, action) => {
+const PicturesReducer = (oldState = {}, action) => {
     Object.freeze(oldState)
     let newState = Object.assign({}, oldState)
 
@@ -13,10 +13,9 @@ const PicturesReducer = (oldState= {}, action) => {
             newState[action.picture.id] = action.picture;
         case RECEIVE_PICTURES:
             return Object.assign(newState, action.pictures);
-            return newState; 
         case REMOVE_PICTURE:
             delete newState[action.pictureId]
-            return newState; 
+            return newState;
         default:
             return oldState
     }

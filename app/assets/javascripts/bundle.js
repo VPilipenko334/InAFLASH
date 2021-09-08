@@ -36,18 +36,14 @@ var receivePictures = function receivePictures(pictures) {
     type: RECEIVE_PICTURES,
     pictures: pictures
   };
-}; // you need pictureId for removal because you need to know which 
-// picture you will be removing 
-
+};
 
 var removePicture = function removePicture(pictureId) {
   return {
     type: REMOVE_PICTURE,
     pictureId: pictureId
   };
-}; // action creators
-// these should match our util
-
+};
 
 var fetchPicture = function fetchPicture(pictureId) {
   return function (dispatch) {
@@ -253,7 +249,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
 /* harmony import */ var _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./session_form/signup_form_container */ "./frontend/components/session_form/signup_form_container.jsx");
 /* harmony import */ var _session_form_session_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./session_form/session_form */ "./frontend/components/session_form/session_form.jsx");
@@ -267,7 +263,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pictures/pictures_index_container */ "./frontend/components/pictures/pictures_index_container.js");
 /* harmony import */ var _user_profile_user_profile_picture_container__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./user_profile/user_profile_picture_container */ "./frontend/components/user_profile/user_profile_picture_container.js");
 /* harmony import */ var _user_profile_user_profile_picture_container__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_user_profile_user_profile_picture_container__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _home_feed_home_feed__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./home_feed/home_feed */ "./frontend/components/home_feed/home_feed.jsx");
 
 
 
@@ -287,13 +282,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import PictureHomeContainer from './pictures_home/pictures_home_container'
-
-
+// import HomeFeed from './home_feed/home_feed'
 
 var App = function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "login-links"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
     exact: true,
     path: "/",
     component: _welcome_welcome__WEBPACK_IMPORTED_MODULE_7__["default"]
@@ -305,10 +299,6 @@ var App = function App() {
     exact: true,
     path: "/login",
     component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
-    exact: true,
-    path: "/home",
-    component: _home_feed_home_feed__WEBPACK_IMPORTED_MODULE_14__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__.ProtectedRoute, {
     exact: true,
     path: "/pictures",
@@ -531,72 +521,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
-/***/ "./frontend/components/home_feed/home_feed.jsx":
-/*!*****************************************************!*\
-  !*** ./frontend/components/home_feed/home_feed.jsx ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-var HomeFeed = /*#__PURE__*/function (_React$Component) {
-  _inherits(HomeFeed, _React$Component);
-
-  var _super = _createSuper(HomeFeed);
-
-  function HomeFeed() {
-    _classCallCheck(this, HomeFeed);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(HomeFeed, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Hi I am going to be the Home Feed"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, " hi I am the inner home feed "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        to: "/",
-        className: "back-home-link"
-      }, "Click to go back to the main page"));
-    }
-  }]);
-
-  return HomeFeed;
-}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomeFeed);
-
-/***/ }),
-
 /***/ "./frontend/components/pictures/pictures_index.jsx":
 /*!*********************************************************!*\
   !*** ./frontend/components/pictures/pictures_index.jsx ***!
@@ -631,8 +555,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-
-
+ // import PictureItem from "./picture_item_page";
 
 var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _inherits(PictureIndex, _React$Component);
@@ -649,12 +572,37 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchPictures();
-      this.props.fetchUsers();
+      this.props.fetchlikes();
     }
   }, {
     key: "render",
     value: function render() {
-      return 'hello I am the picture Index Component';
+      var _this$props = this.props,
+          pictures = _this$props.pictures,
+          loggedIn = _this$props.loggedIn,
+          like = _this$props.like,
+          session = _this$props.session,
+          createLike = _this$props.createLike,
+          deleteLike = _this$props.deleteLike;
+      if (!pictures) return null; // console.log("I am in the index page")
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "upload_container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Discover"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "discover_container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+        className: "picture_item_container"
+      }, pictures.map(function (picture, idx) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(PictureItem, {
+          key: idx,
+          picture: picture,
+          loggedIn: loggedIn,
+          like: like,
+          session: session,
+          createLike: createLike,
+          deleteLike: deleteLike
+        });
+      }))));
     }
   }]);
 
@@ -744,8 +692,6 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
- // import CreateCommentContainer from '../comments/create_comment_container';
-// import { RiHeartLine, RiFolderAddLine, RiShareLine } from "react-icons/ri";
 
 
 
@@ -761,46 +707,48 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      userId: undefined
+      id: ""
     };
-    _this.handleback = _this.handleback.bind(_assertThisInitialized(_this));
+    _this.handleback = _this.handleback.bind(_assertThisInitialized(_this)); // this.handleprofile = this.handleprofile(this)
+
     return _this;
   }
 
   _createClass(PictureShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchPicture(this.props.match.params.id);
-      this.props.fetchUsers(); // this.props.fetchlikes();
+      this.props.fetchPicture(this.props.match.params.pictureId); // this.props.fetchlikes()
+      // this.props.fetchUser(this.props.picture.ownerId)
     }
   }, {
     key: "handleback",
     value: function handleback() {
       this.props.history.goBack();
     } // toggleLike() {
-    //     let like = false
-    //     let likePicture = []
+    //     let liked = false
+    //     let pictureLiked = []
     //     for (let i = 0; i < this.props.likes.length; i++) {
     //         if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
-    //             likePicture.push(this.props.likes[i].id)
-    //             like = true
+    //             pictureLiked.push(this.props.likes[i].id)
+    //             liked = true
     //         }
     //     }
     //     return (
     //         <div className="like_button_box">
     //             {
-    //                 like ?
+    //                 liked ?
     //                     <button className="like_button" onClick={() => this.props.deleteLike(pictureLiked[0])}>
-    //                         <i className="liked-class"></i>
+    //                         <i className="fas fa-heart"></i>
     //                     </button> :
     //                     <button className="like_button" onClick={() => this.props.createLike(this.props.session.id, this.props.picture.id)}>
-    //                         <i className="liked-class"></i>
+    //                         <i className="far fa-heart"></i>
     //                     </button>
     //             }
     //         </div>
     //     )
     // }
     // isUser() {
+    //     // debugger
     //     if (this.props.session === null) {
     //         return null
     //     } else if (this.props.session.id === this.props.picture.ownerId) {
@@ -809,14 +757,50 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
     //         return this.toggleLike()
     //     }
     // }
+    // handleUser() {
+    //     if (this.props.picture === null) {
+    //         return null
+    //     }
+    //     return (
+    //         <div>
+    //             Username: { }
+    //         </div>
+    //     )
+    // }
 
   }, {
     key: "render",
     value: function render() {
+      return 'hello'; // const { picture } = this.props
+      // if (!picture) return null
+      // console.log(`I am in the picture show page`)
       // console.log(this.props)
-      // const { picture } = this.props;
-      // console.log(pictureId)
-      return 'hello darkness my old friend i am the pictures show container';
+      // return (
+      //     <div>
+      //         <div className="picture_show_container">
+      //             <div className="picture_show_box1">
+      //                 <i className="fas fa-arrow-left" onClick={this.handleback}></i>
+      //             </div>
+      //             <div className="picture_show_box2">
+      //                 <div>
+      //                     <img className="picture_show_img" src={picture.pictureUrl} alt="" />
+      //                 </div>
+      //             </div>
+      //         </div>
+      //         <div className="picture_show_info">
+      //             <div className="picture_info">
+      //                 {this.isUser()}
+      //                 <div className="picture_info_box1">
+      //                     <div className="picture_info_box2">
+      //                         {/* {this.handleUser()} */}
+      //                         <i onClick={() => this.props.history.push(`/users/${picture.ownerId}`)} className="fas fa-user-circle profile_logo"></i>
+      //                         <h5>{picture.title}</h5>
+      //                     </div>
+      //                     <p>{picture.description}</p>
+      //                 </div>
+      //             </div>
+      //         </div>
+      //     </div>
     }
   }]);
 
@@ -1626,7 +1610,6 @@ var PicturesReducer = function PicturesReducer() {
 
     case _actions_picture_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_PICTURES:
       return Object.assign(newState, action.pictures);
-      return newState;
 
     case _actions_picture_actions__WEBPACK_IMPORTED_MODULE_0__.REMOVE_PICTURE:
       delete newState[action.pictureId];
@@ -1847,13 +1830,13 @@ var fetchPictures = function fetchPictures() {
     url: '/api/pictures'
   });
 };
-var createPicture = function createPicture(formData) {
+var createPicture = function createPicture(picture) {
   return $.ajax({
     method: "POST",
     url: '/api/pictures',
     contentType: false,
     processData: false,
-    data: formData
+    data: picture
   });
 };
 var deletePicture = function deletePicture(pictureId) {

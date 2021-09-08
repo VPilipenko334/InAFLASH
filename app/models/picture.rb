@@ -10,13 +10,13 @@ class Picture < ApplicationRecord
         foreign_key: :user_id,
         class_name: :User
 
-    has_many :comments,
-        foreign_key: :picture_id,
-        class_name: :Picture 
+    # has_many :comments,
+    #     foreign_key: :picture_id,
+    #     class_name: :Picture 
 
-    has_many :likes, 
-        foreign_key: :picture_id,
-        class_name: :Like
+    # has_many :likes, 
+    #     foreign_key: :picture_id,
+    #     class_name: :Like
 
     # def ensure_post
     #     unless self.post.attached?

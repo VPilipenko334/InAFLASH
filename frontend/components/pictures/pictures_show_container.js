@@ -18,7 +18,7 @@ const mSTP = (state, ownProps) => {
         // user: pictureUserSelector(state, ownProps.match.params.id),
     };
 };
-      
+
 const mDTP = dispatch => {
     return {
         fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),

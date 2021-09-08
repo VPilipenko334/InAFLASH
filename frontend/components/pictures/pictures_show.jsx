@@ -1,48 +1,45 @@
 import React from "react";
-// import CreateCommentContainer from '../comments/create_comment_container';
-// import { RiHeartLine, RiFolderAddLine, RiShareLine } from "react-icons/ri";
-import { Link } from 'react-router-dom';
-
+import { Redirect } from 'react-router-dom';
 
 class PictureShow extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
-            userId: undefined,
-        };
-        this.handleback = this.handleback.bind(this);
-
+            id: "",
+        }
+        this.handleback = this.handleback.bind(this)
+        // this.handleprofile = this.handleprofile(this)
     }
 
     componentDidMount() {
-        this.props.fetchPicture(this.props.match.params.id);
-        this.props.fetchUsers();
-        // this.props.fetchlikes();
+        this.props.fetchPicture(this.props.match.params.pictureId)
+        // this.props.fetchlikes()
+        // this.props.fetchUser(this.props.picture.ownerId)
     }
 
     handleback() {
-        this.props.history.goBack();
+        this.props.history.goBack()
     }
 
+
     // toggleLike() {
-    //     let like = false
-    //     let likePicture = []
+    //     let liked = false
+    //     let pictureLiked = []
     //     for (let i = 0; i < this.props.likes.length; i++) {
     //         if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
-    //             likePicture.push(this.props.likes[i].id)
-    //             like = true
+    //             pictureLiked.push(this.props.likes[i].id)
+    //             liked = true
     //         }
     //     }
-
     //     return (
     //         <div className="like_button_box">
     //             {
-    //                 like ?
+    //                 liked ?
     //                     <button className="like_button" onClick={() => this.props.deleteLike(pictureLiked[0])}>
-    //                         <i className="liked-class"></i>
+    //                         <i className="fas fa-heart"></i>
     //                     </button> :
     //                     <button className="like_button" onClick={() => this.props.createLike(this.props.session.id, this.props.picture.id)}>
-    //                         <i className="liked-class"></i>
+    //                         <i className="far fa-heart"></i>
     //                     </button>
     //             }
     //         </div>
@@ -50,6 +47,7 @@ class PictureShow extends React.Component {
     // }
 
     // isUser() {
+    //     // debugger
     //     if (this.props.session === null) {
     //         return null
     //     } else if (this.props.session.id === this.props.picture.ownerId) {
@@ -59,15 +57,54 @@ class PictureShow extends React.Component {
     //     }
     // }
 
+    // handleUser() {
+    //     if (this.props.picture === null) {
+    //         return null
+    //     }
+
+    //     return (
+    //         <div>
+    //             Username: { }
+    //         </div>
+    //     )
+    // }
 
     render() {
-        // console.log(this.props)
-        // const { picture } = this.props;
-        // console.log(pictureId)
         return (
-            'hello darkness my old friend i am the pictures show container' 
+            'hello'
         )
+        // const { picture } = this.props
+        // if (!picture) return null
+        // console.log(`I am in the picture show page`)
+        // console.log(this.props)
+        // return (
+        //     <div>
+        //         <div className="picture_show_container">
+        //             <div className="picture_show_box1">
+        //                 <i className="fas fa-arrow-left" onClick={this.handleback}></i>
+        //             </div>
+        //             <div className="picture_show_box2">
+        //                 <div>
+        //                     <img className="picture_show_img" src={picture.pictureUrl} alt="" />
+        //                 </div>
+        //             </div>
+        //         </div>
+        //         <div className="picture_show_info">
+        //             <div className="picture_info">
+        //                 {this.isUser()}
+        //                 <div className="picture_info_box1">
+        //                     <div className="picture_info_box2">
+        //                         {/* {this.handleUser()} */}
+        //                         <i onClick={() => this.props.history.push(`/users/${picture.ownerId}`)} className="fas fa-user-circle profile_logo"></i>
+        //                         <h5>{picture.title}</h5>
+        //                     </div>
+        //                     <p>{picture.description}</p>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     </div>
     }
+
 }
 
-export default PictureShow;
+export default PictureShow
