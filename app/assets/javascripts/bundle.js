@@ -718,7 +718,6 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchPicture(this.props.match.params.pictureId); // this.props.fetchlikes()
-      // this.props.fetchUser(this.props.picture.user_id)
     }
   }, {
     key: "handleback",
@@ -771,12 +770,10 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log("I am in the picture show page");
+      console.log('hello this works');
       console.log(this.props);
-      return 'hello'; // const { picture } = this.props
-      // if (!picture) return null
-      // return (
-      //     <div>
+      console.log(this.state);
+      return 'hello' //     <div>
       //         <div className="picture_show_container">
       //             <div className="picture_show_box1">
       //                 <i className="fas fa-arrow-left" onClick={this.handleback}></i>
@@ -801,6 +798,7 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
       //             </div>
       //         </div>
       //     </div>
+      ;
     }
   }]);
 
