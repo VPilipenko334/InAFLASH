@@ -14,7 +14,7 @@ class PictureShow extends React.Component {
     componentDidMount() {
         this.props.fetchPicture(this.props.match.params.pictureId)
         // this.props.fetchlikes()
-        // this.props.fetchUser(this.props.picture.ownerId)
+        // this.props.fetchUser(this.props.picture.user_id)
     }
 
     handleback() {
@@ -70,13 +70,13 @@ class PictureShow extends React.Component {
     // }
 
     render() {
+         console.log(`I am in the picture show page`)
+        console.log(this.props)
         return (
             'hello'
         )
         // const { picture } = this.props
         // if (!picture) return null
-        // console.log(`I am in the picture show page`)
-        // console.log(this.props)
         // return (
         //     <div>
         //         <div className="picture_show_container">
