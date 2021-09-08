@@ -83,16 +83,14 @@ class PictureShow extends React.Component {
         // console.log(user);
         return (
             <div>
-
-                <button onClick={this.handleback}>hello this is a button</button><br/>
-                {/* <img className="picture-show-component" src={picture.picture} /> */}
-                {/* {this.isUser()} */}
-                <h5>{picture.title}</h5>
-                <h5>{picture.description}</h5>
-
-
-                
-
+                <div className="upload-opener">
+                    <button onClick={this.handleback}>hello this is a button</button><br/>
+                    <img className="picture_show_img" height="500" width="500" src={picture.pictureUrl} alt="" />
+                    {/* {this.isUser()} */}
+                    <h5>{picture.title}</h5>
+                    <h4>{picture.description}</h4>
+                    
+                </div>
             </div>
         )
     }
