@@ -63,4 +63,60 @@ outline: 1px solid rgb(238, 239, 242);
    flex-direction: column;
    font-family: Helvetica Neue, Arial, sans-serif;
    margin: 50px; 
+  //  border: 2px black; 
+}
+
+.upload-button-form {
+  width: auto;
+  min-width: 124px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  margin: 0px;
+  border-width: 2px;
+  border-radius: 25px;
+  // border-style: solid;
+  cursor: pointer;
+  text-align: center;
+  max-height: 48px;
+  padding: 10px 10px 10px 10px;
+  outline: none;
+  background-color: #0870d1;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-color: #0870d1;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.cancel-button-form {
+  width: auto;
+  min-width: 124px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  margin: 0px;
+  border-width: 2px;
+  border-radius: 25px;
+  // border-style: solid;
+  cursor: pointer;
+  text-align: center;
+  max-height: 48px;
+  padding: 10px 10px 10px 10px;
+  outline: none;
+  background-color: rgb(194, 22, 22);
+  border-color: rgb(194, 22, 22);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
 }

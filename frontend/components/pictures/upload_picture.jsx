@@ -104,7 +104,7 @@ class UploadPicture extends React.Component {
                     <div className="full-container"> 
                     <div className="upload-container">
                         <label id="uploading-here">
-                            <h2>Upload</h2>
+                           
                             <input type="file" onChange={this.handleFile} style={{display: "none"}} />
                         </label>
                         <div className="upload-form-preview-photo">
@@ -113,8 +113,10 @@ class UploadPicture extends React.Component {
                     </div>
 
                     <form className="upload-form" onSubmit={this.handleSubmit}>
-                            <h3> Art Selected: </h3>
-                            <label>Title:
+                            <h2>Upload A Photo:</h2><br/>
+                            <h3> Art Selected: </h3><br/>
+                            <label>Title:<br/>
+                                {/* <textarea cols="40" rows="2" className="title" type="text" value={this.state.title} onChange={this.update("title")} /> */}
                                 <input className="title" type="text" value={this.state.title} onChange={this.update("title")} />
                                 {this.state.tError ? <p className="errors">Title can not be empty</p> : null}
                             </label> <br/>
@@ -122,8 +124,8 @@ class UploadPicture extends React.Component {
                                 <textarea cols="40" rows="6" className="description" type="text" value={this.state.description} onChange={this.update("description")} />
                             </label> <br/>
                             <div>
-                                <button className="cancel-button" onClick={this.handleCancel}>Cancel</button>
-                                <button className="upload-button" type="submit">Upload</button>
+                                <button className="upload-button-form" type="submit">Upload</button>
+                                <button className="cancel-button-form" onClick={this.handleCancel}>Cancel</button>
                             </div>
 
                         </form>
