@@ -26,52 +26,6 @@ class PictureShow extends React.Component {
     }
 
 
-    toggleLike() {
-        let liked = false
-        let pictureLiked = []
-        for (let i = 0; i < this.props.likes.length; i++) {
-            if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
-                pictureLiked.push(this.props.likes[i].id)
-                liked = true
-            }
-        }
-        return (
-            <div className="like_button_box">
-                {
-                    liked ?
-                        <button className="like_button" onClick={() => this.props.deleteLike(pictureLiked[0])}>
-                            <i className="like"></i>
-                        </button> :
-                        <button className="like_button" onClick={() => this.props.createLike(this.props.session.id, this.props.picture.id)}>
-                            <i className="like"></i>
-                        </button>
-                }
-            </div>
-        )
-    }
-
-    isUser() {
-        // debugger
-        if (this.props.session === null) {
-            return null
-        } else if (this.props.session.id === this.props.picture.userId) {
-            return null
-        } else {
-            return this.toggleLike()
-        }
-    }
-
-    handleUser() {
-        if (this.props.picture === null) {
-            return null
-        }
-
-        return (
-            <div>
-                Username: { }
-            </div>
-        )
-    }
 
     render() {
 
@@ -86,7 +40,7 @@ class PictureShow extends React.Component {
                     <img className="picture_show_img" height="500" width="500" src={picture.pictureUrl} alt="" />
                     <h5>{picture.title}</h5> by
                     <h4>{picture.description}</h4>
-                    
+
                     <button>back to the home page</button>
                 </div>
             </div>

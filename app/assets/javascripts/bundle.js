@@ -706,60 +706,6 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
       this.props.history.goBack();
     }
   }, {
-    key: "toggleLike",
-    value: function toggleLike() {
-      var _this2 = this;
-
-      var liked = false;
-      var pictureLiked = [];
-
-      for (var i = 0; i < this.props.likes.length; i++) {
-        if (this.props.likes && this.props.picture.id === this.props.likes[i].pictureId && this.props.session.id == this.props.likes[i].userId) {
-          pictureLiked.push(this.props.likes[i].id);
-          liked = true;
-        }
-      }
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "like_button_box"
-      }, liked ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-        className: "like_button",
-        onClick: function onClick() {
-          return _this2.props.deleteLike(pictureLiked[0]);
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-        className: "like"
-      })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-        className: "like_button",
-        onClick: function onClick() {
-          return _this2.props.createLike(_this2.props.session.id, _this2.props.picture.id);
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-        className: "like"
-      })));
-    }
-  }, {
-    key: "isUser",
-    value: function isUser() {
-      // debugger
-      if (this.props.session === null) {
-        return null;
-      } else if (this.props.session.id === this.props.picture.userId) {
-        return null;
-      } else {
-        return this.toggleLike();
-      }
-    }
-  }, {
-    key: "handleUser",
-    value: function handleUser() {
-      if (this.props.picture === null) {
-        return null;
-      }
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Username: ");
-    }
-  }, {
     key: "render",
     value: function render() {
       var picture = this.props.picture;
@@ -813,8 +759,6 @@ var mSTP = function mSTP(state, ownProps) {
   return {
     picture: picture,
     session: state.session.currentUser,
-    // user: state.entities.users[picture.userId],
-    // likes: Object.values(state.entities.likes),
     users: state.entities.users
   };
 };
@@ -826,10 +770,7 @@ var mDTP = function mDTP(dispatch) {
     },
     fetchUsers: function fetchUsers() {
       return dispatch((0,_actions_user_actions__WEBPACK_IMPORTED_MODULE_3__.fetchUsers)());
-    } // fetchlikes: () => dispatch(fetchlikes()),
-    // createLike: (likerId, pictureId) => dispatch(createLike(likerId, pictureId)),
-    // deleteLike: likeId => dispatch(deleteLike(likeId))
-
+    }
   };
 };
 
