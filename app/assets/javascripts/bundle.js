@@ -721,7 +721,7 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
         width: "500",
         src: picture.pictureUrl,
         alt: ""
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, picture.title), " by", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, picture.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, "back to the home page")));
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, picture.title), " by", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, picture.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, users.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, "back to the home page")));
     }
   }]);
 
