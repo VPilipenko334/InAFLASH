@@ -13,7 +13,7 @@ class PictureShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPicture(this.props.match.params.pictureId)
+        this.props.fetchPicture(this.props.match.params.pictureId);
         this.props.fetchUsers();
     }
 
