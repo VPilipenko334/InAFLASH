@@ -62,6 +62,7 @@
   }
 }
 
+
 .footer-dark .item.social > a {
   font-size:20px;
   width:36px;
@@ -91,4 +92,5 @@
 .about-me-div {
     align-items: center;
     margin: auto;
+    text-align: center;
 }

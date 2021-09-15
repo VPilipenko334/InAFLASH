@@ -65,7 +65,7 @@ class UploadPicture extends React.Component {
 
     render() {
 
-        const PreviewPicture = this.state.pictureUrl ? <img className="upload-form-preview" src={this.state.pictureUrl} /> : null;
+        const PreviewPicture = this.state.pictureUrl ? <img className="upload-form-preview" height="200" width="300" src={this.state.pictureUrl} /> : null;
 
 
         if (this.state.selectForm === 0) {
@@ -75,20 +75,19 @@ class UploadPicture extends React.Component {
                         <div className="upload-photo-container">
                             <h1>Upload Photo</h1>
                             <div className="upload-form">
-                                <h3>Upload your photo here</h3> <br />
                                 <input type="file" onChange={this.handleFile} id="file" /><br />
                                 <div className="requirements">
                                     <h2>Photo Requirements</h2>
-                                    <p>
+                                    <h3>
                                         .jpg only
                                         Max. photo dimensions are 200MP/megapixels
-                                    </p><br />
+                                    </h3><br />
 
                                     <h2>Licensing requirements</h2>
-                                    <p>Min. photo dimensions are 3MP/megapixels
+                                    <h3>Min. photo dimensions are 3MP/megapixels
                                         No watermarks, logos, or borders
                                         No NSFW content
-                                    </p>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -107,13 +106,12 @@ class UploadPicture extends React.Component {
 
                                 <input type="file" onChange={this.handleFile} style={{ display: "none" }} />
                             </label>
-                            <div className="upload-form-preview-photo" height="100" width="100">
-                                {PreviewPicture}
-                            </div>
                         </div>
 
                         <form className="upload-form" onSubmit={this.handleSubmit}>
-                            <h2>Upload A Photo:</h2><br />
+                            <div>
+                            {PreviewPicture}
+                            <br/><br/>
                             <h3> Art Selected: </h3><br />
                             <label>Title:<br />
                                 {/* <textarea cols="40" rows="2" className="title" type="text" value={this.state.title} onChange={this.update("title")} /> */}
@@ -126,6 +124,7 @@ class UploadPicture extends React.Component {
                             <div>
                                 <button className="cancel-button-form" onClick={this.handleCancel}>Cancel</button>
                                 <button className="upload-button-form" type="submit">Upload</button>
+                            </div>
                             </div>
 
                         </form>
