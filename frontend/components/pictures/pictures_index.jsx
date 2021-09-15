@@ -7,7 +7,7 @@ class PictureIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPictures();
+        // this.props.fetchPictures();
         this.props.fetchUsers(); 
 
     }
@@ -24,10 +24,20 @@ class PictureIndex extends React.Component {
         console.log(users);
 
         return (
-          'hello i am picture index'
+          <div className="index-container">
+              <h1>Welcome to the Picture Index!</h1>
+                <div className="index-container">
+                    {/* <ul className="index-container-list">
+                        {pictures.map((picture, idx) => (
+                            // <Picture
+                        ))}
+                    </ul> */}
+                    hi i am under construction 
+                </div>
+          </div>
         )
     }
 
 }
 
-export default PictureIndex
+export default PictureIndex;

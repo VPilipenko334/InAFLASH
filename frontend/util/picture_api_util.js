@@ -15,7 +15,7 @@ export const fetchPicture = (pictureId) => {
 export const fetchPictures = () => {
     return $.ajax({
         method: "GET",
-        url: '/api/pictures'
+        url: `/api/pictures`
     })
 }
 

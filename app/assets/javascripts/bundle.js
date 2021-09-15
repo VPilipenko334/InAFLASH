@@ -561,7 +561,7 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchPictures();
+      // this.props.fetchPictures();
       this.props.fetchUsers();
     }
   }, {
@@ -574,7 +574,11 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
       console.log('hello, this is working!');
       console.log(pictures);
       console.log(users);
-      return 'hello i am picture index';
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "index-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to the Picture Index!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "index-container"
+      }, "hi i am under construction"));
     }
   }]);
 
@@ -1730,7 +1734,7 @@ var fetchPicture = function fetchPicture(pictureId) {
 var fetchPictures = function fetchPictures() {
   return $.ajax({
     method: "GET",
-    url: '/api/pictures'
+    url: "/api/pictures"
   });
 };
 var createPicture = function createPicture(picture) {
