@@ -544,7 +544,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
- // import PictureItem from "./picture_item_page";
+
+
 
 var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _inherits(PictureIndex, _React$Component);
@@ -560,13 +561,19 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchPictures(); // this.props.fetchlikes()
+      this.props.fetchPictures();
+      this.props.fetchUsers();
     }
   }, {
     key: "render",
     value: function render() {
       var pictures = this.props.pictures;
       if (!pictures) return null;
+      var users = this.props.users;
+      if (!users) return null;
+      console.log('hello, this is working!');
+      console.log(pictures);
+      console.log(users);
       return 'hello i am picture index';
     }
   }]);

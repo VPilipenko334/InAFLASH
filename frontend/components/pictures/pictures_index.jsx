@@ -1,5 +1,5 @@
 import React from "react";
-// import PictureItem from "./picture_item_page";
+import { Link } from 'react-router-dom';
 
 class PictureIndex extends React.Component {
     constructor(props) {
@@ -7,13 +7,21 @@ class PictureIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPictures()
-        // this.props.fetchlikes()
+        this.props.fetchPictures();
+        this.props.fetchUsers(); 
+
     }
 
     render() {
-        const { pictures } = this.props
+        const { pictures } = this.props;
         if (!pictures) return null;
+
+        const { users } = this.props; 
+        if (!users) return null; 
+
+        console.log('hello, this is working!');
+        console.log(pictures);
+        console.log(users);
 
         return (
           'hello i am picture index'
