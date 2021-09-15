@@ -65,7 +65,7 @@ class UploadPicture extends React.Component {
 
     render() {
 
-        const PreviewPicture = this.state.pictureUrl ? <img className="upload-form-preview" height="200" width="300" src={this.state.pictureUrl} /> : null;
+        const PreviewPicture = this.state.pictureUrl ? <img className="upload-form-preview" height="400" width="500" src={this.state.pictureUrl} /> : null;
 
 
         if (this.state.selectForm === 0) {
@@ -118,7 +118,7 @@ class UploadPicture extends React.Component {
                                 <input className="title" type="text" value={this.state.title} onChange={this.update("title")} />
                                 {this.state.tError ? <p className="errors">Title can not be empty</p> : null}
                             </label> <br />
-                            <label>Description:
+                            <label>Description: <br/>
                                 <textarea cols="40" rows="6" className="description" type="text" value={this.state.description} onChange={this.update("description")} />
                             </label> <br />
                             <div>

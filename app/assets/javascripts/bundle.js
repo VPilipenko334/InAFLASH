@@ -1012,8 +1012,8 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var PreviewPicture = this.state.pictureUrl ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         className: "upload-form-preview",
-        height: "200",
-        width: "300",
+        height: "400",
+        width: "500",
         src: this.state.pictureUrl
       }) : null;
 
@@ -1060,7 +1060,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
           onChange: this.update("title")
         }), this.state.tError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
           className: "errors"
-        }, "Title can not be empty") : null), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Description:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
+        }, "Title can not be empty") : null), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Description: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
           cols: "40",
           rows: "6",
           className: "description",
