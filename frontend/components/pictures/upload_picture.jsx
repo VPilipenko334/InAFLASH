@@ -108,8 +108,9 @@ class UploadPicture extends React.Component {
                             </label>
                         </div>
 
+                    <div class="picture-info">
                         <form className="upload-form" onSubmit={this.handleSubmit}>
-                            <div>
+                            <div className="upload-container">
                             {PreviewPicture}
                             <br/><br/>
                             <h3> Art Selected: </h3><br />
@@ -121,7 +122,7 @@ class UploadPicture extends React.Component {
                             <label>Description: <br/>
                                 <textarea cols="40" rows="6" className="description" type="text" value={this.state.description} onChange={this.update("description")} />
                             </label> <br />
-                            <div>
+                            <div><br/>
                                 <button className="cancel-button-form" onClick={this.handleCancel}>Cancel</button>
                                 <button className="upload-button-form" type="submit">Upload</button>
                             </div>
@@ -130,6 +131,7 @@ class UploadPicture extends React.Component {
                         </form>
                     </div>
                 </div>
+            </div>
             )
         }
 
