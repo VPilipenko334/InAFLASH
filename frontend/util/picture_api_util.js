@@ -12,12 +12,12 @@ export const fetchPicture = (pictureId) => {
     })
 };
 
-export const fetchPictures = () => {
-    return $.ajax({
-        method: "GET",
-        url: `/api/pictures`
+export const fetchPictures = () => (
+    $.ajax({
+        method: 'GET',
+        url: 'api/pictures',
     })
-}
+);
 
 export const createPicture = (picture) => {
     return $.ajax({
