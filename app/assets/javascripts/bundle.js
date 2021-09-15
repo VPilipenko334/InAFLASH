@@ -647,6 +647,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -672,6 +673,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var PictureShow = /*#__PURE__*/function (_React$Component) {
   _inherits(PictureShow, _React$Component);
 
@@ -687,18 +689,15 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
       id: "",
       picture: ""
     };
-    _this.handleback = _this.handleback.bind(_assertThisInitialized(_this)); // this.handleprofile = this.handleprofile(this)
-
+    _this.handleback = _this.handleback.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(PictureShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchPicture(this.props.match.params.pictureId); // this.props.fetchPictures();
-
-      this.props.fetchUsers(); // this.props.fetchlikes()
-      // console.log(this.props)
+      this.props.fetchPicture(this.props.match.params.pictureId);
+      this.props.fetchUsers();
     }
   }, {
     key: "handleback",
@@ -709,19 +708,22 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var picture = this.props.picture;
-      if (!picture) return null; // console.log(picture);
-
+      if (!picture) return null;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "upload-opener"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        className: "back-home",
         onClick: this.handleback
-      }, "hello this is a button"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      }, "hello this button takes you back"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         className: "picture_show_img",
         height: "500",
         width: "500",
         src: picture.pictureUrl,
         alt: ""
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, picture.title), " by", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, picture.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, users.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, "back to the home page")));
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, picture.title), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, picture.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        to: "/",
+        className: "back-home"
+      }, "Home"))));
     }
   }]);
 
@@ -969,12 +971,12 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
           value: this.state.description,
           onChange: this.update("description")
         })), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-          className: "upload-button-form",
-          type: "submit"
-        }, "Upload"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
           className: "cancel-button-form",
           onClick: this.handleCancel
-        }, "Cancel")))));
+        }, "Cancel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+          className: "upload-button-form",
+          type: "submit"
+        }, "Upload")))));
       }
     }
   }]);
