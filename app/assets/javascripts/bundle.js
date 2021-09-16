@@ -633,30 +633,23 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      // debugger
       this.props.fetchPictures();
       this.props.fetchUsers();
     }
   }, {
     key: "render",
     value: function render() {
-      // debugger
-      var pictures = this.props.pictures; // if (!pictures) return null;
-      // debugger
+      var pictures = this.props.pictures;
+      if (!pictures) return null;
+      var users = this.props.users;
+      if (!users) return null; // console.log(pictures);
+      // console.log(users);
 
-      var users = this.props.users; // if (!users) return null; 
-      // debugger
-      // console.log('hello, this is working!');
-      // debugger
-
-      console.log(pictures); // debugger 
-
-      console.log(users);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "index-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to the Picture Index!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "index-container"
-      }, "this page is under construction  hallo frenz"));
+      }, "Bugz be GONE!!!!!!!!!!!!!!!!"));
     }
   }]);
 
