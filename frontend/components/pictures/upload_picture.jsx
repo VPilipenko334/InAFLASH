@@ -108,7 +108,7 @@ class UploadPicture extends React.Component {
                             </label>
                         </div>
 
-                    <div class="picture-info">
+                    <div className="picture-info">
                         <form className="upload-form" onSubmit={this.handleSubmit}>
                             <div className="upload-container">
                             {PreviewPicture}

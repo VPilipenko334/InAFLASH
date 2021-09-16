@@ -25,6 +25,11 @@ class Api::PicturesController < ApplicationController
     end 
 
     def index
+        # if params.has_key?(:user_id)
+        #     @pictures = Picture.where(user_id: params[:user_id])
+        # else
+        #     @pictures = Picture.all
+        # end
         @pictures = Picture.all
         render :index
     end

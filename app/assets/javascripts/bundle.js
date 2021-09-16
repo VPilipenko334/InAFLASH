@@ -582,31 +582,6 @@ var HomeFeed = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./frontend/components/pictures/picture_item_page.jsx":
-/*!************************************************************!*\
-  !*** ./frontend/components/pictures/picture_item_page.jsx ***!
-  \************************************************************/
-/***/ (() => {
-
-// import React from "react";
-// import { Link } from "react-router-dom";
-// const PictureItemPage = (props) => {
-//     const { picture } = props
-//         return (
-//             <li className="picture_item">
-//                 <Link to={`/pictures/${picture.id}`}>
-//                     <div className="overlay">
-//                     </div>
-//                     <img className="picture_img" src={picture.pictureUrl} alt="" />
-//                 </Link>
-//             </li>
-//         )
-//     }
-// }
-// export default PictureItemPage;
-
-/***/ }),
-
 /***/ "./frontend/components/pictures/pictures_index.jsx":
 /*!*********************************************************!*\
   !*** ./frontend/components/pictures/pictures_index.jsx ***!
@@ -619,8 +594,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _picture_item_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./picture_item_page */ "./frontend/components/pictures/picture_item_page.jsx");
-/* harmony import */ var _picture_item_page__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_picture_item_page__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -646,7 +619,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-
 var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _inherits(PictureIndex, _React$Component);
 
@@ -661,24 +633,30 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      // debugger
       this.props.fetchPictures();
       this.props.fetchUsers();
     }
   }, {
     key: "render",
     value: function render() {
-      var pictures = this.props.pictures;
-      if (!pictures) return null;
-      var users = this.props.users;
-      if (!users) return null;
-      console.log('hello, this is working!');
-      console.log(pictures);
+      // debugger
+      var pictures = this.props.pictures; // if (!pictures) return null;
+      // debugger
+
+      var users = this.props.users; // if (!users) return null; 
+      // debugger
+      // console.log('hello, this is working!');
+      // debugger
+
+      console.log(pictures); // debugger 
+
       console.log(users);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "index-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to the Picture Index!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "index-container"
-      }, "this page is under construction"));
+      }, "this page is under construction  hallo frenz"));
     }
   }]);
 
@@ -702,9 +680,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
-/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
-/* harmony import */ var _pictures_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pictures_index */ "./frontend/components/pictures/pictures_index.jsx");
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
+/* harmony import */ var _pictures_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pictures_index */ "./frontend/components/pictures/pictures_index.jsx");
+/* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
 
 
 
@@ -714,23 +692,23 @@ __webpack_require__.r(__webpack_exports__);
 var mSTP = function mSTP(state) {
   return {
     pictures: Object.values(state.entities.pictures),
-    errors: state.sessionErrors,
+    // errors: state.sessionErrors,
     users: Object.values(state.entities.users)
   };
 };
 
 var mDTP = function mDTP(dispatch) {
   return {
-    fetchPictures: function fetchPictures() {
-      return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__.fetchPictures)());
-    },
     fetchUsers: function fetchUsers() {
-      return dispatch((0,_actions_user_actions__WEBPACK_IMPORTED_MODULE_3__.fetchUsers)());
+      return dispatch((0,_actions_user_actions__WEBPACK_IMPORTED_MODULE_2__.fetchUsers)());
+    },
+    fetchPictures: function fetchPictures() {
+      return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_4__.fetchPictures)());
     }
   };
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mSTP, mDTP)(_pictures_index__WEBPACK_IMPORTED_MODULE_4__["default"]));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mSTP, mDTP)(_pictures_index__WEBPACK_IMPORTED_MODULE_3__["default"]));
 
 /***/ }),
 
@@ -1051,7 +1029,7 @@ var UploadPicture = /*#__PURE__*/function (_React$Component) {
             display: "none"
           }
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          "class": "picture-info"
+          className: "picture-info"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
           className: "upload-form",
           onSubmit: this.handleSubmit

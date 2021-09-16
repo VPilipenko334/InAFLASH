@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import PictureItemPage from "./picture_item_page";
 
 class PictureIndex extends React.Component {
     constructor(props) {
@@ -8,32 +7,34 @@ class PictureIndex extends React.Component {
     }
 
     componentDidMount() {
+        // debugger
         this.props.fetchPictures();
         this.props.fetchUsers(); 
     }
 
     render() {
+        // debugger
         const { pictures } = this.props;
-        if (!pictures) return null;
+        // if (!pictures) return null;
 
+        // debugger
         const { users } = this.props; 
-        if (!users) return null; 
+        // if (!users) return null; 
 
+        // debugger
+        // console.log('hello, this is working!');
 
-        console.log('hello, this is working!');
+        // debugger
         console.log(pictures);
+
+        // debugger 
         console.log(users);
 
         return (
           <div className="index-container">
               <h1>Welcome to the Picture Index!</h1>
                 <div className="index-container">
-                    {/* <ul className="index-container-list">
-                        {pictures.map((picture, idx) => (
-                            <PictureItemPage key={idx} picture={picture} />
-                        ))}
-                    </ul> */}
-                    this page is under construction 
+                    this page is under construction  hallo frenz
                 </div>
           </div>
         )
