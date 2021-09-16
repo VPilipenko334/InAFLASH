@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+// import PictureItemPage from "./picture_item_page";
 
 class PictureIndex extends React.Component {
     constructor(props) {
@@ -25,12 +26,11 @@ class PictureIndex extends React.Component {
           <div className="index-container">
               <h1>Welcome to the Picture Index!</h1>
                 <div className="index-container">
-                    Bugz be GONE!!!!!!!!!!!!!!!!
+                  
                 </div>
           </div>
         )
     }
-
 }
 
 export default PictureIndex;

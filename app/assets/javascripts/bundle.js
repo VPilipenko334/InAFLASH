@@ -617,7 +617,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
-
+ // import PictureItemPage from "./picture_item_page";
 
 var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _inherits(PictureIndex, _React$Component);
@@ -649,7 +649,7 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
         className: "index-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to the Picture Index!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "index-container"
-      }, "Bugz be GONE!!!!!!!!!!!!!!!!"));
+      }));
     }
   }]);
 
