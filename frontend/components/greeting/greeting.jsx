@@ -33,6 +33,7 @@ const Greeting = ({ currentUser, logout }) => {
         <input type="text" placeholder="Search InAFlash..." className="search-nav-bar" />
         <img src="user.png" className="user-man"></img>
         <Link to="/upload" className="greeting-buttons">Upload</Link>
+        <Link to="/pictures" className="greeting-buttons">Pictures</Link>
         <Link to="/home" className="greeting-buttons">Home</Link>
         <button className="homepage-header-button" onClick={logout}>Logout</button>
       </div>

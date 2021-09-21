@@ -466,6 +466,9 @@ var Greeting = function Greeting(_ref) {
       to: "/upload",
       className: "greeting-buttons"
     }, "Upload"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+      to: "/pictures",
+      className: "greeting-buttons"
+    }, "Pictures"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: "/home",
       className: "greeting-buttons"
     }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
