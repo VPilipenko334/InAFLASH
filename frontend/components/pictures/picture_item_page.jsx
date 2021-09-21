@@ -5,10 +5,11 @@ const PictureIndexItem = (props) => {
     return (
         <div>
         <li>
-            {/* <Link className="link-to-photo" to={`/pictures/${props.picture.id}`}>
-                <img className="actual-photo" src={props.picture.pictureUrl} />
+            {/* <Link className="link-to-picture" to={`/pictures/${props.picture.id}`}>
+                <img className="actual-picture" src={props.picture.pictureUrl} />
             </Link> */}
             <h3>{props.user.username}</h3>
+            {/* <p>{props.users.pictures}</p> */}
         </li>
         </div>
     )

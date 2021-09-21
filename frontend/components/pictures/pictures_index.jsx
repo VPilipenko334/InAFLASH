@@ -14,13 +14,13 @@ class PictureIndex extends React.Component {
 
     render() {
         const { pictures } = this.props;
-        // if (!pictures) return null;
+        if (!pictures) return null;
 
         const { users } = this.props; 
-        // if (!users) return null; 
+        if (!users) return null; 
 
-        console.log(pictures);
-        console.log(users);
+        // console.log(pictures);
+        // console.log(users);
 
         return (
           <div className="index-container">
@@ -29,7 +29,17 @@ class PictureIndex extends React.Component {
                      users.map(user => (
                         <PictureIndexItem
                         user={user}
+                        pictures={pictures}
                         key={user.id}
+                        />
+                     ))
+                 }
+                 
+                 {
+                     pictures.map(picture => (
+                        <PictureIndexItem
+                        picture={picture}
+                        key={picture.id}
                         />
                      ))
                  }

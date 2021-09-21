@@ -682,18 +682,24 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var pictures = this.props.pictures; // if (!pictures) return null;
+      var pictures = this.props.pictures;
+      if (!pictures) return null;
+      var users = this.props.users;
+      if (!users) return null; // console.log(pictures);
+      // console.log(users);
 
-      var users = this.props.users; // if (!users) return null; 
-
-      console.log(pictures);
-      console.log(users);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "index-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, users.map(function (user) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_item_page__WEBPACK_IMPORTED_MODULE_1__["default"], {
           user: user,
+          pictures: pictures,
           key: user.id
+        });
+      }), pictures.map(function (picture) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_item_page__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          picture: picture,
+          key: picture.id
         });
       })));
     }
