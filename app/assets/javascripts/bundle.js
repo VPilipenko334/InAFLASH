@@ -737,7 +737,7 @@ __webpack_require__.r(__webpack_exports__);
 var mSTP = function mSTP(state) {
   return {
     pictures: Object.values(state.entities.pictures),
-    // errors: state.sessionErrors,
+    errors: state.sessionErrors,
     users: Object.values(state.entities.users)
   };
 };

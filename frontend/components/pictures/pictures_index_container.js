@@ -7,7 +7,7 @@ import { fetchPictures } from "../../actions/picture_actions";
 const mSTP = (state) => {
     return {
         pictures: Object.values(state.entities.pictures),
-        // errors: state.sessionErrors,
+        errors: state.sessionErrors,
         users: Object.values(state.entities.users)
     }
 }
