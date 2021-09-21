@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-// import PictureItemPage from "./picture_item_page";
+import PictureIndexItem from "./picture_item_page";
 
 class PictureIndex extends React.Component {
     constructor(props) {
@@ -14,20 +14,27 @@ class PictureIndex extends React.Component {
 
     render() {
         const { pictures } = this.props;
-        if (!pictures) return null;
+        // if (!pictures) return null;
 
         const { users } = this.props; 
-        if (!users) return null; 
+        // if (!users) return null; 
 
-        // console.log(pictures);
-        // console.log(users);
+        console.log(pictures);
+        console.log(users);
 
         return (
           <div className="index-container">
-              <h1>Welcome to the Picture Index!</h1>
-                <div className="index-container">
-                  
-                </div>
+             <ul>
+                 {
+                     users.map(user => (
+                        <PictureIndexItem
+                        user={user}
+                        key={user.id}
+                        />
+                     ))
+                 }
+
+             </ul>
           </div>
         )
     }

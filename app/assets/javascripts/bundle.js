@@ -586,6 +586,43 @@ var HomeFeed = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
+/***/ "./frontend/components/pictures/picture_item_page.jsx":
+/*!************************************************************!*\
+  !*** ./frontend/components/pictures/picture_item_page.jsx ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+
+var PictureIndexItem = function PictureIndexItem(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username)));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PictureIndexItem); // import React from "react";
+// import { Link } from "react-router-dom";
+// const PictureItemPage = (props) => {
+//     const { picture } = props; 
+//     return (
+//         <li className="picture-item-page">
+//             <Link to={`/pictures/${picture.id}`}>
+//                 <div className="overlay">
+//                 </div>
+//                 <img src={picture.pictureUrl} className="picture-url" />
+//             </Link>
+//         </li>
+//     )
+// }
+// export default PictureItemPage;
+
+/***/ }),
+
 /***/ "./frontend/components/pictures/pictures_index.jsx":
 /*!*********************************************************!*\
   !*** ./frontend/components/pictures/pictures_index.jsx ***!
@@ -598,6 +635,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _picture_item_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./picture_item_page */ "./frontend/components/pictures/picture_item_page.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -621,7 +659,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
- // import PictureItemPage from "./picture_item_page";
+
+
 
 var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _inherits(PictureIndex, _React$Component);
@@ -643,17 +682,20 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var pictures = this.props.pictures;
-      if (!pictures) return null;
-      var users = this.props.users;
-      if (!users) return null; // console.log(pictures);
-      // console.log(users);
+      var pictures = this.props.pictures; // if (!pictures) return null;
 
+      var users = this.props.users; // if (!users) return null; 
+
+      console.log(pictures);
+      console.log(users);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "index-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to the Picture Index!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "index-container"
-      }));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, users.map(function (user) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_item_page__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          user: user,
+          key: user.id
+        });
+      })));
     }
   }]);
 
