@@ -30,6 +30,7 @@ const Greeting = ({ currentUser, logout }) => {
     <div className="header-group">
       <h2 className="header-name">welcome, {currentUser.username}!</h2>
         {/* <div className="buttons-on-homepage"> */}
+        <input type="text" placeholder="Search InAFlash..." className="search-nav-bar" />
         <img src="user.png" className="user-man"></img>
         <Link to="/upload" className="greeting-buttons">Upload</Link>
         <Link to="/home" className="greeting-buttons">Home</Link>
