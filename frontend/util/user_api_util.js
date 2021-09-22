@@ -18,7 +18,6 @@ export const updateUser = (user) => (
     })
 );
 
-
 export const fetchUserPictures = userId => (
     $.ajax({
         method: 'GET',

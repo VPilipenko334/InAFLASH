@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import PictureIndexItem from "./picture_item_page";
+import PictureRenderIndex from "./picture_render_index";
 
 class PictureIndex extends React.Component {
     constructor(props) {
@@ -35,14 +36,14 @@ class PictureIndex extends React.Component {
                      ))
                  }
 
-                 {
+                 {/* {
                      pictures.map(picture => (
                         <PictureIndexItem
                         picture={picture}
                         key={picture.id}
                         />
                      ))
-                 }
+                 } */}
 
              </ul>
           </div>
