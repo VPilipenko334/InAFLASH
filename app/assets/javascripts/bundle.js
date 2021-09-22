@@ -607,7 +607,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var PictureIndexItem = function PictureIndexItem(props) {
-  console.log(props);
+  // console.log(props);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "actual-picture",
     src: props.pictures.pictureUrl
