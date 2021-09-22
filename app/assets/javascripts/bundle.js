@@ -199,7 +199,7 @@ var receiveUserErrors = function receiveUserErrors(errors) {
 };
 var fetchUserPictures = function fetchUserPictures(userId) {
   return function (dispatch) {
-    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchUserPictures(userId).then(function (pictures) {
+    return ApiUserUtil.fetchUserPictures(userId).then(function (pictures) {
       return dispatch(receivePictures(pictures));
     }).fail(function (err) {
       return dispatch(receiveUserErrors(err.responseJSON));
@@ -208,7 +208,7 @@ var fetchUserPictures = function fetchUserPictures(userId) {
 };
 var fetchUser = function fetchUser(userId) {
   return function (dispatch) {
-    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchUser(userId).then(function (user) {
+    return ApiUserUtil.fetchUser(userId).then(function (user) {
       return dispatch(receiveUser(user));
     }).fail(function (err) {
       return dispatch(receiveUserErrors(err.responseJSON));
@@ -217,7 +217,7 @@ var fetchUser = function fetchUser(userId) {
 };
 var updateUser = function updateUser(user) {
   return function (dispatch) {
-    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.updateUser(user).then(function (user) {
+    return ApiUserUtil.updateUser(user).then(function (user) {
       return dispatch(receiveUser(user));
     }).fail(function (err) {
       return dispatch(receiveUserErrors(err.responseJSON));
@@ -226,7 +226,7 @@ var updateUser = function updateUser(user) {
 };
 var fetchUsers = function fetchUsers() {
   return function (dispatch) {
-    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchUsers().then(function (users) {
+    return ApiUserUtil.fetchUsers().then(function (users) {
       return dispatch(receiveUsers(users));
     }).fail(function (err) {
       return dispatch(receiveUserErrors(err.responseJSON));
@@ -1507,7 +1507,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import { signup } from '../../actions/session_actions'; 
 
 var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
@@ -1523,9 +1522,11 @@ var mapStateToProps = function mapStateToProps(_ref) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     processForm: function processForm(user) {
-      return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.login)(user));
-    } // signup: (user) => dispatch(signup(user))
-    // login: (user) => dispatch(login(user))
+      return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.signup)(user));
+    },
+    signup: function signup(user) {
+      return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.signup)(user));
+    } // login: (user) => dispatch(login(user))
 
   };
 };
@@ -1814,9 +1815,9 @@ var sessionReducer = function sessionReducer() {
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_CURRENT_USER:
-      return {
+      return Object.assign({}, state, {
         id: action.currentUser.id
-      };
+      });
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__.LOGOUT_CURRENT_USER:
       return _nullUser;
@@ -2038,7 +2039,7 @@ var login = function login(user) {
 var signup = function signup(user) {
   return $.ajax({
     method: 'POST',
-    url: '/api/user',
+    url: '/api/users',
     data: {
       user: user
     }
