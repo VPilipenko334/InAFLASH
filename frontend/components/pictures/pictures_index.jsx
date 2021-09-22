@@ -19,8 +19,8 @@ class PictureIndex extends React.Component {
         const { users } = this.props; 
         if (!users) return null; 
 
-        // console.log(pictures);
-        // console.log(users);
+        console.log(pictures);
+        console.log(users);
 
         return (
           <div className="index-container">
@@ -34,7 +34,7 @@ class PictureIndex extends React.Component {
                         />
                      ))
                  }
-                 
+
                  {
                      pictures.map(picture => (
                         <PictureIndexItem

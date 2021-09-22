@@ -605,24 +605,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var PictureIndexItem = function PictureIndexItem(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username)));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "actual-picture",
+    src: props.pictures.pictureUrl
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, props.pictures), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, props.pictureUrl)));
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PictureIndexItem); // import React from "react";
-// import { Link } from "react-router-dom";
-// const PictureItemPage = (props) => {
-//     const { picture } = props; 
-//     return (
-//         <li className="picture-item-page">
-//             <Link to={`/pictures/${picture.id}`}>
-//                 <div className="overlay">
-//                 </div>
-//                 <img src={picture.pictureUrl} className="picture-url" />
-//             </Link>
-//         </li>
-//     )
-// }
-// export default PictureItemPage;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PictureIndexItem);
 
 /***/ }),
 
@@ -688,9 +677,9 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
       var pictures = this.props.pictures;
       if (!pictures) return null;
       var users = this.props.users;
-      if (!users) return null; // console.log(pictures);
-      // console.log(users);
-
+      if (!users) return null;
+      console.log(pictures);
+      console.log(users);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "index-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, users.map(function (user) {
