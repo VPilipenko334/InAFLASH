@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PictureRenderIndex from './picture_render_index';
 
 const PictureIndexItem = (props) => {
+    console.log(props);
+
     return (
         <div>
         <li>
@@ -10,10 +13,15 @@ const PictureIndexItem = (props) => {
 
             {/* </Link> */}
             <h3>{props.user.username}</h3>
-            {/* <h3>{props.picture.title}</h3> */}
-            {/* <p>{props.users.pictures}</p> */}
-            <p>{props.pictures}</p>
-            <p>{props.pictureUrl}</p>
+            <h3>{props.user.id}</h3>
+
+            {props.pictures.map(picture=>(
+                <PictureRenderIndex 
+                title={picture.title}
+                description={picture.description}
+                pictureUrl = {picture.pictureUrl} />
+            ))}
+            
         </li>
         </div>
     )
