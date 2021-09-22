@@ -199,7 +199,7 @@ var receiveUserErrors = function receiveUserErrors(errors) {
 };
 var fetchUserPictures = function fetchUserPictures(userId) {
   return function (dispatch) {
-    return ApiUserUtil.fetchUserPictures(userId).then(function (pictures) {
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchUserPictures(userId).then(function (pictures) {
       return dispatch(receivePictures(pictures));
     }).fail(function (err) {
       return dispatch(receiveUserErrors(err.responseJSON));
@@ -208,7 +208,7 @@ var fetchUserPictures = function fetchUserPictures(userId) {
 };
 var fetchUser = function fetchUser(userId) {
   return function (dispatch) {
-    return ApiUserUtil.fetchUser(userId).then(function (user) {
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchUser(userId).then(function (user) {
       return dispatch(receiveUser(user));
     }).fail(function (err) {
       return dispatch(receiveUserErrors(err.responseJSON));
@@ -217,7 +217,7 @@ var fetchUser = function fetchUser(userId) {
 };
 var updateUser = function updateUser(user) {
   return function (dispatch) {
-    return ApiUserUtil.updateUser(user).then(function (user) {
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.updateUser(user).then(function (user) {
       return dispatch(receiveUser(user));
     }).fail(function (err) {
       return dispatch(receiveUserErrors(err.responseJSON));
@@ -226,7 +226,7 @@ var updateUser = function updateUser(user) {
 };
 var fetchUsers = function fetchUsers() {
   return function (dispatch) {
-    return ApiUserUtil.fetchUsers().then(function (users) {
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchUsers().then(function (users) {
       return dispatch(receiveUsers(users));
     }).fail(function (err) {
       return dispatch(receiveUserErrors(err.responseJSON));

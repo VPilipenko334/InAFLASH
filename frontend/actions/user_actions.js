@@ -22,21 +22,21 @@ export const receiveUserErrors = (errors) => ({
 });
 
 export const fetchUserPictures = (userId) => (dispatch) => (
-    ApiUserUtil
+    ApiUser
         .fetchUserPictures(userId)
         .then((pictures) => dispatch(receivePictures(pictures)))
         .fail((err) => dispatch(receiveUserErrors(err.responseJSON)))
 )
 
 export const fetchUser = userId => dispatch => (
-    ApiUserUtil.fetchUser(userId).then(user => dispatch(receiveUser(user)))
+    ApiUser.fetchUser(userId).then(user => dispatch(receiveUser(user)))
         .fail(err => dispatch(receiveUserErrors(err.responseJSON)))
 );
 export const updateUser = user => dispatch => (
-    ApiUserUtil.updateUser(user).then(user => dispatch(receiveUser(user)))
+    ApiUser.updateUser(user).then(user => dispatch(receiveUser(user)))
         .fail(err => dispatch(receiveUserErrors(err.responseJSON)))
 );
 export const fetchUsers = () => dispatch => (
-    ApiUserUtil.fetchUsers().then(users => dispatch(receiveUsers(users)))
+    ApiUser.fetchUsers().then(users => dispatch(receiveUsers(users)))
         .fail(err => dispatch(receiveUserErrors(err.responseJSON)))
 );
