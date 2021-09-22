@@ -745,7 +745,8 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchPictures();
+      this.props.fetchPictures(); // this.props.fetchUserPictures(this.props.match.params.userId);
+
       this.props.fetchUsers();
     }
   }, {
@@ -754,9 +755,9 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
       var pictures = this.props.pictures;
       if (!pictures) return null;
       var users = this.props.users;
-      if (!users) return null;
-      console.log(pictures);
-      console.log(users);
+      if (!users) return null; // console.log(pictures);
+      // console.log(users);
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "index-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, users.map(function (user) {
@@ -792,6 +793,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
 /* harmony import */ var _pictures_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pictures_index */ "./frontend/components/pictures/pictures_index.jsx");
 /* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
+/* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/user_api_util */ "./frontend/util/user_api_util.js");
+
 
 
 
@@ -813,7 +816,8 @@ var mDTP = function mDTP(dispatch) {
     },
     fetchPictures: function fetchPictures() {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_4__.fetchPictures)());
-    }
+    } // fetchUserPictures: (userId) => dispatch(fetchUserPictures(userId))
+
   };
 };
 
