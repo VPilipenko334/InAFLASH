@@ -9,7 +9,7 @@ const mSTP = (state) => {
         // pictures: Object.values(state.entities.pictures),
         // errors: state.sessionErrors,
         // users: Object.values(state.entities.user)
-        currentUser: users[session.id]
+        currentUser: users[state.session.id]
     }
 }
 
