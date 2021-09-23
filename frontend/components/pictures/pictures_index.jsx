@@ -25,29 +25,32 @@ class PictureIndex extends React.Component {
         // console.log(users);
 
         return (
-          <div className="index-container">
-             <ul>
-                 {
-                     users.map(user => (
-                        <PictureIndexItem
-                        user={user}
-                        pictures={pictures}
-                        key={user.id}
-                        />
-                     ))
-                 }
+                <div className="upload-opener">
+                    <div className="upload-photo-container">
 
-                 {/* {
-                     pictures.map(picture => (
-                        <PictureIndexItem
-                        picture={picture}
-                        key={picture.id}
-                        />
-                     ))
-                 } */}
+                    <ul>
+                        {
+                            users.map(user => (
+                                <PictureIndexItem
+                                user={user}
+                                pictures={pictures}
+                                key={user.id}
+                                />
+                            ))
+                        }
 
-             </ul>
-          </div>
+                        {/* {
+                            pictures.map(picture => (
+                                <PictureIndexItem
+                                picture={picture}
+                                key={picture.id}
+                                />
+                            ))
+                        } */}
+
+                    </ul>
+                </div>
+             </div>
         )
     }
 }
