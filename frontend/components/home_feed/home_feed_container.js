@@ -11,8 +11,8 @@ const mSTP = ({ session, entities: { users } }) => {
 
 const mDTP = (dispatch) => ({
     fetchUsers: () => dispatch(fetchUsers()),
-    fetchCurrentUser: (userId) => dispatch(fetchUser(userId))
-    // fetchPictures: () => dispatch(fetchPictures())
+    fetchCurrentUser: (userId) => dispatch(fetchUser(userId)),
+    fetchPictures: () => dispatch(fetchPictures())
 })
 
 export default connect(mSTP, mDTP)(HomeFeed);

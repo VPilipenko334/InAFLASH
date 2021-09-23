@@ -617,14 +617,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var PictureIndexItem = function PictureIndexItem(props) {
-  // console.log(props);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    className: "actual-picture",
-    src: props.pictures.pictureUrl
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.id), props.pictures.map(function (picture) {
+  // console.log(props.user);
+  console.log(props.user.pictures);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.id), props.user.pictures.map(function (picture) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
       title: picture.title,
-      description: picture.description,
+      description: picture.description
+    });
+  }), props.pictures.map(function (picture) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
       pictureUrl: picture.pictureUrl
     });
   })));
@@ -689,7 +690,7 @@ var PictureRenderIndex = /*#__PURE__*/function (_React$Component) {
           title = _this$props.title,
           pictureUrl = _this$props.pictureUrl; //    if (!pictureUrl) return null; 
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, description, ";", title, ";"));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, description, ";", title, ";", pictureUrl, ";"));
     }
   }]);
 
@@ -755,8 +756,7 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchPictures(); // this.props.fetchUserPictures(this.props.match.params.userId);
-
+      this.props.fetchPictures();
       this.props.fetchUsers();
     }
   }, {
@@ -777,6 +777,11 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
           user: user,
           pictures: pictures,
           key: user.id
+        });
+      }), pictures.map(function (picture) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_item_page__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          picture: picture,
+          key: picture.id
         });
       }))));
     }
@@ -805,8 +810,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
 /* harmony import */ var _pictures_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pictures_index */ "./frontend/components/pictures/pictures_index.jsx");
 /* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
-/* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/user_api_util */ "./frontend/util/user_api_util.js");
-
 
 
 
@@ -828,8 +831,7 @@ var mDTP = function mDTP(dispatch) {
     },
     fetchPictures: function fetchPictures() {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_4__.fetchPictures)());
-    } // fetchUserPictures: (userId) => dispatch(fetchUserPictures(userId))
-
+    }
   };
 };
 
