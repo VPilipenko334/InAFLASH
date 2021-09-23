@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchUsers } from '../../actions/user_actions';
 import PictureIndex from "./pictures_index";
 import { fetchPictures } from "../../actions/picture_actions";
+import { fetchUserPictures } from "../../util/user_api_util";
 
 const mSTP = (state) => {
     return {
@@ -15,6 +16,7 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => ({
     fetchUsers: () => dispatch(fetchUsers()),
     fetchPictures: () => dispatch(fetchPictures())
+    // fetchUserPictures: (userId) => dispatch(fetchUserPictures(userId))
 })
 
 export default connect(mSTP, mDTP)(PictureIndex);

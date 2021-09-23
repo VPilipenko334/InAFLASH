@@ -12,6 +12,10 @@ class HomeFeed extends React.Component {
                     <h1>welcome!</h1>
                 </div>
                     <br/>
+                <button> Go to the Pictures Page </button>
+                <button> Go to the Welcome Page  </button>
+                <button> Upload a photo </button>
+
                 <Link to="/" className="back-home-link">Click to go back to the main page</Link>
             </div>
         )

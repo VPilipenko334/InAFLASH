@@ -10,6 +10,7 @@ class PictureIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchPictures();
+        // this.props.fetchUserPictures(this.props.match.params.userId);
         this.props.fetchUsers(); 
     }
 
@@ -20,8 +21,8 @@ class PictureIndex extends React.Component {
         const { users } = this.props; 
         if (!users) return null; 
 
-        console.log(pictures);
-        console.log(users);
+        // console.log(pictures);
+        // console.log(users);
 
         return (
           <div className="index-container">
