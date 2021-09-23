@@ -4,7 +4,7 @@ import PictureRenderIndex from './picture_render_index';
 
 const PictureIndexItem = (props) => {
     // console.log(props.user);
-    console.log(props.user.pictures);
+    // console.log(props.user.pictures);
 
 
     return (
@@ -15,18 +15,19 @@ const PictureIndexItem = (props) => {
 
             {/* </Link> */}
             <h3>{props.user.username}</h3>
-            <h3>{props.user.id}</h3>
+            <h3>{props.user.id}</h3> 
 
             {props.user.pictures.map(picture=>(
                 <PictureRenderIndex 
                 title={picture.title}
-                description={picture.description} />
+                description={picture.description}
+                key={picture.id} />
             ))}
 
-            {props.pictures.map(picture=>(
+            {/* {props.pictures.map(picture=>(
                 <PictureRenderIndex 
                 pictureUrl={picture.pictureUrl} />
-            ))}
+            ))} */}
             
         </li>
         </div>

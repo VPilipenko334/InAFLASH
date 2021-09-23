@@ -618,15 +618,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var PictureIndexItem = function PictureIndexItem(props) {
   // console.log(props.user);
-  console.log(props.user.pictures);
+  // console.log(props.user.pictures);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.id), props.user.pictures.map(function (picture) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
       title: picture.title,
-      description: picture.description
-    });
-  }), props.pictures.map(function (picture) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      pictureUrl: picture.pictureUrl
+      description: picture.description,
+      key: picture.id
     });
   })));
 };
@@ -690,7 +687,7 @@ var PictureRenderIndex = /*#__PURE__*/function (_React$Component) {
           title = _this$props.title,
           pictureUrl = _this$props.pictureUrl; //    if (!pictureUrl) return null; 
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, description, ";", title, ";", pictureUrl, ";"));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, title, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), description, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), pictureUrl, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)));
     }
   }]);
 
