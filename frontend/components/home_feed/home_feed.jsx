@@ -10,11 +10,11 @@ class HomeFeed extends React.Component {
                 <p> hi I am the inner home feed </p>
                 
                     <br/>
-                <button> Go to the Pictures Page </button> <br /><br />
-                <button> Go to the Welcome Page  </button><br /><br />
-                <button> Upload a photo </button><br /><br />
 
-                <Link to="/" className="back-home-link">Click to go back to the main page</Link>
+                    <Link to="/pictures" className="upload-button-form">Go to the Pictures Page </Link><br />
+                    <Link to="/" className="upload-button-form">Go to the Welcome Page</Link><br />
+                    <Link to="/upload" className="upload-button-form">Upload a Picture</Link><br />
+                    <Link to="/" className="upload-button-form">Click to go back to the main page</Link><br />
                 </div>
             </div>
         )
