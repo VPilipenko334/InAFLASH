@@ -1,8 +1,17 @@
-// import React from 'react';
+import React from 'react'; 
+import { Link } from 'react-router-dom';
 
-// export default () => (
-//         <div className="search-bar">
-//             <input type="text"
-//                 placeholder="Search..."> </input>
-//         </div>
-// )
+class SearchBar extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div>hello</div>
+        )
+    }
+
+}
+
+export default SearchBar; 
