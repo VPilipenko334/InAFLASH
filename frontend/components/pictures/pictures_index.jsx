@@ -10,7 +10,6 @@ class PictureIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchPictures();
-        // this.props.fetchUserPictures(this.props.match.params.userId);
         this.props.fetchUsers(); 
     }
 
@@ -39,14 +38,14 @@ class PictureIndex extends React.Component {
                             ))
                         }
 
-                        {/* {
+                        {
                             pictures.map(picture => (
                                 <PictureIndexItem
                                 picture={picture}
                                 key={picture.id}
                                 />
                             ))
-                        } */}
+                        }
 
                     </ul>
                 </div>
