@@ -1,5 +1,6 @@
 import React from "react"; 
 import { Link } from "react-router-dom";
+import EditorsChoice from "./editors_choice";
 
 class HomeFeed extends React.Component {
 
@@ -19,12 +20,18 @@ class HomeFeed extends React.Component {
                         {/* <Link to="/" className="upload-button-form">Go to the Welcome Page</Link><br /> */}
                         <Link to="/" className="upload-button-form">Click to go back to the main page</Link><br />
                     </center>
-                    <br /><br />
+                    <br />
 
                     <h1>Hand-picked by our editors</h1>
                     <br />
                     <center><p>Check out photos selected by our InAFlash Editor.</p></center>
+
+                    <div>   
+                    <br/>
+                        < EditorsChoice />
+                    </div>
                     <br />
+                    
                 </div>
             </div>
         )
