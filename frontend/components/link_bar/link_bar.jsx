@@ -4,6 +4,6 @@ import { NavLink } from "react-router-dom";
 
 const LinkBar = (props) => {
     const links = props.currentUser ? (
-        <Link class="logo" to="/homepage">InAFlash</Link>
+        <Link class="logo" to="/">InAFlash</Link>
     )
 }

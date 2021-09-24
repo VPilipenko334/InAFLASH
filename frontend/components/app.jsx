@@ -14,7 +14,6 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import welcome from './welcome/welcome';
-//search bar
 // import PictureIndex from './pictures/pictures_index_container';
 // import HomePage from './pictures_home/home';
 // import home_container from './pictures_home/pictures_home_container';

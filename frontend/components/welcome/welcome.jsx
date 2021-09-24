@@ -61,7 +61,6 @@ export default () => (
                     <div className="community-text">
                 <h1 id="join-community">Join our community today</h1><br/>
                     <p id="love-pics">Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography
-                    <button onClick={scrollToTop} className="button">Scroll to the top</button>
                     </p>
                     </div>
                 </div>
@@ -70,23 +69,56 @@ export default () => (
         
         </div>
             <div className="footer-dark">
+            <center><button onClick={scrollToTop} id="back-to-the-top-button">Scroll to the top</button></center>
+                
                 <footer>
-                    <div className="container">
-                        <div className="row">
-                            <div className="about-me-div">
-                                <p>This website is a clone of the photo-sharing website 500px. </p><br/>
+                <div class="footer-dark">
+                    <footer>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3 item">
+                                    <h3>Projects</h3>
+                                    <ul>
+                                        <li><a href="https://the-greenmarket.herokuapp.com/#/">GreenMarket</a></li>
+                                        <li><a href="https://vpilipenko334.github.io/coffeehouse-catch-project/">CoffeeHouseCatch</a></li>
+                                        <li><a href="https://vpilipenko334.github.io/portfolio-website/">Portfolio</a></li>
+                                        <li><a href="https://vpilipenko334.github.io/resume-website/">Resume</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6 col-md-3 item">
+                                    <h3>About</h3>
+                                    <p>Hi My name is Veronika. </p>
+                                </div>
+                                <div class="col-md-6 item text">
+                                    <h3>InAFlash summary</h3>
+                                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                                </div>
+                                <div class="col item social">
+                                    <a href="https://vpilipenko334.github.io/portfolio-website/"><i class="ionicons ion-ios-contact"></i></a>
+                                    <a href="https://www.linkedin.com/in/veronikapilipenko/"><i class="icon ion-social-linkedin"></i></a>
+                                    <a href="https://github.com/VPilipenko334"><i class="icon ion-social-github"></i></a>
+                                    </div>
                             </div>
-                            <div className="col item social"><a href="#">
-                                <i className="icon ion-social-facebook"></i></a>
-                                <a href="https://github.com/VPilipenko334"><i className="icon ion-social-twitter"></i></a>
-                                <a href="https://www.linkedin.com/in/veronikapilipenko"><i className="icon ion-social-snapchat"></i></a>
-                                <a href="https://angel.co/u/veronika-pilipenko"><i className="icon ion-social-instagram"></i></a></div>
+                            <p class="copyright">InAFlash | Veronika Pilipenko © 2021</p>
                         </div>
-                        <p className="copyright">InAFlash © 2021</p>
-                    </div>
+                    </footer>
+                </div>
                 </footer>
             </div>
     </div>
 )
 
                        
+                        // <div className="container">
+                        //     <div className="row">
+                        //         <div className="about-me-div">
+                        //         <center><p>This website is a clone of the photo-sharing website 500px. </p></center><br /><br />
+                        //         </div>
+                        //         <div className="col item social"><a href="#">
+                        //             <i className="icon ion-social-facebook"></i></a>
+                        //             <a href="https://github.com/VPilipenko334"><i className="icon ion-social-twitter"></i></a>
+                        //             <a href="https://www.linkedin.com/in/veronikapilipenko"><i className="icon ion-social-snapchat"></i></a>
+                        //             <a href="https://angel.co/u/veronika-pilipenko"><i className="icon ion-social-instagram"></i></a></div>
+                        //         </div>
+                        //     <p className="copyright">InAFlash © 2021</p>
+                        // </div>
