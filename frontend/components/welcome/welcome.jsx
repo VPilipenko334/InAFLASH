@@ -85,13 +85,21 @@ export default () => (
                                         <li><a href="https://vpilipenko334.github.io/resume-website/">Resume</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-sm-6 col-md-3 item">
-                                    <h3>About</h3>
-                                    <p>Hi My name is Veronika. </p>
+                                <div class="col-sm-6 col-md-3">
+                                    <h3>InAFlash</h3>
+                                    <p>
+                                        This website is a clone of the photo-sharing website 500px
+                                    </p>
+                            
                                 </div>
                                 <div class="col-md-6 item text">
-                                    <h3>InAFlash summary</h3>
-                                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                                    <h3>About the Creator</h3>
+                                    <p>
+                                        Hi, my name is Veronika Pilipenko and I am a fullstack developer.
+                                        I really enjoy working working with frontend frameworks such as React, and backend frameworks such as Rails.
+                                        My favorite languages to code in are JavaScript and Ruby.
+                                        I live in New York City with my dog. 
+                                    </p>
                                 </div>
                                 <div class="col item social">
                                     <a href="https://vpilipenko334.github.io/portfolio-website/"><i class="ionicons ion-ios-contact"></i></a>
