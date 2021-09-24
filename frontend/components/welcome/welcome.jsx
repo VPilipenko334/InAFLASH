@@ -72,11 +72,11 @@ export default () => (
             <center><button onClick={scrollToTop} id="back-to-the-top-button">Scroll to the top</button></center>
                 
                 <footer>
-                <div class="footer-dark">
+                <div className="footer-dark">
                     <footer>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-6 col-md-3 item">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-sm-6 col-md-3 item">
                                     <h3>Projects</h3>
                                     <ul>
                                         <li><a href="https://the-greenmarket.herokuapp.com/#/">GreenMarket</a></li>
@@ -85,14 +85,14 @@ export default () => (
                                         <li><a href="https://vpilipenko334.github.io/resume-website/">Resume</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-sm-6 col-md-3">
+                                <div className="col-sm-6 col-md-3">
                                     <h3>InAFlash</h3>
                                     <p>
                                         This website is a clone of the photo-sharing website 500px
                                     </p>
                             
                                 </div>
-                                <div class="col-md-6 item text">
+                                <div className="col-md-6 item text">
                                     <h3>About the Creator</h3>
                                     <p>
                                         My name is Veronika Pilipenko and I am a fullstack developer based in New York City.
@@ -100,13 +100,13 @@ export default () => (
                                         My favorite languages to code in are JavaScript and Ruby.
                                     </p>
                                 </div>
-                                <div class="col item social">
-                                    <a href="https://vpilipenko334.github.io/portfolio-website/"><i class="ionicons ion-ios-contact"></i></a>
-                                    <a href="https://www.linkedin.com/in/veronikapilipenko/"><i class="icon ion-social-linkedin"></i></a>
-                                    <a href="https://github.com/VPilipenko334"><i class="icon ion-social-github"></i></a>
+                                <div className="col item social">
+                                    <a href="https://vpilipenko334.github.io/portfolio-website/"><i className="ionicons ion-ios-contact"></i></a>
+                                    <a href="https://www.linkedin.com/in/veronikapilipenko/"><i className="icon ion-social-linkedin"></i></a>
+                                    <a href="https://github.com/VPilipenko334"><i className="icon ion-social-github"></i></a>
                                     </div>
                             </div>
-                            <p class="copyright">InAFlash | Veronika Pilipenko © 2021</p>
+                            <p className="copyright">InAFlash | Veronika Pilipenko © 2021</p>
                         </div>
                     </footer>
                 </div>
