@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import UploadPicture from '../pictures/upload_picture';
 // import PictureIndexContainer from '../pictures/pictures_index_container';
-
+import SearchBar from '../search_bar/search_bar_container';
 
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
@@ -30,7 +30,8 @@ const Greeting = ({ currentUser, logout }) => {
     <div className="header-group">
       <h2 className="header-name">welcome, {currentUser.username}!</h2>
         {/* <div className="buttons-on-homepage"> */}
-        <input type="text" placeholder="Search InAFlash..." className="search-nav-bar" />
+        {/* <input type="text" placeholder="Search InAFlash..." className="search-nav-bar" /> */}
+        < SearchBar />
         <img src="user.png" className="user-man"></img>
         <Link to="/upload" className="greeting-buttons">Upload</Link>
         <Link to="/pictures" className="greeting-buttons">Pictures</Link>
