@@ -71,7 +71,7 @@ class UploadPicture extends React.Component {
         if (this.state.selectForm === 0) {
             return (
                 <div className="upload-opener">
-                    <div className="full-container">
+                    {/* <div className="full-container"> */}
                         <div className="upload-photo-container">
                             <h1>Upload Photo</h1>
                             <div className="upload-form">
@@ -92,7 +92,7 @@ class UploadPicture extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                // </div>
             )
         }
 
@@ -100,17 +100,17 @@ class UploadPicture extends React.Component {
         if (this.state.selectForm === 1) {
             return (
                 <div className="upload-opener">
-                    <div className="full-container">
-                        <div className="upload-container">
+                    <div className="upload-photo-container">
+                        {/* <div className="upload-container"> */}
                             <label id="uploading-here">
 
                                 <input type="file" onChange={this.handleFile} style={{ display: "none" }} />
                             </label>
                         </div>
 
-                    <div className="picture-info">
+                    <div className="upload-opener">
                         <form className="upload-form" onSubmit={this.handleSubmit}>
-                            <div className="upload-container">
+                            <div className="upload-photo-container">
                             {PreviewPicture}
                             <br/><br/>
                             <h3> Art Selected: </h3><br />
@@ -131,7 +131,7 @@ class UploadPicture extends React.Component {
                         </form>
                     </div>
                 </div>
-            </div>
+            // </div>
             )
         }
 

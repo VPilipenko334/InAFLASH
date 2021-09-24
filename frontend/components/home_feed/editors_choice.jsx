@@ -8,13 +8,13 @@ class EditorsChoice extends React.Component {
     render() {
         return (
             <div>
-                <div className="row">
+                {/* <div className="row">
                     <img src="https://inaflash-seeds.s3.amazonaws.com/painting.jpg" height="200" width="200"/>
                     <img src="https://inaflash-seeds.s3.amazonaws.com/purple_trees.jpg" height="200" width="200"/>
                     <img src="https://inaflash-seeds.s3.amazonaws.com/sea.jpg" height="200" width="200"/>
                     <img src="https://inaflash-seeds.s3.amazonaws.com/ski.jpg" height="200" width="200"/>
                     <img src="https://inaflash-seeds.s3.amazonaws.com/water.jpg" height="200" width="200"/>
-                </div>
+                </div> */}
 {/* 
                 {/* <div className="row">
                     <img src="https://inaflash-seeds.s3.amazonaws.com/grey.jpg" height="200" width="200"/>
