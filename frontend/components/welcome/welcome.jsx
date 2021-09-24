@@ -114,18 +114,3 @@ export default () => (
             </div>
     </div>
 )
-
-                       
-                        // <div className="container">
-                        //     <div className="row">
-                        //         <div className="about-me-div">
-                        //         <center><p>This website is a clone of the photo-sharing website 500px. </p></center><br /><br />
-                        //         </div>
-                        //         <div className="col item social"><a href="#">
-                        //             <i className="icon ion-social-facebook"></i></a>
-                        //             <a href="https://github.com/VPilipenko334"><i className="icon ion-social-twitter"></i></a>
-                        //             <a href="https://www.linkedin.com/in/veronikapilipenko"><i className="icon ion-social-snapchat"></i></a>
-                        //             <a href="https://angel.co/u/veronika-pilipenko"><i className="icon ion-social-instagram"></i></a></div>
-                        //         </div>
-                        //     <p className="copyright">InAFlash © 2021</p>
-                        // </div>

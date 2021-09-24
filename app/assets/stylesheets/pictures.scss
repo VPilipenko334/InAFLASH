@@ -52,7 +52,7 @@ h3 {
    height: 400;
   //  max-height: 400; 
    width: 400;
-   font-size: 20px; 
+   font-size: 16px; 
    align-items: center;
    background-color: white;
   //  border: 1px black;
@@ -91,7 +91,12 @@ h3 {
   text-decoration: none;
   border-color: #0870d1;
   margin: 10px;
+}
 
+.upload-button-form:hover {
+  text-decoration: none;
+  background-color: black;
+  color: white; 
 }
 
 .cancel-button-form {

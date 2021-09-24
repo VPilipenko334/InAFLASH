@@ -8,13 +8,23 @@ class HomeFeed extends React.Component {
             <div className="upload-opener">
                 <div className="upload-photo-container">
                     <h1>Home Feed</h1>
-                
-                    <br/>
 
-                    <Link to="/pictures" className="upload-button-form">Go to the Pictures Page </Link><br />
-                    {/* <Link to="/" className="upload-button-form">Go to the Welcome Page</Link><br /> */}
-                    <Link to="/upload" className="upload-button-form">Upload a Picture</Link><br />
-                    <Link to="/" className="upload-button-form">Click to go back to the main page</Link><br />
+                    <br />
+                        <center><p>See photos and published Galleries from people you follow.</p></center>
+
+                    <br/>
+                    <center>
+                        <Link to="/upload" className="upload-button-form">Upload a Picture</Link><br />
+                        <Link to="/pictures" className="upload-button-form">See All Pictures </Link><br />
+                        {/* <Link to="/" className="upload-button-form">Go to the Welcome Page</Link><br /> */}
+                        <Link to="/" className="upload-button-form">Click to go back to the main page</Link><br />
+                    </center>
+                    <br /><br />
+
+                    <h1>Hand-picked by our editors</h1>
+                    <br />
+                    <center><p>Check out photos selected by our InAFlash Editor.</p></center>
+                    <br />
                 </div>
             </div>
         )
