@@ -1682,7 +1682,7 @@ __webpack_require__.r(__webpack_exports__);
     "class": "col-sm-6 col-md-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "InAFlash"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "This website is a clone of the photo-sharing website 500px")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     "class": "col-md-6 item text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "About the Creator"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Hi, my name is Veronika Pilipenko and I am a fullstack developer. I really enjoy working working with frontend frameworks such as React, and backend frameworks such as Rails. My favorite languages to code in are JavaScript and Ruby. I live in New York City with my dog.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "About the Creator"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "My name is Veronika Pilipenko and I am a fullstack developer based in New York City. I really enjoy working working with frontend frameworks such as React, and backend frameworks such as Rails. My favorite languages to code in are JavaScript and Ruby.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     "class": "col item social"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "https://vpilipenko334.github.io/portfolio-website/"

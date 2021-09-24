@@ -95,10 +95,9 @@ export default () => (
                                 <div class="col-md-6 item text">
                                     <h3>About the Creator</h3>
                                     <p>
-                                        Hi, my name is Veronika Pilipenko and I am a fullstack developer.
+                                        My name is Veronika Pilipenko and I am a fullstack developer based in New York City.
                                         I really enjoy working working with frontend frameworks such as React, and backend frameworks such as Rails.
                                         My favorite languages to code in are JavaScript and Ruby.
-                                        I live in New York City with my dog. 
                                     </p>
                                 </div>
                                 <div class="col item social">
