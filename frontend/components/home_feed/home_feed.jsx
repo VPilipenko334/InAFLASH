@@ -9,7 +9,7 @@ class HomeFeed extends React.Component {
             <div className="upload-opener">
                 <div className="upload-photo-container">
                     <h1>Home Feed</h1>
-
+                    hello
                     <br />
                         <center><p>See photos and published Galleries from people you follow.</p></center>
 
