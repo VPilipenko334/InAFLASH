@@ -99,18 +99,14 @@ class UploadPicture extends React.Component {
 
         if (this.state.selectForm === 1) {
             return (
-                <div className="upload-opener">
-                    <div className="upload-photo-container">
-                        {/* <div className="upload-container"> */}
-                            <label id="uploading-here">
-
-                                <input type="file" onChange={this.handleFile} style={{ display: "none" }} />
-                            </label>
-                        </div>
+                <div>
+                     <label id="uploading-here">
+                        <input type="file" onChange={this.handleFile} style={{ display: "none" }} />
+                    </label>
 
                     <div className="upload-opener">
-                        <form className="upload-form" onSubmit={this.handleSubmit}>
                             <div className="upload-photo-container">
+                        <form className="upload-form" onSubmit={this.handleSubmit}>
                             {PreviewPicture}
                             <br/><br/>
                             <h3> Art Selected: </h3><br />
@@ -126,12 +122,12 @@ class UploadPicture extends React.Component {
                                 <button className="cancel-button-form" onClick={this.handleCancel}>Cancel</button>
                                 <button className="upload-button-form" type="submit">Upload</button>
                             </div>
-                            </div>
 
                         </form>
+                            </div>
                     </div>
-                </div>
-            // </div>
+           
+              </div>
             )
         }
 
