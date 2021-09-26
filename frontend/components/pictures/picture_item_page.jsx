@@ -18,15 +18,16 @@ const PictureIndexItem = (props) => {
             <h3>{props.user.username}</h3>
             <h3>{props.user.id}</h3> 
 
-                <div className="picture-render-box">
-                    <img className="picture-render" src={props.user.picture} />
-                </div>
+            
+            {/* <img className="picture-render" src={props.user.picture} /> */}
+                
 
             {props.user.pictures.map(picture=>(
                 <PictureRenderIndex 
                 title={picture.title}
                 description={picture.description}
                 picture={picture.picture}
+                // pictureUrl={picture.pictureUrl}
                 key={picture.id} />
             ))}
 {/* 

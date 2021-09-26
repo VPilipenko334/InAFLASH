@@ -11,9 +11,9 @@ class PictureRenderIndex extends React.Component {
         return (
             <div>
                 <p>
-                    
                 {title} <br/>
-                {description} <br /> <br /> 
+                {description} <br />
+                {picture} <br/>
                 {/* {pictureUrl} <br /> */}
                 </p>
             </div> 
