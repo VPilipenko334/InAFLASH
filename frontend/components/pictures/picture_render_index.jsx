@@ -4,13 +4,14 @@ class PictureRenderIndex extends React.Component {
     
 
     render() {
-       const {description, title, pictureUrl} = this.props;  
+       const {description, title, picture, pictureUrl} = this.props;  
 
     //    if (!pictureUrl) return null; 
 
         return (
             <div>
                 <p>
+                    
                 {title} <br/>
                 {description} <br /> <br /> 
                 {/* {pictureUrl} <br /> */}

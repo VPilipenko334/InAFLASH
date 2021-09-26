@@ -1,4 +1,5 @@
 import React from 'react'
+import { useStore } from 'react-redux';
 import { Link } from 'react-router-dom'
 import PictureRenderIndex from './picture_render_index';
 
@@ -17,14 +18,19 @@ const PictureIndexItem = (props) => {
             <h3>{props.user.username}</h3>
             <h3>{props.user.id}</h3> 
 
+                <div className="picture-render-box">
+                    <img className="picture-render" src={props.user.picture} />
+                </div>
+
             {props.user.pictures.map(picture=>(
                 <PictureRenderIndex 
                 title={picture.title}
                 description={picture.description}
+                picture={picture.picture}
                 key={picture.id} />
             ))}
-
-            {/* {props.pictures.map(picture=>(
+{/* 
+            {props.pictures.map(picture=>(
                 <PictureRenderIndex 
                 pictureUrl={picture.pictureUrl} />
             ))} */}
