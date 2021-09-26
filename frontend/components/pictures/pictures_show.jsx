@@ -36,6 +36,7 @@ class PictureShow extends React.Component {
                     <h4>{picture.description}</h4><br />
 
                    <button><Link to="/" className="back-home">Home</Link></button>
+                   <button><Link to="/pictures" className="back-home">See all pictures</Link></button>
                 </div>
             </div>
         )
