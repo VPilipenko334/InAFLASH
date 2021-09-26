@@ -27,6 +27,7 @@ class PictureShow extends React.Component {
         const { picture } = this.props;
         if (!picture) return null;
 
+    
         return (
             <div>
                 <div className="upload-opener">

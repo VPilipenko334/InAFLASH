@@ -27,18 +27,7 @@ user9 = User.create!(username: 'charis', password: 'ilovetodance')
 user10 = User.create!(username: 'nicha', password: 'imclinicallyinsanetbh')
 
 #adding pictures to the database 
-picture1 = Picture.create!(title: 'beach', private: false, description: 'first', user_id: user1.id)
-picture2 = Picture.create!(title: 'bride', private: false, description: 'a photo of a beautiful bride', user_id: user2.id)
-picture3 = Picture.create!(title: 'castle', private: false, description: 'a wonderful castle stands', user_id: user3.id)
-picture4 = Picture.create!(title: 'child', private: false, description: 'a child is found on the photo', user_id: user4.id)
-picture5 = Picture.create!(title: 'cloud', private: true, description: 'the beautiful clouds', user_id: user5.id)
-picture6 = Picture.create!(title: 'grey', private: true, description: 'grey clouds', user_id: user6.id)
-picture7 = Picture.create!(title: 'fairy', private: true, description: 'a beautiful fairy has appeared!', user_id: user7.id)
-picture8 = Picture.create!(title: 'house', private: true, description: 'a house stands', user_id: user8.id)
-picture9 = Picture.create!(title: 'mushrooms', private: true, description: 'beautiful neon mushrooms that light up the night sky', user_id: user9.id)
-picture10 = Picture.create!(title: 'ocean', private: false, description: 'the ocean is the purest place on earth', user_id: user10.id)
 
-#AWS attaching pictures // seeding the database
 
 file1 = open("https://inaflash-seeds.s3.amazonaws.com/background.jpg")
 file2 = open("https://inaflash-seeds.s3.amazonaws.com/bride.jpg")
@@ -51,6 +40,17 @@ file8 = open("https://inaflash-seeds.s3.amazonaws.com/house.jpg")
 file9 = open("https://inaflash-seeds.s3.amazonaws.com/mushrooms.jpg")
 file10 = open("https://inaflash-seeds.s3.amazonaws.com/ocean.jpg")
 
+
+picture1 = Picture.create!(title: 'beach', private: false, description: 'first', user_id: user1.id)
+picture2 = Picture.create!(title: 'bride', private: false, description: 'a photo of a beautiful bride', user_id: user2.id)
+picture3 = Picture.create!(title: 'castle', private: false, description: 'a wonderful castle stands', user_id: user3.id)
+picture4 = Picture.create!(title: 'child', private: false, description: 'a child is found on the photo', user_id: user4.id)
+picture5 = Picture.create!(title: 'cloud', private: true, description: 'the beautiful clouds', user_id: user5.id)
+picture6 = Picture.create!(title: 'grey', private: true, description: 'grey clouds', user_id: user6.id)
+picture7 = Picture.create!(title: 'fairy', private: true, description: 'a beautiful fairy has appeared!', user_id: user7.id)
+picture8 = Picture.create!(title: 'house', private: true, description: 'a house stands', user_id: user8.id)
+picture9 = Picture.create!(title: 'mushrooms', private: true, description: 'beautiful neon mushrooms that light up the night sky', user_id: user9.id)
+picture10 = Picture.create!(title: 'ocean', private: false, description: 'the ocean is the purest place on earth', user_id: user10.id)
 
 #attaching the pictures to the users 
 picture1.picture.attach(io: file1, filename: 'bride.jpg')
