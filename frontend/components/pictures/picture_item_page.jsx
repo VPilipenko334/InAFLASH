@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 import PictureRenderIndex from './picture_render_index';
 
 const PictureIndexItem = (props) => {
-    console.log(props.user);
-    console.log(props.user.pictures);
-    console.log(props.user.pictures.pictureUrl)
+    // console.log(props.user);
+    // console.log(props.user.pictures);
 
 
     return (
