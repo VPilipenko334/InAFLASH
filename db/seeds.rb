@@ -63,3 +63,14 @@ picture7.picture.attach(io: file7, filename: 'fairy.jpg')
 picture8.picture.attach(io: file8, filename: 'house.jpg')
 picture9.picture.attach(io: file9, filename: 'mushrooms.jpg')
 picture10.picture.attach(io: file10, filename: 'ocean.jpg')
+
+picture1.save!
+picture2.save!
+picture3.save!
+picture4.save!
+picture5.save!
+picture6.save!
+picture7.save!
+picture8.save!
+picture9.save!
+picture10.save!
