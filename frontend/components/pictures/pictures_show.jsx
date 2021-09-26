@@ -30,13 +30,15 @@ class PictureShow extends React.Component {
         return (
             <div>
                 <div className="upload-opener">
+                    <div className="upload-photo-container">
                     <button className="back-home" onClick={this.handleback}>hello this button takes you back</button><br /><br />
                     <img className="picture_show_img" height="500" width="500" src={picture.pictureUrl} alt="" /><br /><br />
                     <h5>{picture.title}</h5> <br/>
                     <h4>{picture.description}</h4><br />
 
-                   <button><Link to="/" className="back-home">Home</Link></button>
-                   <button><Link to="/pictures" className="back-home">See all pictures</Link></button>
+                    <Link to="/" className="upload-button-form">Home</Link> <br /> <br />
+                    <Link to="/pictures" className="upload-button-form">See all pictures</Link>
+                    </div>
                 </div>
             </div>
         )
