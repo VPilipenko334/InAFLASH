@@ -673,10 +673,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _picture_render_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./picture_render_index */ "./frontend/components/pictures/picture_render_index.jsx");
-/* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
+/* harmony import */ var _picture_render_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./picture_render_index */ "./frontend/components/pictures/picture_render_index.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -701,11 +698,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-
-
-
-
-
 var PictureIndexItem = /*#__PURE__*/function (_React$Component) {
   _inherits(PictureIndexItem, _React$Component);
 
@@ -715,21 +707,15 @@ var PictureIndexItem = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, PictureIndexItem);
 
     return _super.call(this, props);
-  } // console.log(props.user);
-  // console.log(props.user.pictures);
-  // console.log(props.user.pictures);
-  // console.log(props.picture.picture);
-  // componentDidMount() {
-  //     this.props.fetchPictures();
-  // }
-
+  }
 
   _createClass(PictureIndexItem, [{
     key: "render",
     value: function render() {
-      // console.log(this.props.pictures)
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, this.props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, this.props.user.id), this.props.pictures.map(function (picture) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          title: picture.title,
+          description: picture.description,
           picture: picture.picture,
           pictureUrl: picture.pictureUrl,
           key: picture.id
@@ -740,19 +726,7 @@ var PictureIndexItem = /*#__PURE__*/function (_React$Component) {
 
   return PictureIndexItem;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PictureIndexItem); // const mSTP = (state) => {
-//     return {
-//         pictures: Object.values(state.entities.pictures),
-//         errors: state.sessionErrors,
-//         users: Object.values(state.entities.users)
-//     }
-// }
-// const mDTP = (dispatch) => ({
-//     fetchUsers: () => dispatch(fetchUsers()),
-//     fetchPictures: () => dispatch(fetchPictures()),
-//     // fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
-// })
-// export default connect(mSTP, mDTP)(PictureIndexItem);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PictureIndexItem);
 
 /***/ }),
 
