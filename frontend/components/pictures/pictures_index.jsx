@@ -37,6 +37,7 @@ class PictureIndex extends React.Component {
                                 />
                             ))
                         }
+                        
                         {/* <img className="picture-render" src={pictures.pictures} />  */}
 
                         {/* {

@@ -29,9 +29,9 @@ export class PictureIndexItem extends React.Component {
             <h3>{this.props.user.id}</h3>
 
                 {/* <Link className="picture-render" to={`/pictures/${this.props.pictures.pictureId}`}></Link>  */}
-                {this.props.pictures.map(picture => { 
+                {this.props.pictures.map(picture => {
                     // console.log(picture.picture);
-                    <img className="picture-render" height="300" width="300" src={picture.pictureUrl} />
+                    <img className="picture-render" height="300" width="300" src={picture.picture} />
                  })}
 
              
