@@ -5,21 +5,21 @@ export const RECEIVE_PICTURES = "RECEIVE_PICTURES";
 export const REMOVE_PICTURE = "REMOVE_PICTURE";
 
 //thunk actions
-const receivePicture = (picture) => {
+export const receivePicture = (picture) => {
     return {
         type: RECEIVE_PICTURE,
         picture
     }
 }
 
-const receivePictures = (pictures) => {
+export const receivePictures = (pictures) => {
     return {
         type: RECEIVE_PICTURES,
         pictures
     }
 }
 
-const removePicture = (pictureId) => {
+export const removePicture = (pictureId) => {
     return {
         type: REMOVE_PICTURE,
         pictureId

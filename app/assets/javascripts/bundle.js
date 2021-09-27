@@ -13,6 +13,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "RECEIVE_PICTURE": () => (/* binding */ RECEIVE_PICTURE),
 /* harmony export */   "RECEIVE_PICTURES": () => (/* binding */ RECEIVE_PICTURES),
 /* harmony export */   "REMOVE_PICTURE": () => (/* binding */ REMOVE_PICTURE),
+/* harmony export */   "receivePicture": () => (/* binding */ receivePicture),
+/* harmony export */   "receivePictures": () => (/* binding */ receivePictures),
+/* harmony export */   "removePicture": () => (/* binding */ removePicture),
 /* harmony export */   "fetchPicture": () => (/* binding */ fetchPicture),
 /* harmony export */   "fetchPictures": () => (/* binding */ fetchPictures),
 /* harmony export */   "createPicture": () => (/* binding */ createPicture),
@@ -30,21 +33,18 @@ var receivePicture = function receivePicture(picture) {
     picture: picture
   };
 };
-
 var receivePictures = function receivePictures(pictures) {
   return {
     type: RECEIVE_PICTURES,
     pictures: pictures
   };
 };
-
 var removePicture = function removePicture(pictureId) {
   return {
     type: REMOVE_PICTURE,
     pictureId: pictureId
   };
 };
-
 var fetchPicture = function fetchPicture(pictureId) {
   return function (dispatch) {
     return _util_picture_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchPicture(pictureId).then(function (picture) {
@@ -200,7 +200,7 @@ var receiveUserErrors = function receiveUserErrors(errors) {
 var fetchUserPictures = function fetchUserPictures(userId) {
   return function (dispatch) {
     return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__.fetchUserPictures(userId).then(function (pictures) {
-      return dispatch(receivePictures(pictures));
+      return dispatch((0,_picture_actions__WEBPACK_IMPORTED_MODULE_1__.receivePictures)(pictures));
     }).fail(function (err) {
       return dispatch(receiveUserErrors(err.responseJSON));
     });
@@ -828,8 +828,8 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
       if (!pictures) return null;
       var users = this.props.users;
       if (!users) return null;
-      console.log(pictures); // console.log(users);
-
+      console.log(pictures);
+      console.log(users);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "upload-opener"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -2175,13 +2175,13 @@ var fetchPictures = function fetchPictures() {
     url: 'api/pictures'
   });
 };
-var createPicture = function createPicture(picture) {
+var createPicture = function createPicture(formData) {
   return $.ajax({
-    method: "POST",
+    method: 'POST',
     url: '/api/pictures',
+    data: formData,
     contentType: false,
-    processData: false,
-    data: picture
+    processData: false
   });
 };
 var deletePicture = function deletePicture(pictureId) {

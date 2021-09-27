@@ -21,7 +21,7 @@ class PictureIndex extends React.Component {
         if (!users) return null; 
 
         console.log(pictures);
-        // console.log(users);
+        console.log(users);
 
         return (
                 <div className="upload-opener">

@@ -1,6 +1,6 @@
 import * as ApiUser from "../util/user_api_util";
 
-import { receivePicture } from './picture_actions';
+import { receivePictures } from './picture_actions';
 
 export const RECEIVE_USER = "RECEIVE_USER";
 export const RECEIVE_USER_ERRORS = "RECEIVE_USER_ERRORS";
