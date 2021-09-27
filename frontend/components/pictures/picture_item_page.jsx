@@ -21,22 +21,22 @@ const PictureIndexItem = (props) => {
             <h3>{props.user.id}</h3>
 
             
-            <img className="picture-render" src={props.pictures} />
+            {/* <img className="picture-render" src={props.pictures} /> */}
                 
 
             {props.user.pictures.map(picture=>(
                 <PictureRenderIndex 
                 title={picture.title}
                 description={picture.description}
-                picture={picture.picture}
+                // picture={picture.picture}
                 key={picture.id} />
             ))}
 
-            {props.pictures.map(picture=>(
+            {/* {props.pictures.map(picture=>(
                 <PictureRenderIndex 
                 picture={picture.picture}
                 pictureUrl={picture.pictureUrl} />
-            ))}
+            ))} */}
             
         </li>
         </div>

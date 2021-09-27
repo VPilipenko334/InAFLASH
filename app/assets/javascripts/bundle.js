@@ -684,20 +684,12 @@ var PictureIndexItem = function PictureIndexItem(props) {
   // console.log(props.user.pictures);
   // console.log(props.user.pictures);
   // console.log(props.picture.picture);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.id), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    className: "picture-render",
-    src: props.pictures
-  }), props.user.pictures.map(function (picture) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.id), props.user.pictures.map(function (picture) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
       title: picture.title,
-      description: picture.description,
-      picture: picture.picture,
+      description: picture.description // picture={picture.picture}
+      ,
       key: picture.id
-    });
-  }), props.pictures.map(function (picture) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      picture: picture.picture,
-      pictureUrl: picture.pictureUrl
     });
   })));
 };
@@ -835,8 +827,8 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
       var pictures = this.props.pictures;
       if (!pictures) return null;
       var users = this.props.users;
-      if (!users) return null; // console.log(pictures);
-      // console.log(users);
+      if (!users) return null;
+      console.log(pictures); // console.log(users);
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "upload-opener"
@@ -847,14 +839,6 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
           user: user,
           pictures: pictures,
           key: user.id
-        });
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        className: "picture-render",
-        src: users.pictures
-      }), pictures.map(function (picture) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          picture: picture,
-          key: picture.id
         });
       }))));
     }
