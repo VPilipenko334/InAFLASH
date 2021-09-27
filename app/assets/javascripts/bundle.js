@@ -757,9 +757,7 @@ var PictureRenderIndex = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           description = _this$props.description,
           title = _this$props.title,
-          picture = _this$props.picture,
-          pictureUrl = _this$props.pictureUrl; //    if (!pictureUrl) return null; 
-
+          picture = _this$props.picture;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, title, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), description, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), picture, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)));
     }
   }]);
