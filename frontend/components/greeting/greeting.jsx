@@ -29,9 +29,9 @@ const Greeting = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <div className="header-group">
       <h2 className="header-name">welcome, {currentUser.username}!</h2>
-        {/* <div className="buttons-on-homepage"> */}
+        {/* <div className="buttons-on-homepage">
         {/* <input type="text" placeholder="Search InAFlash..." className="search-nav-bar" /> */}
-        < SearchBar />
+        < SearchBar /> 
         <img src="user.png" className="user-man"></img>
         <Link to="/upload" className="greeting-buttons">Upload</Link>
         <Link to="/pictures" className="greeting-buttons">Pictures</Link>
