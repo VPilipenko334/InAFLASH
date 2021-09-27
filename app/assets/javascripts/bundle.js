@@ -729,16 +729,6 @@ var PictureIndexItem = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       // console.log(this.props.pictures)
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, this.props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, this.props.user.id), this.props.pictures.map(function (picture) {
-        // console.log(picture.picture);
-
-        /*#__PURE__*/
-        react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-          className: "picture-render",
-          height: "300",
-          width: "300",
-          src: picture.picture
-        });
-      }), this.props.pictures.map(function (picture) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_3__["default"], {
           picture: picture.picture,
           pictureUrl: picture.pictureUrl,
@@ -821,7 +811,12 @@ var PictureRenderIndex = /*#__PURE__*/function (_React$Component) {
           description = _this$props.description,
           title = _this$props.title,
           picture = _this$props.picture;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, title, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), description, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), picture, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, title, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), description, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        className: "picture-render",
+        height: "300",
+        width: "300",
+        src: picture
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)));
     }
   }]);
 

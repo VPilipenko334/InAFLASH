@@ -13,7 +13,9 @@ class PictureRenderIndex extends React.Component {
 
                 {title} <br/>
                 {description} <br />
-                {picture}
+                    {/* {this.props.pictures.map(picture => { */}
+                        <img className="picture-render" height="300" width="300" src={picture} />
+                    {/* })} */}
                 <br/>
                 </p>
             </div> 
