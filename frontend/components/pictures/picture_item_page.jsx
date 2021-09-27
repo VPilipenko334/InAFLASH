@@ -11,10 +11,8 @@ export class PictureIndexItem extends React.Component {
         <div>
             
             <li>
-                <h3>{this.props.user.username}</h3>
-                <h3>{this.props.user.id}</h3>
+                <h2>{this.props.user.username}</h2>
 
-                
                 {this.props.pictures.map(picture=>(
                     <PictureRenderIndex 
                     title={picture.title}
