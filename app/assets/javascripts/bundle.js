@@ -680,10 +680,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var PictureIndexItem = function PictureIndexItem(props) {
-  console.log(props.user); // console.log(props.user.pictures);
+  // console.log(props.user);
+  // console.log(props.user.pictures);
   // console.log(props.user.pictures);
   // console.log(props.picture.picture);
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), props.user.pictures.map(function (picture) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
       title: picture.title,
