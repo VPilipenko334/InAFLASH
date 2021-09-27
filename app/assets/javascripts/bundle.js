@@ -2311,6 +2311,7 @@ var login = function login(user) {
   return $.ajax({
     method: 'POST',
     url: '/api/session',
+    async: true,
     data: {
       user: user
     }
@@ -2320,6 +2321,7 @@ var signup = function signup(user) {
   return $.ajax({
     method: 'POST',
     url: '/api/users',
+    async: true,
     data: {
       user: user
     }
@@ -2328,6 +2330,7 @@ var signup = function signup(user) {
 var logout = function logout() {
   return $.ajax({
     method: 'DELETE',
+    async: true,
     url: '/api/session'
   });
 };
