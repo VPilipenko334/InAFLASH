@@ -41,16 +41,16 @@ file9 = open("https://inaflash-seeds.s3.amazonaws.com/mushrooms.jpg")
 file10 = open("https://inaflash-seeds.s3.amazonaws.com/ocean.jpg")
 
 
-picture1 = Picture.create!(title: 'sunflower', private: false, description: 'lovely sunflower', user_id: user1.id)
-picture2 = Picture.create!(title: 'bride', private: false, description: 'a photo of a beautiful bride', user_id: user2.id)
-picture3 = Picture.create!(title: 'castle', private: false, description: 'a wonderful castle stands', user_id: user3.id)
-picture4 = Picture.create!(title: 'child', private: false, description: 'a child is found on the photo', user_id: user4.id)
-picture5 = Picture.create!(title: 'cloud', private: true, description: 'the beautiful clouds', user_id: user5.id)
-picture6 = Picture.create!(title: 'grey', private: true, description: 'grey clouds', user_id: user6.id)
-picture7 = Picture.create!(title: 'fairy', private: true, description: 'a beautiful fairy has appeared!', user_id: user7.id)
-picture8 = Picture.create!(title: 'house', private: true, description: 'a house stands', user_id: user8.id)
-picture9 = Picture.create!(title: 'mushrooms', private: true, description: 'beautiful neon mushrooms that light up the night sky', user_id: user9.id)
-picture10 = Picture.create!(title: 'ocean', private: false, description: 'the ocean is the purest place on earth', user_id: user10.id)
+picture1 = Picture.new(title: 'sunflower', private: false, description: 'lovely sunflower', user_id: user1.id)
+picture2 = Picture.new(title: 'bride', private: false, description: 'a photo of a beautiful bride', user_id: user2.id)
+picture3 = Picture.new(title: 'castle', private: false, description: 'a wonderful castle stands', user_id: user3.id)
+picture4 = Picture.new(title: 'child', private: false, description: 'a child is found on the photo', user_id: user4.id)
+picture5 = Picture.new(title: 'cloud', private: true, description: 'the beautiful clouds', user_id: user5.id)
+picture6 = Picture.new(title: 'grey', private: true, description: 'grey clouds', user_id: user6.id)
+picture7 = Picture.new(title: 'fairy', private: true, description: 'a beautiful fairy has appeared!', user_id: user7.id)
+picture8 = Picture.new(title: 'house', private: true, description: 'a house stands', user_id: user8.id)
+picture9 = Picture.new(title: 'mushrooms', private: true, description: 'beautiful neon mushrooms that light up the night sky', user_id: user9.id)
+picture10 = Picture.new(title: 'ocean', private: false, description: 'the ocean is the purest place on earth', user_id: user10.id)
 
 
 #attaching the pictures to the users 
