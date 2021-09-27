@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom'
 import PictureRenderIndex from './picture_render_index';
 
 const PictureIndexItem = (props) => {
-    // console.log(props.user);
+    console.log(props.user);
     // console.log(props.user.pictures);
+    // console.log(props.user.pictures);
+    // console.log(props.picture.picture);
 
 
     return (
@@ -16,17 +18,18 @@ const PictureIndexItem = (props) => {
 
             {/* </Link> */}
             <h3>{props.user.username}</h3>
-            <h3>{props.user.id}</h3> 
+            {/* <h3>{props.user.id}</h3>  */}
 
             
-            {/* <img className="picture-render" src={props.user.picture} /> */}
+            {/* <img className="picture-render" src={picture.picture} /> */}
                 
 
             {props.user.pictures.map(picture=>(
                 <PictureRenderIndex 
                 title={picture.title}
                 description={picture.description}
-                picture={picture.picture}
+                // private={picture.private}
+                // picture={picture.picture}
                 // pictureUrl={picture.pictureUrl}
                 key={picture.id} />
             ))}

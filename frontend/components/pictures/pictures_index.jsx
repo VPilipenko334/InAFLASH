@@ -37,15 +37,16 @@ class PictureIndex extends React.Component {
                                 />
                             ))
                         }
+                        <img className="picture-render" src={users.pictures} />
 
-                        {/* {
+                        {
                             pictures.map(picture => (
                                 <PictureRenderIndex
                                 picture={picture}
                                 key={picture.id}
                                 />
                             ))
-                        } */}
+                        }
 
                     </ul>
                 </div>

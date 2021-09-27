@@ -680,13 +680,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var PictureIndexItem = function PictureIndexItem(props) {
-  // console.log(props.user);
+  console.log(props.user); // console.log(props.user.pictures);
   // console.log(props.user.pictures);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.id), props.user.pictures.map(function (picture) {
+  // console.log(props.picture.picture);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), props.user.pictures.map(function (picture) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
       title: picture.title,
-      description: picture.description,
-      picture: picture.picture // pictureUrl={picture.pictureUrl}
+      description: picture.description // private={picture.private}
+      // picture={picture.picture}
+      // pictureUrl={picture.pictureUrl}
       ,
       key: picture.id
     });
@@ -840,6 +843,14 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
           user: user,
           pictures: pictures,
           key: user.id
+        });
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        className: "picture-render",
+        src: users.pictures
+      }), pictures.map(function (picture) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          picture: picture,
+          key: picture.id
         });
       }))));
     }
