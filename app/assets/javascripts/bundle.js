@@ -684,14 +684,18 @@ var PictureIndexItem = function PictureIndexItem(props) {
   // console.log(props.user.pictures);
   // console.log(props.user.pictures);
   // console.log(props.picture.picture);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), props.user.pictures.map(function (picture) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.id), props.user.pictures.map(function (picture) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
       title: picture.title,
-      description: picture.description // private={picture.private}
-      // picture={picture.picture}
-      // pictureUrl={picture.pictureUrl}
-      ,
+      description: picture.description,
+      picture: picture.picture,
+      pictureUrl: picture.pictureUrl,
       key: picture.id
+    });
+  }), props.pictures.map(function (picture) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      picture: picture.picture,
+      pictureUrl: picture.pictureUrl
     });
   })));
 };
@@ -883,7 +887,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+ // import { fetchPicture } from "../../actions/picture_actions";
 
 var mSTP = function mSTP(state) {
   return {
@@ -900,7 +904,8 @@ var mDTP = function mDTP(dispatch) {
     },
     fetchPictures: function fetchPictures() {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_4__.fetchPictures)());
-    }
+    } // fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
+
   };
 };
 
