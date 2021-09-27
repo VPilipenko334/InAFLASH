@@ -951,8 +951,7 @@ var mDTP = function mDTP(dispatch) {
     },
     fetchPictures: function fetchPictures() {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_4__.fetchPictures)());
-    } // fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
-
+    }
   };
 };
 

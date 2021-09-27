@@ -15,8 +15,7 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => ({
     fetchUsers: () => dispatch(fetchUsers()),
-    fetchPictures: () => dispatch(fetchPictures()),
-    // fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
+    fetchPictures: () => dispatch(fetchPictures())
 })
 
 export default connect(mSTP, mDTP)(PictureIndex);
