@@ -787,8 +787,8 @@ var PictureRenderIndex = /*#__PURE__*/function (_React$Component) {
           title = _this$props.title,
           picture = _this$props.picture;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, title, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), description, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        className: "post-index-item",
-        to: "/pictures/".concat(picture.id)
+        to: "/pictures/".concat(picture.id),
+        className: "picture-render-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         className: "picture-render",
         height: "300",
@@ -818,7 +818,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _picture_item_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./picture_item_page */ "./frontend/components/pictures/picture_item_page.jsx");
-/* harmony import */ var _picture_render_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./picture_render_index */ "./frontend/components/pictures/picture_render_index.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -840,8 +839,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
 
 
 
@@ -869,9 +866,7 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
       var pictures = this.props.pictures;
       if (!pictures) return null;
       var users = this.props.users;
-      if (!users) return null; // console.log(pictures);
-      // console.log(users);
-
+      if (!users) return null;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "upload-opener"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {

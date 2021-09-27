@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import PictureIndexItem from "./picture_item_page";
-import PictureRenderIndex from "./picture_render_index";
 
 class PictureIndex extends React.Component {
     constructor(props) {
@@ -20,9 +18,6 @@ class PictureIndex extends React.Component {
         const { users } = this.props; 
         if (!users) return null; 
 
-        // console.log(pictures);
-        // console.log(users);
-
         return (
                 <div className="upload-opener">
                     <div className="upload-photo-container">
@@ -37,18 +32,6 @@ class PictureIndex extends React.Component {
                                 />
                             ))
                         }
-                        
-                        {/* <img className="picture-render" src={pictures.pictures} />  */}
-
-                        {/* {
-                            pictures.map(picture => (
-                                <PictureRenderIndex
-                                picture={picture}
-                                key={picture.id}
-                                />
-                            ))
-                        } */}
-
                     </ul>
                 </div>
              </div>
