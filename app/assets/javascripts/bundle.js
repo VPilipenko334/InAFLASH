@@ -684,12 +684,14 @@ var PictureIndexItem = function PictureIndexItem(props) {
   // console.log(props.user.pictures);
   // console.log(props.user.pictures);
   // console.log(props.picture.picture);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.id), props.user.pictures.map(function (picture) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, props.user.id), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "picture-render",
+    src: props.pictures
+  }), props.user.pictures.map(function (picture) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
       title: picture.title,
       description: picture.description,
       picture: picture.picture,
-      pictureUrl: picture.pictureUrl,
       key: picture.id
     });
   }), props.pictures.map(function (picture) {
@@ -1963,6 +1965,7 @@ var PicturesReducer = function PicturesReducer() {
       newState[action.picture.id] = action.picture;
 
     case _actions_picture_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_PICTURES:
+      // return action.pictures; 
       return Object.assign(newState, action.pictures);
 
     case _actions_picture_actions__WEBPACK_IMPORTED_MODULE_0__.REMOVE_PICTURE:
