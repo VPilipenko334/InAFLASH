@@ -20,8 +20,8 @@ class PictureIndex extends React.Component {
         const { users } = this.props; 
         if (!users) return null; 
 
-        console.log(pictures);
-        console.log(users);
+        // console.log(pictures);
+        // console.log(users);
 
         return (
                 <div className="upload-opener">
@@ -37,7 +37,7 @@ class PictureIndex extends React.Component {
                                 />
                             ))
                         }
-                        {/* <img className="picture-render" src={users.pictures} /> */}
+                        <img className="picture-render" src={pictures.picture} />
 {/* 
                         {
                             pictures.map(picture => (

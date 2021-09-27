@@ -8,12 +8,11 @@ class PictureRenderIndex extends React.Component {
         
         return (
             <div>
-                {/* <img className="picture-render" src={picture} /> */}
+                <img className="picture-render" src={picture} />
 
                 <p>
                 {title} <br/>
                 {description} <br />
-                {picture} <br/>
                 </p>
             </div> 
         )
