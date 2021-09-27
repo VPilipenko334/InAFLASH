@@ -1415,10 +1415,9 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      search: "",
-      // title: [],
-      pictures: [] // users: []
-
+      inputValue: "",
+      title: [],
+      users: []
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
@@ -1429,9 +1428,9 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
     value: function handleSubmit(e) {
       e.preventDefault();
       this.setState({
-        search: e.target.value
+        inputValue: e.target.value
       });
-      var searchBar = document.querySelector(".search-bar");
+      var searchBar = document.querySelector(".search-bar-result");
       searchBar.style.visibility = "visible";
     }
   }, {
@@ -1439,10 +1438,9 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      // const { title, pictures } = this.props; 
-      // if (!this.props.pictures.title)
-      // return null; 
-      if (!this.props.pictures) return null;
+      // if (!this.props.pictures)
+      // return null;
+      if (!this.props.users) return null;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "search-bar-wigit"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1450,24 +1448,26 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         placeholder: "Search InAFlash...",
         type: "text",
-        value: this.state.search,
+        value: this.state.inputValue,
         onChange: this.handleSubmit,
         onBlur: function onBlur() {
           setTimeout(function () {
             _this2.setState({
-              search: ""
+              inputValue: ""
             });
           }, 100);
         }
-      }), this.state.search.length > 0 ? this.props.pictures.filter(function (title) {
-        return props.pictures.title.includes(_this2.state.search);
-      }).map(function (title) {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
+        className: "search-bar-result"
+      }, this.state.inputValue.length > 0 ? this.props.pictures.filter(function (picture) {
+        return picture.title.includes(_this2.state.inputValue);
+      }).map(function (picture) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-          key: props.picture.title
+          key: picture.title
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-          to: "/pictures/".concat(pictureId)
-        }, props.picture.title));
-      }) : null)));
+          to: "/pictures/".concat(picture.id)
+        }, picture.title));
+      }) : null))));
     }
   }]);
 
@@ -1489,12 +1489,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
-/* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
-/* harmony import */ var _search_bar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./search_ bar */ "./frontend/components/search_bar/search_ bar.jsx");
-
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
+/* harmony import */ var _actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/picture_actions */ "./frontend/actions/picture_actions.js");
+/* harmony import */ var _search_bar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./search_ bar */ "./frontend/components/search_bar/search_ bar.jsx");
 
 
 
@@ -1509,15 +1507,15 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchUsers: function fetchUsers() {
-      return dispatch((0,_actions_user_actions__WEBPACK_IMPORTED_MODULE_2__.fetchUsers)());
+      return dispatch((0,_actions_user_actions__WEBPACK_IMPORTED_MODULE_1__.fetchUsers)());
     },
     fetchPictures: function fetchPictures() {
-      return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_3__.fetchPictures)());
+      return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__.fetchPictures)());
     }
   };
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, mapDispatchToProps)(_search_bar__WEBPACK_IMPORTED_MODULE_4__["default"]));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_0__.connect)(mapStateToProps, mapDispatchToProps)(_search_bar__WEBPACK_IMPORTED_MODULE_3__["default"]));
 
 /***/ }),
 
