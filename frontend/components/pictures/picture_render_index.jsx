@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class PictureRenderIndex extends React.Component {
     
@@ -8,11 +9,11 @@ class PictureRenderIndex extends React.Component {
         
         return (
             <div>
-                <img className="picture-render" src={picture} />
-
                 <p>
+
                 {title} <br/>
                 {description} <br />
+                <br/>
                 </p>
             </div> 
         )
