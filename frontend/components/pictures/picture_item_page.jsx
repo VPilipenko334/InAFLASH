@@ -15,13 +15,13 @@ export class PictureIndexItem extends React.Component {
     // console.log(props.user.pictures);
     // console.log(props.picture.picture);
 
-    componentDidMount() {
-        this.props.fetchPictures();
+    // componentDidMount() {
+    //     this.props.fetchPictures();
 
-    }
+    // }
 
     render() {
-    console.log(this.props.pictures)
+    // console.log(this.props.pictures)
     return (
         <div>
         <li>
@@ -30,7 +30,7 @@ export class PictureIndexItem extends React.Component {
 
                 {/* <Link className="picture-render" to={`/pictures/${this.props.pictures.pictureId}`}></Link>  */}
                 {this.props.pictures.map(picture => { 
-                    console.log(picture.picture);
+                    // console.log(picture.picture);
                     <img className="picture-render" height="300" width="300" src={picture.picture} />
                  })}
 
@@ -57,20 +57,20 @@ export class PictureIndexItem extends React.Component {
   }
 
 
-// export PictureIndexItem; 
+export default PictureIndexItem; 
 
-const mSTP = (state) => {
-    return {
-        pictures: Object.values(state.entities.pictures),
-        errors: state.sessionErrors,
-        users: Object.values(state.entities.users)
-    }
-}
+// const mSTP = (state) => {
+//     return {
+//         pictures: Object.values(state.entities.pictures),
+//         errors: state.sessionErrors,
+//         users: Object.values(state.entities.users)
+//     }
+// }
 
-const mDTP = (dispatch) => ({
-    fetchUsers: () => dispatch(fetchUsers()),
-    fetchPictures: () => dispatch(fetchPictures()),
-    // fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
-})
+// const mDTP = (dispatch) => ({
+//     fetchUsers: () => dispatch(fetchUsers()),
+//     fetchPictures: () => dispatch(fetchPictures()),
+//     // fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
+// })
 
-export default connect(mSTP, mDTP)(PictureIndexItem);
+// export default connect(mSTP, mDTP)(PictureIndexItem);

@@ -719,19 +719,17 @@ var PictureIndexItem = /*#__PURE__*/function (_React$Component) {
   // console.log(props.user.pictures);
   // console.log(props.user.pictures);
   // console.log(props.picture.picture);
+  // componentDidMount() {
+  //     this.props.fetchPictures();
+  // }
 
 
   _createClass(PictureIndexItem, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.fetchPictures();
-    }
-  }, {
     key: "render",
     value: function render() {
-      console.log(this.props.pictures);
+      // console.log(this.props.pictures)
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, this.props.user.username), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, this.props.user.id), this.props.pictures.map(function (picture) {
-        console.log(picture.picture);
+        // console.log(picture.picture);
 
         /*#__PURE__*/
         react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -745,39 +743,20 @@ var PictureIndexItem = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return PictureIndexItem;
-}(react__WEBPACK_IMPORTED_MODULE_0__.Component); // export PictureIndexItem; 
-
-var mSTP = function mSTP(state) {
-  return {
-    pictures: Object.values(state.entities.pictures),
-    errors: state.sessionErrors,
-    users: Object.values(state.entities.users)
-  };
-};
-
-var mDTP = function mDTP(dispatch) {
-  return {
-    fetchUsers: function (_fetchUsers) {
-      function fetchUsers() {
-        return _fetchUsers.apply(this, arguments);
-      }
-
-      fetchUsers.toString = function () {
-        return _fetchUsers.toString();
-      };
-
-      return fetchUsers;
-    }(function () {
-      return dispatch(fetchUsers());
-    }),
-    fetchPictures: function fetchPictures() {
-      return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_4__.fetchPictures)());
-    } // fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
-
-  };
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mSTP, mDTP)(PictureIndexItem));
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PictureIndexItem); // const mSTP = (state) => {
+//     return {
+//         pictures: Object.values(state.entities.pictures),
+//         errors: state.sessionErrors,
+//         users: Object.values(state.entities.users)
+//     }
+// }
+// const mDTP = (dispatch) => ({
+//     fetchUsers: () => dispatch(fetchUsers()),
+//     fetchPictures: () => dispatch(fetchPictures()),
+//     // fetchPicture: pictureId => dispatch(fetchPicture(pictureId)),
+// })
+// export default connect(mSTP, mDTP)(PictureIndexItem);
 
 /***/ }),
 
