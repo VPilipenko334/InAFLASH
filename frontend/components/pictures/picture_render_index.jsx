@@ -13,6 +13,7 @@ class PictureRenderIndex extends React.Component {
 
                 {title} <br/>
                 {description} <br />
+                {/* {picture} */}
                 <br/>
                 </p>
             </div> 

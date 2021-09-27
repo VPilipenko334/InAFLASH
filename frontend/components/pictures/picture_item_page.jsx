@@ -31,25 +31,27 @@ export class PictureIndexItem extends React.Component {
                 {/* <Link className="picture-render" to={`/pictures/${this.props.pictures.pictureId}`}></Link>  */}
                 {this.props.pictures.map(picture => { 
                     // console.log(picture.picture);
-                    <img className="picture-render" height="300" width="300" src={picture.picture} />
+                    <img className="picture-render" height="300" width="300" src={picture.pictureUrl} />
                  })}
 
              
-
-            {/* {this.props.user.pictures.map(picture=>(
+{/* 
+            {this.props.user.pictures.map(picture=>(
                 <PictureRenderIndex 
                 title={picture.title}
                 description={picture.description}
                 picture={picture.picture}
                 key={picture.id} />
-            ))}
+            ))} */}
+
 
             {this.props.pictures.map(picture=>(
                 <PictureRenderIndex 
                 picture={picture.picture}
-                pictureUrl={picture.pictureUrl} />
+                pictureUrl={picture.pictureUrl}
+                key={picture.id} />
             ))}
-             */}
+            
         </li>
         </div>
       )

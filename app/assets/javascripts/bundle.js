@@ -736,7 +736,13 @@ var PictureIndexItem = /*#__PURE__*/function (_React$Component) {
           className: "picture-render",
           height: "300",
           width: "300",
-          src: picture.picture
+          src: picture.pictureUrl
+        });
+      }), this.props.pictures.map(function (picture) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          picture: picture.picture,
+          pictureUrl: picture.pictureUrl,
+          key: picture.id
         });
       })));
     }
@@ -934,7 +940,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import { fetchPicture } from "../../actions/picture_actions";
+
 
 var mSTP = function mSTP(state) {
   return {
