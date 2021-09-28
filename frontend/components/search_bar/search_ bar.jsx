@@ -22,9 +22,8 @@ class SearchBar extends React.Component {
     render() {
 
         return (
-            <div className="search-wigit">
-                <div className="search-bar-actual">
-                    <input placeholder="Search InAFlash..." className="search-bar" type="text" value={this.state.inputValue} onChange={this.handleSubmit} onBlur={() => { setTimeout(() => { this.setState({ inputValue: "" }) }, 100) }} />
+            <div className="search-bar-container">
+                <input placeholder="Search InAFlash..." className="search-bar" type="text" value={this.state.inputValue} onChange={this.handleSubmit} onBlur={() => { setTimeout(() => { this.setState({ inputValue: "" }) }, 100) }} />
                     <nav className="search-bar-result" >
                         {this.state.inputValue.length > 0 ? this.props.pictures.title.filter(picture => picture.title.includes(this.state.inputValue)).map(picture => {
                             return (
@@ -34,9 +33,9 @@ class SearchBar extends React.Component {
                             )
                         }) : null}
                     </nav>
-
-                </div>
             </div>
+                
+            
         )
     }
 

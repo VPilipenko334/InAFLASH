@@ -437,9 +437,9 @@ var Greeting = function Greeting(_ref) {
     }, "LinkedIn"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
       href: "https://angel.co/u/veronika-pilipenko",
       className: "linkedin"
-    }, "AngelList"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, "AngelList"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_search_bar_search_bar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "more-nav-right"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_search_bar_search_bar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       className: "log-in-link",
       to: "/login"
     }, "Log in"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
@@ -1486,9 +1486,7 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "search-wigit"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "search-bar-actual"
+        className: "search-bar-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         placeholder: "Search InAFlash...",
         className: "search-bar",
@@ -1512,7 +1510,7 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
           to: "/pictures/".concat(picture.id)
         }, picture.title));
-      }) : null)));
+      }) : null));
     }
   }]);
 

@@ -13,12 +13,10 @@ const Greeting = ({ currentUser, logout }) => {
             <Link to="/" className="logo">InAFlash</Link>
             <a href="https://github.com/VPilipenko334" className="git">      Github      </a>
             <a href="https://linkedin.com/in/veronikapilipenko" className="linkedin">LinkedIn</a>
-            <a href="https://angel.co/u/veronika-pilipenko" className="linkedin">AngelList</a>
-            <br />
+            <a href="https://angel.co/u/veronika-pilipenko" className="linkedin">AngelList</a> 
+              < SearchBar />
             </div>
           <div className="more-nav-right">
-            < SearchBar />
-              &nbsp; 
               <Link className="log-in-link" to="/login">Log in</Link>
               <Link className="sign-up-button-form" to="/signup">Sign up</Link>
               </div>
