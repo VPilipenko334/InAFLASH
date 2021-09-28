@@ -32,6 +32,8 @@ const Greeting = ({ currentUser, logout }) => {
       <h2 className="header-name">welcome, {currentUser.username}!</h2>
         < SearchBar /> 
         <img src="user.png" className="user-man"></img>
+        <img src="mail.png" className="icons"></img>
+        <img src="bell.png" className="icons"></img>
         <Link to="/upload" className="greeting-buttons">Upload</Link>
         <Link to="/pictures" className="greeting-buttons">Pictures</Link>
         <Link to="/home" className="greeting-buttons">Home</Link>

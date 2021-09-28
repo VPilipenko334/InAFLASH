@@ -100,14 +100,26 @@
 }
 
 .user-man {
-  width: 40px;
-  height: 40px;
-  // margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  margin-top: 3px;
   // padding: 5px;
   align-items: center;
   text-align: center;
   cursor: pointer;
-  margin-left: 50px;
+  margin-left: 20px;
+  // margin-right: 10px;
+}
+
+.icons {
+  width: 34px;
+  height: 34px;
+  margin-top: 3px;
+  // padding: 5px;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 20px;
   // margin-right: 10px;
 }
 
