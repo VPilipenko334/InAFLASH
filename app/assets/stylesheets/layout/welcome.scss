@@ -6,11 +6,13 @@
 
 .p-text {
   position: relative;
-  max-width: 500px;
+  max-width: 400px;
   box-sizing: border-box;
   font-family: Helvetica Neue, Arial, sans-serif;
   color: rgba(255, 255, 255, 0.947); 
+  font-size: 17px;
 }
+
 //div that has the main photo in it 
 .top-bar {
   background-image: image-url("../pictures/waveedit.png");
@@ -62,6 +64,13 @@
   color: rgb(34, 34, 34);
   text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.sign-up-button-home:hover {
+  text-decoration: none;
+  background-color: grey;
+  color: black; 
 }
 
 inner-main-container > h2 {
@@ -87,6 +96,7 @@ inner-main-container {
   width: 180px;
   height: 60px;
   border: none;
+  position: fixed;
 }
 
 .difference {
@@ -209,11 +219,16 @@ inner-main-container {
   border-radius: 100px;
   font-weight: bold;
   margin: 20px; 
-  background-color: rgb(34, 34, 34);
-  color: rgb(255, 255, 255);
+  color: rgb(34, 34, 34);
+  background-color: rgb(255, 255, 255);
   border: none;
   font-family: Helvetica Neue, Arial, sans-serif;
   justify-content: center;
+}
+
+#back-to-the-top-button:hover {
+  background-color: grey;
+  text-decoration: none; 
 }
 
 #join-community {
@@ -230,7 +245,7 @@ inner-main-container {
   position: relative;
   padding-top: 35vh;
   width: 100vw;
-  height: 70vh;
+  height: 550px;
   margin-top: 20px;
 }
 
@@ -291,6 +306,11 @@ inner-main-container {
   padding:0 40px;
 }
 
+.log-in-link:hover {
+  text-decoration: none;
+  color: black; 
+}
+
 
 .sign-up-button-form {
   font-family: Helvetica Neue, Arial, sans-serif;
@@ -310,6 +330,12 @@ inner-main-container {
   margin: 0px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.sign-up-button-form:hover {
+  text-decoration: none;
+  background-color: lightgray;
+  color: black;
 }
 
 #photo-generator-text {
@@ -400,6 +426,12 @@ inner-main-container {
   padding:0 40px;
 }
 
+
+.logo:hover {
+  text-decoration: none;
+  color: black; 
+}
+
 .git {
   font-size: 16px;
   font-weight: normal;
@@ -421,4 +453,14 @@ inner-main-container {
   font-family: Helvetica Neue, Arial, sans-serif;
   margin: 0px -15px;
   padding:0 40px;
+}
+
+.git:hover {
+  text-decoration: none;
+  color: black; 
+}
+
+.linkedin:hover {
+  text-decoration: none;
+  color: black; 
 }
