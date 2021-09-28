@@ -760,7 +760,7 @@ var PictureIndexItem = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureIndexItem, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.pictures.map(function (picture) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, this.props.user.username), this.props.pictures.map(function (picture) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
           title: picture.title,
           description: picture.description,

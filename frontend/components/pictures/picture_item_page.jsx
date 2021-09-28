@@ -11,7 +11,7 @@ export class PictureIndexItem extends React.Component {
         <div>
             
             {/* <ul> */}
-                {/* <h2>{this.props.user.username}</h2> */}
+                <h2>{this.props.user.username}</h2>
                 
 
                 {this.props.pictures.map(picture=>(
