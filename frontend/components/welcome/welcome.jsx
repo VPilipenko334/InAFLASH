@@ -43,18 +43,6 @@ export default () => (
                             </p><br />  
                 </div></center><br />
                 
-                <div className="content-box">
-                    <center><div className="photo-icon"></div></center>
-                    <span className="random-photos"></span><br/>
-                        <center><h3 id="photo-generator-text">Photo of the week:</h3></center><br/>
-                        <br/> <p id="editors"> Our editors are always on the lookout for jaw dropping content for you 
-                        to discover and stay inspired. Check back weekly to see what’s new. </p>
-                        <div id="random-photo">
-
-                        </div>
-                        <center><button id="generator-button" onClick={getRandomImage}>Click for photo of the week</button></center><br /><br /><br />
-                </div>
-
         <div className="content-box-two">
             <div className="smoller-content-box">
                 <div className="community">
