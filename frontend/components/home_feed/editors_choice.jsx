@@ -7,7 +7,7 @@ class EditorsChoice extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPictures(); 
+        this.props.fetchPictures // not a function??
     }
 
     render() {

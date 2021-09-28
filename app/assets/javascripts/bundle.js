@@ -569,7 +569,7 @@ var EditorsChoice = /*#__PURE__*/function (_React$Component) {
   _createClass(EditorsChoice, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchPictures();
+      this.props.fetchPictures; // not a function??
     }
   }, {
     key: "render",
