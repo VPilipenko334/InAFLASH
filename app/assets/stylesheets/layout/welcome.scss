@@ -4,25 +4,36 @@
   font-family: Helvetica Neue, Arial, sans-serif;
 }
 
+.p-text {
+  position: relative;
+  max-width: 500px;
+  box-sizing: border-box;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.947); 
+}
 //div that has the main photo in it 
 .top-bar {
   background-image: image-url("../pictures/waveedit.png");
-  background-size: cover;
-  display: inline-block;
-  position: relative;
-  padding-top: 90vh;
-  width: 100vw;
-  height: 50px;
-  // margin-top: 2%;
-  font-size: 16px;
-  color: white;
+    // height: 600px;
+    height: 52vw;
+    background-position: center;
+    background-size: cover;
+    // background-attachment: fixed;
+    z-index: 1;
+    position: relative;
+    background-repeat: no-repeat;
+    // border:3px solid red;
+    // box-sizing: border-box;
 }
 
 .first-h1 {
   font-size: 46px;
   line-height: 52px;
   letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.947); 
+  padding-top: 40px;
 }
+
 
 .top-bar .inner-main-container {
   display: inline-block;

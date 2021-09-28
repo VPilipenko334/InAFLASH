@@ -8,7 +8,7 @@ export default () => (
         <div className="top-bar">
             <div className="inner-main-container"> 
                 <h1 className="first-h1">Discover and share the world’s best photos</h1><br />
-                    <p>Get inspired with incredible photos from diverse styles and genres around the world. 
+                    <p className="p-text">Get inspired with incredible photos from diverse styles and genres around the world. 
                     We're not guided by fads—just great photography.
                     </p><br />
                 <Link to="/signup" className="sign-up-button-home">Sign up</Link>
