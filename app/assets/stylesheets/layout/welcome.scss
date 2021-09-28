@@ -86,6 +86,56 @@
   background-color: grey;
   color: black; 
 }
+.sign-up-button-home-bottom {
+  margin-top: 16px;
+  height: 64px;
+  width: auto;
+  line-height: 64px;
+  font-size: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  font-weight: bold;
+  margin: 16px 0px 0px;
+  min-width: 216px;
+  background-color: rgb(0, 0, 0);
+  color: lightgray;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sign-up-button-home-bottom:hover {
+  text-decoration: none;
+  background-color: grey;
+  color: black; 
+}
+.sign-up-button-home {
+  margin-top: 16px;
+  height: 64px;
+  width: auto;
+  line-height: 64px;
+  font-size: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  font-weight: bold;
+  margin: 16px 0px 0px;
+  min-width: 216px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sign-up-button-home:hover {
+  text-decoration: none;
+  background-color: grey;
+  color: black; 
+}
 
 inner-main-container > h2 {
   font-size: 40px;
@@ -249,29 +299,31 @@ inner-main-container {
   font-size: 46px;
   line-height: 52px;
   letter-spacing: -0.4px;
-  text-align: left;
+  text-align: center;
 }
 
 .community {
-  background-image: image-url("../pictures/mount.jpeg");
+  background-image: image-url("../pictures/black.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   display: inline-block;
   position: relative;
   padding-top: 35vh;
   width: 100vw;
-  height: 550px;
+  height: 575px;
   margin-top: 5px;
 }
 
 .community-text {
   display: flex;
   align-items: flex-end;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: right;
   flex-direction: column;
   width: 40%;
   margin-right: 10%;
-  margin-left: 40%;
+  margin-left: 43%;
   margin-top: -10%;
   
 }
