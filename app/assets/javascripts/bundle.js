@@ -439,11 +439,7 @@ var Greeting = function Greeting(_ref) {
       className: "linkedin"
     }, "AngelList"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "more-nav-right"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-      type: "text",
-      placeholder: "Search InAFlash...",
-      className: "search-bar"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_search_bar_search_bar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       className: "log-in-link",
       to: "/login"
     }, "Log in"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
@@ -1416,8 +1412,7 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.state = {
       inputValue: "",
-      title: [],
-      users: []
+      pictures: []
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
@@ -1430,21 +1425,18 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
       this.setState({
         inputValue: e.target.value
       });
-      var searchBar = document.querySelector(".search-bar-result");
-      searchBar.style.visibility = "visible";
+      var SearchInput = documnet.querySelector(".search-bar-result");
+      SearchInput.style.visibility = "visible";
     }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
-      // if (!this.props.pictures)
-      // return null;
-      if (!this.props.users) return null;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "search-bar-wigit"
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "search-wigit"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "search-bar"
+        className: "search-bar-actual"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         placeholder: "Search InAFlash...",
         type: "text",
@@ -1459,15 +1451,15 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
         className: "search-bar-result"
-      }, this.state.inputValue.length > 0 ? this.props.pictures.filter(function (picture) {
+      }, this.state.inputValue.length > 0 ? this.props.pictures.title.filter(function (picture) {
         return picture.title.includes(_this2.state.inputValue);
       }).map(function (picture) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-          key: picture.title
+          key: picture.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
           to: "/pictures/".concat(picture.id)
         }, picture.title));
-      }) : null))));
+      }) : null)));
     }
   }]);
 
@@ -1500,15 +1492,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    users: Object.values(state.entities.users)
+    users: Object.values(state.entities.users) // pictures: Object.values(state.entitites.pictures)
+
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    fetchUsers: function fetchUsers() {
-      return dispatch((0,_actions_user_actions__WEBPACK_IMPORTED_MODULE_1__.fetchUsers)());
-    },
+    // fetchUsers: () => dispatch(fetchUsers()),
     fetchPictures: function fetchPictures() {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__.fetchPictures)());
     }

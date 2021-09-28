@@ -17,7 +17,8 @@ const Greeting = ({ currentUser, logout }) => {
             <br />
             </div>
           <div className="more-nav-right">
-            <input type="text" placeholder="Search InAFlash..." className="search-bar" />
+            < SearchBar />
+              &nbsp; 
               <Link className="log-in-link" to="/login">Log in</Link>
               <Link className="sign-up-button-form" to="/signup">Sign up</Link>
               </div>
@@ -29,8 +30,6 @@ const Greeting = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <div className="header-group">
       <h2 className="header-name">welcome, {currentUser.username}!</h2>
-        {/* <div className="buttons-on-homepage">
-        {/* <input type="text" placeholder="Search InAFlash..." className="search-nav-bar" /> */}
         < SearchBar /> 
         <img src="user.png" className="user-man"></img>
         <Link to="/upload" className="greeting-buttons">Upload</Link>
