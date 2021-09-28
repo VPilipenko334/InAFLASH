@@ -345,6 +345,8 @@ inner-main-container {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  vertical-align: baseline;
+  height: 50px; 
 }
 
 .nav-bar-things  {
@@ -353,6 +355,16 @@ inner-main-container {
   flex-direction: row;
   margin:0 -15px;
   padding:0 20px;
+}
+
+.socials {
+  // vertical-align: bottom; 
+  // margin: auto; 
+  // bottom: 0; 
+  margin-top: 25px; 
+  min-width: 200px;
+  // border: 1px solid black; 
+  height: 50px; 
 }
 
 .more-nav-right {
@@ -479,6 +491,20 @@ inner-main-container {
   line-height: 1.15;
   margin: 0px -15px;
   padding:0 40px;
+  display: flex;
+}
+
+.nav-bar-things{
+  display: flex;
+  flex-direction: row; 
+  width: 100%; 
+  justify-content: space-between;
+}
+
+.more-nav-right{
+  display: flex;
+  flex-direction: row; 
+  width: 300px; 
 }
 
 .logo { 

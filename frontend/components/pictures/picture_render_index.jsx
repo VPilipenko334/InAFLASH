@@ -5,8 +5,9 @@ class PictureRenderIndex extends React.Component {
     
 
     render() {
-       const { description, title, picture } = this.props;  
-        
+       const { description, title, picture} = this.props;  
+        // console.log(picture)
+        // console.log(picture.picture.id)
         return (
             <div>
                 <p>
