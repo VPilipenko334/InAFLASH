@@ -132,3 +132,9 @@ h3 {
   border: 1px black;
   background-color: white; 
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}

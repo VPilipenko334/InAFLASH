@@ -1,5 +1,6 @@
 import React from "react";
 import PictureIndexItem from "./picture_item_page";
+import PictureRenderIndex from "./picture_render_index";
 
 class PictureIndex extends React.Component {
     constructor(props) {
@@ -21,8 +22,8 @@ class PictureIndex extends React.Component {
         return (
                 <div className="upload-opener">
                     <div className="upload-photo-container">
+                        <div className="row">
 
-                    <ul>
                         {
                             users.map(user => (
                                 <PictureIndexItem
@@ -32,7 +33,16 @@ class PictureIndex extends React.Component {
                                 />
                             ))
                         }
-                    </ul>
+
+                        {/* {
+                            pictures.map(picture => (
+                                <PictureRenderIndex
+                                    key={picture.id}
+                                />
+                            ))
+                        } */}
+
+                    </div>
                 </div>
              </div>
         )
