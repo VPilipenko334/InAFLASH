@@ -50,7 +50,7 @@ export default () => (
                     <div className="community-text">
                 <h1 id="join-community">Join our community today</h1><br/>
                     <p id="love-pics">Do you love photography? Want to constantly stay inspired and be surrounded by millions of like-minded creators? Then sign-up today and get rewarded for your love of photography</p>
-                        <center><Link to="/signup" className="sign-up-button-home-bottom">Sign up</Link></center>
+                        <Link to="/signup" className="sign-up-button-home-bottom">Sign up</Link>
                     </div>
                 </div>
             </div>
