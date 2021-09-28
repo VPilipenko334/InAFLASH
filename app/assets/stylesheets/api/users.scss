@@ -13,7 +13,7 @@
 .buttons-on-homepage {
   display: inline-block;
   margin: 0 5px;
-  flex-direction: row;
+  // flex-direction: row;
   margin:0 -15px;
   padding:0 20px;
 }
@@ -41,7 +41,7 @@
   border-color: 767676;
   color: rgb(34, 34, 34);
   text-decoration: none;
-  margin: 5px; 
+  // margin: 2px; 
 }
 
 .homepage-header-button:hover {
@@ -60,7 +60,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: bold;
-  margin: 0px;
+  // margin: 0px;
   border-width: 2px;
   border-radius: 25px;
   border-style: solid;
@@ -73,9 +73,9 @@
   border-color: rgb(34, 34, 34);
   color: rgb(34, 34, 34);
   text-decoration: none;
-  margin: 5px; 
-  margin-left: 15px;
-  margin-right: 15px;
+  // margin: 5px; 
+  // margin-left: 1px;
+  // margin-right: 1px;
 }
 
 .greeting-buttons:hover {
