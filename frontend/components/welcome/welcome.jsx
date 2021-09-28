@@ -15,34 +15,35 @@ export default () => (
             </div>
         </div>
 
-        <center><div className="about-container-head">
-            <h3 className="difference">What makes us different?</h3><br />
-                <div className="body-container">
-                    <span className="leaves"></span>
+            <div className="middle-info"> 
+                <center><div className="about-container-head">
+                    <h3 className="difference">What makes us different?</h3><br />
+                        <div className="body-container">
+                            <span className="leaves"></span>
 
-                    <h4 className="words">Grow as an artist</h4>
-                        <p id="smollwords">Get immediate exposure with your first upload. Our Pulse algorithm surfaces new photographs and 
-                            photographers, ensuring your photos are seen by the community so you receive valuable feedback on day one.
-                        </p><br />
+                            <h4 className="words">Grow as an artist</h4>
+                                <p id="smollwords">Get immediate exposure with your first upload. Our Pulse algorithm surfaces new photographs and 
+                                    photographers, ensuring your photos are seen by the community so you receive valuable feedback on day one.
+                                </p><br />
+                        </div>
                 </div>
-        </div>
 
-        <div className="body-container">
-                    <span className="pencil"></span>
-                    <h4 className="words">Build Your Career</h4>
-                        <p id="smollwords">Present yourself as a professional. Display your Services, create a Directory listing and get hired, 
-                        showcase your articles, presets, videos, and more with Resources, and curate Galleries to highlight your work.
-                        </p><br />
-        </div>
+                <div className="body-container">
+                            <span className="pencil"></span>
+                            <h4 className="words">Build Your Career</h4>
+                                <p id="smollwords">Present yourself as a professional. Display your Services, create a Directory listing and get hired, 
+                                showcase your articles, presets, videos, and more with Resources, and curate Galleries to highlight your work.
+                                </p><br />
+                </div>
 
-        <div className="body-container">
-                <span className="stats"></span>
-                    <h4 className="words">See how you're performing</h4>
-                            <p id="smollwords">With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank 
-                            in comparison to other photographers in the community.
-                            </p><br />  
-                </div></center><br />
-                
+                <div className="body-container">
+                        <span className="stats"></span>
+                            <h4 className="words">See how you're performing</h4>
+                                    <p id="smollwords">With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank 
+                                    in comparison to other photographers in the community.
+                                    </p><br />  
+                        </div></center><br />
+            </div>
         <div className="content-box-two">
             <div className="smoller-content-box">
                 <div className="community">

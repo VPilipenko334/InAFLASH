@@ -28,6 +28,20 @@
     // box-sizing: border-box;
 }
 
+.middle-info {
+    // background-image: image-url("../pictures/yellow.png");
+    height: 620px;
+    // height: 43vw;
+    background-position: center;
+    background-size: cover;
+    // background-attachment: fixed;
+    z-index: 1;
+    position: relative;
+    background-repeat: no-repeat;
+    // border:3px solid red;
+    // box-sizing: border-box;
+}
+
 .first-h1 {
   font-size: 46px;
   line-height: 52px;
@@ -239,14 +253,14 @@ inner-main-container {
 }
 
 .community {
-  background-image: image-url("../pictures/skyyyy.jpg");
+  background-image: image-url("../pictures/mount.jpeg");
   background-size: cover;
   display: inline-block;
   position: relative;
   padding-top: 35vh;
   width: 100vw;
   height: 550px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .community-text {
