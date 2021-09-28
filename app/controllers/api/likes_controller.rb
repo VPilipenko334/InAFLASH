@@ -2,6 +2,11 @@ class Api::LikesController < ApplicationController
     def index
         @likes = Like.all
     end
+
+    def show
+        @like = Like.find(params[:id])
+    end 
+
     def create
         @like = Like.new
         @like.picture_id = params[:id]
@@ -18,4 +23,11 @@ class Api::LikesController < ApplicationController
         render json: @like
     end
    
+    private 
+
+    def likes_params
+        params.require(:likes).permit(:user_id, :picture_id)
+    end 
+
+
 end
