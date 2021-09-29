@@ -21,7 +21,7 @@ class PictureIndex extends React.Component {
 
         return (
                 <div className="upload-opener">
-                    <div className="upload-photo-container">
+                    <div className="index-container">
                         <div className="row">
 
                         {/* {
