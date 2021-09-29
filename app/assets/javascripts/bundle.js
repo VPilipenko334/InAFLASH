@@ -469,25 +469,10 @@ var Greeting = function Greeting(_ref) {
     }, "Pictures"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       to: "/",
       onClick: logout
-    }, "Logout"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: "mail.png",
-      className: "icons"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: "bell.png",
-      className: "icons"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, "Logout"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       to: "/upload",
       className: "greeting-buttons"
-    }, "Upload"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-      to: "/pictures",
-      className: "greeting-buttons"
-    }, "Pictures"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-      to: "/home",
-      className: "greeting-buttons"
-    }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-      className: "homepage-header-button",
-      onClick: logout
-    }, "Logout")) // </div>
+    }, "Upload")) // </div>
     ;
   };
 

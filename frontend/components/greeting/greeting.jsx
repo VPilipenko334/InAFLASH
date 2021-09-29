@@ -42,12 +42,12 @@ const Greeting = ({ currentUser, logout }) => {
           </div>
         </div>
 
-        <img src="mail.png" className="icons"></img>
-        <img src="bell.png" className="icons"></img>
+        {/* <img src="mail.png" className="icons"></img>
+        <img src="bell.png" className="icons"></img> */}
         <Link to="/upload" className="greeting-buttons">Upload</Link>
-        <Link to="/pictures" className="greeting-buttons">Pictures</Link>
-        <Link to="/home" className="greeting-buttons">Home</Link>
-        <button className="homepage-header-button" onClick={logout}>Logout</button>
+        {/* <Link to="/pictures" className="greeting-buttons">Pictures</Link>
+        <Link to="/home" className="greeting-buttons">Home</Link> */}
+        {/* <button className="homepage-header-button" onClick={logout}>Logout</button> */}
       </div>
     // </div>
   );
