@@ -28,8 +28,8 @@ class PictureIndex extends React.Component {
                         
                     {/* <div className="index-container"> */}
 
-                        <div className="outer-photos">
-                            <div className="inner-photos">
+                        <div className="outer-container">
+                            <div className="inner-container">
                         {/* {
                             users.map(user => (
                                 <PictureIndexItem
