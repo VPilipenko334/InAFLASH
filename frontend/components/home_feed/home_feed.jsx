@@ -30,6 +30,7 @@ class HomeFeed extends React.Component {
                     <h1>Hand-picked by our editors</h1>
                     <br />
                     <center><p>Check out photos selected by our InAFlash Editor.</p></center>
+
                     <div>   
                     <br/>
                         {/* < EditorsChoice /> */}

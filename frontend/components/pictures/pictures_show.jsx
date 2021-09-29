@@ -34,7 +34,7 @@ class PictureShow extends React.Component {
                     <div className="show-container">
                     <div className="show-buttons">
                         <button className="back-button" onClick={this.handleback}>Back</button>
-                        <Link to="/" className="back-button">Home</Link> 
+                        <Link to="/home" className="back-button">Home</Link> 
                         <Link to="/pictures" className="back-button">Pictures</Link>
                     </div>
 

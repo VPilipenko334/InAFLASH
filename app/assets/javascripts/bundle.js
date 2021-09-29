@@ -1082,7 +1082,7 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
         className: "back-button",
         onClick: this.handleback
       }, "Back"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        to: "/",
+        to: "/home",
         className: "back-button"
       }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/pictures",
