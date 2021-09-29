@@ -34,7 +34,7 @@ const Greeting = ({ currentUser, logout }) => {
         < SearchBar /> 
 
         <div class="dropdown">
-          <button class="dropbtn">Dropdown</button>
+        <img src="user.png" className="user-man"></img>
           <div class="dropdown-content">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
@@ -42,7 +42,6 @@ const Greeting = ({ currentUser, logout }) => {
           </div>
         </div>
 
-        <img src="user.png" className="user-man"></img>
         <img src="mail.png" className="icons"></img>
         <img src="bell.png" className="icons"></img>
         <Link to="/upload" className="greeting-buttons">Upload</Link>
