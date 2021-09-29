@@ -34,9 +34,8 @@ class HomeFeed extends React.Component {
 
                     <div>   
                     <br/>
-                         <div className="row">
-                            < PictureRenderIndex />
-                        </div>
+                        < PictureRenderIndex />
+                  
                     </div>
                     <br />
                     
