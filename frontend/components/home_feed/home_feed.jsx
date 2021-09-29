@@ -33,7 +33,8 @@ class HomeFeed extends React.Component {
 
                     <div>   
                     <br/>
-                        < PictureRenderIndex />
+                        {/* < PictureRenderIndex /> */}
+                        < EditorsChoice />
                   
                     </div>
                     <br />
