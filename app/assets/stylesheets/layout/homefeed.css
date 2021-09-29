@@ -45,3 +45,15 @@
   display: flex;
   margin-bottom: 10px;
 }
+
+.random-generator-container {
+  /* display: flex;  */
+  justify-content: center;
+  align-items: center;
+}
+
+.random-generator-container-inner {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}

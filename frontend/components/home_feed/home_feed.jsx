@@ -1,6 +1,7 @@
 import React from "react"; 
 import { Link } from "react-router-dom";
 import EditorsChoice from "./editors_choice_container";
+import { getRandomImage } from "../generator/random_generator"
 import PictureRenderIndex from "../pictures/pictures_index_container";
 
 class HomeFeed extends React.Component {
@@ -26,10 +27,23 @@ class HomeFeed extends React.Component {
                             {/* <Link to="/" className="upload-button-form">Go to the Welcome Page</Link><br /> */}
                             {/* <Link to="/" className="upload-button-form">Click to go back to the main page</Link>&nbsp; */}
                     </div>
-
+{/* 
                     <h1>Hand-picked by our editors</h1>
                     <br />
-                    <center><p>Check out photos selected by our InAFlash Editor.</p></center>
+                    <center><p>Check out photos selected by our InAFlash Editor.</p></center> */}
+
+                    <div className="random-generator-container">
+                        <center><div className="photo-icon"></div></center>
+                        <center><h1>Photo of the week:</h1></center><br />
+                        <p id="editors"> Our editors are always on the lookout for jaw dropping content for you
+                            to discover and stay inspired. Check back weekly to see what’s new. </p>
+                        <div id="random-photo">
+
+                        </div>
+                        <center><button id="generator-button" onClick={getRandomImage}>Click for photo of the week</button></center>
+                    </div>
+
+
 
                     <div>   
                     <br/>
