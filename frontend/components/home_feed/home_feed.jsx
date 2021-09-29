@@ -16,17 +16,16 @@ class HomeFeed extends React.Component {
                     <h1>Home Feed</h1>
                     
                     <br />
-                        <center><p>See photos and published Galleries from people you follow.</p></center>
                     
+                        <center><p>See photos and published Galleries from people you follow.</p></center>
 
                     <br/>
-                    <center>
-                        <Link to="/upload" className="upload-button-form">Upload a Picture</Link><br />
-                        <Link to="/pictures" className="upload-button-form">See All Pictures </Link><br />
-                        {/* <Link to="/" className="upload-button-form">Go to the Welcome Page</Link><br /> */}
-                        <Link to="/" className="upload-button-form">Click to go back to the main page</Link><br />
-                    </center>
-                    <br />
+                    <div className="inner-homefeed-buttons">
+                            <Link to="/upload" className="upload-button-form">Upload</Link>&nbsp;
+                            <Link to="/pictures" className="upload-button-form">Share </Link>&nbsp;
+                            {/* <Link to="/" className="upload-button-form">Go to the Welcome Page</Link><br /> */}
+                            {/* <Link to="/" className="upload-button-form">Click to go back to the main page</Link>&nbsp; */}
+                    </div>
 
                     <h1>Hand-picked by our editors</h1>
                     <br />

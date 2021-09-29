@@ -37,3 +37,11 @@
   margin-top: 250px;
   box-sizing: border-box;
 }
+
+.inner-homefeed-buttons {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  margin-bottom: 10px;
+}
