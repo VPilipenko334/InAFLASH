@@ -29,11 +29,11 @@ user10 = User.create!(username: 'nicha', password: 'imclinicallyinsanetbh')
 #adding pictures to the database 
 
 
-file1 = open("https://inaflash-seeds.s3.amazonaws.com/sunflower.jpg")
+file1 = open("https://inaflash-seeds.s3.amazonaws.com/ocean_view_portrait.jpeg")
 file2 = open("https://inaflash-seeds.s3.amazonaws.com/bride.jpg")
-file3 = open("https://inaflash-seeds.s3.amazonaws.com/castle.jpg")
+file3 = open("https://inaflash-seeds.s3.amazonaws.com/sand.jpeg")
 file4 = open("https://inaflash-seeds.s3.amazonaws.com/child.jpg")
-file5 = open("https://inaflash-seeds.s3.amazonaws.com/cloud.jpg")
+file5 = open("https://inaflash-seeds.s3.amazonaws.com/surt.jpeg")
 file6 = open("https://inaflash-seeds.s3.amazonaws.com/grey.jpg")
 file7 = open("https://inaflash-seeds.s3.amazonaws.com/fairy.jpg")
 file8 = open("https://inaflash-seeds.s3.amazonaws.com/house.jpg")

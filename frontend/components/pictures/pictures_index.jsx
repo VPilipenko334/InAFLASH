@@ -26,7 +26,7 @@ class PictureIndex extends React.Component {
                             <center><h3>See photos and published Galleries from your favorite artists.</h3></center> <br/>
                         </div>
                         
-                    <div className="index-container">
+                    {/* <div className="index-container"> */}
 
                         <div className="outer-photos">
                             <div className="inner-photos">
@@ -52,7 +52,7 @@ class PictureIndex extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            // </div>
         )
     }
 }
