@@ -20,16 +20,16 @@ class PictureIndex extends React.Component {
         if (!users) return null; 
 
         return (    
-            <div className="upload-opener">
-                        <div className="photo-feed-text">
+           <div>
+           <div className="outer-container-pics">
                             <h1>Pictures Feed</h1> <br/> 
                             <center><h3>See photos and published Galleries from your favorite artists.</h3></center> <br/>
                         </div>
                         
-                <div className="upload-opener">
                     <div className="index-container">
 
-                        <div className="row">
+                        <div className="outer-photos">
+                            <div className="inner-photos">
                         {/* {
                             users.map(user => (
                                 <PictureIndexItem
@@ -39,19 +39,19 @@ class PictureIndex extends React.Component {
                                 />
                             ))
                         } */}
-                        
-                        {
-                            pictures.map(picture => (
-                                <PictureRenderIndex
-                                    picture={picture}
-                                    key={picture.id}
-                                />
-                            ))
-                        }
-
+                        <ul className="pictures-list">
+                            {
+                                pictures.map(picture => (
+                                    <PictureRenderIndex
+                                        picture={picture}
+                                        key={picture.id}
+                                    />
+                                ))
+                            }
+                        </ul>
+                        </div>
                     </div>
                 </div>
-             </div>
             </div>
         )
     }
