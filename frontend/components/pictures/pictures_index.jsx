@@ -19,11 +19,17 @@ class PictureIndex extends React.Component {
         const { users } = this.props; 
         if (!users) return null; 
 
-        return (
+        return (    
+            <div className="upload-opener">
+                        <div className="photo-feed-text">
+                            <h1>Pictures Feed</h1> <br/> 
+                            <center><h3>See photos and published Galleries from your favorite artists.</h3></center> <br/>
+                        </div>
+                        
                 <div className="upload-opener">
                     <div className="index-container">
-                        <div className="row">
 
+                        <div className="row">
                         {/* {
                             users.map(user => (
                                 <PictureIndexItem
@@ -33,7 +39,7 @@ class PictureIndex extends React.Component {
                                 />
                             ))
                         } */}
-
+                        
                         {
                             pictures.map(picture => (
                                 <PictureRenderIndex
@@ -46,6 +52,7 @@ class PictureIndex extends React.Component {
                     </div>
                 </div>
              </div>
+            </div>
         )
     }
 }
