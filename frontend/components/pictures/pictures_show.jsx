@@ -42,10 +42,13 @@ class PictureShow extends React.Component {
 
                             <center><img className="picture_show_img" height="500" width="500" src={picture.pictureUrl} alt="" /></center>
                         </div>
-
+                    <div class="background-container-show">
+                        <div className="photo-details">
+                    
                     <h1>{picture.title}</h1> <br/>
                     <h1>{picture.description}</h1><br />
-
+                            </div>
+                    </div>
                     </div>
                 </div>
             </div>
