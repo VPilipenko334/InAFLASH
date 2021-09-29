@@ -36,11 +36,17 @@
   text-decoration: none;
   border-color: #0870d1;
   margin: 10px;
-  margin-left: 200px; 
+  /* margin-left: 200px;  */
 }
 
 .back-button:hover {
   text-decoration: none;
   background-color: black;
   color: white; 
+}
+
+.show-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
 }

@@ -32,17 +32,19 @@ class PictureShow extends React.Component {
             <div>
                 <div className="upload-opener">
                     <div className="show-container">
+                    <div className="show-buttons">
+                        <button className="back-button" onClick={this.handleback}>Back</button>
+                        <Link to="/" className="back-button">Home</Link> 
+                        <Link to="/pictures" className="back-button">Pictures</Link>
+                    </div>
 
-                    <button className="back-button" onClick={this.handleback}>Back</button>
-                    <Link to="/" className="back-button">Home</Link> 
-                    <Link to="/pictures" className="back-button">Pictures</Link>
                         <div className="show-page">
 
                             <center><img className="picture_show_img" height="500" width="500" src={picture.pictureUrl} alt="" /></center>
                         </div>
 
-                    <h5>{picture.title}</h5> <br/>
-                    <h4>{picture.description}</h4><br />
+                    <h1>{picture.title}</h1> <br/>
+                    <h1>{picture.description}</h1><br />
 
                     </div>
                 </div>
