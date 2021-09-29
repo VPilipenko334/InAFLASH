@@ -34,13 +34,14 @@ class PictureIndex extends React.Component {
                             ))
                         }
 
-                        {/* {
+                        {
                             pictures.map(picture => (
                                 <PictureRenderIndex
+                                    picture={picture}
                                     key={picture.id}
                                 />
                             ))
-                        } */}
+                        }
 
                     </div>
                 </div>
