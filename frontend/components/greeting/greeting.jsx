@@ -33,12 +33,12 @@ const Greeting = ({ currentUser, logout }) => {
       <h2 className="header-name">welcome, {currentUser.username}!</h2>
         < SearchBar /> 
 
-        <div class="dropdown">
+        <div className="dropdown">
         <img src="user.png" className="user-man"></img>
-          <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+          <div className="dropdown-content">
+            <Link to="/home">Profile</Link>
+            <Link to="/pictures">Pictures</Link>
+            <Link to="/" onClick={logout}>Logout</Link>
           </div>
         </div>
 
