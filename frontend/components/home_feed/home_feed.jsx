@@ -1,6 +1,7 @@
 import React from "react"; 
 import { Link } from "react-router-dom";
 import EditorsChoice from "./editors_choice_container";
+import PictureRenderIndex from "../pictures/pictures_index_container";
 
 class HomeFeed extends React.Component {
 
@@ -33,7 +34,9 @@ class HomeFeed extends React.Component {
 
                     <div>   
                     <br/>
-                        {/* < EditorsChoice /> */}
+                         <div className="row">
+                            < PictureRenderIndex />
+                        </div>
                     </div>
                     <br />
                     
