@@ -20,14 +20,7 @@ class EditorsChoice extends React.Component {
         return (
             <div>
                 <ul>
-                    {
-                        pictures.map(picture => (
-                            <PictureRenderIndex
-                            picture={picture}
-                            key={picture.id}
-                            />
-                        ))
-                    }
+                    < PictureRenderIndex />
                 </ul>
             </div>
         )

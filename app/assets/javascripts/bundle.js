@@ -584,12 +584,7 @@ var EditorsChoice = /*#__PURE__*/function (_React$Component) {
       var pictures = this.props.pictures;
       if (!pictures) return null;
       console.log(pictures);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, pictures.map(function (picture) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          picture: picture,
-          key: picture.id
-        });
-      })));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
     }
   }]);
 
@@ -773,7 +768,7 @@ var PictureIndexItem = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureIndexItem, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.pictures.map(function (picture) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, this.props.user.username), this.props.pictures.map(function (picture) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
           title: picture.title,
           description: picture.description,
