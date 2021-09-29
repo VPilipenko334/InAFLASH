@@ -29,41 +29,59 @@ user10 = User.create!(username: 'nicha', password: 'imclinicallyinsanetbh')
 #adding pictures to the database 
 
 
-file1 = open("https://inaflash-seeds.s3.amazonaws.com/ocean_view_portrait.jpeg")
-file2 = open("https://inaflash-seeds.s3.amazonaws.com/bride.jpg")
-file3 = open("https://inaflash-seeds.s3.amazonaws.com/sand.jpeg")
-file4 = open("https://inaflash-seeds.s3.amazonaws.com/child.jpg")
-file5 = open("https://inaflash-seeds.s3.amazonaws.com/surt.jpeg")
-file6 = open("https://inaflash-seeds.s3.amazonaws.com/grey.jpg")
-file7 = open("https://inaflash-seeds.s3.amazonaws.com/fairy.jpg")
-file8 = open("https://inaflash-seeds.s3.amazonaws.com/house.jpg")
-file9 = open("https://inaflash-seeds.s3.amazonaws.com/mushrooms.jpg")
-file10 = open("https://inaflash-seeds.s3.amazonaws.com/ocean.jpg")
+file9 = open("https://inaflash-seeds.s3.amazonaws.com/ocean_view_portrait.jpeg")
+
+file2 = open("https://inaflash-seeds.s3.amazonaws.com/tiny+flower.jpeg")
+
+file3 = open("https://inaflash-seeds.s3.amazonaws.com/surt.jpeg")
+
+file4 = open("https://inaflash-seeds.s3.amazonaws.com/yellow.jpeg")
+
+file5 = open("https://inaflash-seeds.s3.amazonaws.com/mountainnnn.jpeg")
+
+file6 = open("https://inaflash-seeds.s3.amazonaws.com/giraffee.jpeg")
+
+file7 = open("https://inaflash-seeds.s3.amazonaws.com/lavender.jpeg")
+
+file8 = open("https://inaflash-seeds.s3.amazonaws.com/green+woods.jpeg")
+
+file1 = open("https://inaflash-seeds.s3.amazonaws.com/snow.jpeg")
+
+file10 = open("https://inaflash-seeds.s3.amazonaws.com/lakehouse.jpeg")
 
 
-picture1 = Picture.new(title: 'sunflower', private: false, description: 'lovely sunflower', user_id: user1.id)
-picture2 = Picture.new(title: 'bride', private: false, description: 'a photo of a beautiful bride', user_id: user2.id)
-picture3 = Picture.new(title: 'castle', private: false, description: 'a wonderful castle stands', user_id: user3.id)
-picture4 = Picture.new(title: 'child', private: false, description: 'a child is found on the photo', user_id: user4.id)
-picture5 = Picture.new(title: 'cloud', private: true, description: 'the beautiful clouds', user_id: user5.id)
-picture6 = Picture.new(title: 'grey', private: true, description: 'grey clouds', user_id: user6.id)
-picture7 = Picture.new(title: 'fairy', private: true, description: 'a beautiful fairy has appeared!', user_id: user7.id)
-picture8 = Picture.new(title: 'house', private: true, description: 'a house stands', user_id: user8.id)
-picture9 = Picture.new(title: 'mushrooms', private: true, description: 'beautiful neon mushrooms that light up the night sky', user_id: user9.id)
-picture10 = Picture.new(title: 'ocean', private: false, description: 'the ocean is the purest place on earth', user_id: user10.id)
+picture9 = Picture.new(title: 'Bright Blue Ocean', private: false, description: 'Stunning photo of the bright blue ocean as the waves cascade', user_id: user1.id)
+
+picture2 = Picture.new(title: 'Yellow Flower', private: false, description: 'A stunning small yellow flower gets submerged in a blue lake', user_id: user2.id)
+
+picture3 = Picture.new(title: 'Surfing Session', private: false, description: 'A wonderful time while surfing the beach in California', user_id: user3.id)
+
+picture4 = Picture.new(title: 'Yellow Background', private: false, description: 'A lovely woman poses beside a bright yellow background', user_id: user4.id)
+
+picture5 = Picture.new(title: 'Snowy Mountains', private: true, description: 'Stunning photo of the beautiful, snowy mountains, in the middle of winter', user_id: user5.id)
+
+picture6 = Picture.new(title: 'Giraffee', private: true, description: 'A girrafe stands with a light sky behind him', user_id: user6.id)
+
+picture7 = Picture.new(title: 'Lavender', private: true, description: 'A stunning shade of purple emerges from a lavender plant', user_id: user7.id)
+
+picture8 = Picture.new(title: 'Green Woods', private: true, description: 'The trees will change color during the fall', user_id: user8.id)
+
+picture1 = Picture.new(title: 'Snow', private: true, description: 'First snowfall emerges from the sky', user_id: user9.id)
+
+picture10 = Picture.new(title: 'House on a lake', private: false, description: 'A small house stands at the tip of a lake', user_id: user10.id)
 
 
 #attaching the pictures to the users 
-picture1.picture.attach(io: file1, filename: 'sunflower.jpg')
-picture2.picture.attach(io: file2, filename: 'bridge.jpg')
-picture3.picture.attach(io: file3, filename: 'castle.jpg')
-picture4.picture.attach(io: file4, filename: 'child.jpg')
-picture5.picture.attach(io: file5, filename: 'cloud.jpg')
-picture6.picture.attach(io: file6, filename: 'grey.jpg')
-picture7.picture.attach(io: file7, filename: 'fairy.jpg')
-picture8.picture.attach(io: file8, filename: 'house.jpg')
-picture9.picture.attach(io: file9, filename: 'mushrooms.jpg')
-picture10.picture.attach(io: file10, filename: 'ocean.jpg')
+picture1.picture.attach(io: file1, filename: 'ocean_view_portrait.jpeg')
+picture2.picture.attach(io: file2, filename: 'tiny+flower.jpeg')
+picture3.picture.attach(io: file3, filename: 'surt.jpeg')
+picture4.picture.attach(io: file4, filename: 'yellow.jpeg')
+picture5.picture.attach(io: file5, filename: 'mountainnnn.jpeg')
+picture6.picture.attach(io: file6, filename: 'giraffee.jpeg')
+picture7.picture.attach(io: file7, filename: 'lavender.jpeg')
+picture8.picture.attach(io: file8, filename: 'green+woods.jpeg')
+picture9.picture.attach(io: file9, filename: 'snow.jpeg')
+picture10.picture.attach(io: file10, filename: 'lakehouse.jpeg')
 
 picture1.save!
 picture2.save!
