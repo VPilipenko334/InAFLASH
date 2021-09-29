@@ -48,8 +48,9 @@
 .show-buttons {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    padding-bottom: 10px;
     padding-top: 10px; 
+    background-color: rgba(211, 211, 211, 0.411);
 }
 
 .background-container-show {
@@ -67,7 +68,7 @@
    width: 100%; 
    font-size: 16px; 
    align-items: center;
-   background-color: rgb(210, 207, 207);
-  border: 1px solid gray; 
+   background-color: rgba(211, 211, 211, 0.411);
+  border: 1px solid rgba(227, 227, 227, 0.315); 
   justify-content: center;
 }
