@@ -766,7 +766,7 @@ var PictureIndexItem = /*#__PURE__*/function (_React$Component) {
   _createClass(PictureIndexItem, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, this.props.user.username), this.props.pictures.map(function (picture) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.pictures.map(function (picture) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
           title: picture.title,
           description: picture.description,
@@ -849,7 +849,7 @@ var PictureRenderIndex = /*#__PURE__*/function (_React$Component) {
         className: "picture-render",
         height: "300",
         width: "300",
-        src: picture
+        src: picture.picture
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)));
     }
   }]);
@@ -931,13 +931,7 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
         className: "upload-photo-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "row"
-      }, users.map(function (user) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_item_page__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          user: user,
-          pictures: pictures,
-          key: user.id
-        });
-      }), pictures.map(function (picture) {
+      }, pictures.map(function (picture) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
           picture: picture,
           key: picture.id

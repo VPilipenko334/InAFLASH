@@ -24,7 +24,7 @@ class PictureIndex extends React.Component {
                     <div className="upload-photo-container">
                         <div className="row">
 
-                        {
+                        {/* {
                             users.map(user => (
                                 <PictureIndexItem
                                 user={user}
@@ -32,7 +32,7 @@ class PictureIndex extends React.Component {
                                 key={user.id}
                                 />
                             ))
-                        }
+                        } */}
 
                         {
                             pictures.map(picture => (
