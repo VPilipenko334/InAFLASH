@@ -5,7 +5,7 @@
 .header-group {
   background-color: rgb(255, 255, 255);
   display: flex; 
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   padding: 15px;
   box-sizing: border-box;
@@ -104,12 +104,13 @@
 .user-man {
   width: 30px;
   height: 30px;
-  margin-top: 3px;
+  // margin-top: 3px;
   // padding: 5px;
   align-items: center;
   text-align: center;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
   // margin-right: 10px;
   font-family: Helvetica Neue, Arial, sans-serif;
 }
@@ -133,8 +134,9 @@
   font-family: Helvetica Neue, Arial, sans-serif;
   // margin: 0px -15px;
   padding:0 20px;
-  margin-right: 150px;
+  margin-right: 55%;
   margin-left: 20px;
+  position: relative; 
 }
 
 //dropdown menu:hover

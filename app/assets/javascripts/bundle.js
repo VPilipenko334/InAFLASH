@@ -472,7 +472,10 @@ var Greeting = function Greeting(_ref) {
     }, "Logout"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       to: "/upload",
       className: "greeting-buttons"
-    }, "Upload")) // </div>
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+      className: "fas fa-arrow-up"
+    }), "   Upload")) // </div>
+    // </div>
     ;
   };
 

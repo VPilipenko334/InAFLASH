@@ -30,8 +30,10 @@ const Greeting = ({ currentUser, logout }) => {
 
   const personalGreeting = () => (
     <div className="header-group">
-      <h2 className="header-name">welcome, {currentUser.username}!</h2>
-        < SearchBar /> 
+          <h2 className="header-name">welcome, {currentUser.username}!</h2>
+          
+          {/* <div className="right-elements"> */}
+          < SearchBar /> 
 
         <div className="dropdown">
         <img src="user.png" className="user-man"></img>
@@ -41,14 +43,16 @@ const Greeting = ({ currentUser, logout }) => {
             <Link to="/" onClick={logout}>Logout</Link>
           </div>
         </div>
+        
 
         {/* <img src="mail.png" className="icons"></img>
         <img src="bell.png" className="icons"></img> */}
-        <Link to="/upload" className="greeting-buttons">Upload</Link>
+        <Link to="/upload" className="greeting-buttons"><i className="fas fa-arrow-up"></i>   Upload</Link>
         {/* <Link to="/pictures" className="greeting-buttons">Pictures</Link>
         <Link to="/home" className="greeting-buttons">Home</Link> */}
         {/* <button className="homepage-header-button" onClick={logout}>Logout</button> */}
       </div>
+    // </div>
     // </div>
   );
 
