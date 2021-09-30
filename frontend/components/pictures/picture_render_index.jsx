@@ -10,15 +10,14 @@ class PictureRenderIndex extends React.Component {
         // console.log(picture.picture.id)
         return (
             <div>
-                <p>
-                
+{/*              
                 {title} <br/> 
-                {description} <br /> 
+                {description} <br />  */}
                     <Link to={`/pictures/${picture.id}`} className="picture-render-link">
                             <img className="picture-render" src={picture.picture} />
                     </Link>
                 <br/>
-                </p>
+            
             </div> 
         )
     }
