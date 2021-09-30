@@ -44,7 +44,6 @@ const Greeting = ({ currentUser, logout }) => {
           </div>
         </div>
         
-
         {/* <img src="mail.png" className="icons"></img>
         <img src="bell.png" className="icons"></img> */}
         <Link to="/upload" className="greeting-buttons"><i className="fas fa-arrow-up"></i>   Upload</Link>
@@ -55,7 +54,7 @@ const Greeting = ({ currentUser, logout }) => {
     // </div>
     // </div>
   );
-
+  
   return currentUser ? personalGreeting() : sessionLinks();
 };
 
