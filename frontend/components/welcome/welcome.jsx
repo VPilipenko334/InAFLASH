@@ -42,8 +42,7 @@ export default () => (
                                     <p id="smollwords">With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank 
                                     in comparison to other photographers in the community.
                                     </p><br />  
-                        </div></center><br />     
-
+                        </div></center><br />
             </div>
         <div className="content-box-two">
             <div className="smoller-content-box">
