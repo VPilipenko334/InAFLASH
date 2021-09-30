@@ -22,14 +22,17 @@ class PictureIndex extends React.Component {
         return (    
            <div>
            <div className="outer-container-pics">
+                    {/* <div className="photo-index-container-inner-top">  */}
                             <h1>Pictures Feed</h1> <br/> 
                             <center><h3>See photos and published Galleries from your favorite artists.</h3></center> <br/>
+                            {/* </div> */}
                         </div>
                         
                     {/* <div className="index-container"> */}
 
                         <div className="outer-container">
                             <div className="inner-container">
+                                {/* <div className="photo-index-container-inner">  */}
                         {/* {
                             users.map(user => (
                                 <PictureIndexItem
@@ -49,7 +52,7 @@ class PictureIndex extends React.Component {
                                 ))
                             }
                         </ul>
-                        </div>
+                        {/* </div> */}
                     </div>
                 </div>
             // </div>

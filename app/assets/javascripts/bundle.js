@@ -940,8 +940,7 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
           picture: picture,
           key: picture.id
         });
-      }))))) // </div>
-      ;
+      })))), "// ");
     }
   }]);
 
