@@ -32,7 +32,7 @@ class HomeFeed extends React.Component {
                     <br />
                     <center><p>Check out photos selected by our InAFlash Editor.</p></center> */}
 
-                    {/* <div className="random-generator-container">
+                    <div className="random-generator-container">
                         <center><div className="photo-icon"></div></center>
                         <center><h1>Photo of the week:</h1></center><br />
                         <p id="editors"> Our editors are always on the lookout for jaw dropping content for you
@@ -42,7 +42,7 @@ class HomeFeed extends React.Component {
                         </div>
                         <center><button id="generator-button" onClick={getRandomImage}>Click for photo of the week</button></center>
                     </div>
- */}
+
 
 
                     <div>   
