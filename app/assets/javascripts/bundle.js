@@ -537,6 +537,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pictures/pictures_index_container */ "./frontend/components/pictures/pictures_index_container.js");
+/* harmony import */ var _home_feed_editors_choice_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../home_feed/editors_choice_container */ "./frontend/components/home_feed/editors_choice_container.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -562,6 +563,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
 var EditorsChoice = /*#__PURE__*/function (_React$Component) {
   _inherits(EditorsChoice, _React$Component);
 
@@ -582,8 +585,10 @@ var EditorsChoice = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var pictures = this.props.pictures;
-      if (!pictures) return null;
-      console.log(pictures);
+      if (!pictures) return null; // console.log(pictures[0]); 
+      // console.log(pictures.id);
+      // console.log(pictures.picture)
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
     }
   }]);
@@ -852,9 +857,7 @@ var PictureRenderIndex = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         className: "picture-render",
         src: picture.picture
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
-        className: "picture-title"
-      }, picture.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null));
     }
   }]);
 
