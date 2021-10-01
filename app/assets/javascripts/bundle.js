@@ -1455,6 +1455,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1491,9 +1492,8 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, SearchBar);
 
     _this = _super.call(this, props);
-    _this.setState = {
+    _this.state = {
       searchValue: "",
-      users: [],
       pictures: []
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
@@ -1513,7 +1513,9 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var users = this.props.users;
+      var _this2 = this;
+
+      // const { users } = this.props ;
       var pictures = this.props.pictures; // console.log(users);
       // console.log(this.props);
       // console.log(users)
@@ -1526,11 +1528,30 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
       // if (!pictures); 
       // return null; 
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "search-bar-outer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         placeholder: "Search InAFlash...",
         type: "text",
-        className: "search-bar"
-      });
+        className: "search-bar",
+        value: this.state.searchValue,
+        onChange: this.handleChange,
+        onBlur: function onBlur() {
+          setTimeout(function () {
+            _this2.setState({
+              searchValue: ""
+            });
+          }, 100);
+        }
+      }), this.state.searchValue.length > 0 ? pictures.filter(function (picture) {
+        return picture.title.toLowerCase().includes(_this2.state.searchValue.toLowerCase());
+      }).map(function (picture) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+          key: picture.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+          to: "/pictures/".concat(picture.id)
+        }, picture.title));
+      }) : null);
     }
   }]);
 
@@ -1563,16 +1584,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    users: Object.values(state.entities.users),
+    // users: Object.values(state.entities.users),
     pictures: Object.values(state.entities.pictures)
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    fetchUsers: function fetchUsers() {
-      return dispatch((0,_actions_user_actions__WEBPACK_IMPORTED_MODULE_1__.fetchUsers)());
-    },
+    // fetchUsers: () => dispatch(fetchUsers()),
     fetchPictures: function fetchPictures() {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__.fetchPictures)());
     }

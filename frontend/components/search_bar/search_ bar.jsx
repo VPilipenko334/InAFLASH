@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom'
 class SearchBar extends React.Component {
     constructor(props) {
         super(props)
-        this.setState = {
+        this.state = {
             searchValue: "",
-            users: [],
-            pictures: []
+            pictures: [],
         };
 
         this.handleChange = this.handleChange.bind(this); 
@@ -21,7 +20,7 @@ class SearchBar extends React.Component {
     }
 
     render() {
-        const { users } = this.props ;
+        // const { users } = this.props ;
         const { pictures } = this.props; 
 
         // console.log(users);
@@ -39,7 +38,17 @@ class SearchBar extends React.Component {
         // return null; 
 
         return (
-            <input placeholder="Search InAFlash..." type="text" className="search-bar"></input>
+            <div className="search-bar-outer">
+                    <input placeholder="Search InAFlash..." type="text" className="search-bar" value={this.state.searchValue} onChange={this.handleChange} onBlur={() => { setTimeout(() => { this.setState({ searchValue: ""})}, 100) }} />
+                        {/* <nav className="search-bar"> */}
+                            {this.state.searchValue.length > 0 ? pictures.filter(picture => picture.title.toLowerCase().includes(this.state.searchValue.toLowerCase())).map(picture => {
+                                return (
+                                    <ul key={picture.id}>
+                                        <Link to={`/pictures/${picture.id}`}>{picture.title}</Link>
+                                    </ul>
+                                )
+                            }) : null }
+                </div>
         )
 
     }

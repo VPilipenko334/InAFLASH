@@ -4,12 +4,12 @@ import { fetchPictures } from "../../actions/picture_actions";
 import SearchBar from "./search_ bar";
 
 const mapStateToProps = (state) => ({
-    users: Object.values(state.entities.users),
+    // users: Object.values(state.entities.users),
     pictures: Object.values(state.entities.pictures)
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchUsers: () => dispatch(fetchUsers()),
+    // fetchUsers: () => dispatch(fetchUsers()),
     fetchPictures: () => dispatch(fetchPictures())
 })
 
