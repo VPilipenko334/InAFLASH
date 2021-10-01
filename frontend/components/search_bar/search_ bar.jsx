@@ -23,6 +23,7 @@ class SearchBar extends React.Component {
         // const { users } = this.props ;
         const { pictures } = this.props; 
 
+        if (!pictures) return null;
         // console.log(users);
         // console.log(this.props);
         // console.log(users)
@@ -38,7 +39,7 @@ class SearchBar extends React.Component {
         // return null; 
 
         return (
-            <div className="search-bar-outer">
+            <div className="dropdown-search">
                     <input placeholder="Search InAFlash..." type="text" className="search-bar" value={this.state.searchValue} onChange={this.handleChange} onBlur={() => { setTimeout(() => { this.setState({ searchValue: ""})}, 100) }} />
                             {this.state.searchValue.length > 0 ? pictures.filter(picture => picture.title.toLowerCase().includes(this.state.searchValue.toLowerCase())).map(picture => {
                                 return (

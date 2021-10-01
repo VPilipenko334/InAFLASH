@@ -1516,7 +1516,8 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       // const { users } = this.props ;
-      var pictures = this.props.pictures; // console.log(users);
+      var pictures = this.props.pictures;
+      if (!pictures) return null; // console.log(users);
       // console.log(this.props);
       // console.log(users)
       // console.log(pictures)
@@ -1529,7 +1530,7 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
       // return null; 
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "search-bar-outer"
+        className: "dropdown-search"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
         placeholder: "Search InAFlash...",
         type: "text",
