@@ -928,6 +928,8 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      // console.log(pictures)
+      // console.log(users)
       var pictures = this.props.pictures;
       if (!pictures) return null;
       var users = this.props.users;
@@ -1491,8 +1493,8 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.setState = {
       searchValue: "",
-      title: "",
-      users: []
+      users: [],
+      pictures: []
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     return _this;
@@ -1513,15 +1515,17 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var users = this.props.users;
       var pictures = this.props.pictures;
-      console.log(users); // console.log(pictures);
+      console.log(users);
+      console.log(pictures);
+      if (!users) return null; // if (!pictures); 
+      // return null; 
 
-      if (!users) return null;
-      if (!pictures) ;
-      return null;
-    } // return (
-    //     hello 
-    // )
-
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        placeholder: "Search InAFlash...",
+        type: "text",
+        className: "search-bar"
+      });
+    }
   }]);
 
   return SearchBar;
@@ -1553,7 +1557,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    users: Object.values(state.entities.users) // pictures: Object.values(state.entitites.pictures)
+    users: Object.values(state.entities.users) // pictures: Object.values(state.entitites.pictures),
 
   };
 };

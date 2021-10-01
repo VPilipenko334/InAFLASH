@@ -6,8 +6,8 @@ class SearchBar extends React.Component {
         super(props)
         this.setState = {
             searchValue: "",
-            title: "",
-            users: []
+            users: [],
+            pictures: []
         };
 
         this.handleChange = this.handleChange.bind(this); 
@@ -21,23 +21,21 @@ class SearchBar extends React.Component {
     }
 
     render() {
-        const {users} = this.props ;
+        const { users } = this.props ;
         const { pictures } = this.props; 
 
         console.log(users);
-        // console.log(pictures);
+        console.log(pictures);
 
         if (!users) 
         return null;
 
-        if (!pictures); 
-        return null; 
+        // if (!pictures); 
+        // return null; 
+        return (
+            <input placeholder="Search InAFlash..." type="text" className="search-bar"></input>
+        )
 
-        
     }
-        // return (
-        //     hello 
-        // )
 }
-
 export default SearchBar; 

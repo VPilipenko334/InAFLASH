@@ -13,6 +13,10 @@ class PictureIndex extends React.Component {
     }
 
     render() {
+
+        // console.log(pictures)
+        // console.log(users)
+
         const { pictures } = this.props;
         if (!pictures) return null;
 
