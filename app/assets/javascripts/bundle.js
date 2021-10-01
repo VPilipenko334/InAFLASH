@@ -1515,14 +1515,15 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var users = this.props.users;
       var pictures = this.props.pictures; // console.log(users);
-
-      console.log(this.props);
-      console.log(this.props.users);
-      console.log(this.props.pictures); // console.log(this.state);
+      // console.log(this.props);
+      // console.log(users)
+      // console.log(pictures)
+      // console.log(this.state);
       // console.log(users.id);
       // console.log(pictures);
-
-      if (!users) return null; // if (!pictures); 
+      // if (!users) 
+      // return null;
+      // if (!pictures); 
       // return null; 
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
