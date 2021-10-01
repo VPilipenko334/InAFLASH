@@ -1457,6 +1457,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
@@ -1480,10 +1484,45 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(SearchBar);
 
   function SearchBar(props) {
+    var _this;
+
     _classCallCheck(this, SearchBar);
 
-    return _super.call(this, props);
+    _this = _super.call(this, props);
+    _this.setState = {
+      searchValue: "",
+      title: "",
+      users: []
+    };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    return _this;
   }
+
+  _createClass(SearchBar, [{
+    key: "handleChange",
+    value: function handleChange(e) {
+      e.preventDefault();
+      this.setState({
+        searchValue: e.target.value
+      });
+      var searchWidget = document.querySelector(".search-bar");
+      searchWidget.style.visibility = "visible";
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var users = this.props.users;
+      var pictures = this.props.pictures;
+      console.log(users); // console.log(pictures);
+
+      if (!users) return null;
+      if (!pictures) ;
+      return null;
+    } // return (
+    //     hello 
+    // )
+
+  }]);
 
   return SearchBar;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
@@ -1514,8 +1553,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    users: Object.values(state.entities.users),
-    pictures: Object.values(state.entitites.pictures)
+    users: Object.values(state.entities.users) // pictures: Object.values(state.entitites.pictures)
+
   };
 };
 
