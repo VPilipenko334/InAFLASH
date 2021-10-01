@@ -1514,9 +1514,14 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var users = this.props.users;
-      var pictures = this.props.pictures;
-      console.log(users);
-      console.log(pictures);
+      var pictures = this.props.pictures; // console.log(users);
+
+      console.log(this.props);
+      console.log(this.props.users);
+      console.log(this.props.pictures); // console.log(this.state);
+      // console.log(users.id);
+      // console.log(pictures);
+
       if (!users) return null; // if (!pictures); 
       // return null; 
 
@@ -1557,8 +1562,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    users: Object.values(state.entities.users) // pictures: Object.values(state.entitites.pictures),
-
+    users: Object.values(state.entities.users),
+    pictures: Object.values(state.entities.pictures)
   };
 };
 

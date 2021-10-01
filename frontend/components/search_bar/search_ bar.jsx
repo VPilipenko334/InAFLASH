@@ -24,8 +24,13 @@ class SearchBar extends React.Component {
         const { users } = this.props ;
         const { pictures } = this.props; 
 
-        console.log(users);
-        console.log(pictures);
+        // console.log(users);
+        console.log(this.props);
+        console.log(this.props.users)
+        console.log(this.props.pictures)
+        // console.log(this.state);
+        // console.log(users.id);
+        // console.log(pictures);
 
         if (!users) 
         return null;
