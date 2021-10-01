@@ -1449,18 +1449,10 @@ var Root = function Root(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -1484,66 +1476,14 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(SearchBar);
 
-  function SearchBar(props) {
-    var _this;
-
+  function SearchBar() {
     _classCallCheck(this, SearchBar);
 
-    _this = _super.call(this, props);
-    _this.state = {
-      inputValue: "",
-      pictures: []
-    };
-    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
-    return _this;
+    return _super.apply(this, arguments);
   }
-
-  _createClass(SearchBar, [{
-    key: "handleSubmit",
-    value: function handleSubmit(e) {
-      e.preventDefault();
-      this.setState({
-        inputValue: e.target.value
-      });
-      var SearchInput = documnet.querySelector(".search-bar-result");
-      SearchInput.style.visibility = "visible";
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-        placeholder: "Search InAFlash...",
-        className: "search-bar",
-        type: "text",
-        value: this.state.inputValue,
-        onChange: this.handleSubmit,
-        onBlur: function onBlur() {
-          setTimeout(function () {
-            _this2.setState({
-              inputValue: ""
-            });
-          }, 100);
-        }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
-        className: "search-bar-result"
-      }, this.state.inputValue.length > 0 ? this.props.pictures.title.filter(function (picture) {
-        return picture.title.includes(_this2.state.inputValue);
-      }).map(function (picture) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-          key: picture.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
-          to: "/pictures/".concat(picture.id)
-        }, picture.title));
-      }) : null));
-    }
-  }]);
 
   return SearchBar;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchBar);
 
 /***/ }),
 
@@ -1569,14 +1509,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    users: Object.values(state.entities.users) // pictures: Object.values(state.entitites.pictures)
-
+    users: Object.values(state.entities.users),
+    pictures: Object.values(state.entitites.pictures)
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    // fetchUsers: () => dispatch(fetchUsers()),
+    fetchUsers: function fetchUsers() {
+      return dispatch((0,_actions_user_actions__WEBPACK_IMPORTED_MODULE_1__.fetchUsers)());
+    },
     fetchPictures: function fetchPictures() {
       return dispatch((0,_actions_picture_actions__WEBPACK_IMPORTED_MODULE_2__.fetchPictures)());
     }
