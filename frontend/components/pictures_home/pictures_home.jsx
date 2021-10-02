@@ -14,11 +14,22 @@ class PictureHome extends React.Component {
 
     render() {
         return (
-            <li>
-                <Link to={`/pictures/${picture.id}`} className="picture-render-link">
-                    <img className="picture-render" height="300" width="300" src={props.pictures.picture} />
-                </Link>
-            </li>
+            <div>
+            {
+                pictures.map(picture => (
+                    <PictureRenderIndex
+                        picture={picture}
+                        key={picture.id}
+                    />
+                ))
+                
+            }
+            </div>
+            // <li>
+            //     <Link to={`/pictures/${picture.id}`} className="picture-render-link">
+            //         <img className="picture-render" height="300" width="300" src={props.pictures.picture} />
+            //     </Link>
+            // </li>
         )
     }
 }
