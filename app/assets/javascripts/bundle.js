@@ -1079,6 +1079,8 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var users = this.props.users;
+      if (!users) return null;
       var picture = this.props.picture;
       if (!picture) return null;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1100,15 +1102,14 @@ var PictureShow = /*#__PURE__*/function (_React$Component) {
         className: "show-page"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         className: "picture_show_img",
-        height: "500",
-        width: "500",
         src: picture.pictureUrl,
         alt: ""
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "background-container-show"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "photo-details"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, picture.title), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, picture.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null))))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        className: "camera",
+        src: "camera.png"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, picture.title), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, picture.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)))));
     }
   }]);
 

@@ -1,17 +1,25 @@
 .show-container {
-  outline: 1px solid rgb(238, 239, 242);
+  outline: 1px;
   font-family: Helvetica Neue, Arial, sans-serif;
-  height: 400;
-  width: 400;
+  width: 600;
+  height: 1000;
   font-size: 16px; 
   align-items: center;
   background-color: white;
   justify-content: center;
+  box-shadow: 0px 0px 5px 0px rgba(95, 95, 95, 0.247);
 }
 
 .show-page {
     background-color: #222222; 
     padding: 20px;
+}
+
+.picture_show_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75vh
 }
 
 .back-button {
@@ -36,6 +44,9 @@
   text-decoration: none;
   border-color: #0870d1;
   margin: 10px;
+  outline: none; 
+  text-decoration: none;
+  border: 2px solid #0870d1;
   /* margin-left: 200px;  */
 }
 
@@ -56,6 +67,7 @@
 .background-container-show {
     background-color: rgba(228, 233, 228, 0.404);
     padding: 10px; 
+    padding-top: 20px; 
 }
 
 .photo-details {
@@ -88,4 +100,32 @@
     flex-direction: column;
     box-shadow: 0px 0px 5px 0px rgb(95 95 95 / 25%);
     background-color: #EEEFF2;
+}
+
+/* .title { */
+  /* justify-content: left; */
+  /* justify-content: center;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  margin-left: 150px;
+  margin-top: 5px;
+ */
+/* } */
+
+/* .description { */
+  /* justify-content: left; */
+  /* justify-content: center;
+  margin: auto; 
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  margin-left: 150px;
+  margin-top: 5px;
+} */
+
+.camera {
+  height: 90px;
+  width: 135px; 
+  position: absolute;
 }

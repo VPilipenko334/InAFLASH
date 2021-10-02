@@ -24,10 +24,12 @@ class PictureShow extends React.Component {
 
     render() {
 
+        const {users } =this.props; 
+        if (!users) return null; 
+        
         const { picture } = this.props;
         if (!picture) return null;
 
-    
         return (
             <div>
                 <div className="upload-opener">
@@ -40,18 +42,21 @@ class PictureShow extends React.Component {
 
                         <div className="show-page">
 
-                            <center><img className="picture_show_img" height="500" width="500" src={picture.pictureUrl} alt="" /></center>
+                            <center><img className="picture_show_img" src={picture.pictureUrl} alt="" /></center>
                         </div>
+            
                     <div className="background-container-show">
-                        <div className="photo-details">
+                        <img className="camera" src="camera.png"></img>
+
+                        <h1>{picture.title}</h1> <br/>
+
+                        <h1>{picture.description}</h1><br />
                     
-                    <h1>{picture.title}</h1> <br/>
-                    <h1>{picture.description}</h1><br />
+
+                    </div>
                             </div>
                     </div>
                     </div>
-                </div>
-         </div>
         )
     }
 
