@@ -172,6 +172,12 @@ inner-main-container {
   box-sizing: border-box;
 }
 
+.about-container-head {
+  display: flex;
+      flex-direction: row;
+      justify-content: center;
+}
+
 .body-container {
   font-size: 16px;
   line-height: 120%;
