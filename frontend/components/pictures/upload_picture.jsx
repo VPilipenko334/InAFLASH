@@ -79,13 +79,13 @@ class UploadPicture extends React.Component {
                             <center><input type="file" onChange={this.handleFile} id="file" className="file-upload-button" /></center><br />
                                 <div className="requirements">
 
-                                    <h2>Photo Requirements</h2>
+                                <h2><b>Photo Requirements</b></h2>
                                     <h3>
                                         .jpg only
                                         Max. photo dimensions are 200MP/megapixels
                                     </h3><br />
 
-                                    <h2>Licensing requirements</h2>
+                                <h2><b>Licensing requirements</b></h2>
                                     <h3>Min. photo dimensions are 3MP/megapixels
                                         No watermarks, logos, or borders
                                         No NSFW content
