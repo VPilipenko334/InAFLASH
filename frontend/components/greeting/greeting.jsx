@@ -10,7 +10,7 @@ const Greeting = ({ currentUser, logout }) => {
       <nav className="login-signup-links">
         
         <header className="header-container">
-          <div className="nav-bar-things">
+          {/* <div className="nav-bar-things"> */}
             <div className="socials">
               <Link to="/" className="logo">InAFlash</Link>
               <a href="https://github.com/VPilipenko334" className="git">      Github      </a>
@@ -18,7 +18,7 @@ const Greeting = ({ currentUser, logout }) => {
               <a href="https://angel.co/u/veronika-pilipenko" className="linkedin">AngelList</a> 
             </div>
             
-            </div>
+            {/* </div> */}
           <div className="more-nav-right">
             < SearchBar />
               <Link className="log-in-link" to="/login">Log in</Link>
