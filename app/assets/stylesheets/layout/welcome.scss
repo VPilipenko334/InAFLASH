@@ -395,15 +395,19 @@ inner-main-container {
   // border: 1px solid black; 
   height: 50px; 
   display: flex;
+  margin-left: 30px; 
+  padding-top: 5px;
 }
 
 .more-nav-right {
-  display: inline-block;
+  display: block;
   margin: 0 5px;
   flex-direction: row;
   justify-content: center;
   // padding-left: 200px;
-  // margin-left: 100px; 
+  margin-right: 30px; 
+  // padding-top: 5px;
+  // justify-content: space-around;
 
 }
 
@@ -541,12 +545,6 @@ inner-main-container {
   justify-content: space-between;
 }
 
-.more-nav-right{
-  display: flex;
-  flex-direction: row; 
-  width: 575px;  
-  max-width: 575px;  
-}
 
 .logo { 
   font-size: 16px;
