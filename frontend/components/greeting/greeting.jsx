@@ -8,6 +8,7 @@ const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <div className="main-top-container">
       <nav className="login-signup-links">
+        
         <header className="header-container">
           <div className="nav-bar-things">
             <div className="socials">
@@ -27,6 +28,7 @@ const Greeting = ({ currentUser, logout }) => {
       </nav>
     </div>
   );
+  
 
   const personalGreeting = () => (
     <div className="header-group">

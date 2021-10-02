@@ -249,7 +249,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
 /* harmony import */ var _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./session_form/signup_form_container */ "./frontend/components/session_form/signup_form_container.jsx");
 /* harmony import */ var _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./session_form/login_form_container */ "./frontend/components/session_form/login_form_container.jsx");
@@ -259,6 +259,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pictures_upload_picture_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pictures/upload_picture_container */ "./frontend/components/pictures/upload_picture_container.js");
 /* harmony import */ var _pictures_pictures_index_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pictures/pictures_index_container */ "./frontend/components/pictures/pictures_index_container.js");
 /* harmony import */ var _home_feed_home_feed__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./home_feed/home_feed */ "./frontend/components/home_feed/home_feed.jsx");
+/* harmony import */ var _search_bar_search_bar_container__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./search_bar/search_bar_container */ "./frontend/components/search_bar/search_bar_container.js");
 
 
 
@@ -278,10 +279,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var App = function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "login-links"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
     exact: true,
     path: "/",
     component: _welcome_welcome__WEBPACK_IMPORTED_MODULE_6__["default"]
@@ -934,20 +936,24 @@ var PictureIndex = /*#__PURE__*/function (_React$Component) {
       if (!pictures) return null;
       var users = this.props.users;
       if (!users) return null;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "outer-container-pics"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Pictures Feed"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "See photos and published Galleries from your favorite artists.")), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "outer-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "inner-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-        className: "pictures-list"
-      }, pictures.map(function (picture) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          picture: picture,
-          key: picture.id
-        });
-      })))), "// ");
+      return (
+        /*#__PURE__*/
+        //    <div>
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "outer-container-pics"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Pictures Feed"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("center", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "See photos and published Galleries from your favorite artists.")), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "outer-container"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "inner-container"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+          className: "pictures-list"
+        }, pictures.map(function (picture) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_picture_render_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            picture: picture,
+            key: picture.id
+          });
+        })))), "// ")
+      );
     }
   }]);
 

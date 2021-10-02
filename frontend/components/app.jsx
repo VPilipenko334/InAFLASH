@@ -23,6 +23,7 @@ import PicturesIndexContainer from './pictures/pictures_index_container'
 // import userProfilePictureContainer from './user_profile/user_profile_picture_container';
 // import PictureHomeContainer from './pictures_home/pictures_home_container'
 import HomeFeed from './home_feed/home_feed'
+import SearchBar from './search_bar/search_bar_container';
 
 
 const App = () => (
