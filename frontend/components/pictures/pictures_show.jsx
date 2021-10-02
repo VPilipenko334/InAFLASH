@@ -46,7 +46,8 @@ class PictureShow extends React.Component {
                         </div>
             
                     <div className="background-container-show">
-                        <img className="camera" src="camera.png"></img>
+                        
+                        <img className="camera" src="camera2.png"></img>
 
                         <h1>{picture.title}</h1> <br/>
 
