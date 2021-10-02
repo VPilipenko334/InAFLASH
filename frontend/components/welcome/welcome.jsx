@@ -13,9 +13,9 @@ export default () => (
                     </p><br />
                 <Link to="/signup" className="sign-up-button-home">Sign up</Link>
             </div>
-        </div>
+        </div><br />
 
-                    <h3 className="difference">What makes us different?</h3><br />
+            <h3 className="difference">What makes us different?</h3><br /><br />
                 <div className="about-container-head">
 
 
