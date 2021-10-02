@@ -48,7 +48,7 @@ const Greeting = ({ currentUser, logout }) => {
         
         {/* <img src="mail.png" className="icons"></img>
         <img src="bell.png" className="icons"></img> */}
-        <Link to="/upload" className="greeting-buttons"><i className="fas fa-arrow-up"></i>   Upload</Link>
+      <Link to="/upload" className="greeting-buttons"><i className="fas fa-arrow-up"></i>&ensp;Upload</Link>
         {/* <Link to="/pictures" className="greeting-buttons">Pictures</Link>
         <Link to="/home" className="greeting-buttons">Home</Link> */}
         {/* <button className="homepage-header-button" onClick={logout}>Logout</button> */}
