@@ -12,9 +12,9 @@
 .inner-container {
   display: flex; 
   flex-flow: row wrap;
-  width: calc(0.90 * 100vw);
+  /* width: calc(0.90 * 100vw); */
   padding-top: 20px;
-  margin-left: 5vw;
+  /* margin-left: 5vw; */
 }
 
 .pictures-list {

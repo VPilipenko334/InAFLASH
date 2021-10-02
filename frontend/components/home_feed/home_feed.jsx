@@ -8,7 +8,7 @@ class HomeFeed extends React.Component {
 
     render() {
         return (
-            <div className="upload-opener">
+            <div className="basic-opener-container">
                 <div className="homefeed-container">
                     <div className="background-homefeed">
 
@@ -33,7 +33,6 @@ class HomeFeed extends React.Component {
                     <center><p>Check out photos selected by our InAFlash Editor.</p></center> */}
 
 
-                    <div>   
                     <br/>
                         {/* < PictureRenderIndex /> */}
                         < EditorsChoice />
@@ -42,7 +41,6 @@ class HomeFeed extends React.Component {
                     <br />
                     
                 </div>
-            </div>
         )
     }
 }

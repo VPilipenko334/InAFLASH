@@ -19,6 +19,18 @@
   // box-shadow: 0px 0px 5px 0px rgb(95 95 95 / 25%);
 }
 
+.basic-opener-container {
+  background-color: FFFFFF;
+  padding-top: 50px;
+  padding-bottom: 300px;
+  // padding-left: 50px;
+  // padding-right: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+
 h1 {
   display: flex;
   font-family: Helvetica Neue, Arial, sans-serif;
@@ -176,3 +188,37 @@ h3 {
 //     animation: 
 //     opacity: 100%;
 //  }
+
+// .file-upload-button {
+//   // display: hidden;
+//   // visibility: hidden;
+//    width: auto;
+//   min-width: 124px;
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+//   font-size: 16px;
+//   line-height: 20px;
+//   font-weight: bold;
+//   margin: 0px;
+//   border-width: 2px;
+//   border-radius: 25px;
+//   cursor: pointer;
+//   text-align: center;
+//   max-height: 48px;
+//   padding: 10px 10px 10px 10px;
+//   outline: none;
+//   background-color: #0870d1;
+//   color: rgb(255, 255, 255);
+//   text-decoration: none;
+//   border-color: #0870d1;
+//   margin: 10px;
+// }
+
+.picture-index-text {
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
