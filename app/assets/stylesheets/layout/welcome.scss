@@ -376,7 +376,8 @@ inner-main-container {
     // padding: 10px 50px;
     height: 75px;
     box-sizing: border-box;
-}
+    position:sticky;
+ }
 
 .nav-bar-things  {
   display: inline-block;

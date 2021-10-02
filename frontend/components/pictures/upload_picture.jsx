@@ -77,7 +77,8 @@ class UploadPicture extends React.Component {
                             <h1>Upload photos</h1>
                             <div className="upload-form">
 
-                            <center><button className="file-upload"><input type="file" onChange={this.handleFile} id="file" className="custom-file-input" />Select Photos</button></center><br />
+                            <center><button className="file-upload">Select Photos<input type="file" onChange={this.handleFile} id="file" className="custom-file-input" /></button></center>
+                                
                                 <div className="requirements">
 
                                 <h2><b>Photo Requirements</b></h2>

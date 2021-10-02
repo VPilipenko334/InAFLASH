@@ -189,7 +189,7 @@ h3 {
 //     opacity: 100%;
 //  }
 
-.file-upload-button {
+// .file-upload-button {
   // display: hidden;
   // visibility: hidden;
   //  width: auto;
@@ -214,29 +214,37 @@ h3 {
   // text-decoration: none;
   // border-color: #0870d1;
   // margin: 10px;
-}
+// }
 
-.file-upload {
-//  position: absolute;
-    top: 108px;
-    cursor: pointer;
-    width: 153px;
-    // height: 48px;
-    // line-height: 30px;
-    background: #0870d1;
-    border-radius: 28px;
-    font-size: 16px;
-    font-family: Arial,Helvetica,sans-serif;
-    text-align: center;
-    color: #fff;
-    left: 50%;
-    // margin-left: -76px;
-    font-weight: 700;
-}
+// .file-upload {
+//     background-color: #0870d1;
+//     cursor: pointer;
+//     width: 160px;
+//     height: 60px;
+//     font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial, sansserif;
+//     color: #fff;
+//     font-weight: 700;
+//     padding-top: 10px; 
+//     border: none;
+//     color: white;
+//     border-radius: 30px;
+//     font-size: 16px;
+//     margin-top: 0px;
+//     margin-left: 5px;
+// }
 
-.custom-file-input::-webkit-file-upload-button {
-  visibility: hidden;
-}
+// #file {
+//   visibility: hidden;
+// }
+
+// .custom-file-input {
+//   display: hidden;
+//   visibility: hidden;
+// }
+
+// .custom-file-input::-webkit-file-upload-button {
+//   visibility: hidden;
+// }
 // .custom-file-input::before {
 //   content: 'Select some files';
 //   display: inline-block;
