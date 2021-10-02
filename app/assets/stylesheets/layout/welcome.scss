@@ -177,6 +177,8 @@ inner-main-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 0 2rem;
+  line-height: 2rem;
 }
 
 .body-container {
@@ -185,6 +187,8 @@ inner-main-container {
   text-align: left;
   max-width: 70%;
   // padding: 10px; 
+  padding-left: 20px;
+  padding-right: 50px;
 }
 
 .body-container > h4 {
@@ -278,6 +282,13 @@ inner-main-container {
   color: rgb(255, 255, 255);
   border: none;
   font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+#generator-button:hover {
+  color: black;
+  background-color: rgb(150, 145, 145);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 #back-to-the-top-button {
