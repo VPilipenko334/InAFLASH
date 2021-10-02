@@ -13,9 +13,9 @@ const Greeting = ({ currentUser, logout }) => {
           {/* <div className="nav-bar-things"> */}
             <div className="socials">
               <Link to="/" className="logo">In A Flash</Link>
-              <a href="https://github.com/VPilipenko334" className="git">      Github      </a>
-              <a href="https://linkedin.com/in/veronikapilipenko" className="linkedin">LinkedIn</a>
-              <a href="https://angel.co/u/veronika-pilipenko" className="linkedin">AngelList</a> 
+              {/* <a href="https://github.com/VPilipenko334" className="git">      Github      </a> */}
+              {/* <a href="https://linkedin.com/in/veronikapilipenko" className="linkedin">LinkedIn</a> */}
+              {/* <a href="https://angel.co/u/veronika-pilipenko" className="linkedin">AngelList</a>  */}
             </div>
             
             {/* </div> */}
