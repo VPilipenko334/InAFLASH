@@ -15,7 +15,6 @@ export default () => (
             </div>
         </div>
 
-            {/* <div className="middle-info">  */}
                     <h3 className="difference">What makes us different?</h3><br />
                 <div className="about-container-head">
 
@@ -46,7 +45,18 @@ export default () => (
                         </div>
             </div>
            
-            {/* </div> */}
+            <div className="random-generator-container">
+                <center><div className="photo-icon"></div></center><br/>
+                <center><h1>Photo of the week:</h1></center><br />
+                <p id="editors"> Our editors are always on the lookout for jaw dropping content for you
+                    to discover and stay inspired. Check back weekly to see what’s new. </p>
+                <div id="random-photo">
+
+                </div>
+                <center><button id="generator-button" onClick={getRandomImage}>Click for photo of the week</button></center>
+            </div>
+
+
         <div className="content-box-two">
             <div className="smoller-content-box">
                 <div className="community">
