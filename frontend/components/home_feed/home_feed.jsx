@@ -8,7 +8,7 @@ class HomeFeed extends React.Component {
 
     render() {
         return (
-            <div className="basic-opener-container">
+            <div className="upload-opener">
                 <div className="homefeed-container">
                     <div className="background-homefeed">
 
