@@ -430,7 +430,7 @@ var Greeting = function Greeting(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       to: "/",
       className: "logo"
-    }, "InAFlash"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    }, "In A Flash"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
       href: "https://github.com/VPilipenko334",
       className: "git"
     }, "      Github      "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {

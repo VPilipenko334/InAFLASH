@@ -368,7 +368,7 @@ inner-main-container {
   // vertical-align: baseline;
   // height: 70px; 
   // box-sizing: border-box;
-  // box-shadow: 0px 0px 5px 0px rgba(95, 95, 95, 0.247);
+    box-shadow: 0px 0px 5px 0px rgba(95, 95, 95, 0.247);
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -395,8 +395,8 @@ inner-main-container {
   // border: 1px solid black; 
   height: 50px; 
   display: flex;
-  margin-left: 30px; 
-  padding-top: 5px;
+  margin-left: 20px; 
+  padding-top: 7px;
 }
 
 .more-nav-right {
@@ -524,11 +524,12 @@ inner-main-container {
 
 .search-bar {
   background-color: rgb(247, 248, 250);
+  color:rgb(0, 0, 0);
   border: none;
   border-radius: 25px;
   width: 210px;
   height: 40px;
-  text-indent: 48px;
+  text-indent: 35px;
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -536,6 +537,8 @@ inner-main-container {
   // padding:0 40px;
   display: flex;
   margin-top: 25px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
 }
 
 .nav-bar-things{
@@ -547,51 +550,65 @@ inner-main-container {
 
 
 .logo { 
-  font-size: 16px;
+  font-size: 35px;
   font-weight: normal;
   cursor: pointer;
-  color: rgb(49, 49, 49);
+  color: #000000da;
   text-decoration: none;
-  font-family: Helvetica Neue, Arial, sans-serif;
-  margin: 0px -15px;
-  padding:0 40px;
+  // margin-bottom: 10px;
+  // font-family: Helvetica Neue, Arial, sans-serif;
+  font-family: 'Bangers', cursive;
+  // padding-bottom: 15px;
+  // padding: 10px;
+  margin: -7px 40px;
+  justify-content: center;
+  // padding-right: 10px;
+  // padding:0 40px;
 }
 
 
 .logo:hover {
   text-decoration: none;
-  color: black; 
+  color: rgb(83, 157, 186); 
+  cursor: pointer;
 }
 
 .git {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bolder;;
   cursor: pointer;
-  color: rgb(49, 49, 49);
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  font-family: Helvetica Neue, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  // font-family: Helvetica Neue, Arial, sans-serif;
   min-height: 31px;
   margin: 0px -15px;
   padding:0 40px;
+  padding-top: 2px;
 }
+
 
 .linkedin {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bolder;
   cursor: pointer;
-  color: rgb(49, 49, 49);
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  font-family: Helvetica Neue, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  // font-family: Helvetica Neue, Arial, sans-serif;
   margin: 0px -15px;
   padding:0 40px;
+  padding-top: 2px;
 }
 
 .git:hover {
   text-decoration: none;
-  color: black; 
+  color:rgb(66, 69, 100); 
+  cursor: pointer;
 }
 
 .linkedin:hover {
   text-decoration: none;
-  color: black; 
+  color: rgb(66, 69, 100); 
+  cursor: pointer;
 }
