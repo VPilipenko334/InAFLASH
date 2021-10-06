@@ -13,13 +13,13 @@
   
 }
 .background-homefeed {
-  background-color: #0970d169; 
+  /* background-color: #0970d169;  */
   width: 100%;
   height: 300px; 
   margin-bottom: 60px;
-  /* background-image: url("../pictures/purple_trees.jpg"); */
+  background-image: url("https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80");
   background-size: cover;
-  /* background-size: contain; */
+  /* background-size:inherit */
   /* background-repeat: no-repeat; */
   /* border: 1px solid rgba(167, 167, 167, 0.377); */
   box-shadow: 0px 0px 5px 0px rgb(95 95 95 / 25%);
