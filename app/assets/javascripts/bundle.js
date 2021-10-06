@@ -1652,7 +1652,7 @@ var mapStateToProps = function mapStateToProps(_ref) {
     errors: errors.session,
     formType: 'Log In',
     navLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-      to: "/login"
+      to: "/signup"
     }, "Sign Up")
   };
 };
