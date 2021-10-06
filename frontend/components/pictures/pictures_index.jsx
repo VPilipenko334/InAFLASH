@@ -24,8 +24,8 @@ class PictureIndex extends React.Component {
         if (!users) return null; 
 
         return (    
-            <div className="upload-opener">
-                   <div className="homefeed-container">
+            <div className="upload-opener2">
+                   {/* <div className="homefeed-container"> */}
                        <div className="picture-index-text">
                          <h1>Pictures Feed</h1> <br/> 
                             <center><h3>See photos and published Galleries from your favorite artists.</h3></center> <br/>
@@ -53,7 +53,7 @@ class PictureIndex extends React.Component {
                             }
                         </ul>
                         {/* </div> */}
-                    </div>
+                    {/* </div> */}
             </div>
                     </div>
                 </div>

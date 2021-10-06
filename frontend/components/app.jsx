@@ -30,12 +30,13 @@ const App = () => (
     <div>
             <div className="login-links">
                 <GreetingContainer />
+                {/* <SearchBar /> */}
                     <Switch>
                             <Route exact path="/" component={welcome} />
                             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
                             <AuthRoute exact path="/login" component={LogInFormContainer} />
                             <ProtectedRoute exact path='/home' component={HomeFeed} />
-                            
+
                             {/* <AuthRoute exact path='/' component={PictureHomeContainer} /> */}
                             <ProtectedRoute exact path='/pictures' component={PicturesIndexContainer} />
                             {/* <ProtectedRoute exact path='/profile' component={userProfilePictureContainer} /> */}

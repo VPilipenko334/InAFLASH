@@ -79,7 +79,7 @@ class UploadPicture extends React.Component {
 
                             <center><button className="inputfile">Select Photos<input type="file" onChange={this.handleFile} id="file" className="custom-file-input" /></button></center>
                             
-                        <center><button className="file-upload"><label for="file">Select Photos</label></button></center>
+                        <center><button className="file-upload"><label htmlFor="file">Select Photos</label></button></center>
 
                                 <div className="requirements">
 
@@ -129,8 +129,8 @@ class UploadPicture extends React.Component {
                                     <textarea cols="40" rows="6" className="description" type="text" value={this.state.description} onChange={this.update("description")} />
                                 </label> <br />
                                 <div><br/>
-                                    <button className="cancel-button-form" onClick={this.handleCancel}>Cancel</button>
-                                    <button className="upload-button-form" type="submit">Upload</button>
+                                    <button className="cancel-button-form" onClick={this.handleCancel}>Cancel</button>&nbsp; &nbsp; &nbsp; 
+                                    <button className="file-upload" type="submit">Upload</button>
                                 </div>
 
                         </form>

@@ -24,25 +24,7 @@ class EditorsChoice extends React.Component {
         return (
             <div>
                 <ul>
-                    {/* {pictures.map(picture => (
-                     picture={picture}
-                    ))} */}
-
-                    {/* <Link to={`/pictures/${picture.id}`} className="picture-render-link"> */}
-                        {/* <img className="picture-render" height="300" width="300" src={pictures.picture} /> */}
-                    {/* </Link> */}
-
-                    {/* {
-                        pictures.map(picture => (
-                            <EditorsItemPictures
-                                picture={picture}
-                                key={picture.id}
-                            />
-                        ))
-                    } */}
                     < PictureRenderIndex />
-                    {/* <EditorsItemPictures />  */}
-                    {/* hello */}
                 </ul>
             </div>
         )
