@@ -441,7 +441,7 @@ var Greeting = function Greeting(_ref) {
       className: "linkedin"
     }, "AngelList")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "more-nav-right"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_search_bar_search_bar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       className: "log-in-link",
       to: "/login"
     }, "Log in"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
@@ -1661,10 +1661,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     processForm: function processForm(user) {
       return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.login)(user));
-    },
-    login: function login(user) {
-      return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.login)(user));
-    }
+    } // login: (user) => dispatch(login(user))
+
   };
 };
 
@@ -1875,8 +1873,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
+ // import { login } from '../../actions/session_actions';
 
 var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
@@ -1893,10 +1890,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     processForm: function processForm(user) {
       return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.signup)(user));
-    },
-    signup: function signup(user) {
-      return dispatch((0,_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__.signup)(user));
-    } // login: (user) => dispatch(login(user))
+    } // signup: (user) => dispatch(signup(user)),
 
   };
 };
