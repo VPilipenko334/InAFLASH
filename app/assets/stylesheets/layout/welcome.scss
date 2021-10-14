@@ -100,7 +100,7 @@
   font-weight: bold;
   margin: 30px 150px 0px;
   min-width: 216px;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   color: lightgray;
   text-decoration: none;
   cursor: pointer;
@@ -338,7 +338,7 @@ inner-main-container {
 .community-text {
   display: flex;
   align-items: flex-end;
-  color: rgb(0, 0, 0);
+  color: black;
   text-align: center;
   flex-direction: column;
   width: 40%;
@@ -525,7 +525,7 @@ inner-main-container {
 
 .search-bar {
   background-color: rgb(247, 248, 250);
-  color:rgb(0, 0, 0);
+  color:black; 
   border: none;
   border-radius: 25px;
   width: 210px;

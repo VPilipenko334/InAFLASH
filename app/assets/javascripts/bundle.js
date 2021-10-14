@@ -1770,7 +1770,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       var login = function login() {
         _this3.props.processForm(_this3.state);
 
-        _this3.props.history.push("/");
+        _this3.props.history.push("/home");
       };
 
       if (this.state.username !== username) {

@@ -46,7 +46,7 @@ class SessionForm extends React.Component {
         let interval = 300;
         let login = () => {
             this.props.processForm(this.state);
-            this.props.history.push("/")
+            this.props.history.push("/home")
         };
         if (this.state.username !== username) {
             let inputUsername = setInterval(() => {
