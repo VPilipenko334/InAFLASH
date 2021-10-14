@@ -15,8 +15,8 @@ local:
 #   bucket: your_own_bucket
 amazon_dev:
   service: S3
-  access_key_id: <%= Rails.application.credentials.aws[:AKIAYCTNLYXW4Y7V5Q4J] %>
-  secret_access_key: <%= Rails.application.credentials.aws[:4cdacOKhMRS2OVIaeQUjuxzxWeJnVSBi64b0R535] %>
+  access_key_id: <%= Rails.application.credentials.aws[:access_key_id] %>
+  secret_access_key: <%= Rails.application.credentials.aws[:secret_access_key] %>
   region: <%= Rails.application.credentials.aws[:region] %>
   bucket: <%= Rails.application.credentials.aws[:dev][:bucket] %>
 

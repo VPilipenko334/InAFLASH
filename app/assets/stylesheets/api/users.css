@@ -4,7 +4,7 @@
   align-items: center;
   padding: 15px;
   box-sizing: border-box;
-  /* box-shadow: 0px 0px 5px 0px rgba(95, 95, 95, 0.247); */
+  box-shadow: 0px 0px 5px 0px rgba(95, 95, 95, 0.247);
 }
 
 .buttons-on-homepage {
