@@ -26,19 +26,19 @@ user8 = User.create!(username: 'walker', password: 'jellybeansareyum')
 user9 = User.create!(username: 'charis', password: 'ilovetodance')  
 user10 = User.create!(username: 'nicha', password: 'imclinicallyinsanetbh')
 
+
 #adding pictures to the database 
 
-
-file1 = open("https://inaflash-seeds.s3.amazonaws.com/ocean_view_portrait.jpeg")
-file2 = open("https://inaflash-seeds.s3.amazonaws.com/tiny+flower.jpeg")
-file3 = open("https://inaflash-seeds.s3.amazonaws.com/surt.jpeg")
-file4 = open("https://inaflash-seeds.s3.amazonaws.com/yellow.jpeg")
-file5 = open("https://inaflash-seeds.s3.amazonaws.com/mountainnnn.jpeg")
-file6 = open("https://inaflash-seeds.s3.amazonaws.com/giraffee.jpeg")
-file7 = open("https://inaflash-seeds.s3.amazonaws.com/lavender.jpeg")
-file8 = open("https://inaflash-seeds.s3.amazonaws.com/green+woods.jpeg")
-file9 = open("https://inaflash-seeds.s3.amazonaws.com/snow.jpeg")
-file10 = open("https://inaflash-seeds.s3.amazonaws.com/lakehouse.jpeg")
+file1 = URI.open("https://inaflash-seeds.s3.amazonaws.com/ocean_view_portrait.jpeg")
+file2 = URI.open("https://inaflash-seeds.s3.amazonaws.com/tiny+flower.jpeg")
+file3 = URI.open("https://inaflash-seeds.s3.amazonaws.com/surt.jpeg")
+file4 = URI.open("https://inaflash-seeds.s3.amazonaws.com/yellow.jpeg")
+file5 = URI.open("https://inaflash-seeds.s3.amazonaws.com/mountainnnn.jpeg")
+file6 = URI.open("https://inaflash-seeds.s3.amazonaws.com/giraffee.jpeg")
+file7 = URI.open("https://inaflash-seeds.s3.amazonaws.com/lavender.jpeg")
+file8 = URI.open("https://inaflash-seeds.s3.amazonaws.com/green+woods.jpeg")
+file9 = URI.open("https://inaflash-seeds.s3.amazonaws.com/snow.jpeg")
+file10 = URI.open("https://inaflash-seeds.s3.amazonaws.com/lakehouse.jpeg")
 
 
 picture1 = Picture.new(title: 'Bright Blue Ocean', private: false, description: 'Stunning photo of the bright blue ocean as the waves cascade', user_id: user1.id)
