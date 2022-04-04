@@ -1,7 +1,6 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { fetchPictures } from '../../actions/picture_actions';
-import {fetchUser, fetchUsers } from '../../actions/user_actions';
+import {fetchUsers } from '../../actions/user_actions';
 import HomePage from './home'
 
 const mSTP = (state) => {
@@ -17,10 +16,6 @@ const mDTP = (dispatch) => {
     return {
         fetchPictures: () => dispatch(fetchPictures()),
         fetchUsers: () => dispatch(fetchUsers())
-        // fetchCurrentUser: (userId) => dispatch(fetchUser(userId))
-        //fetchLikes
-        //createLikes
-        //deleteLikes
     }
 }
 

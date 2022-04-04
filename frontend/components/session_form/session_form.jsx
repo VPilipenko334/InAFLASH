@@ -72,19 +72,13 @@ class SessionForm extends React.Component {
         };
     }
 
-    // demoLogin(e) {
-    //     e.preventDefault();
-    //     this.props.login({ username: 'mikem', password: 'teslaspacerocket'})
-    // }
-
-
     render() {
         return (
             <div className="full">
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
                         <h3>Welcome to InAFlash!</h3>
-                            <br />
+                        <br />
                         <div className="login-form">
                             <br />
                             <label className="username-password">Username:
@@ -96,7 +90,7 @@ class SessionForm extends React.Component {
                                 />
                             </label>
                             <br />
-                            <label className="username-password">Password: 
+                            <label className="username-password">Password:
                                 <br />
                                 <input type="password"
                                     value={this.state.password}
@@ -105,7 +99,7 @@ class SessionForm extends React.Component {
                                 />
                             </label>
                             <br />
-                            <input className="session-submit" type="submit" value={this.props.formType} /><br/>
+                            <input className="session-submit" type="submit" value={this.props.formType} /><br />
                             <button className="demo-user-button" onClick={this.demoLogin}>Demo User</button>
                         </div>
                         <br />
@@ -114,7 +108,7 @@ class SessionForm extends React.Component {
                         </div>
                     </form>
                 </div>
-        </div>
+            </div>
         );
     }
 }

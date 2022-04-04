@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { fetchPicture } from "../../actions/picture_actions";
 import { fetchUsers } from "../../actions/user_actions";
 import PictureShow from "./pictures_show";
-// import { fetchlikes, createLike, deletelike } from "../../actions/like_actions";
 
 
 const mSTP = (state, ownProps) => {

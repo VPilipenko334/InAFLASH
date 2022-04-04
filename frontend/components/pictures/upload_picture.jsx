@@ -1,6 +1,4 @@
 import React from "react";
-import { Redirect } from "react-router";
-
 
 class UploadPicture extends React.Component {
     constructor(props) {
@@ -41,10 +39,9 @@ class UploadPicture extends React.Component {
         }
     }
 
+
     handleSubmit(e) {
         e.preventDefault();
-        // debugger
-        // console.log(this.state)
         if (this.state.tError === false) {
             const formData = new FormData();
             formData.append('picture[title]', this.state.title)
@@ -52,8 +49,6 @@ class UploadPicture extends React.Component {
             formData.append('picture[user_id]', this.state.userId)
             formData.append('picture[picture]', this.state.pictureFile)
             this.props.createPicture(formData).then(res => this.props.history.push(`/pictures/${res.id}`));
-            // this.props.history.push('/pictures')
-
         }
     }
 
@@ -71,34 +66,30 @@ class UploadPicture extends React.Component {
         if (this.state.selectForm === 0) {
             return (
                 <div className="upload-opener">
-                    {/* <div className="full-container"> */}
-                        {/* <div className="upload-photo-container"> */}
-                    <center><i className="fas fa-arrow-up" id="upload-arrow"></i></center><br/>
-                            <h1>Upload photos</h1>
-                            <div className="upload-form">
+                    <center><i className="fas fa-arrow-up" id="upload-arrow"></i></center><br />
+                    <h1>Upload photos</h1>
+                    <div className="upload-form">
 
-                            <center><button className="inputfile">Select Photos<input type="file" onChange={this.handleFile} id="file" className="custom-file-input" /></button></center>
-                            
+                        <center><button className="inputfile">Select Photos<input type="file" onChange={this.handleFile} id="file" className="custom-file-input" /></button></center>
+
                         <center><button className="file-upload"><label htmlFor="file">Select Photos</label></button></center>
 
-                                <div className="requirements">
+                        <div className="requirements">
 
-                                <h2><b>Photo Requirements</b></h2>
-                                    <h3>
-                                        .jpg only
-                                        Max. photo dimensions are 200MP/megapixels
-                                    </h3><br />
+                            <h2><b>Photo Requirements</b></h2>
+                            <h3>
+                                .jpg only
+                                Max. photo dimensions are 200MP/megapixels
+                            </h3><br />
 
-                                <h2><b>Licensing requirements</b></h2>
-                                    <h3>Min. photo dimensions are 3MP/megapixels
-                                        No watermarks, logos, or borders
-                                        No NSFW content
-                                    </h3>
-                                </div>
-                            </div>
+                            <h2><b>Licensing requirements</b></h2>
+                            <h3>Min. photo dimensions are 3MP/megapixels
+                                No watermarks, logos, or borders
+                                No NSFW content
+                            </h3>
                         </div>
-                    // </div>
-                // </div>
+                    </div>
+                </div>
             )
         }
 
@@ -106,38 +97,37 @@ class UploadPicture extends React.Component {
         if (this.state.selectForm === 1) {
             return (
                 <div>
-                     <label id="uploading-here">
+                    <label id="uploading-here">
                         <input type="file" onChange={this.handleFile} style={{ display: "none" }} />
                     </label>
 
                     <div className="upload-opener">
 
-                            <div className="preview-container">
+                        <div className="preview-container">
 
-                        <form className="upload-form" onSubmit={this.handleSubmit}>
+                            <form className="upload-form" onSubmit={this.handleSubmit}>
                                 <center><h1 id="arts-selected"><b>Photo Selected: </b></h1></center>
-                            
-                             {PreviewPicture}
-                            <br/><br/>
-                            
+
+                                {PreviewPicture}
+                                <br /><br />
+
                                 <label><b>Title:</b><br />
-                                    {/* <textarea cols="40" rows="2" className="title" type="text" value={this.state.title} onChange={this.update("title")} /> */}
                                     <input className="title" type="text" value={this.state.title} onChange={this.update("title")} />
                                     {this.state.tError ? <p className="errors">Title can not be empty</p> : null}
                                 </label> <br />
-                                <label><b>Description:</b><br/>
+                                <label><b>Description:</b><br />
                                     <textarea cols="40" rows="6" className="description" type="text" value={this.state.description} onChange={this.update("description")} />
                                 </label> <br />
-                                <div><br/>
-                                    <button className="cancel-button-form" onClick={this.handleCancel}>Cancel</button>&nbsp; &nbsp; &nbsp; 
+                                <div><br />
+                                    <button className="cancel-button-form" onClick={this.handleCancel}>Cancel</button>&nbsp; &nbsp; &nbsp;
                                     <button className="file-upload" type="submit">Upload</button>
                                 </div>
 
-                        </form>
-                            </div>
+                            </form>
+                        </div>
                     </div>
-           
-              </div>
+
+                </div>
             )
         }
 

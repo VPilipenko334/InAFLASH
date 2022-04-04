@@ -1,4 +1,3 @@
-import React from "react";
 import { connect } from "react-redux";
 import LinkBar from './link_bar_container'
 import { logout } from "../../actions/session_actions";

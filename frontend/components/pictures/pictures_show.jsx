@@ -1,5 +1,4 @@
 import React from "react";
-import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 class PictureShow extends React.Component {
@@ -24,9 +23,9 @@ class PictureShow extends React.Component {
 
     render() {
 
-        const {users } =this.props; 
-        if (!users) return null; 
-        
+        const { users } = this.props;
+        if (!users) return null;
+
         const { picture } = this.props;
         if (!picture) return null;
 
@@ -34,30 +33,30 @@ class PictureShow extends React.Component {
             <div>
                 <div className="upload-opener">
                     <div className="show-container">
-                    <div className="show-buttons">
-                        <button className="back-button" onClick={this.handleback}>Back</button>
-                        <Link to="/home" className="back-button">Home</Link> 
-                        <Link to="/pictures" className="back-button">Pictures</Link>
-                    </div>
+                        <div className="show-buttons">
+                            <button className="back-button" onClick={this.handleback}>Back</button>
+                            <Link to="/home" className="back-button">Home</Link>
+                            <Link to="/pictures" className="back-button">Pictures</Link>
+                        </div>
 
                         <div className="show-page">
 
                             <center><img className="picture_show_img" src={picture.pictureUrl} alt="" /></center>
                         </div>
-            
-                    <div className="background-container-show">
-                        
-                        <img className="camera" src="camera2.png"></img>
 
-                        <h1>{picture.title}</h1> <br/>
+                        <div className="background-container-show">
 
-                        <h1>{picture.description}</h1><br />
-                    
+                            <img className="camera" src="camera2.png"></img>
 
+                            <h1>{picture.title}</h1> <br />
+
+                            <h1>{picture.description}</h1><br />
+
+
+                        </div>
                     </div>
-                            </div>
-                    </div>
-                    </div>
+                </div>
+            </div>
         )
     }
 
