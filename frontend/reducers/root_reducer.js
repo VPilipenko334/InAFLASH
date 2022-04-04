@@ -1,5 +1,3 @@
-// combines multiple, domain specific reducers 
-
 import { combineReducers } from "redux";
 
 import entitiesReducer from "./entities_reducer";

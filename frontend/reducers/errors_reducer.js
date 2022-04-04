@@ -1,5 +1,3 @@
-//keeps track of error messages 
-
 import { combineReducers } from "redux";
 import sessionErrorReducer from "./session_errors_reducer";
 
