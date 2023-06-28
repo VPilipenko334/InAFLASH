@@ -10,7 +10,7 @@ gem 'bcrypt'
 gem "aws-sdk-s3"
 gem 'mini_magick'
 
-
+ruby '3.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
 # Use postgresql as the database for Active Record
