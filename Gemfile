@@ -9,6 +9,7 @@ gem 'annotate'
 gem 'bcrypt'
 gem "aws-sdk-s3"
 gem 'mini_magick'
+gem 'jsbundling-rails'
 
 ruby '3.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
